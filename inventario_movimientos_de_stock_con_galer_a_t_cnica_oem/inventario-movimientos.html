@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="#"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="#"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="taller-ordenes" href="#"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="#"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="#"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="#"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Operational Sub-Header & Global Utility Bar -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm mb-space-md">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Title, Breadcrumb & Active Branch Switcher -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs uppercase text-secondary">
+<span>Almacén General</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary-container font-semibold">Kardex &amp; Repuestos OEM</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-space-2xs">Inventario &amp; Movimientos de Stock</h1>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="material-symbols-outlined text-primary-container text-base">domain</span>
+<div class="text-left">
+<span class="block font-label-xs text-label-xs text-secondary leading-none">Sede de Operación</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sede Central - Taller &amp; POS Norte</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-base">expand_more</span>
+</div>
+<div class="flex items-center gap-space-xs bg-error-container/40 px-space-sm py-space-xs rounded text-error">
+<span class="material-symbols-outlined text-base">notification_important</span>
+<span class="font-label-md text-label-md font-semibold">1 SKU Crítico</span>
+<span class="font-label-xs text-label-xs bg-surface-container-lowest px-space-xs py-space-2xs rounded font-bold text-error">KTM-6030-1002</span>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>Nueva Entrada (+)</span>
+</button>
+<button class="bg-inverse-surface hover:bg-on-background text-inverse-on-surface font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base">remove_circle_outline</span>
+<span>Nuevo Despacho (-)</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-sm py-space-xs rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-secondary text-base">file_download</span>
+<span>Exportar Kardex</span>
+</button>
+</div>
+</div>
+<!-- Filter Bar & Search Utility -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mt-space-md pt-space-md bg-surface-container-low/60 -mx-space-md px-space-md">
+<!-- Category Quick Badges -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs lg:pb-0">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-sm py-space-xs rounded shadow-sm whitespace-nowrap" type="button">
+          Todos (2,418)
+        </button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors whitespace-nowrap" type="button">
+          Filtros (342)
+        </button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors whitespace-nowrap" type="button">
+          Lubricantes (188)
+        </button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors whitespace-nowrap" type="button">
+          Frenos &amp; Pastillas (512)
+        </button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors whitespace-nowrap" type="button">
+          Encendido &amp; Eléctrico (295)
+        </button>
+<button class="bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors whitespace-nowrap" type="button">
+          Transmisión &amp; Corona (480)
+        </button>
+</div>
+<!-- Live Search & Scanner Listening -->
+<div class="flex items-center gap-space-sm">
+<div class="relative w-full lg:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-base">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded shadow-inner focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Filtrar por SKU, OEM, Molde o Ubicación..." type="text"/>
+<span class="absolute right-2 top-2 font-label-xs text-label-xs bg-surface-container-high text-secondary px-space-xs py-space-2xs rounded">Ctrl + K</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-2xs bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-sm">qr_code_scanner</span>
+<span>OPTIC SYNC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Split Architecture: Stock Grid + Technical Gallery Modal Preview -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left / Center: Interactive Parts Catalog Table (8 Cols when modal is active or 12 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Table Shell Card -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low/80">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-lg">view_list</span>
+<span class="font-headline-md text-headline-md text-on-surface">Catálogo de Repuestos &amp; Trazabilidad OEM</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-secondary px-space-xs py-space-2xs rounded font-semibold">6 repuestos seleccionados</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-xs hover:bg-surface-container-high rounded text-secondary" title="Configurar Columnas" type="button">
+<span class="material-symbols-outlined text-base">tune</span>
+</button>
+<button class="p-space-xs hover:bg-surface-container-high rounded text-secondary" title="Refrescar" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high/60 font-label-xs text-label-xs text-secondary uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">Repuesto / Identificador OEM</th>
+<th class="py-space-sm px-space-sm">Ubicación Pasillo</th>
+<th class="py-space-sm px-space-sm text-center">Stock Físico</th>
+<th class="py-space-sm px-space-sm text-right">Costo / Venta</th>
+<th class="py-space-sm px-space-sm text-center">Estado</th>
+<th class="py-space-sm px-space-md text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Item 1: Active SKU with Full OEM Photo Dossier -->
+<tr class="bg-surface-container-low/70 hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="toggleOemModal(true)">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Technical product shot of an OEM KTM motorcycle oil filter cartridge made of micro-pleated cellulose with brass mesh end-caps and precision black Viton O-rings on a clean workshop testing bench with crisp directional LED studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoRywHwBGdwfq_kGyXqeo2fTb19_9pKNYDfB_kqKjSNO-0zUlrLnzhmKbVDzMgT_C9bDR6xUPdBcfqsk7-S5ED7mq5mDgtOUjyX06raJZPDd0OQohaiEgtHe01gEHOCc9G-6KD7kNHprSsZtGlwOh2ZVZ9sEFhN_YvXOk8rHfSlmDrdEZBHFYO0qqgxEvUxJdm-oAvtYor4lI6OzLg5LXwjxl_LUwNJdhnN2CMRbGpjylcjAKg1ZAj"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/90 text-inverse-on-surface font-label-xs text-label-xs text-[9px] text-center py-0.5">3 FOTOS</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-primary">KTM-6030-8015</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs px-space-xs py-space-2xs rounded">KTM PowerParts</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Kit Filtro Aceite OEM KTM LC8 1290 / 1090</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Filtros</span>
+<span class="text-secondary">•</span>
+<span class="font-label-xs text-label-xs text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">photo_camera</span>
+                          Inspección Visual OEM
+                        </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">C-04-12</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo C • Est. 04</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">14 <span class="font-label-xs text-label-xs font-normal text-secondary">UN</span></div>
+<span class="font-label-xs text-label-xs text-secondary">Mínimo: 4 UN</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $31.25 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-primary-container">$45.00 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$125,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Óptimo
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface-variant font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 transition-colors" onclick="toggleOemModal(true)" type="button">
+<span class="material-symbols-outlined text-xs">zoom_in</span>
+<span>Revisar OEM</span>
+</button>
+</td>
+</tr>
+<!-- Item 2: Motul 7100 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Product photograph of Motul 7100 4T 10W50 synthetic motorcycle engine oil 1 liter red translucent bottle in high resolution studio lighting with clear label and tamper-evident cap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI1obTmwGsms5xPSFYJYo2o8AFb4PqouRlO-UQAvWNbcbwjvSjWVznlY6TIjn6GNHNhf5GMzfVl_xeFrYFuMo0svdjm78db46dZsQ6YhRDoYnctcXxJlwUMUv9PdYpq_EpPlaelVygfrim-WjyLtulM1krFOGpWJUrgHDVnaNFxdzQc_Brt11qhaLJax-1hiNL3AleTXuZU4GhsMXT2QLU67MwHk95wk7mQHJwwyu3I2WT3nwc7bjs"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/80 text-inverse-on-surface font-label-xs text-label-xs text-[9px] text-center py-0.5">2 FOTOS</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-secondary">MOTUL-7100-10W50</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Motul Lubricants</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Aceite Sintético Motul 7100 4T 10W50 Ester</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Lubricantes</span>
+<span class="text-secondary">•</span>
+<span class="font-label-xs text-label-xs text-secondary">Batch: 2024-Q3</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">A-01-08</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo A • Est. 01</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">48 <span class="font-label-xs text-label-xs font-normal text-secondary">LTS</span></div>
+<span class="font-label-xs text-label-xs text-secondary">Mínimo: 12 LTS</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $15.50 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$22.50 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$90,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Óptimo
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Ver</span>
+</button>
+</td>
+</tr>
+<!-- Item 3: Brembo Pads -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Technical photography of Brembo sintered red motorcycle brake pads 07BB38SA on reflective metallic surface showing the friction material texture and laser engraved Brembo logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Bmne3fwLmDAqv2uCIyw97DaPDmfjHvBN4BeSZmWNkp_HiRDuBDrN9vggnmolYfeY-5nBDMRDKwZJgSt7f9_I0hYFLeCwEQRamQlKAkX67QowdaJ1zGvDZGyUZn_27z5b2wASeVl0NL3Wat3YxL38A-KxUKa2_4Yx2BOLv9S1zxqecbdkitDlabaQrOdm0TM100-F5qz_CaeD5KNkoJQBnv6O88c_eHushQCg4m6MzFK5ps4TvA5T"/>
+<span class="absolute bottom-0 inset-x-0 bg-inverse-surface/80 text-inverse-on-surface font-label-xs text-label-xs text-[9px] text-center py-0.5">2 FOTOS OEM</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-secondary">BREMBO-07BB38SA</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Brembo Genuine</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Pastillas Delanteras Brembo Sinterizadas SA</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Frenos</span>
+<span class="text-secondary">•</span>
+<span class="font-label-xs text-label-xs text-secondary">Compuesto: Road Sinter</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">C-02-05</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo C • Est. 02</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">8 <span class="font-label-xs text-label-xs font-normal text-secondary">KIT</span></div>
+<span class="font-label-xs text-label-xs text-secondary">Mínimo: 2 KIT</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $48.00 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$68.00 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$272,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Óptimo
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Ver</span>
+</button>
+</td>
+</tr>
+<!-- Item 4: Motul Brake Fluid DOT 5.1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-2xl">oil_barrel</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-secondary">MOTUL-DOT51-500</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Motul</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Líquido de Frenos Motul DOT 5.1 500ml</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Frenos / Líquidos</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">A-03-02</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo A • Est. 03</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">18 <span class="font-label-xs text-label-xs font-normal text-secondary">UN</span></div>
+<span class="font-label-xs text-label-xs text-secondary">Mínimo: 6 UN</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $8.90 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$14.00 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$56,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Óptimo
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Ver</span>
+</button>
+</td>
+</tr>
+<!-- Item 5: NGK Spark Plug -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-2xl">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-secondary">NGK-LMAR9AI8</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded">NGK Laser Iridium</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Bujía Láser Iridium NGK LMAR9AI-8</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Encendido</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">B-01-14</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo B • Est. 01</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">24 <span class="font-label-xs text-label-xs font-normal text-secondary">UN</span></div>
+<span class="font-label-xs text-label-xs text-secondary">Mínimo: 8 UN</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $12.10 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$19.50 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$78,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Óptimo
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-xs">visibility</span>
+<span>Ver</span>
+</button>
+</td>
+</tr>
+<!-- Item 6: KTM Air Filter (Critial Alert State) -->
+<tr class="hover:bg-surface-container-low transition-colors group bg-error-container/10">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded bg-surface-container overflow-hidden flex-shrink-0 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-2xl">air</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-error">KTM-6030-1002</span>
+<span class="bg-error-container text-on-error-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-bold">KTM Genuine</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight font-semibold">Filtro de Aire KTM Adventure 1290 R / S</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-xs text-label-xs text-secondary">Categoría: Filtros</span>
+<span class="text-secondary">•</span>
+<span class="font-label-xs text-label-xs text-error font-semibold">Stock cerca al mínimo operativo</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shelves</span>
+<span class="bg-surface-container px-space-xs py-space-2xs rounded text-on-surface font-semibold">C-03-01</span>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-0.5">Pasillo C • Est. 03</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<div class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-error">6 <span class="font-label-xs text-label-xs font-normal text-secondary">UN</span></div>
+<span class="font-label-xs text-label-xs text-error font-medium">Mínimo: 5 UN</span>
+</td>
+<td class="py-space-md px-space-sm text-right">
+<span class="font-label-xs text-label-xs text-secondary block">Costo: $52.00 USD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$76.00 USD</span>
+<span class="font-label-xs text-label-xs text-secondary block">$304,000 COP</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="font-label-xs text-label-xs bg-error-container text-on-error-container px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                    Alerta Reponer
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-error text-on-error font-label-xs text-label-xs px-space-sm py-space-xs rounded inline-flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-xs">add_shopping_cart</span>
+<span>Pedir</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between font-label-xs text-label-xs text-secondary">
+<div class="flex items-center gap-space-md">
+<span>Mostrando 6 de 2,418 referencias</span>
+<div class="flex items-center gap-space-xs">
+<span>Filas por pág:</span>
+<span class="bg-surface-container-lowest px-space-xs py-0.5 rounded text-on-surface font-semibold">10</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface font-semibold" type="button">1</button>
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary" type="button">2</button>
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary" type="button">3</button>
+<span class="px-space-xs py-1">…</span>
+<button class="px-space-xs py-1 rounded hover:bg-surface-container text-secondary" type="button">242</button>
+</div>
+</div>
+</div>
+<!-- Section: Recent Kardex Movements with Photographic Dispatch Vouchers -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-lg">receipt_long</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Últimos Movimientos Kardex con Soporte Fotográfico</h2>
+<p class="font-body-sm text-body-sm text-secondary">Trazabilidad física de descargo y remisiones de entrega a mecánicos en taller</p>
+</div>
+</div>
+<button class="text-tertiary font-label-xs text-label-xs font-semibold hover:underline flex items-center gap-1" type="button">
+<span>Ver historial completo</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+<div class="p-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Movement 1: Linked to OT-1048 -->
+<div class="p-space-md rounded bg-surface-container-low/70 flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs bg-error-container text-on-error-container px-space-xs py-space-2xs rounded font-bold uppercase">Salida OT</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">OT-1048 (KTM 1290 Super Adv)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-1">1x Kit Filtro Aceite OEM KTM (SKU: KTM-6030-8015)</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">Despachado por: <strong>Jorge Morales</strong> (Jefe Almacén) • Receptor: <strong>Andrés López</strong> (Técnico Bahía 04)</span>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-xs text-label-xs text-secondary block">Hoy, 10:42 AM</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-primary-container">-$31.25 USD</span>
+</div>
+</div>
+<!-- Photographic Proof Strip -->
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Physical paper workshop repair order voucher OT-1048 signed with blue ballpoint pen placed over the sealed orange KTM parts box on shop counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsQoxFbDu9t8m1kqg1dfPIA7ywozdZCKDVHLvyUtVBfn6K_dgnawn0oZvqRiiZi4tjN7Y6WHeTCY0VUKrEjtpYGsObhXe_yKdmnZduev3c30es2eqP87Ssjz7BQR8W2OJNithtapfmWMWEIyzSbg3_6sBSNgZhPCHPH8K6hP7nScfG8oe-fw9CafI8eNM01yUTIum0saxdee5N3AROGapWEELzmK35xtsEx0Dzx0UURFJ1qBAasKm7"/>
+</div>
+<div>
+<span class="font-label-xs text-label-xs font-semibold text-on-surface block">Comprobante Físico Firmado</span>
+<span class="font-label-xs text-label-xs text-tertiary block">REM-OT-1048-DESP.JPG</span>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-on-surface font-label-xs text-label-xs px-space-xs py-1 rounded transition-colors flex items-center gap-1" onclick="toggleOemModal(true, 3)" type="button">
+<span class="material-symbols-outlined text-xs">zoom_in</span>
+<span>Auditar</span>
+</button>
+</div>
+</div>
+<!-- Movement 2: Recent Inbound Supply -->
+<div class="p-space-md rounded bg-surface-container-low/70 flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded font-bold uppercase">Entrada Factura</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">FAC-2024-8841 (Import Motos)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block mt-1">12x Aceite Sintético Motul 7100 4T 10W50</span>
+<span class="font-label-xs text-label-xs text-secondary block mt-0.5">Recibido por: <strong>Jorge Morales</strong> • Precinto de palet verificado</span>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-xs text-label-xs text-secondary block">Ayer, 16:15 PM</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-tertiary">+$186.00 USD</span>
+</div>
+</div>
+<!-- Photographic Proof Strip -->
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Warehouse receiving area showing a wooden pallet with original sealed Motul oil boxes and shipping barcode manifest verified under warehouse fluorescent lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_gIFOuK17nOWaFEFGeq7ti20Y5caalWbsFBFd346p5C-efFnHHCAmgiRfksbCPbidiggLa7xTM2NZFGH4s5b9pXl-HNZAYBzEP7lMlzSPaVZmMgPxcb4JDsfvCYv5C7mZgkEiIynAbH6OEsPYgu7bEKWRhP4fZ_-21az-PZv5D3hjAAwwEjmqldn8k5c3mu-rhysvHzshSnnf7coYthmNkPmBz8kZkcpgblqtHo5jqsn7ejpDEavq"/>
+</div>
+<div>
+<span class="font-label-xs text-label-xs font-semibold text-on-surface block">Foto de Palet &amp; Guía Proveedor</span>
+<span class="font-label-xs text-label-xs text-tertiary block">RECEPCION-PALET-8841.JPG</span>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-on-surface font-label-xs text-label-xs px-space-xs py-1 rounded transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">zoom_in</span>
+<span>Auditar</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: INTERACTIVE TECHNICAL OEM INSPECTION MODAL / DEDICATED AUDIT HUD -->
+<!-- Prototyped and open for SKU: KTM-6030-8015 -->
+<div class="xl:col-span-4 flex flex-col gap-space-md" id="oemModalContainer">
+<div class="bg-surface-container-lowest rounded shadow-lg overflow-hidden flex flex-col">
+<!-- Modal / Panel Header -->
+<div class="p-space-md bg-inverse-surface text-inverse-on-surface flex items-start justify-between">
+<div class="pr-space-xs">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-label-xs text-label-xs bg-primary-container text-on-primary font-bold px-space-xs py-0.5 rounded tracking-wider">OEM INSPECTION HUD</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-primary-fixed-dim">KTM-6030-8015</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-inverse-on-surface font-semibold leading-tight">Kit Filtro Aceite OEM KTM LC8</h3>
+<span class="font-label-xs text-label-xs text-inverse-on-surface/70 block mt-0.5">KTM PowerParts • Original Spare Parts Austria (Mattighofen)</span>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="bg-inverse-surface/80 hover:bg-inverse-surface text-inverse-on-surface/90 hover:text-inverse-on-surface p-space-xs rounded text-xs flex items-center gap-1" title="Descargar Ficha Técnica PDF" type="button">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+</button>
+<button class="bg-inverse-surface/80 hover:bg-error hover:text-on-error text-inverse-on-surface p-space-xs rounded text-xs" onclick="toggleOemModal(false)" title="Minimizar Inspección" type="button">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+<!-- Primary Photo Stage with Zoom Viewport -->
+<div class="relative bg-on-background overflow-hidden group">
+<!-- Main Active Image -->
+<div class="relative w-full h-72 flex items-center justify-center bg-black/40">
+<!-- Simulated 2.5x Zoomable technical view -->
+<img class="w-full h-full object-contain transition-transform duration-300 ease-out transform group-hover:scale-125 cursor-crosshair" data-alt="Macro close-up technical inspection of KTM original oil filter cartridge showing micro-pleated cellulose matrix, wire mesh reinforcement, and Viton rubber sealing ring with Mattighofen factory stamp" id="activeOemImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1oBgrU4KV0doxrlTEtOJFv2U--r-A2KfnhIiI_cN9FDt_P021nXYUfxTuYUcqVpHYk5Vyb72Ig0yljqD3_0i4-0XKNKe16hLVqN12j2qmSqFE0Ki6QTCzQfc7-9nvJakSFHzrxKIVLUXKKT-Ip5ObXNpPuzkZBEMGfOJ7ID-2IUXvyjtRglJ1GWR-LzFNpfu_zjsATJjEaUACiFvWW5_uZA7vPd_fGGirFXYc8WCgUtXeS_vzwf7s"/>
+<!-- Zoom & View HUD Indicators -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs bg-inverse-surface/90 text-inverse-on-surface px-space-xs py-1 rounded font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-xs text-primary-container">search</span>
+<span id="zoomMultiplierLabel">Zoom: 2.5x Dinámico</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-space-2xs bg-inverse-surface/90 text-inverse-on-surface px-space-xs py-1 rounded font-label-xs text-label-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span id="viewStatusLabel">1920x1080 WebP</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm bg-inverse-surface/85 backdrop-blur-sm p-space-xs rounded text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary-container">lens_blur</span>
+<span class="font-label-xs text-label-xs font-semibold" id="activeViewTitle">Toma 1: Cartucho microplegado celulosa &amp; tamiz de bronce</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-5 h-5 flex items-center justify-center bg-surface-container-high/30 hover:bg-surface-container-high/60 rounded text-xs text-inverse-on-surface" onclick="adjustZoom(-0.5)" type="button">-</button>
+<button class="w-5 h-5 flex items-center justify-center bg-surface-container-high/30 hover:bg-surface-container-high/60 rounded text-xs text-inverse-on-surface" onclick="adjustZoom(0.5)" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Angle View Selectors (4 Views) -->
+<div class="p-space-sm bg-surface-container-low flex items-center gap-space-xs overflow-x-auto">
+<button class="oem-thumb-btn flex-1 min-w-[70px] bg-surface-container-lowest p-space-2xs rounded shadow-sm hover:opacity-100 transition-all text-left" onclick="switchView(0)" type="button">
+<span class="block font-label-xs text-label-xs text-[10px] text-secondary">TOMA 1</span>
+<span class="font-label-xs text-label-xs text-primary font-bold truncate block">Cartucho</span>
+</button>
+<button class="oem-thumb-btn flex-1 min-w-[70px] bg-surface-container-lowest opacity-70 p-space-2xs rounded hover:opacity-100 transition-all text-left" onclick="switchView(1)" type="button">
+<span class="block font-label-xs text-label-xs text-[10px] text-secondary">TOMA 2</span>
+<span class="font-label-xs text-label-xs text-on-surface font-semibold truncate block">Caja OEM</span>
+</button>
+<button class="oem-thumb-btn flex-1 min-w-[70px] bg-surface-container-lowest opacity-70 p-space-2xs rounded hover:opacity-100 transition-all text-left" onclick="switchView(2)" type="button">
+<span class="block font-label-xs text-label-xs text-[10px] text-secondary">TOMA 3</span>
+<span class="font-label-xs text-label-xs text-on-surface font-semibold truncate block">O-Rings Vitón</span>
+</button>
+<button class="oem-thumb-btn flex-1 min-w-[70px] bg-surface-container-lowest opacity-70 p-space-2xs rounded hover:opacity-100 transition-all text-left" onclick="switchView(3)" type="button">
+<span class="block font-label-xs text-label-xs text-[10px] text-secondary">SOPORTE</span>
+<span class="font-label-xs text-label-xs text-on-surface font-semibold truncate block">Remisión OT</span>
+</button>
+</div>
+<!-- Warehouse Verification & Inspection Checkpoints -->
+<div class="p-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Checkpoints Section -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Protocolo de Inspección Almacén</span>
+<span class="font-label-xs text-label-xs text-tertiary font-semibold">3/3 Válidos</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="flex items-center gap-space-sm p-space-xs rounded bg-surface-container-low/60 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container rounded focus:ring-0" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-on-surface block">Troquel de Fábrica KTM 6030-8015</span>
+<span class="font-label-xs text-label-xs text-secondary">Grabado en láser visible en la tapa superior de aleación</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs rounded bg-surface-container-low/60 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container rounded focus:ring-0" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-on-surface block">Kit O-rings de Vitón Completo</span>
+<span class="font-label-xs text-label-xs text-secondary">2x Vitón Negro (39x2.5mm) + 1x Verde Alta Temp</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs rounded bg-surface-container-low/60 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary-container rounded focus:ring-0" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-on-surface block">Holograma Mattighofen Sin Romper</span>
+<span class="font-label-xs text-label-xs text-secondary">Sello termoactivado sobre caja Ready to Race</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Stock & Shelf Location Details -->
+<div class="p-space-sm bg-surface-container-low rounded">
+<div class="grid grid-cols-2 gap-space-sm text-left">
+<div>
+<span class="font-label-xs text-label-xs text-secondary block">Stock en Sede Central</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">14 UN</span>
+<span class="font-label-xs text-label-xs text-tertiary block">Reservadas: 2 (OT-1051)</span>
+</div>
+<div>
+<span class="font-label-xs text-label-xs text-secondary block">Gaveta / Bin</span>
+<span class="font-label-md text-label-md text-primary font-bold block">Pasillo C-04-12</span>
+<span class="font-label-xs text-label-xs text-secondary block">Capacidad Bin: 25 UN</span>
+</div>
+</div>
+</div>
+<!-- Action Footers -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md py-space-xs rounded flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">local_shipping</span>
+<span>Despachar a Bahía</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors" type="button">
+              Historial
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Technical OEM Photo Gallery Views Store
+  const oemViews = [
+    {
+      title: "Toma 1: Cartucho microplegado celulosa & tamiz de bronce",
+      resolution: "1920x1080 WebP",
+      desc: "Cartucho principal con estructura de flujo invertido y sellos vulcanizados de fábrica KTM Mattighofen"
+    },
+    {
+      title: "Toma 2: Empaque original Ready to Race con holograma",
+      resolution: "2048x1536 WebP",
+      desc: "Caja de cartón sellada de fábrica con holograma de seguridad de autenticidad Austria"
+    },
+    {
+      title: "Toma 3: Kit O-rings de Vitón 39x2.5mm y tamiz lateral",
+      resolution: "1920x1080 WebP",
+      desc: "Inspección macro de los dos anillos Vitón resistentes a hidrocarburos y junta de tapa embrague"
+    },
+    {
+      title: "Soporte: Comprobante Físico de Despacho Almacén OT-1048",
+      resolution: "1600x1200 WebP",
+      desc: "Firma autógrafa de recepción por el técnico Andrés López en Bahía 04 para revisión de los 15,000 km"
+    }
+  ];
+
+  let currentZoom = 2.5;
+
+  function switchView(index) {
+    const titleEl = document.getElementById("activeViewTitle");
+    const statusEl = document.getElementById("viewStatusLabel");
+    const imgEl = document.getElementById("activeOemImage");
+    const buttons = document.querySelectorAll(".oem-thumb-btn");
+
+    if (oemViews[index]) {
+      titleEl.innerText = oemViews[index].title;
+      statusEl.innerText = oemViews[index].resolution;
+
+      // Update button highlights
+      buttons.forEach((btn, idx) => {
+        if (idx === index) {
+          btn.classList.remove("opacity-70");
+          btn.classList.add("shadow-sm");
+        } else {
+          btn.classList.add("opacity-70");
+          btn.classList.remove("shadow-sm");
+        }
+      });
+    }
+  }
+
+  function adjustZoom(delta) {
+    currentZoom = Math.min(Math.max(1.0, currentZoom + delta), 4.0);
+    const zoomLabel = document.getElementById("zoomMultiplierLabel");
+    const imgEl = document.getElementById("activeOemImage");
+    
+    if (zoomLabel) {
+      zoomLabel.innerText = "Zoom: " + currentZoom.toFixed(1) + "x";
+    }
+    if (imgEl) {
+      imgEl.style.transform = "scale(" + currentZoom + ")";
+    }
+  }
+
+  function toggleOemModal(show, viewIndex = 0) {
+    const modal = document.getElementById("oemModalContainer");
+    if (modal) {
+      if (show) {
+        modal.classList.remove("hidden");
+        switchView(viewIndex);
+      } else {
+        modal.classList.add("hidden");
+      }
+    }
+  }
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer></body></html>

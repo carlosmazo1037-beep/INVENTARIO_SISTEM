@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#3f465c","surface-dim":"#cbdbf5","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","surface-container-low":"#eff4ff","on-tertiary-fixed":"#001d31","surface-variant":"#d3e4fe","primary-fixed-dim":"#ffb690","surface-container-lowest":"#ffffff","background":"#f8f9ff","surface-bright":"#f8f9ff","on-tertiary":"#ffffff","inverse-surface":"#213145","secondary":"#565e74","secondary-container":"#dae2fd","on-background":"#0b1c30","surface-container":"#e5eeff","error":"#ba1a1a","secondary-fixed-dim":"#bec6e0","outline-variant":"#e0c0b1","primary-fixed":"#ffdbca","inverse-primary":"#ffb690","inverse-on-surface":"#eaf1ff","on-primary-container":"#582200","on-surface-variant":"#584237","on-primary-fixed":"#341100","on-secondary-fixed":"#131b2e","outline":"#8c7164","surface":"#f8f9ff","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a","surface-tint":"#9d4300","on-error-container":"#93000a","on-tertiary-fixed-variant":"#004b73","on-secondary":"#ffffff","error-container":"#ffdad6","primary-container":"#f97316","on-error":"#ffffff","tertiary-container":"#40a2e7","on-primary-fixed-variant":"#783200","primary":"#9d4300","on-primary":"#ffffff","on-surface":"#0b1c30","tertiary":"#006398","on-tertiary-container":"#003655","tertiary-fixed":"#cce5ff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter":"1rem","gutter-dense":"0.5rem","space-md":"0.75rem","margin-mobile":"0.75rem","space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-lg":"1rem","margin":"1.5rem","space-2xs":"0.125rem"},fontFamily:{"body-sm":["Inter"],"body-md":["Inter"],"tabular-mono-lg":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"tabular-mono-md":["Inter"],"headline-xl":["Inter"],"headline-md":["Inter"],"label-xs":["Inter"],"label-md":["Inter"],"display-lg":["Inter"],"display-lg-mobile":["Inter"]},fontSize:{"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"tabular-mono-lg":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"tabular-mono-md":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"500"}],"headline-xl":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-xs":["10px",{lineHeight:"14px",letterSpacing:"0.05em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col"><span class="font-headline-md text-headline-md leading-none text-on-surface">MotoPro</span><span class="font-label-xs text-label-xs tracking-wider uppercase text-secondary">Workshop ERP</span></div></div><span class="px-space-xs py-space-2xs rounded bg-surface-container-high font-label-xs text-label-xs text-secondary">v2.4</span></div><div class="px-space-lg pt-space-lg pb-space-xs"><span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-md" data-path="dashboard-&-caja-pos" href="#"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span>Dashboard & Caja POS</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="inventario-&-movimientos" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Inventario & Movimientos</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="taller-&-órdenes" href="#"><span class="material-symbols-outlined text-[18px]">two_wheeler</span><span>Taller & Órdenes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="clientes-&-proveedores" href="#"><span class="material-symbols-outlined text-[18px]">contacts</span><span>Clientes & Proveedores</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="facturación-&-finanzas" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span>Facturación & Finanzas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuración-&-sedes" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Configuración & Sedes</span></a></nav></div><div class="p-space-sm bg-surface-container-lowest"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Terminal POS</span><span class="inline-flex items-center gap-space-2xs text-[11px] font-bold text-on-surface"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Online</span></div><div class="flex items-center justify-between text-secondary font-label-xs text-label-xs"><span>Epson TM-T20</span><span class="font-tabular-mono-md text-tabular-mono-md text-on-surface">80mm USB</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low cursor-pointer"><span class="material-symbols-outlined text-[18px] text-primary">store</span><div class="flex flex-col text-left"><span class="font-label-xs text-label-xs text-secondary leading-tight">Sede Activa</span><span class="font-label-md text-label-md text-on-surface leading-tight">Sede Central - Taller Norte</span></div><span class="material-symbols-outlined text-[16px] text-secondary ml-space-xs">expand_more</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-[18px] text-on-surface">payments</span><span class="font-label-xs text-label-xs text-secondary">Caja Turno #04:</span><span class="font-label-md text-label-md text-on-surface font-semibold">ABIERTA</span><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse ml-space-2xs"></span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-secondary pointer-events-none">search</span><input class="w-80 h-9 pl-9 pr-space-sm rounded bg-surface-container-low text-on-surface placeholder:text-secondary font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest shadow-[0_1px_2px_rgba(0,0,0,0.05)]" placeholder="Buscar OT, Chasis/VIN, SKU o Cliente (Ctrl+K)..." type="text"/></div><div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container-low"><span class="material-symbols-outlined text-[18px] text-tertiary">barcode_scanner</span><span class="font-label-xs text-label-xs uppercase font-bold text-tertiary">HID Scan Ready</span></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-none">Carlos M.</span><span class="font-label-xs text-label-xs text-secondary leading-none mt-1">Jefe de Taller</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XGH2JZwq0yw-ueAZDBjoHLlC6xa_gKOeccBO2SCLr0ywaLkYYqM3qezx_n_a0LfBNFBMsDaZZMcJr8SdiTp7LAWBeqLfXOnyN7gqTQKnb_EAOEeyYNRCu2aQ3rUaYs7KKvwydIBLG4wNrQ4TAGQlxSEBm0xLMx2yBXDhR3w8LK_2rgXIwV5DSDdVtoTL9wIrYiaPFc_h9zIQt_4lxQdeg6ncYXHb-S59OEFpjVelIkTcKTiper7UMJ3_0"/></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-header / Command Bar (Tooling & State) -->
+<div class="w-full bg-surface-container-lowest px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-sm sticky top-14 z-30">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Breadcrumb Path -->
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="hover:text-primary cursor-pointer transition-colors">Órdenes de Trabajo</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-md text-label-md text-on-surface">OT-1048</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Liquidación POS</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-bold">Tirilla Térmica 80mm</span>
+</div>
+<div class="h-4 w-px bg-surface-container-high hidden sm:block"></div>
+<!-- Hardware Device Status Chip -->
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">print</span>
+<span class="font-label-md text-label-md font-semibold">Epson TM-T20III</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary ml-1">LAN 192.168.1.150:9100</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">payments</span>
+<span class="font-label-xs text-label-xs text-secondary uppercase font-bold">Gaveta RJ11 Lista</span>
+</div>
+</div>
+<!-- Quick Terminal Action Bar -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all shadow-sm active:scale-95" id="btnPrintTicket">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Imprimir Tirilla (Ctrl+P)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-inverse-surface text-inverse-on-surface font-label-md text-label-md hover:opacity-90 transition-all" id="btnOpenDrawer">
+<span class="material-symbols-outlined text-[18px]">eject</span>
+<span>Abrir Gaveta (F9)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+<span>Copia Cliente</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>DIAN A4</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-emerald-700 font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp</span>
+</button>
+<div class="h-6 w-px bg-surface-container-high"></div>
+<!-- Font density toggle -->
+<div class="flex items-center rounded bg-surface-container p-0.5">
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-primary font-label-xs text-label-xs font-bold shadow-xs" id="btnFontA">Font A (48c)</button>
+<button class="px-space-xs py-1 rounded text-secondary font-label-xs text-label-xs hover:text-on-surface" id="btnFontB">Font B (64c)</button>
+</div>
+</div>
+</div>
+<!-- Main Split Canvas: Dual-Pane Architecture -->
+<div class="w-full px-space-lg py-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT PANEL: Realistic 80mm Thermal Receipt Simulation -->
+<div class="lg:col-span-7 xl:col-span-7 flex flex-col items-center">
+<!-- Workshop Workpad Plinth -->
+<div class="w-full max-w-[440px] bg-inverse-surface rounded-xl p-space-md sm:p-space-lg shadow-xl relative overflow-hidden flex flex-col items-center">
+<!-- Ambient Top Illumination Bar / Laser Guidemark -->
+<div class="w-full flex items-center justify-between pb-space-sm text-surface-container-low font-label-xs text-label-xs border-b border-surface-container-highest/20 mb-space-sm">
+<div class="flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-tabular-mono-md text-tabular-mono-md">EPSON ESC/POS SIMULATOR - 80mm FEED</span>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-surface-dim">DPI: 203 • ESC @</span>
+</div>
+<!-- The Thermal Paper Roll Sheet -->
+<div class="w-[370px] bg-surface-container-lowest text-slate-900 shadow-2xl relative font-mono select-text transition-all duration-200" id="thermalReceipt">
+<!-- Guillotine Cutter Teeth Notch Visual -->
+<div class="w-full h-3 bg-surface-container-lowest relative overflow-hidden flex items-center">
+<svg class="w-full h-3 text-inverse-surface" fill="currentColor" preserveaspectratio="none" viewbox="0 0 370 12">
+<polygon points="0,0 10,12 20,0 30,12 40,0 50,12 60,0 70,12 80,0 90,12 100,0 110,12 120,0 130,12 140,0 150,12 160,0 170,12 180,0 190,12 200,0 210,12 220,0 230,12 240,0 250,12 260,0 270,12 280,0 290,12 300,0 310,12 320,0 330,12 340,0 350,12 360,0 370,12 370,0"></polygon>
+</svg>
+</div>
+<!-- Paper Receipt Padding Area -->
+<div class="px-space-md py-space-sm text-[11px] leading-[15px] font-mono tracking-tight text-neutral-900">
+<!-- Header Section -->
+<div class="text-center flex flex-col items-center">
+<!-- ASCII / Monospace Brand Symbol -->
+<div class="font-black text-center text-[12px] tracking-widest leading-none pt-1">
+                ===============================<br/>
+                [ ★ MOTOPRO WORKSHOP S.A.S. ★ ]<br/>
+                ===============================
+              </div>
+<div class="font-bold text-[13px] mt-1 text-black tracking-normal">SERVICIO ESPECIALIZADO DE MOTOS</div>
+<div class="text-[10px] text-neutral-700">NIT: 901.482.391-4 • IVA Régimen Común</div>
+<div class="text-[10px] text-neutral-700">Sede Principal Calle 80 #68G-12 • Bogotá D.C.</div>
+<div class="text-[10px] text-neutral-700">PBX: (601) 745-9200 • WhatsApp: +57 310 999 8877</div>
+<div class="w-full my-1.5 border-t border-dashed border-neutral-400"></div>
+<div class="font-bold text-[11px] text-black">FACTURA ELECTRÓNICA DE VENTA</div>
+<div class="font-bold text-[13px] bg-neutral-100 px-2 py-0.5 rounded">FE-89240</div>
+<div class="text-[9px] text-neutral-600 mt-0.5">Res. DIAN No. 18764039281746 (12/01/2023)</div>
+<div class="text-[9px] text-neutral-600">Rango: FE-80000 hasta FE-100000 Vig: 24 meses</div>
+</div>
+<!-- Metadata Table -->
+<div class="w-full my-1.5 border-t border-dashed border-neutral-400"></div>
+<div class="space-y-0.5 text-[10.5px]">
+<div class="flex justify-between">
+<span class="text-neutral-600">EMISIÓN:</span>
+<span class="font-semibold">14/10/2023 17:36:12</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">CAJA / TURNO:</span>
+<span>POS-01 (Tarde) | Caj: L. Gómez</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">CLIENTE:</span>
+<span class="font-bold uppercase">Roberto Valencia Ospina</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">C.C. / NIT:</span>
+<span>1.020.458.902-8 (Tel: 312 458 9021)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">ORDEN TALLER:</span>
+<span class="font-bold bg-neutral-100 px-1">OT-1048 [Bahía B-04]</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">VEHÍCULO:</span>
+<span class="font-bold">KTM 1290 SUPER ADV S '23</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">PLACA / KM:</span>
+<span class="font-bold">JKL-92D | 11,452 KM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-600">ASESOR / MEC:</span>
+<span>J. Pérez / A. López</span>
+</div>
+</div>
+<!-- Items Table Heading -->
+<div class="w-full my-1.5 border-t-2 border-neutral-900"></div>
+<div class="flex justify-between font-bold text-[10px] text-neutral-800 uppercase tracking-tighter">
+<span class="w-[50%]">DESCRIPCIÓN</span>
+<span class="w-[22%] text-right">CANTxVAL</span>
+<span class="w-[28%] text-right">TOTAL</span>
+</div>
+<div class="w-full my-1 border-t border-neutral-300"></div>
+<!-- Item Rows -->
+<div class="space-y-1.5 text-[10.5px]">
+<!-- Item 1 -->
+<div>
+<div class="font-bold">01 MANTENIMIENTO MAYOR 10K KTM</div>
+<div class="flex justify-between text-neutral-700 text-[10px]">
+<span>2.5 H x $74.00 USD</span>
+<span class="font-bold text-neutral-900">$185.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="font-bold">02 FILTRO ACEITE PRIMARIO KTM OEM</div>
+<div class="flex justify-between text-neutral-600 text-[10px]">
+<span>1.0 UND x $42.50</span>
+<span>$42.50</span>
+</div>
+<div class="flex justify-between text-[9.5px] text-neutral-600 italic">
+<span>- Dcto Club Rider KTM (5%)</span>
+<span>-$2.13</span>
+</div>
+<div class="flex justify-between font-semibold text-neutral-900 text-[10px]">
+<span class="text-neutral-500 pl-2">» Subtotal ítem</span>
+<span>$40.37</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div>
+<div class="font-bold">03 BUJÍA NGK LASER IRIDIUM (X2)</div>
+<div class="flex justify-between text-neutral-600 text-[10px]">
+<span>2.0 UND x $19.00</span>
+<span>$38.00</span>
+</div>
+<div class="flex justify-between text-[9.5px] text-neutral-600 italic">
+<span>- Dcto Club Rider KTM (5%)</span>
+<span>-$1.90</span>
+</div>
+<div class="flex justify-between font-semibold text-neutral-900 text-[10px]">
+<span class="text-neutral-500 pl-2">» Subtotal ítem</span>
+<span>$36.10</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div>
+<div class="font-bold">04 INSUMO TALLER Y LAVADO MOTOREX</div>
+<div class="flex justify-between text-neutral-600 text-[10px]">
+<span>1.0 GLB x $25.00</span>
+<span class="line-through text-neutral-400">$25.00</span>
+</div>
+<div class="flex justify-between font-semibold text-emerald-800 text-[9.5px]">
+<span class="pl-2">★ CORTESÍA TALLER (100% OFF)</span>
+<span>$0.00</span>
+</div>
+</div>
+</div>
+<!-- Financial Settlement -->
+<div class="w-full my-2 border-t-2 border-dashed border-neutral-900"></div>
+<div class="space-y-0.5 text-[10.5px]">
+<div class="flex justify-between">
+<span class="text-neutral-600">SUBTOTAL BRUTO:</span>
+<span>$289.50 USD</span>
+</div>
+<div class="flex justify-between text-neutral-700">
+<span>TOTAL DESCUENTOS:</span>
+<span>-$28.03 USD</span>
+</div>
+<div class="flex justify-between text-neutral-600">
+<span>BASE GRAVABLE (19%):</span>
+<span>$261.47 USD</span>
+</div>
+<div class="flex justify-between text-neutral-600">
+<span>IMPUESTO IVA (19%):</span>
+<span>$49.68 USD</span>
+</div>
+<div class="w-full my-1 border-t border-neutral-400"></div>
+<!-- Total High Priority -->
+<div class="flex justify-between items-baseline font-black text-[14px] text-neutral-950">
+<span>TOTAL A PAGAR:</span>
+<span>$311.15 USD</span>
+</div>
+<div class="flex justify-between items-baseline font-bold text-[12px] bg-neutral-100 px-1 py-0.5">
+<span>TOTAL COP (TRM $4,001.20):</span>
+<span>$1'245.000 COP</span>
+</div>
+</div>
+<!-- Split Payments Breakdown -->
+<div class="w-full my-2 border-t border-dashed border-neutral-400"></div>
+<div class="font-bold text-[10px] text-neutral-900 uppercase">FORMAS DE PAGO LIQUIDADAS:</div>
+<div class="space-y-1 text-[10px] mt-1">
+<div class="flex justify-between font-medium">
+<span>[1] TARJETA DÉBITO VISA (..4821)</span>
+<span class="font-bold">$200.00 USD</span>
+</div>
+<div class="text-[9px] text-neutral-600 pl-4">Aprobación Redeban: #883912 • RRN 029381</div>
+<div class="flex justify-between font-medium">
+<span>[2] EFECTIVO CAJA REGISTRADORA</span>
+<span class="font-bold">$111.15 USD</span>
+</div>
+<div class="flex justify-between text-[9px] text-neutral-600 pl-4">
+<span>Recibido: $120.00 USD</span>
+<span class="font-semibold text-neutral-900">Cambio: $8.85 (COP $35.400)</span>
+</div>
+</div>
+<!-- DIAN Fiscal CUFE & QR Block -->
+<div class="w-full my-2 border-t-2 border-neutral-900"></div>
+<div class="flex gap-2 items-center">
+<!-- Inline High Density Fiscal QR Representation -->
+<div class="w-16 h-16 bg-neutral-950 p-1 rounded-none flex-shrink-0 flex items-center justify-center text-white">
+<svg class="w-full h-full text-white" fill="currentColor" viewbox="0 0 33 33">
+<!-- QR Finder Top Left -->
+<rect fill="currentColor" height="9" width="9" x="0" y="0"></rect>
+<rect fill="#ffffff" height="6" width="6" x="1.5" y="1.5"></rect>
+<rect fill="currentColor" height="3" width="3" x="3" y="3"></rect>
+<!-- QR Finder Top Right -->
+<rect fill="currentColor" height="9" width="9" x="24" y="0"></rect>
+<rect fill="#ffffff" height="6" width="6" x="25.5" y="1.5"></rect>
+<rect fill="currentColor" height="3" width="3" x="27" y="3"></rect>
+<!-- QR Finder Bottom Left -->
+<rect fill="currentColor" height="9" width="9" x="0" y="24"></rect>
+<rect fill="#ffffff" height="6" width="6" x="1.5" y="25.5"></rect>
+<rect fill="currentColor" height="3" width="3" x="3" y="27"></rect>
+<!-- Data Dots Matrix -->
+<rect height="2" width="2" x="11" y="2"></rect>
+<rect height="2" width="3" x="15" y="1"></rect>
+<rect height="2" width="2" x="20" y="3"></rect>
+<rect height="2" width="3" x="12" y="6"></rect>
+<rect height="3" width="2" x="18" y="7"></rect>
+<rect height="3" width="2" x="4" y="11"></rect>
+<rect height="2" width="3" x="8" y="13"></rect>
+<rect height="4" width="4" x="13" y="11"></rect>
+<rect height="2" width="2" x="20" y="12"></rect>
+<rect height="2" width="3" x="25" y="11"></rect>
+<rect height="3" width="2" x="29" y="13"></rect>
+<rect height="2" width="3" x="2" y="17"></rect>
+<rect height="2" width="2" x="7" y="18"></rect>
+<rect height="4" width="2" x="11" y="17"></rect>
+<rect height="2" width="4" x="16" y="18"></rect>
+<rect height="2" width="3" x="23" y="17"></rect>
+<rect height="3" width="2" x="28" y="18"></rect>
+<rect height="2" width="3" x="11" y="24"></rect>
+<rect height="3" width="2" x="16" y="23"></rect>
+<rect height="2" width="3" x="20" y="25"></rect>
+<rect height="2" width="2" x="25" y="24"></rect>
+<rect height="3" width="3" x="29" y="26"></rect>
+<rect height="3" width="2" x="12" y="28"></rect>
+<rect height="2" width="3" x="17" y="29"></rect>
+<rect height="2" width="2" x="22" y="28"></rect>
+</svg>
+</div>
+<div class="flex-1 text-[8.5px] leading-tight text-neutral-600">
+<span class="font-bold text-neutral-900">CUFE DIAN:</span><br/>
+<span class="break-all font-mono text-[8px]">fe4b89a29d81745ca7b330198cd92b451992aa90172e90f671c</span><br/>
+<span class="mt-0.5 block text-neutral-500">Documento electrónico validado por el sistema de Facturación DIAN. Proveedor Tecnológico: MotoPro Cloud ERP</span>
+</div>
+</div>
+<!-- Guarantee Policy -->
+<div class="w-full my-2 border-t border-neutral-300"></div>
+<div class="text-[9px] leading-[13px] text-neutral-700 text-center">
+<span class="font-bold text-black uppercase">Póliza de Garantía Taller:</span> 6 MESES O 5,000 KM en repuestos y servicio técnico calificado.<br/>
+<span class="italic text-neutral-500">Piezas sustituidas devueltas en empaque precinto #PK-1048.</span>
+</div>
+<!-- Partial Tear ESC/POS Cut Line -->
+<div class="relative my-3 flex items-center justify-center">
+<div class="w-full border-t border-dashed border-neutral-500"></div>
+<span class="absolute bg-surface-container-lowest px-2 text-[8px] font-bold tracking-widest text-neutral-500 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">content_cut</span> CORTE PARCIAL ESC/POS
+              </span>
+</div>
+<!-- Gate Pass Stub (Pase de Salida de Vigilancia) -->
+<div class="bg-neutral-50 p-2 border border-neutral-300">
+<div class="flex items-center justify-between">
+<span class="font-black text-[11px] text-neutral-900 tracking-wider">PASE DE SALIDA - GARITA</span>
+<span class="font-bold text-[9px] bg-neutral-900 text-white px-1 py-0.5">VIGILANCIA</span>
+</div>
+<div class="mt-1 space-y-0.5 text-[9.5px]">
+<div class="flex justify-between">
+<span class="text-neutral-500">MOTO:</span>
+<span class="font-bold">KTM 1290 ADV S</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-500">PLACA:</span>
+<span class="font-black text-[12px] text-black">JKL-92D</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-500">RETIRO AUTORIZADO:</span>
+<span class="font-medium">Roberto Valencia</span>
+</div>
+<div class="flex justify-between">
+<span class="text-neutral-500">CAJA ESTADO:</span>
+<span class="text-emerald-800 font-bold uppercase">PAGADO TOTAL 100% OK</span>
+</div>
+</div>
+<!-- Barcode CODE128 visual simulation -->
+<div class="mt-2 text-center flex flex-col items-center">
+<div class="h-9 w-full flex items-stretch justify-center gap-[2px] bg-surface-container-lowest px-2 py-1">
+<!-- Barcode stripes sequence -->
+<span class="w-[2px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[4px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[4px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[4px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[4px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[3px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+<span class="w-[1px] bg-black"></span>
+<span class="w-[4px] bg-black"></span>
+<span class="w-[2px] bg-black"></span>
+</div>
+<span class="font-mono text-[9px] tracking-widest text-neutral-800 font-bold mt-0.5">*OT1048-FE89240-OK*</span>
+</div>
+<!-- Stamp graphic -->
+<div class="mt-2 flex items-center justify-between text-[8px] text-neutral-500">
+<span>Válido solo: 14/10/2023</span>
+<span class="border border-neutral-800 text-neutral-800 font-bold px-1 uppercase tracking-tighter">PORTERÍA TALLER NORTE</span>
+</div>
+</div>
+<!-- Bottom Paper Feed Spacing -->
+<div class="h-6"></div>
+</div>
+<!-- Bottom Jagged Tear Edge -->
+<div class="w-full h-3 bg-surface-container-lowest relative overflow-hidden flex items-center">
+<svg class="w-full h-3 text-inverse-surface rotate-180" fill="currentColor" preserveaspectratio="none" viewbox="0 0 370 12">
+<polygon points="0,0 10,12 20,0 30,12 40,0 50,12 60,0 70,12 80,0 90,12 100,0 110,12 120,0 130,12 140,0 150,12 160,0 170,12 180,0 190,12 200,0 210,12 220,0 230,12 240,0 250,12 260,0 270,12 280,0 290,12 300,0 310,12 320,0 330,12 340,0 350,12 360,0 370,12 370,0"></polygon>
+</svg>
+</div>
+</div>
+<!-- Terminal Paper Roll Metric Pill -->
+<div class="mt-space-md flex items-center gap-space-md text-surface-container-low font-label-xs text-label-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">straighten</span> Longitud: 312 mm
+          </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> Tiempo impresión: 0.84s
+          </span>
+<span>•</span>
+<span class="text-emerald-400 font-semibold">Ready to Feed</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Hardware Controls & Epson ESC/POS Settings -->
+<div class="lg:col-span-5 xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Card 1: ESC/POS Thermal Driver Controller -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">settings_ethernet</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Configuración Epson ESC/POS</h2>
+<p class="font-body-sm text-body-sm text-secondary">Control de hardware POS y directivas térmicas directas</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-emerald-50 text-emerald-700 font-label-xs text-label-xs font-bold uppercase">Online 2ms</span>
+</div>
+<!-- Port & Device Specs -->
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div>
+<span class="font-label-xs text-label-xs text-secondary uppercase font-semibold">Modelo Activo</span>
+<div class="font-label-md text-label-md text-on-surface font-bold">Epson TM-T20III (80mm)</div>
+<div class="font-body-sm text-body-sm text-secondary">Emulación ESC/POS Nativa</div>
+</div>
+<div>
+<span class="font-label-xs text-label-xs text-secondary uppercase font-semibold">Enlace / Host</span>
+<div class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-bold">TCP 192.168.1.150</div>
+<div class="font-body-sm text-body-sm text-secondary">Puerto RAW 9100 / USB 01</div>
+</div>
+</div>
+<!-- Thermal Density & Quality -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface">Densidad Térmica (Head Heating)</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-primary">100% (Normal High Contrast)</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[80%] rounded-full"></div>
+</div>
+<div class="flex justify-between text-secondary font-label-xs text-label-xs">
+<span>80% Eco</span>
+<span>100% Estándar</span>
+<span>120% Resalte Gráfico</span>
+</div>
+</div>
+<!-- ESC/POS Mechanical Checkboxes -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary font-bold">Directivas de Secuencia de Impresión</span>
+<label class="flex items-center gap-space-sm cursor-pointer p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Corte Guillotina Automático (GS V 66 0)</span>
+<span class="font-body-sm text-body-sm text-secondary">Ejecuta corte parcial dejando 2mm para fácil extracción manual.</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Apertura Automática de Gaveta (DLE DC4 1)</span>
+<span class="font-body-sm text-body-sm text-secondary">Pulso de 24V al puerto RJ11 al confirmar recibo en efectivo o mixto.</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Incluir Pase de Portería Desprendible</span>
+<span class="font-body-sm text-body-sm text-secondary">Añade talón con código de barras para verificación de salida de vehículo.</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer p-space-xs rounded hover:bg-surface-container-low transition-colors">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Imprimir Copia Contable Auditoría</span>
+<span class="font-body-sm text-body-sm text-secondary">Duplica ticket con marca de agua "COPIA CONTABILIDAD".</span>
+</div>
+</label>
+</div>
+<!-- Hardware Pulse Buttons -->
+<div class="pt-space-sm border-t border-surface-container-high flex flex-wrap gap-space-sm">
+<button class="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all active:scale-95" id="btnTestCut">
+<span class="material-symbols-outlined text-[16px]">content_cut</span>
+<span>Test Corte</span>
+</button>
+<button class="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all active:scale-95" id="btnTestPulse">
+<span class="material-symbols-outlined text-[16px]">point_of_sale</span>
+<span>Test Gaveta</span>
+</button>
+<button class="flex items-center justify-center px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high text-secondary hover:text-on-surface font-label-md text-label-md transition-colors" title="Ver volcado hexadecimal ESC/POS">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Visual Customer & Vehicle Context Summary -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase font-bold text-secondary">Vehículo Asociado a esta Tirilla</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs font-bold">KTM READY TO RACE</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-20 h-16 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High-end orange and black KTM 1290 Super Adventure S motorcycle parked in a modern clean workshop bay with mechanical tools and diagnostic monitors in the background, sharp professional automotive studio photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcnaiHKIt9-LG-QMJBWiBOm8zLUI5tQXMjSkV6A7bfE2HSH9BPsDLHA8yRxSFvPNT_rNUVz7qvvy84ngUlzj7fQ0Cz0bk_l8REFEM1KPNTxupnT8qteiFi9jqO8QYJmvMqHDyO-hYg9DJXiOStWvrU81dcxjwirpdDCr1cRj_kYGdkztZ-gb2ZbiGCoNbYKV7r2KXGK8275R0UDhvvTfXXQQ5l7ide9CDnST5swvLUOr_JsBPffRL0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate">KTM 1290 Super Adventure S</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-secondary">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-low px-1.5 py-0.5 rounded">JKL-92D</span>
+<span>•</span>
+<span>11,452 km</span>
+<span>•</span>
+<span class="text-primary font-semibold">OT-1048</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate mt-0.5">Titular: Roberto Valencia Ospina</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs border-t border-surface-container-high text-center">
+<div class="bg-surface-container-low p-space-xs rounded">
+<div class="font-label-xs text-label-xs text-secondary">Mano de Obra</div>
+<div class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$185.00</div>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded">
+<div class="font-label-xs text-label-xs text-secondary">Repuestos OEM</div>
+<div class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$76.47</div>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded">
+<div class="font-label-xs text-label-xs text-secondary">IVA + Cargos</div>
+<div class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">$49.68</div>
+</div>
+</div>
+</div>
+<!-- Card 3: POS Audit & Hardware Log Trail -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">Historial de Eventos de Tirilla</span>
+<span class="font-label-xs text-label-xs text-secondary">Auditoría POS en Vivo</span>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0"></span>
+<div class="flex-1 flex justify-between items-baseline">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Ticket Original emitido exitosamente</p>
+<p class="font-label-xs text-label-xs text-secondary">Epson TM-T20III (#01) - 48 col ESC/POS</p>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary text-[11px]">17:36:15</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+<div class="flex-1 flex justify-between items-baseline">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Gaveta monedero abierta por cajero</p>
+<p class="font-label-xs text-label-xs text-secondary">Laura Gómez • Arqueo cambio $8.85 USD</p>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary text-[11px]">17:36:18</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<div class="flex-1 flex justify-between items-baseline">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Pase de salida validado en Garita Norte</p>
+<p class="font-label-xs text-label-xs text-secondary">Lector Opticon Laser - Operador: M. Castro</p>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary text-[11px]">17:37:02</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container (Dynamic Feedback) -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-2xl flex items-center gap-space-sm translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-emerald-400" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold" id="toastTitle">Comando Enviado</span>
+<span class="font-body-sm text-body-sm text-surface-container-high" id="toastBody">Impresión térmica enviada a Epson TM-T20III</span>
+</div>
+</div>
+<script>
+    (function() {
+      // Elements
+      const btnPrint = document.getElementById('btnPrintTicket');
+      const btnDrawer = document.getElementById('btnOpenDrawer');
+      const btnTestCut = document.getElementById('btnTestCut');
+      const btnTestPulse = document.getElementById('btnTestPulse');
+      const btnFontA = document.getElementById('btnFontA');
+      const btnFontB = document.getElementById('btnFontB');
+      const receipt = document.getElementById('thermalReceipt');
+      
+      const toast = document.getElementById('toastNotification');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastBody = document.getElementById('toastBody');
+      const toastIcon = document.getElementById('toastIcon');
+
+      let toastTimer = null;
+
+      function showToast(title, msg, icon = 'check_circle', iconColor = 'text-emerald-400') {
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTitle.textContent = title;
+        toastBody.textContent = msg;
+        toastIcon.textContent = icon;
+        toastIcon.className = `material-symbols-outlined text-[20px] ${iconColor}`;
+        
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        toastTimer = setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 2800);
+      }
+
+      // Font density switches
+      btnFontA.addEventListener('click', () => {
+        btnFontA.className = 'px-space-xs py-1 rounded bg-surface-container-lowest text-primary font-label-xs text-label-xs font-bold shadow-xs';
+        btnFontB.className = 'px-space-xs py-1 rounded text-secondary font-label-xs text-label-xs hover:text-on-surface';
+        receipt.style.width = '370px';
+        receipt.classList.remove('text-[10px]');
+        showToast('Modo Font A Activo', 'Formato estándar 48 columnas (12x24 dots)');
+      });
+
+      btnFontB.addEventListener('click', () => {
+        btnFontB.className = 'px-space-xs py-1 rounded bg-surface-container-lowest text-primary font-label-xs text-label-xs font-bold shadow-xs';
+        btnFontA.className = 'px-space-xs py-1 rounded text-secondary font-label-xs text-label-xs hover:text-on-surface';
+        receipt.style.width = '340px';
+        showToast('Modo Font B Activo', 'Formato condensado 64 columnas (9x17 dots)');
+      });
+
+      // Actions triggers
+      btnPrint.addEventListener('click', () => {
+        // Visual feed animation
+        receipt.style.transform = 'translateY(-4px)';
+        setTimeout(() => { receipt.style.transform = 'translateY(0)'; }, 200);
+        showToast('Imprimiendo Tirilla...', 'Enviando buffer ESC/POS a LAN 192.168.1.150', 'print', 'text-primary-container');
+      });
+
+      btnDrawer.addEventListener('click', () => {
+        showToast('Gaveta Abierta', 'Pulso 24V Pin-2 enviado a gaveta monedero RJ11', 'eject', 'text-amber-400');
+      });
+
+      btnTestCut.addEventListener('click', () => {
+        showToast('Test de Corte Ejecutado', 'Comando GS V 66 0 disparado en cuchilla guillotina', 'content_cut', 'text-sky-400');
+      });
+
+      btnTestPulse.addEventListener('click', () => {
+        showToast('Pulso de Prueba OK', 'Test de solenoide gaveta completado sin errores', 'point_of_sale', 'text-emerald-400');
+      });
+
+      // Keyboard shortcuts listener
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+          e.preventDefault();
+          btnPrint.click();
+        }
+        if (e.key === 'F9') {
+          e.preventDefault();
+          btnDrawer.click();
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>
