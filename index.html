@@ -1,1066 +1,1353 @@
 <!DOCTYPE html>
+<html lang="es" class="h-full bg-[#f8f9ff]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoPro Workshop ERP - Portal & Directorio Interactivo</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316', // MotoPro Orange
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Phosphor Icons & FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .smooth-scroll { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="h-full flex flex-col text-slate-800 bg-[#f8f9ff] smooth-scroll">
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb690","on-error-container":"#93000a","tertiary":"#006398","surface-container-lowest":"#ffffff","surface":"#f8f9ff","primary-fixed":"#ffdbca","outline-variant":"#e0c0b1","primary":"#9d4300","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","surface-tint":"#9d4300","background":"#f8f9ff","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","error-container":"#ffdad6","on-surface-variant":"#584237","inverse-primary":"#ffb690","on-secondary-container":"#5c647a","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","primary-container":"#f97316","on-background":"#0b1c30","on-tertiary-fixed":"#001d31","surface-variant":"#d3e4fe","on-tertiary-container":"#003655","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#783200","surface-container-highest":"#d3e4fe","on-tertiary-fixed-variant":"#004b73","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","tertiary-fixed":"#cce5ff","secondary-fixed-dim":"#bec6e0","tertiary-fixed-dim":"#93ccff","on-tertiary":"#ffffff","secondary":"#565e74","on-surface":"#0b1c30","inverse-surface":"#213145","secondary-fixed":"#dae2fd","surface-container":"#e5eeff","secondary-container":"#dae2fd","on-primary-container":"#582200","on-primary-fixed":"#341100","tertiary-container":"#40a2e7","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem","space-md":"0.75rem","gutter-dense":"0.5rem","space-xs":"0.25rem","space-2xs":"0.125rem","space-lg":"1rem","gutter":"1rem","margin":"1.5rem","margin-mobile":"0.75rem"},"fontFamily":{"display-lg":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"display-lg-mobile":["Inter"],"label-xs":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 flex items-center px-space-lg gap-space-sm bg-surface-container-lowest"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
-- Font: inter
-- Mode: light
-- Roundness: rounded-sm
-. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface leading-tight">MotoPro</span><span class="font-label-xs text-label-xs text-primary font-bold uppercase tracking-wider">Workshop ERP</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface font-medium">Entorno</span></div><select aria-label="Seleccionar entorno de ejecución" class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg px-space-xs py-space-2xs outline-none cursor-pointer"><option value="gh-pages">GitHub Pages</option><option value="local">Local Dev (3000)</option></select></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider font-bold">Directorio Central</span></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="directorio-modulos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Todos los Módulos</span></div><span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-bold">24</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="erp-administracion" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">ERP & Administración</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="taller-bahias" href="#"><span class="material-symbols-outlined text-[18px]">two_wheeler</span><span class="font-body-md text-body-md">Taller & Bahías</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="punto-de-venta-pos" href="#"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span class="font-body-md text-body-md">Punto de Venta & POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="movil-pwa-operarios" href="#"><span class="material-symbols-outlined text-[18px]">smartphone</span><span class="font-body-md text-body-md">Móvil & PWA Operarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="portal-clientes-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-body-md text-body-md">Portal WhatsApp</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentacion-readme" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Documentación & README</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-xs text-label-xs">REPOSITORIO v2.4</span><span class="flex items-center gap-space-2xs font-label-xs text-label-xs text-on-surface font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Producción</span></div><div class="flex items-center gap-space-xs pt-space-xs"><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">code</span>Repo</a><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">download</span>ZIP</a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" placeholder="Buscar módulo, orden, chasis o parte... (Ctrl + K)" type="text"/><kbd class="absolute right-space-sm px-space-xs py-space-2xs bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs rounded shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold">v2.4 Prod</span></div><button aria-label="Estado del sistema sincronizado" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">sync</span></button><button aria-label="Notificaciones y alertas operativas" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button></div><div class="flex items-center gap-space-sm pl-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XGH2JZwq0yw-ueAZDBjoHLlC6xa_gKOeccBO2SCLr0ywaLkYYqM3qezx_n_a0LfBNFBMsDaZZMcJr8SdiTp7LAWBeqLfXOnyN7gqTQKnb_EAOEeyYNRCu2aQ3rUaYs7KKvwydIBLG4wNrQ4TAGQlxSEBm0xLMx2yBXDhR3w8LK_2rgXIwV5DSDdVtoTL9wIrYiaPFc_h9zIQt_4lxQdeg6ncYXHb-S59OEFpjVelIkTcKTiper7UMJ3_0"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold leading-none">Carlos M.</span><span class="font-label-xs text-label-xs text-on-surface-variant font-medium">Jefe de Taller</span></div></div></div></header><main class="flex-1 pt-16 bg-surface w-full px-space-xl py-space-xl"><div class="flex flex-col w-full">
-<!-- BANNER DE ENCABEZADO Y RESUMEN TÉCNICO -->
-<div class="relative w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-xl mb-space-xl overflow-hidden">
-<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-gradient-to-br from-primary-container/10 via-primary-fixed-dim/20 to-transparent pointer-events-none blur-2xl"></div>
-<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
-<div class="max-w-3xl space-y-space-sm">
-<div class="flex flex-wrap items-center gap-space-xs">
-<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs font-bold tracking-wider uppercase">
-<span class="material-symbols-outlined text-[13px]">verified</span> Production Ready v2.4
-          </span>
-<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> 24 Pantallas Disponibles
-          </span>
-<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-medium">
-            DIAN UBL 2.1 Compliant
-          </span>
-<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-medium">
-            ESC/POS 80mm Ready
-          </span>
-<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-medium">
-            Licencia MIT
-          </span>
-</div>
-<div class="pt-space-xs">
-<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
-            🏍️ MotoPro Workshop ERP & POS
-          </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-2xs">
-            Directorio interactivo y showcase centralizado con 24 módulos operativos diseñados para flujos de alta rotación en talleres de motocicletas, terminales de cobro POS y PWA para operarios.
+  <!-- TOP HEADER / NAV -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Brand Logo & Title -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-brand-500/20">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-bold tracking-tight text-slate-900">MotoPro<span class="text-brand-500">ERP</span></span>
+              <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-brand-50 text-brand-600 border border-brand-200">v2.4 Enterprise</span>
+            </div>
+            <p class="text-xs text-slate-500 hidden sm:block">Suite de Taller Mecánico, Kardex & Caja POS Multi-Sede</p>
+          </div>
+        </div>
+
+        <!-- Quick Top Links & Search -->
+        <div class="flex items-center gap-3">
+          <div class="relative hidden md:block">
+            <input 
+              type="text" 
+              id="globalSearchInput" 
+              placeholder="Buscar pantalla o módulo (ej. kardex, arqueo)..." 
+              class="w-64 lg:w-80 pl-9 pr-10 py-1.5 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:bg-white transition-all"
+            >
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+            <span class="absolute right-2.5 top-1.5 text-[10px] text-slate-400 bg-white px-1.5 py-0.5 rounded border border-slate-200 font-mono font-medium">Ctrl+K</span>
+          </div>
+
+          <a href="#swaggerSection" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+            <i class="fa-solid fa-plug text-brand-500"></i>
+            <span>Swagger API</span>
+          </a>
+
+          <button onclick="toggleDocModal(true)" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors shadow-sm">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Docs & Guía</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER (SIDEBAR + CONTENT) -->
+  <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex gap-6">
+
+    <!-- LEFT SIDEBAR / MENU LATERAL -->
+    <aside class="w-64 shrink-0 hidden lg:block">
+      <div class="sticky top-24 bg-white rounded-2xl border border-slate-200 shadow-sm p-4 space-y-6">
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 mb-2">Filtrar por Área</h3>
+          <nav class="space-y-1" id="sidebarNav">
+            <button onclick="filterCategory('all', this)" class="sidebar-btn active w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-900 bg-brand-50 text-brand-600 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-solid fa-border-all text-brand-500 w-4 text-center"></i>
+                <span>Todos los Módulos</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs font-bold rounded-md bg-white border border-brand-200 text-brand-600">24</span>
+            </button>
+
+            <button onclick="filterCategory('erp', this)" class="sidebar-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-solid fa-building-columns text-slate-400 w-4 text-center"></i>
+                <span>ERP & Administración</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-slate-100 text-slate-600">5</span>
+            </button>
+
+            <button onclick="filterCategory('taller', this)" class="sidebar-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-solid fa-wrench text-slate-400 w-4 text-center"></i>
+                <span>Taller & Bahías</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-slate-100 text-slate-600">5</span>
+            </button>
+
+            <button onclick="filterCategory('pos', this)" class="sidebar-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-solid fa-cash-register text-slate-400 w-4 text-center"></i>
+                <span>Punto de Venta & POS</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-slate-100 text-slate-600">7</span>
+            </button>
+
+            <button onclick="filterCategory('mobile', this)" class="sidebar-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-solid fa-mobile-screen text-slate-400 w-4 text-center"></i>
+                <span>Móvil & PWA Operarios</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-slate-100 text-slate-600">2</span>
+            </button>
+
+            <button onclick="filterCategory('whatsapp', this)" class="sidebar-btn w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i class="fa-brands fa-whatsapp text-emerald-500 w-4 text-center"></i>
+                <span>Portal WhatsApp</span>
+              </span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-slate-100 text-slate-600">2</span>
+            </button>
+          </nav>
+        </div>
+
+        <hr class="border-slate-100">
+
+        <!-- Flujos Rápidos por Rol -->
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 mb-2">Recorridos Guiados</h3>
+          <div class="space-y-1.5 text-xs">
+            <a href="desktop/recepcion-inspeccion.html" class="flex items-center gap-2 p-2 rounded-lg text-slate-700 hover:bg-orange-50 hover:text-brand-600 transition-colors">
+              <span class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center font-bold text-[10px]">1</span>
+              <span>Flujo Asesor de Servicio</span>
+            </a>
+            <a href="desktop/ordenes-taller.html" class="flex items-center gap-2 p-2 rounded-lg text-slate-700 hover:bg-orange-50 hover:text-brand-600 transition-colors">
+              <span class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center font-bold text-[10px]">2</span>
+              <span>Flujo Mecánico en Bahía</span>
+            </a>
+            <a href="desktop/dashboard-pos.html" class="flex items-center gap-2 p-2 rounded-lg text-slate-700 hover:bg-orange-50 hover:text-brand-600 transition-colors">
+              <span class="w-6 h-6 rounded-full bg-orange-100 text-brand-600 flex items-center justify-center font-bold text-[10px]">3</span>
+              <span>Flujo Caja & Cierre Z</span>
+            </a>
+          </div>
+        </div>
+
+        <hr class="border-slate-100">
+
+        <!-- Netlify / Repo Info Banner -->
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-semibold text-slate-800">
+            <i class="fa-solid fa-circle-check text-emerald-500"></i>
+            <span>Estado de Despliegue</span>
+          </div>
+          <p class="text-slate-500 leading-relaxed">Archivos estructurados para <strong>Netlify</strong> y <strong>GitHub Pages</strong> con subcarpetas <code>/desktop</code> y <code>/mobile</code>.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT RIGHT -->
+    <main class="flex-1 min-w-0 space-y-6">
+
+      <!-- BANNER HERO -->
+      <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-lg shadow-slate-900/10">
+        <div class="relative z-10 max-w-2xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-400/30 text-xs font-medium">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Directorio Oficial de Pantallas y Microservicios</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">MotoPro Workshop ERP & POS System</h1>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Explora las 24 vistas interactivas del sistema. Haz clic en cualquier tarjeta para abrir directamente la pantalla correspondiente en tu navegador o entorno de producción.
           </p>
-</div>
-</div>
-<!-- Barra de Acciones Globales -->
-<div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch gap-space-sm shrink-0">
-<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-low rounded-lg">
-<div class="flex items-center gap-space-xs">
-<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
-<span class="font-label-md text-label-md text-on-surface">GH Pages / Demo</span>
-</div>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-lowest text-primary font-bold">ONLINE</span>
-</div>
-<div class="flex items-center gap-space-xs">
-<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 active:scale-95 transition-all" id="btnZip" onclick="triggerZipDownload()">
-<span class="material-symbols-outlined text-[18px]">folder_zip</span>
-<span>Descargar .ZIP</span>
-</button>
-<a class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px]">terminal</span>
-<span>GitHub</span>
-</a>
-<button class="w-10 h-10 flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg transition-colors" onclick="scrollToShortcuts()" title="Ver Atajos y Guía">
-<span class="material-symbols-outlined text-[18px]">help</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Indicadores clave de rendimiento de la suite -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-lg pt-space-lg bg-surface-container-low/60 rounded-lg p-space-md">
-<div class="flex flex-col">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Módulos Desarrollados</span>
-<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs">24 / 24 <span class="font-label-xs text-label-xs text-primary font-bold">(100%)</span></span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Arquitectura Soporte</span>
-<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs">HTML5 + Tailwind CSS</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Dispositivos Clave</span>
-<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs">20 Desktop • 4 Mobile</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Latencia Operativa Local</span>
-<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs">< 14ms (Zero-Lag)</span>
-</div>
-</div>
-</div>
-<!-- CONTROL DE BÚSQUEDA Y FILTRADO AVANZADO -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-xl flex flex-col gap-space-md">
-<!-- Barra de Búsqueda Viva -->
-<div class="relative w-full">
-<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[22px]">manage_search</span>
-<input class="w-full h-12 pl-12 pr-28 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:shadow-sm outline-none transition-all" id="searchModulesInput" oninput="handleLiveSearch()" placeholder="Buscar por módulo, archivo .html, perfil (p. ej. Cajero, Mecánico) o palabra clave... (Ctrl + K)" type="text"/>
-<div class="absolute right-space-sm top-1/2 -translate-y-1/2 flex items-center gap-space-2xs">
-<span class="hidden font-tabular-mono-md text-tabular-mono-md px-space-xs py-space-2xs rounded bg-primary-container text-on-primary-container font-bold" id="matchCountBadge">0</span>
-<kbd class="px-space-xs py-space-2xs bg-surface-container text-on-surface-variant font-label-xs text-label-xs rounded">⌘K</kbd>
-</div>
-</div>
-<!-- Grupos de Filtros -->
-<div class="flex flex-col gap-space-sm pt-space-xs">
-<!-- Filtro Categorías -->
-<div class="flex flex-wrap items-center gap-space-xs">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mr-space-xs">Categoría:</span>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold transition-all" data-cat="all" onclick="setCategoryFilter('all')">
-          Todos (24)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="pos" onclick="setCategoryFilter('pos')">
-          Caja & Terminal POS (7)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="workshop" onclick="setCategoryFilter('workshop')">
-          Taller & Mecánica (5)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="inventory" onclick="setCategoryFilter('inventory')">
-          Inventario & Kardex (3)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="admin" onclick="setCategoryFilter('admin')">
-          Administración & Sedes (5)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="mobile-pwa" onclick="setCategoryFilter('mobile-pwa')">
-          Móvil PWA Operarios (2)
-        </button>
-<button class="filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-cat="portal-whatsapp" onclick="setCategoryFilter('portal-whatsapp')">
-          Portal Clientes WhatsApp (2)
-        </button>
-</div>
-<!-- Filtro Dispositivo y Perfil Secundario -->
-<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs bg-surface-container-low/40 p-space-sm rounded-lg">
-<div class="flex flex-wrap items-center gap-space-xs">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mr-space-xs">Dispositivo:</span>
-<button class="filter-pill-dev px-space-xs py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-high text-on-surface font-bold" data-dev="all" onclick="setDeviceFilter('all')">
-            Todos
-          </button>
-<button class="filter-pill-dev px-space-xs py-space-2xs rounded font-label-xs text-label-xs text-on-surface-variant hover:text-on-surface" data-dev="Desktop" onclick="setDeviceFilter('Desktop')">
-            Desktop (20)
-          </button>
-<button class="filter-pill-dev px-space-xs py-space-2xs rounded font-label-xs text-label-xs text-on-surface-variant hover:text-on-surface" data-dev="Mobile / PWA" onclick="setDeviceFilter('Mobile / PWA')">
-            Mobile / PWA (4)
-          </button>
-</div>
-<div class="flex items-center gap-space-xs">
-<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Perfil Asignado:</span>
-<select class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded px-space-sm py-space-2xs outline-none cursor-pointer" id="roleFilterSelect" onchange="handleFilterChange()">
-<option value="all">Todos los Perfiles</option>
-<option value="Jefe de Taller">Jefe de Taller</option>
-<option value="Cajero">Cajero / POS</option>
-<option value="Mecánico">Mecánico Operario</option>
-<option value="Almacenista">Almacenista</option>
-<option value="Administrador">Administrador</option>
-<option value="Cliente">Cliente Final</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<!-- SHOWCASE GRID DE MÓDULOS -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="moduleCardsContainer">
-<!-- 01. Dashboard & Terminal Caja POS -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Cajero">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">point_of_sale</span> Caja POS
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Dashboard & Terminal Caja POS</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Terminal activa de facturación, métricas del turno en tiempo real, arqueo rápido y cobro ágil de órdenes de trabajo.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/dashboard-pos.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cajero / Admin</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Teclas Rápidas F1-F12
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/dashboard-pos.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 02. Factura y Liquidación Final de Caja -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Cajero">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">receipt_long</span> Liquidación
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Factura y Liquidación Final de Caja</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Cobro final al retirar la motocicleta del taller, split payments multitarjeta y emisión de pase de portería digital.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/factura-liquidacion.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cajero Mostrador</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Pase Portería QR
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/factura-liquidacion.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 03. Tirilla Térmica POS 80mm -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Cajero">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">print</span> Hardware POS
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Tirilla Térmica POS 80mm (ESC/POS)</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Simulador de ticket fiscal térmico para impresoras Epson/Star con validación CUFE, código QR y talón desprendible.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/tirilla-pos-80mm.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cajero / Auditor</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>80mm Monocromo
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/tirilla-pos-80mm.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 04. Factura Electrónica DIAN PDF (A4) -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">description</span> DIAN UBL 2.1
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Factura Electrónica DIAN PDF (A4)</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Formato fiscal oficial DIAN estándar UBL 2.1 con desglose de retenciones en la fuente, ICA, IVA y firma digital.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/factura-dian-pdf-a4.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Contabilidad</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Hoja A4 Fiscal
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/factura-dian-pdf-a4.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 05. Arqueo y Cierre Fiscal - Reporte Z -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Cajero">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> Cierre de Caja
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Arqueo y Cierre Fiscal - Reporte Z</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Cuadre ciego por denominaciones de billetes, conciliación de datáfonos Redeban/CredibanCo y emisión de Reporte Z.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/arqueo-cierre-reporte-z.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cajero / Supervisor</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Cierre Blindado
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/arqueo-cierre-reporte-z.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 06. Egresos y Vales de Caja Menor -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Cajero">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">payments</span> Caja Menor
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Egresos y Vales de Caja Menor (Ctrl+M)</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Vales de desembolso rápido para repuestos de emergencia, fletes y viáticos con pulso eléctrico RJ11 para apertura de cajón.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/egresos-caja-menor.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cajero</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Pulso RJ11
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/egresos-caja-menor.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 07. Configuración de Formas de Pago & Split -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="pos" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">tune</span> Config Pasarelas
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Configuración de Formas de Pago & Split</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Ajuste de terminales SmartPOS, comisiones porcentuales, pasarela QR interoperable Bre-B, Wompi y cuentas bancarias.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/formas-de-pago.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Administrador</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Multipasarela
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/formas-de-pago.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 08. Tablero Kanban Taller & Órdenes -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="workshop" data-device="Desktop" data-role="Jefe de Taller">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">view_kanban</span> Gestión Bahías
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Tablero Kanban Taller & Órdenes</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Monitoreo en vivo de 8 bahías activas con estados de avance, tiempos de ciclo, cuellos de botella y alertas de retraso.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/ordenes-taller.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Jefe de Taller</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>8 Bahías
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/ordenes-taller.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 09. Recepción Pericial 360° con Daños -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="workshop" data-device="Desktop" data-role="Jefe de Taller">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">fact_check</span> Peritaje Visual
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Recepción Pericial 360° con Daños</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Silueta de motocicleta interactiva para marcaje de rayones, roturas, nivel de combustible y firma digital del cliente.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/recepcion-inspeccion.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Asesor Servicio</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Hotspots 360°
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/recepcion-inspeccion.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 10. Diagnóstico Técnico y Cotización -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="workshop" data-device="Desktop" data-role="Jefe de Taller">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">calculate</span> Baremo de Horas
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Diagnóstico Técnico y Cotización</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Baremo oficial de tiempos de mano de obra (Flat Rate), cotizador de repuestos OEM y cálculo de rentabilidad neta.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/diagnostico-cotizacion.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Jefe Técnico</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Flat-rate OEM
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/diagnostico-cotizacion.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 11. Gestión de Garantías y Reclamos a Fábrica -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="workshop" data-device="Desktop" data-role="Jefe de Taller">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">policy</span> Garantías Ensamblador
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Gestión de Garantías y Reclamos a Fábrica</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Trazabilidad de componentes averiados, emisión de notas de reclamo para ensambladoras (Bajaj, Yamaha, AKT) y notas de crédito.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/garantias-reclamos.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Jefe de Taller</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Claims Fábrica
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/garantias-reclamos.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 12. Modal Radicar Nuevo Reclamo Garantía -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="workshop" data-device="Desktop" data-role="Jefe de Taller">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">open_in_new</span> Modal Form
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Modal Radicar Reclamo Garantía</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Diagnóstico de escáner Texa, adjunto de evidencias fotográficas macro y cuarentena del repuesto defectuoso.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/modal-radicar-garantia.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Jefe Técnico</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Scan Texa
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/modal-radicar-garantia.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 13. Inventario & Movimientos de Stock -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="inventory" data-device="Desktop" data-role="Almacenista">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">inventory_2</span> Kardex Multisede
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Inventario & Movimientos de Stock</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Control de existencias multialmacén, costo promedio ponderado, umbral de reposición y trazabilidad de ubicaciones.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/inventario-movimientos.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Almacenista</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Stock Crítico
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/inventario-movimientos.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 14. Registrar Entrada de Compra a Proveedor -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="inventory" data-device="Desktop" data-role="Almacenista">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">local_shipping</span> Recepción B2B
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Registrar Entrada de Compra</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Ingreso de remisiones y facturas de repuestos por escáner de código de barras 2D y rotulado directo de gavetas.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/entrada-compra.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Almacenista</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Etiquetado 2D
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/entrada-compra.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 15. Registrar Salida / Despacho a OT -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="inventory" data-device="Desktop" data-role="Almacenista">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">output</span> Despacho a Bahía
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Registrar Salida / Despacho a OT</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Entrega blindada de refacciones y aceites vinculados a la Orden de Trabajo con firma y confirmación del técnico responsable.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/salida-despacho.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Almacenista</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Entrega OT Blindada
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/salida-despacho.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 16. Acceso Multiusuario & Selección de Sede -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="admin" data-device="Desktop" data-role="all">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">lock</span> Auth & Sedes
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Acceso Multiusuario & Selección de Sede</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Portal centralizado de autenticación con selección inmediata de sucursal, control de roles (RBAC) y sesiones activas.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/login-multiusuario.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Todos los Roles</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>RBAC Sede
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/login-multiusuario.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 17. Facturación, Clientes & Contabilidad -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="admin" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">account_balance</span> Cartera & ERP
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Facturación, Clientes & Contabilidad</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Consolidación de cuentas por cobrar de flotas corporativas, trazabilidad de pagos a 30/60 días y libro auxiliar contable.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/facturacion-contabilidad.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Contabilidad</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Cartera Flotas
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/facturacion-contabilidad.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 18. Configuración de Sedes & Tarifas -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="admin" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">settings</span> Red Sucursales
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Configuración de Sedes & Tarifas</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Parametrización global de sucursales, tarifas hora técnico por cilindrada (Baja/Media/Alta) y reglas de negocio.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/configuracion-sedes.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Administrador</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Tarifario H/MO
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/configuracion-sedes.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 19. Modal Configuración de Bahías & Elevadores -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="admin" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">hardware</span> Equipamiento
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Configuración de Bahías & Elevadores</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Asignación y calibración de elevadores neumáticos/hidráulicos, extractores de gases y herramientas por puesto.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/modal-bahias-elevadores.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Administrador</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Maquinaria
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/modal-bahias-elevadores.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 20. Modal Agregar Bahía de Trabajo -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="admin" data-device="Desktop" data-role="Administrador">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">add_circle</span> Nueva Bahía
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-bold">Desktop</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Modal Agregar Bahía de Trabajo</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Alta rápida de módulo físico de atención, vinculación de técnicos especialistas y capacidad de carga en toneladas.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">desktop/modal-agregar-bahia.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Administrador</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Setup Rápido
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="desktop/modal-agregar-bahia.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 21. Bahía Mecánico - Modo Táctil OT Activa (Mobile PWA) -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="mobile-pwa" data-device="Mobile / PWA" data-role="Mecánico">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">timer</span> PWA Operario
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-primary-container text-on-primary-container font-bold">Mobile / PWA</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Bahía Mecánico - Modo Táctil OT Activa</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Cronómetro de mano de obra en vivo con tap targets de 44px, checklist táctil y pedido instantáneo de repuestos a almacén.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">mobile/bahia-mecanico-tactil.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Mecánico</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Clock-in Bahía
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="mobile/bahia-mecanico-tactil.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 22. Captura de Evidencias y Nota de Voz -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="mobile-pwa" data-device="Mobile / PWA" data-role="Mecánico">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">mic</span> Multimedia OT
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-primary-container text-on-primary-container font-bold">Mobile / PWA</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Captura de Evidencias y Nota de Voz</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Fotografía de desgastes en motor, compresión de cilindros, grabación de ruido mecánico y sincronización a la nube.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">mobile/captura-evidencias-voz.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Mecánico</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Audio 60s + Foto
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="mobile/captura-evidencias-voz.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 23. Portal Cliente WhatsApp - Evidencias y Aprobación -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="portal-whatsapp" data-device="Mobile / PWA" data-role="Cliente">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">chat</span> Portal WhatsApp
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-primary-container text-on-primary-container font-bold">Mobile / PWA</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Portal Cliente WhatsApp - Evidencias</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Visor web abierto mediante enlace de WhatsApp para que el propietario escuche audios técnicos y apruebe repuestos adicionales.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">mobile/portal-cliente-whatsapp.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cliente Final</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Aprobación Rápida
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="mobile/portal-cliente-whatsapp.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-<!-- 24. Confirmación con Firma Digital y Comprobante -->
-<article class="module-card flex flex-col justify-between bg-surface-container-lowest rounded-xl shadow-sm p-space-lg hover:shadow-md transition-shadow" data-category="portal-whatsapp" data-device="Mobile / PWA" data-role="Cliente">
-<div>
-<div class="flex items-center justify-between gap-space-sm mb-space-sm">
-<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-semibold uppercase">
-<span class="material-symbols-outlined text-[14px]">draw</span> Firma Vinculante
-          </span>
-<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-primary-container text-on-primary-container font-bold">Mobile / PWA</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-space-2xs">Confirmación Firma Digital & Voucher</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
-          Aprobación con firma táctil en pantalla, generación de hash criptográfico de seguridad y envío de recibo al WhatsApp.
-        </p>
-<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-md flex items-center justify-between">
-<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant truncate">mobile/confirmacion-firma-digital.html</span>
-<span class="font-label-xs text-label-xs text-primary font-bold uppercase shrink-0">Cliente Final</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-space-xs">
-<span class="inline-flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Hash SHA-256
-        </span>
-<a class="flex items-center gap-space-2xs px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm hover:brightness-105 transition-all" href="mobile/confirmacion-firma-digital.html">
-<span>Abrir Pantalla</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</article>
-</div>
-<!-- ESTADO VACÍO DE FILTRO (HIDDEN INICIALMENTE) -->
-<div class="hidden flex-col items-center justify-center p-space-2xl bg-surface-container-lowest rounded-xl shadow-sm text-center my-space-lg" id="noResultsState">
-<span class="material-symbols-outlined text-[48px] text-on-surface-variant mb-space-sm">search_off</span>
-<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs">No se encontraron pantallas con los criterios actuales</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-md">
-      Prueba ajustando el término de búsqueda o restableciendo los filtros de categoría o perfil.
-    </p>
-<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg shadow-sm" onclick="resetAllFilters()">
-      Restablecer Filtros
-    </button>
-</div>
-<!-- SECCIÓN RÁPIDA: GUÍA DE DESPLIEGUE, ATAJOS & CREDENCIALES -->
-<div class="mt-space-2xl grid grid-cols-1 lg:grid-cols-3 gap-space-lg" id="shortcutsGuideSection">
-<!-- Atajos Rápidos de Teclado -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs mb-space-md">
-<span class="material-symbols-outlined text-primary text-[22px]">keyboard</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Atajos de Teclado en POS</h2>
-</div>
-<div class="space-y-space-xs">
-<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
-<span class="font-body-sm text-body-sm text-on-surface">Buscador Universal</span>
-<kbd class="px-space-xs py-space-2xs bg-surface-container text-on-surface font-tabular-mono-md text-tabular-mono-md rounded">Ctrl + K</kbd>
-</div>
-<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
-<span class="font-body-sm text-body-sm text-on-surface">Egreso / Caja Menor</span>
-<kbd class="px-space-xs py-space-2xs bg-surface-container text-on-surface font-tabular-mono-md text-tabular-mono-md rounded">Ctrl + M</kbd>
-</div>
-<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
-<span class="font-body-sm text-body-sm text-on-surface">Apertura Gaveta de Dinero</span>
-<kbd class="px-space-xs py-space-2xs bg-surface-container text-on-surface font-tabular-mono-md text-tabular-mono-md rounded">F9 (RJ11)</kbd>
-</div>
-<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
-<span class="font-body-sm text-body-sm text-on-surface">Imprimir Tirilla Fiscal</span>
-<kbd class="px-space-xs py-space-2xs bg-surface-container text-on-surface font-tabular-mono-md text-tabular-mono-md rounded">Ctrl + P</kbd>
-</div>
-</div>
-</div>
-<div class="pt-space-md mt-space-md border-t border-surface-container-low text-on-surface-variant font-label-xs text-label-xs">
-        Simulador de pulsos compatible con navegadores Chromium.
-      </div>
-</div>
-<!-- Credenciales de Prueba Rápida -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs mb-space-md">
-<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Credenciales Demo Sandbox</h2>
-</div>
-<div class="space-y-space-xs font-tabular-mono-md text-tabular-mono-md">
-<div class="p-space-xs rounded bg-surface-container-low flex flex-col">
-<div class="flex justify-between items-center text-on-surface font-semibold">
-<span>Carlos M. (Jefe Taller)</span>
-<span class="text-primary">PIN 8921</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Acceso maestro a kanban, asignación y diagnóstico</span>
-</div>
-<div class="p-space-xs rounded bg-surface-container-low flex flex-col">
-<div class="flex justify-between items-center text-on-surface font-semibold">
-<span>Laura Gómez (Cajera POS)</span>
-<span class="text-primary">USR-892</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Turno Mañana • Caja #01 Principal</span>
-</div>
-<div class="p-space-xs rounded bg-surface-container-low flex flex-col">
-<div class="flex justify-between items-center text-on-surface font-semibold">
-<span>OT Mock Activa</span>
-<span class="text-primary">OT-1048</span>
-</div>
-<span class="font-body-sm text-body-sm text-on-surface-variant">KTM SuperDuke 1290 R (Placa WTC-89F)</span>
-</div>
-</div>
-</div>
-<div class="pt-space-md mt-space-md border-t border-surface-container-low text-on-surface-variant font-label-xs text-label-xs">
-        Entorno local con almacenamiento simulado en localStorage.
-      </div>
-</div>
-<!-- Comandos Git & Despliegue Rápido -->
-<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs mb-space-md">
-<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Despliegue Git & GitHub Pages</h2>
-</div>
-<div class="space-y-space-xs">
-<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between">
-<code class="font-tabular-mono-md text-tabular-mono-md text-on-surface truncate">git clone https://github.com/...</code>
-<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" onclick="copyToClipboard('git clone https://github.com/motopro-erp/motopro-suite.git')" title="Copiar Comando">
-<span class="material-symbols-outlined text-[16px]">content_copy</span>
-</button>
-</div>
-<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between">
-<code class="font-tabular-mono-md text-tabular-mono-md text-on-surface truncate">npm install && npm run dev</code>
-<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" onclick="copyToClipboard('npm install && npm run dev')" title="Copiar Comando">
-<span class="material-symbols-outlined text-[16px]">content_copy</span>
-</button>
-</div>
-<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between">
-<code class="font-tabular-mono-md text-tabular-mono-md text-on-surface truncate">git push origin main</code>
-<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-on-surface" onclick="copyToClipboard('git push origin main')" title="Copiar Comando">
-<span class="material-symbols-outlined text-[16px]">content_copy</span>
-</button>
-</div>
-</div>
-</div>
-<div class="hidden pt-space-xs text-center text-primary font-label-md text-label-md font-bold" id="copyAlertToast">
-        ✓ Copiado al portapapeles
-      </div>
-<div class="pt-space-md mt-space-md border-t border-surface-container-low text-on-surface-variant font-label-xs text-label-xs flex items-center justify-between">
-<span>Static Web Ready</span>
-<span class="font-bold text-on-surface">CI/CD Action OK</span>
-</div>
-</div>
-</div>
-<!-- SCRIPT DE LÓGICA INTERACTIVA CLIENT-SIDE -->
-<script>
-    let activeCategory = 'all';
-    let activeDevice = 'all';
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a href="desktop/dashboard-pos.html" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-bold transition-all shadow-md shadow-brand-500/30">
+              <i class="fa-solid fa-play"></i>
+              <span>Abrir Terminal Caja POS</span>
+            </a>
+            <a href="desktop/ordenes-taller.html" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-semibold transition-all">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Ver Tablero Kanban Taller</span>
+            </a>
+            <a href="mobile/bahia-mecanico-tactil.html" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-semibold transition-all">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <span>Modo Táctil Mecánico</span>
+            </a>
+          </div>
+        </div>
+        <!-- Decorative bg motor graphic -->
+        <i class="fa-solid fa-motorcycle absolute -right-6 -bottom-8 text-white/5 text-[180px] pointer-events-none select-none"></i>
+      </section>
 
-    function setCategoryFilter(category) {
-      activeCategory = category;
-      document.querySelectorAll('.filter-pill-cat').forEach(btn => {
-        if (btn.getAttribute('data-cat') === category) {
-          btn.className = 'filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold transition-all';
-        } else {
-          btn.className = 'filter-pill-cat px-space-sm py-space-2xs rounded font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all';
+      <!-- 3 USER JOURNEYS (FLUJOS GUIADOS) -->
+      <section class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div>
+            <h2 class="text-base font-bold text-slate-900">🧭 Flujos Guiados por Rol (End-to-End)</h2>
+            <p class="text-xs text-slate-500">Recorridos completos de 4 pasos para auditar la experiencia de cada perfil operativo</p>
+          </div>
+          <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2.5 py-1 rounded-full self-start sm:self-auto border border-brand-200">
+            3 Recorridos Activos
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Flujo 1: Asesor de Servicio -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 hover:bg-slate-50 transition-colors space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">1. Asesor de Servicio</h4>
+                <p class="text-[11px] text-slate-500">Recepción ➔ Cotización ➔ WhatsApp</p>
+              </div>
+            </div>
+            <ol class="space-y-1.5 text-xs text-slate-600">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">1</span>
+                <a href="desktop/recepcion-inspeccion.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Recepción 360° & Checklist</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">2</span>
+                <a href="desktop/diagnostico-cotizacion.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Baremo & Cotización</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">3</span>
+                <a href="mobile/portal-cliente-whatsapp.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Portal WhatsApp Cliente</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">4</span>
+                <a href="mobile/confirmacion-firma-digital.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Firma Digital & Acta</a>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Flujo 2: Mecánico en Bahía -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 hover:bg-slate-50 transition-colors space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">2. Mecánico en Bahía</h4>
+                <p class="text-[11px] text-slate-500">PWA Táctil ➔ Evidencias ➔ Despacho</p>
+              </div>
+            </div>
+            <ol class="space-y-1.5 text-xs text-slate-600">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">1</span>
+                <a href="desktop/ordenes-taller.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Tablero Kanban Bahías</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">2</span>
+                <a href="mobile/bahia-mecanico-tactil.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">PWA Bahía con Cronómetro</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">3</span>
+                <a href="mobile/captura-evidencias-voz.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Captura de Fotos y Voz</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">4</span>
+                <a href="desktop/salida-despacho.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Despacho de Piezas Kardex</a>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Flujo 3: Cajera Mostrador POS -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50 hover:bg-slate-50 transition-colors space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-cash-register"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">3. Cajera Mostrador POS</h4>
+                <p class="text-[11px] text-slate-500">Cobro Split ➔ Tirilla ➔ Cierre Z</p>
+              </div>
+            </div>
+            <ol class="space-y-1.5 text-xs text-slate-600">
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">1</span>
+                <a href="desktop/dashboard-pos.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Dashboard Caja & Órdenes</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">2</span>
+                <a href="desktop/factura-liquidacion.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Liquidación Split USD/COP</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">3</span>
+                <a href="desktop/tirilla-pos-80mm.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Tirilla 80mm & Pase Portería</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-[10px] font-bold">4</span>
+                <a href="desktop/arqueo-cierre-reporte-z.html" class="hover:text-brand-600 font-medium underline-offset-2 hover:underline">Arqueo Ciego & Reporte Z</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORY PILLS (MOBILE / TABLET) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none lg:hidden">
+        <button onclick="filterCategory('all', this)" class="category-pill active whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-500 text-white">Todos (24)</button>
+        <button onclick="filterCategory('erp', this)" class="category-pill whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700">ERP & Admin (5)</button>
+        <button onclick="filterCategory('taller', this)" class="category-pill whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700">Taller & Bahías (5)</button>
+        <button onclick="filterCategory('pos', this)" class="category-pill whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700">Caja POS (7)</button>
+        <button onclick="filterCategory('mobile', this)" class="category-pill whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700">Móvil Bahía (2)</button>
+        <button onclick="filterCategory('whatsapp', this)" class="category-pill whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700">WhatsApp (2)</button>
+      </div>
+
+      <!-- CATALOG GRID DE PANTALLAS (24 MÓDULOS) -->
+      <div id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+
+        <!-- 1. LOGIN -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="login multiusuario sedes contrasena usuario auth">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-600">ERP & Acceso</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/login-multiusuario.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-lock text-brand-500"></i>
+              <span>Acceso Multiusuario & Sedes</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Selector de sucursal activa, autenticación por roles (RBAC) y PIN de supervisor para autorizaciones críticas.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Desktop • Blank Frame</span>
+            <a href="desktop/login-multiusuario.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. DASHBOARD POS -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="dashboard pos caja mostrador ingresos facturacion diaria retiro">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">Caja POS</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/dashboard-pos.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-cash-register text-emerald-600"></i>
+              <span>Dashboard & Terminal Caja POS</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Resumen de facturación del día, motos listas para retiro, estado de periféricos de hardware en tiempo real.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Atajo Ctrl+K • POS</span>
+            <a href="desktop/dashboard-pos.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. ORDENES TALLER KANBAN -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="taller" data-keywords="ordenes taller kanban bahias elevadores mecanicos tecnicos">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-orange-50 text-brand-700 border border-brand-200">Taller</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/ordenes-taller.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-table-columns text-brand-500"></i>
+              <span>Tablero Kanban de Taller & Bahías</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Monitoreo en vivo de elevadores (B-01 a B-08), estados operativos, operarios asignados y alertas de tiempo.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Supervisión en Vivo</span>
+            <a href="desktop/ordenes-taller.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. RECEPCION INSPECCION 360 -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="taller" data-keywords="recepcion inspeccion 360 checklist danos combustible peritaje">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 border border-blue-200">Recepción</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/recepcion-inspeccion.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-magnifying-glass-chart text-blue-600"></i>
+              <span>Recepción Pericial 360° & Checklist</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Inspección interactiva sobre silueta de moto, inventario de accesorios, nivel de combustible y firma digital.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Acta de Custodia</span>
+            <a href="desktop/recepcion-inspeccion.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. DIAGNOSTICO & BAREMO -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="taller" data-keywords="diagnostico cotizacion baremo tiempos repuestos flat rate margen">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-amber-50 text-amber-700 border border-amber-200">Cotización</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/diagnostico-cotizacion.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-file-invoice-dollar text-amber-600"></i>
+              <span>Diagnóstico Técnico & Baremo</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Baremo oficial de tiempos de mano de obra por cilindraje, repuestos OEM con margen y enlace a WhatsApp.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Baremo Flat Rate</span>
+            <a href="desktop/diagnostico-cotizacion.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. INVENTARIO & KARDEX CON GALERÍA OEM -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="inventario kardex repuestos galeria oem fotos zoom stock pasillo">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">Inventario</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/inventario-movimientos.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-boxes-stacked text-indigo-600"></i>
+              <span>Kardex con Galería Técnica OEM & Zoom</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Catálogo de repuestos multisede, trazabilidad de remisiones físicas, visor modal con zoom de 2.5x para detalles.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Zoom 2.5x Holograma</span>
+            <a href="desktop/inventario-movimientos.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. ENTRADA COMPRA PROVEEDOR -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="entrada compra proveedor compras lote factura recepcion almacén">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-purple-50 text-purple-700 border border-purple-200">Compras</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/entrada-compra.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-truck-ramp-box text-purple-600"></i>
+              <span>Entrada de Compras a Proveedores</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Ingreso con lote, orden de compra, ubicación en estantería física y recálculo de costo promedio ponderado.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Kardex Ponderado</span>
+            <a href="desktop/entrada-compra.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. SALIDA / DESPACHO A BAHÍA -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="salida despacho repuestos bahia entrega firma mecanico">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-rose-50 text-rose-700 border border-rose-200">Almacén</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/salida-despacho.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-dolly text-rose-600"></i>
+              <span>Salida / Despacho de Repuestos</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Descarga blindada contra OT activa con firma de recepción del operario en elevador y actualización de stock.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Descarga Blindada</span>
+            <a href="desktop/salida-despacho.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. FACTURA Y LIQUIDACIÓN SPLIT PAYMENT -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="factura liquidacion split payment cobro efectivo datafono qr porteria">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">POS Mostrador</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/factura-liquidacion.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-money-bill-transfer text-emerald-600"></i>
+              <span>Liquidación Final & Split Payment</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Pago mixto en efectivo USD/COP con TRM en vivo, datáfonos Redeban/Credibanco y código QR de pase de salida.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Pase de Salida QR</span>
+            <a href="desktop/factura-liquidacion.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 10. TIRILLA 80MM EPSON -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="tirilla termica epson esc pos 80mm ticket recibo porteria talon">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700">Hardware POS</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/tirilla-pos-80mm.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-receipt text-slate-700"></i>
+              <span>Tirilla Térmica 80mm ESC/POS</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Simulador térmico para impresoras Epson con corte automático, código QR fiscal, CUFE y talón desprendible.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Epson TM-T20III</span>
+            <a href="desktop/tirilla-pos-80mm.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 11. FACTURA DIAN A4 -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="factura dian ubl electronica fiscal pdf a4 impresion cufe">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-sky-50 text-sky-700 border border-sky-200">Fiscal DIAN</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/factura-dian-pdf-a4.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-file-pdf text-sky-600"></i>
+              <span>Factura Electrónica DIAN PDF (A4)</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Formato fiscal estándar UBL 2.1 con firma digital XML, retenciones en la fuente/ICA y validación en la DIAN.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">UBL 2.1 & CUFE</span>
+            <a href="desktop/factura-dian-pdf-a4.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 12. ARQUEO CIEGO & REPORTE Z -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="arqueo ciego reporte z cierre fiscal turno cuadre billetes monedas">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-teal-50 text-teal-700 border border-teal-200">Cierre Fiscal</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/arqueo-cierre-reporte-z.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-scale-balanced text-teal-600"></i>
+              <span>Arqueo Ciego & Cierre - Reporte Z</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Conteo físico por denominación sin ver saldo del sistema, conciliación de vouchers y bloqueo de terminal.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Diferencia $0.00</span>
+            <a href="desktop/arqueo-cierre-reporte-z.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 13. EGRESOS CAJA MENOR (CTRL+M) -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="egresos caja menor vales salida gastos insumos atajo ctrl m">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-amber-50 text-amber-700 border border-amber-200">Caja Menor</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/egresos-caja-menor.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-money-bill-wave text-amber-600"></i>
+              <span>Vales de Caja Menor (Ctrl+M)</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Salida express de efectivo para insumos urgentes (ej. limpiador de frenos), autorizada con PIN de supervisor.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Atajo Ctrl + M</span>
+            <a href="desktop/egresos-caja-menor.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 14. FORMAS DE PAGO -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="formas de pago pasarelas comisiones datafono redeban qr">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-blue-50 text-blue-700 border border-blue-200">Ajustes POS</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/formas-de-pago.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-credit-card text-blue-600"></i>
+              <span>Gestión de Formas de Pago</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Parametrización de pasarelas de pago, comisiones bancarias, datáfonos en red LAN y latencias de periféricos.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">SmartPOS Redeban</span>
+            <a href="desktop/formas-de-pago.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 15. GARANTÍAS Y RECLAMOS -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="taller" data-keywords="garantias reclamos ensambladora fabrica falla obd2 texa cuarentena">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-red-50 text-red-700 border border-red-200">Garantías</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/garantias-reclamos.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-red-600"></i>
+              <span>Garantías & Reclamos a Ensambladora</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Seguimiento de piezas con falla de fábrica, notas de crédito conciliadas y cuarentena física de refacciones.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Texa OBD2 Bike</span>
+            <a href="desktop/garantias-reclamos.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 16. MODAL RADICAR GARANTIA -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="taller" data-keywords="modal radicar garantia texa scanner expediente cuarentena qr">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-red-50 text-red-700 border border-red-200">Garantías</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/modal-radicar-garantia.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-file-shield text-red-600"></i>
+              <span>Modal Radicar Garantía & Escáner Texa</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Expediente técnico con volcado de diagnóstico OBD2 Texa IDC5 Bike, fotos periciales y etiqueta QR de cuarentena.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Expediente Oficial</span>
+            <a href="desktop/modal-radicar-garantia.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 17. CONFIGURACIÓN SEDES, TARIFAS Y USUARIOS -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="configuracion sedes tarifas mano de obra usuarios roles permisos">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700">Ajustes ERP</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/configuracion-sedes.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-sliders text-slate-700"></i>
+              <span>Configuración de Sedes, Tarifas & Usuarios</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Parámetros de sucursales, tarifas horarias de mano de obra por segmento de cilindraje y permisos de acceso.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Admin General</span>
+            <a href="desktop/configuracion-sedes.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 18. MODAL BAHÍAS Y ELEVADORES -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="modal bahias elevadores plataforma tijera hidraulico postes">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700">Ajustes ERP</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/modal-bahias-elevadores.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-cubes-stacked text-slate-700"></i>
+              <span>Modal Bahías & Equipamiento de Elevadores</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Equipamiento técnico por elevador: capacidad de carga en kilogramos, tipo de elevador (2 postes/tijera) y estado.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Capacidad 800 kg</span>
+            <a href="desktop/modal-bahias-elevadores.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 19. FACTURACIÓN Y CONTABILIDAD -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="erp" data-keywords="facturacion contabilidad cartera clientes credito cobros flotas">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-cyan-50 text-cyan-700 border border-cyan-200">Contabilidad</span>
+              <span class="text-xs text-slate-400 font-mono">desktop/facturacion-contabilidad.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-file-lines text-cyan-600"></i>
+              <span>Facturación, Clientes & Cartera</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Historial de facturas electrónicas emitidas, cupo de crédito para flotas comerciales y estados de cuenta.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Cartera Flotas</span>
+            <a href="desktop/facturacion-contabilidad.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 20. BAHIA MECANICO TACTIL PWA -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="mobile" data-keywords="bahia mecanico tactil pwa cronometro clock in checklist tablet elevador">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-orange-100 text-brand-800 border border-brand-300">PWA Móvil</span>
+              <span class="text-xs text-slate-400 font-mono">mobile/bahia-mecanico-tactil.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-stopwatch text-brand-500"></i>
+              <span>Bahía Táctil de Mecánico (PWA)</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Modo de alto contraste para tablets en elevadores: cronómetro en vivo (Clock-in/out) y botones táctiles grandes (≥48px).
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Móvil • Botones 48px</span>
+            <a href="mobile/bahia-mecanico-tactil.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 transition-colors">
+              <span>Abrir PWA</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 21. CAPTURA EVIDENCIAS VOZ BAHIA -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="mobile" data-keywords="captura evidencias fotos audio nota voz peritaje bahia camara">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-orange-100 text-brand-800 border border-brand-300">PWA Móvil</span>
+              <span class="text-xs text-slate-400 font-mono">mobile/captura-evidencias-voz.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-microphone-lines text-brand-500"></i>
+              <span>Captura de Evidencias Foto & Nota de Voz</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Disparador de cámara para registrar piezas desgastadas y grabador de notas de voz de hasta 60s para el cliente.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Móvil • Audio 60s</span>
+            <a href="mobile/captura-evidencias-voz.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 22. PORTAL CLIENTE WHATSAPP -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-emerald-500 transition-all flex flex-col justify-between" data-category="whatsapp" data-keywords="portal cliente whatsapp evidencias presupuesto aprobacion audio fotos">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">WhatsApp Web</span>
+              <span class="text-xs text-slate-400 font-mono">mobile/portal-cliente-whatsapp.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-500 text-base"></i>
+              <span>Portal de Aprobación Cliente WhatsApp</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Visor web ligero sin apps: el cliente escucha el audio del mecánico, ve fotos de desgaste y aprueba ítem por ítem.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Enlace Seguro</span>
+            <a href="mobile/portal-cliente-whatsapp.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 23. CONFIRMACIÓN Y FIRMA DIGITAL -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-emerald-500 transition-all flex flex-col justify-between" data-category="whatsapp" data-keywords="confirmacion firma digital hash sha 256 aprobacion comprobante">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">WhatsApp Web</span>
+              <span class="text-xs text-slate-400 font-mono">mobile/confirmacion-firma-digital.html</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-signature text-emerald-600"></i>
+              <span>Confirmación & Firma Criptográfica</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Captura de firma manuscrita digitalizada, generación de hash de seguridad SHA-256 y comprobante de autorización.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Hash SHA-256</span>
+            <a href="mobile/confirmacion-firma-digital.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors">
+              <span>Abrir</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 24. COMMAND PALETTE (CTRL+K) -->
+        <div class="module-card group bg-white rounded-2xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-brand-500 transition-all flex flex-col justify-between" data-category="pos" data-keywords="busqueda command palette ctrl k atajo teclado repuestos placa vin">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md bg-slate-100 text-slate-700">Utilidad Global</span>
+              <span class="text-xs text-slate-400 font-mono">Ctrl + K Global</span>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-keyboard text-slate-700"></i>
+              <span>Búsqueda Rápida Universal (Ctrl+K)</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Command Palette predictiva multicriterio por placa, cliente, SKU o repuesto compatible con lector de barras.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400">Atajo de Mostrador</span>
+            <button onclick="triggerCommandPalette()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-slate-900 group-hover:bg-brand-500 transition-colors">
+              <span>Probar</span>
+              <i class="fa-solid fa-bolt text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NO RESULTS PLACEHOLDER -->
+      <div id="noResults" class="hidden py-16 text-center bg-white rounded-2xl border border-slate-200">
+        <i class="fa-solid fa-magnifying-glass text-slate-300 text-4xl mb-3"></i>
+        <h4 class="text-base font-bold text-slate-800">No se encontraron pantallas</h4>
+        <p class="text-xs text-slate-500 mt-1">Intenta con otro término (ej. "pos", "kardex", "dian", "arqueo").</p>
+        <button onclick="resetSearch()" class="mt-4 px-4 py-2 text-xs font-semibold text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-lg transition-colors">
+          Restablecer búsqueda
+        </button>
+      </div>
+
+      <!-- SECCIÓN SWAGGER UI INTERACTIVA / API DOCS -->
+      <section id="swaggerSection" class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-100 text-emerald-800 font-mono">OpenAPI 3.0.3</span>
+              <h2 class="text-lg font-bold text-slate-900">Consola de API REST & Mock Sandbox</h2>
+            </div>
+            <p class="text-xs text-slate-500">Endpoints homologados para sincronización de hardware POS, órdenes de taller y facturación electrónica DIAN</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full font-medium border border-emerald-200">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Servidor Mock Activo
+            </span>
+          </div>
+        </div>
+
+        <!-- MOCK CONSOLE TABS -->
+        <div class="space-y-4">
+          <div class="flex border-b border-slate-200 gap-4 text-xs font-semibold">
+            <button onclick="switchApiTab('liquidar', this)" class="api-tab active pb-2 border-b-2 border-brand-500 text-brand-600">
+              POST /caja/liquidaciones (Split Payment)
+            </button>
+            <button onclick="switchApiTab('arqueo', this)" class="api-tab pb-2 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+              POST /caja/cierres/reporte-z (Arqueo Z)
+            </button>
+            <button onclick="switchApiTab('despacho', this)" class="api-tab pb-2 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+              POST /inventario/despacho (Kardex OT)
+            </button>
+          </div>
+
+          <!-- TAB 1: LIQUIDAR -->
+          <div id="apiTab-liquidar" class="api-tab-content space-y-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <span class="text-xs font-bold text-slate-700">Payload de Solicitud (JSON):</span>
+                <pre class="bg-slate-900 text-emerald-400 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "otId": "OT-1048",
+  "terminal": "POS-01-MOSTRADOR",
+  "sedeId": "SEDE-CENTRAL-01",
+  "trm": 4001.20,
+  "metodosPago": [
+    { "metodo": "EFECTIVO_USD", "monto": 100.00, "moneda": "USD" },
+    { "metodo": "DATAFONO_REDEBAN", "monto": 211.15, "moneda": "USD", "voucher": "AUTH-892182" }
+  ]
+}</pre>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-700">Respuesta Mock (200 OK):</span>
+                  <button onclick="executeMockTest('liquidar')" class="px-2.5 py-1 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">
+                    <i class="fa-solid fa-play text-[10px]"></i> Ejecutar Mock
+                  </button>
+                </div>
+                <pre id="mockOutput-liquidar" class="bg-slate-900 text-slate-200 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "status": "success",
+  "numeroRecibo": "REC-POS-00892",
+  "totalCobradoUSD": 311.15,
+  "totalCobradoCOP": 1245000.00,
+  "paseSalidaPorteriaQR": "MOTOPRO-PASS-OT1048-VALID-2023",
+  "aperturaGavetaEjecutada": true
+}</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: ARQUEO -->
+          <div id="apiTab-arqueo" class="api-tab-content hidden space-y-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <span class="text-xs font-bold text-slate-700">Payload Arqueo Ciego Físico:</span>
+                <pre class="bg-slate-900 text-emerald-400 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "terminal": "POS-01-MOSTRADOR",
+  "supervisorPin": "8921",
+  "denominacion_100_usd": 4,
+  "denominacion_50_usd": 2,
+  "denominacion_100k_cop": 12,
+  "vouchersRedebanUSD": 680.50
+}</pre>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-700">Respuesta Reporte Z:</span>
+                  <button onclick="executeMockTest('arqueo')" class="px-2.5 py-1 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">
+                    <i class="fa-solid fa-play text-[10px]"></i> Ejecutar Mock
+                  </button>
+                </div>
+                <pre id="mockOutput-arqueo" class="bg-slate-900 text-slate-200 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "consecutivoZ": "Z-2023-10-18-001",
+  "totalEsperadoUSD": 1980.50,
+  "totalArqueadoFisicoUSD": 1980.50,
+  "diferenciaCuadreUSD": 0.00,
+  "estadoTerminal": "BLOQUEADA_REPORTE_Z"
+}</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: DESPACHO -->
+          <div id="apiTab-despacho" class="api-tab-content hidden space-y-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <span class="text-xs font-bold text-slate-700">Payload Despacho a Bahía:</span>
+                <pre class="bg-slate-900 text-emerald-400 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "otId": "OT-1048",
+  "mecanicoId": "USR-415",
+  "items": [
+    { "sku": "KTM-6030-8015", "cantidad": 1.0 },
+    { "sku": "MOTUL-7100-10W50", "cantidad": 3.5 }
+  ]
+}</pre>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-700">Descarga Kardex:</span>
+                  <button onclick="executeMockTest('despacho')" class="px-2.5 py-1 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">
+                    <i class="fa-solid fa-play text-[10px]"></i> Ejecutar Mock
+                  </button>
+                </div>
+                <pre id="mockOutput-despacho" class="bg-slate-900 text-slate-200 p-3 rounded-xl text-xs font-mono overflow-x-auto">{
+  "status": "DESPACHADO",
+  "kardexMovimientoId": 89412,
+  "stockRestante_KTM": 14.0,
+  "stockRestante_MOTUL": 48.0,
+  "almacenista": "USR-205"
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MODAL DOCUMENTACIÓN & GUÍA RÁPIDA -->
+  <div id="docModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Guía de Instalación, Despliegue y Carpetas</h3>
+            <p class="text-xs text-slate-500">MotoPro Workshop ERP v2.4 (Enterprise Suite)</p>
+          </div>
+        </div>
+        <button onclick="toggleDocModal(false)" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-200/50 transition-colors">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-600 leading-relaxed font-sans">
+        <div class="p-3.5 bg-orange-50 border border-orange-200 rounded-xl text-brand-900">
+          <p class="font-bold mb-1">📁 Estructura requerida en Netlify / GitHub Pages:</p>
+          <p>Para evitar errores 404 al hacer clic en las tarjetas, los archivos deben estar organizados en las subcarpetas <code>desktop/</code> y <code>mobile/</code> junto a este <code>index.html</code> en la raíz.</p>
+        </div>
+
+        <h4 class="font-bold text-slate-800 text-sm">1. Árbol de Carpetas Recomendado</h4>
+        <pre class="bg-slate-900 text-slate-200 p-3 rounded-xl font-mono text-[11px] leading-snug">mi-taller-erp/
+├── index.html                   (Este archivo principal)
+├── desktop/                     (16 pantallas ERP y POS)
+│   ├── dashboard-pos.html
+│   ├── inventario-movimientos.html
+│   ├── ordenes-taller.html
+│   ├── recepcion-inspeccion.html
+│   └── ...
+├── mobile/                      (4 pantallas PWA)
+│   ├── bahia-mecanico-tactil.html
+│   ├── captura-evidencias-voz.html
+│   ├── portal-cliente-whatsapp.html
+│   └── confirmacion-firma-digital.html
+├── database/                    (schema.sql y seed.sql)
+└── api/                         (openapi-motopro-erp-v2.4.yaml)</pre>
+
+        <h4 class="font-bold text-slate-800 text-sm">2. Atajos de Teclado Operativos</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Ctrl + K :</strong> Apertura instantánea del Command Palette para buscar OT, placa o SKU.</li>
+          <li><strong>Ctrl + M :</strong> Registro rápido de vales de egreso de caja menor.</li>
+          <li><strong>F9 :</strong> Apertura forzada de gaveta monedero por pulso RJ11.</li>
+        </ul>
+
+        <h4 class="font-bold text-slate-800 text-sm">3. Credenciales Demo de Prueba</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Jefe de Taller:</strong> <code>carlos.m@motopro.com</code> • PIN: <code>8921</code></li>
+          <li><strong>Cajera Mostrador:</strong> <code>laura.gomez</code> • Clave: <code>MotoPro2024*</code></li>
+          <li><strong>Mecánico Bahía:</strong> <code>andres.lopez</code> • Clave: <code>MotoPro2024*</code></li>
+        </ul>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3 border-t border-slate-100 bg-slate-50 flex justify-end">
+        <button onclick="toggleDocModal(false)" class="px-4 py-2 text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-colors">
+          Entendido, Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE MODAL (CTRL+K) -->
+  <div id="commandPaletteModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-start justify-center pt-20 p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="relative p-3 border-b border-slate-100 flex items-center">
+        <i class="fa-solid fa-magnifying-glass text-slate-400 ml-2"></i>
+        <input 
+          type="text" 
+          id="cmdInput" 
+          placeholder="Escribe el nombre de un repuesto, placa, o módulo..." 
+          class="w-full pl-3 pr-8 py-2 text-sm focus:outline-none"
+        >
+        <button onclick="toggleCommandPalette(false)" class="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded hover:bg-slate-200">Esc</button>
+      </div>
+      <div class="p-2 max-h-64 overflow-y-auto text-xs space-y-1" id="cmdResults">
+        <a href="desktop/inventario-movimientos.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-orange-50 hover:text-brand-600 transition-colors">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-boxes-stacked text-slate-400"></i> Kardex de Repuestos con Fotos OEM</span>
+          <span class="text-[10px] text-slate-400">desktop/inventario-movimientos.html</span>
+        </a>
+        <a href="desktop/dashboard-pos.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-orange-50 hover:text-brand-600 transition-colors">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-cash-register text-slate-400"></i> Dashboard de Caja POS</span>
+          <span class="text-[10px] text-slate-400">desktop/dashboard-pos.html</span>
+        </a>
+        <a href="desktop/factura-liquidacion.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-orange-50 hover:text-brand-600 transition-colors">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-money-bill-transfer text-slate-400"></i> Liquidación Final Split Payment</span>
+          <span class="text-[10px] text-slate-400">desktop/factura-liquidacion.html</span>
+        </a>
+        <a href="mobile/bahia-mecanico-tactil.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-orange-50 hover:text-brand-600 transition-colors">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-stopwatch text-slate-400"></i> Modo Táctil Bahía Mecánico (PWA)</span>
+          <span class="text-[10px] text-slate-400">mobile/bahia-mecanico-tactil.html</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-slate-200 bg-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-700">MotoPro Workshop ERP</span>
+        <span>•</span>
+        <span>Licencia MIT</span>
+        <span>•</span>
+        <span>Especialistas en 2 Ruedas</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#swaggerSection" class="hover:text-brand-600">OpenAPI Spec</a>
+        <a href="https://github.com" target="_blank" class="hover:text-brand-600"><i class="fa-brands fa-github"></i> Repositorio</a>
+        <button onclick="toggleDocModal(true)" class="hover:text-brand-600">Manuales</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Filtrado interactivo por categorías
+    function filterCategory(cat, element) {
+      // Actualizar botones del sidebar
+      document.querySelectorAll('.sidebar-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-50', 'text-brand-600');
+        btn.classList.add('text-slate-600');
+        const icon = btn.querySelector('i');
+        if (icon && !btn.innerText.includes('WhatsApp')) {
+          icon.classList.remove('text-brand-500');
+          icon.classList.add('text-slate-400');
         }
       });
-      applyFilters();
-    }
 
-    function setDeviceFilter(device) {
-      activeDevice = device;
-      document.querySelectorAll('.filter-pill-dev').forEach(btn => {
-        if (btn.getAttribute('data-dev') === device) {
-          btn.className = 'filter-pill-dev px-space-xs py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-high text-on-surface font-bold';
-        } else {
-          btn.className = 'filter-pill-dev px-space-xs py-space-2xs rounded font-label-xs text-label-xs text-on-surface-variant hover:text-on-surface';
+      if (element) {
+        element.classList.add('bg-brand-50', 'text-brand-600');
+        element.classList.remove('text-slate-600');
+        const icon = element.querySelector('i');
+        if (icon && !element.innerText.includes('WhatsApp')) {
+          icon.classList.add('text-brand-500');
+          icon.classList.remove('text-slate-400');
         }
+      }
+
+      // Actualizar píldoras móviles
+      document.querySelectorAll('.category-pill').forEach(pill => {
+        pill.classList.remove('bg-brand-500', 'text-white');
+        pill.classList.add('bg-white', 'text-slate-700');
       });
-      applyFilters();
-    }
 
-    function handleFilterChange() {
-      applyFilters();
-    }
-
-    function handleLiveSearch() {
-      applyFilters();
-    }
-
-    function applyFilters() {
-      const searchInput = document.getElementById('searchModulesInput').value.toLowerCase().trim();
-      const roleFilter = document.getElementById('roleFilterSelect').value;
+      // Filtrar tarjetas
       const cards = document.querySelectorAll('.module-card');
-      const matchBadge = document.getElementById('matchCountBadge');
       let visibleCount = 0;
 
       cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        const path = card.querySelector('.font-tabular-mono-md').textContent.toLowerCase();
-        const cardCategory = card.getAttribute('data-category');
-        const cardDevice = card.getAttribute('data-device');
-        const cardRole = card.getAttribute('data-role');
-
-        const matchesSearch = !searchInput || 
-          title.includes(searchInput) || 
-          desc.includes(searchInput) || 
-          path.includes(searchInput) ||
-          cardRole.toLowerCase().includes(searchInput);
-
-        const matchesCat = (activeCategory === 'all') || (cardCategory === activeCategory);
-        const matchesDev = (activeDevice === 'all') || (cardDevice === activeDevice);
-        const matchesRole = (roleFilter === 'all') || (cardRole === 'all') || (cardRole.toLowerCase().includes(roleFilter.toLowerCase()));
-
-        if (matchesSearch && matchesCat && matchesDev && matchesRole) {
+        const cardCat = card.getAttribute('data-category');
+        if (cat === 'all' || cardCat === cat) {
           card.classList.remove('hidden');
-          card.classList.add('flex');
           visibleCount++;
         } else {
-          card.classList.remove('flex');
           card.classList.add('hidden');
         }
       });
 
-      const noResults = document.getElementById('noResultsState');
+      // Mostrar u ocultar placeholder de no resultados
+      const noResults = document.getElementById('noResults');
       if (visibleCount === 0) {
         noResults.classList.remove('hidden');
-        noResults.classList.add('flex');
       } else {
-        noResults.classList.remove('flex');
         noResults.classList.add('hidden');
       }
-
-      if (searchInput) {
-        matchBadge.textContent = visibleCount;
-        matchBadge.classList.remove('hidden');
-      } else {
-        matchBadge.classList.add('hidden');
-      }
     }
 
-    function resetAllFilters() {
-      document.getElementById('searchModulesInput').value = '';
-      document.getElementById('roleFilterSelect').value = 'all';
-      setCategoryFilter('all');
-      setDeviceFilter('all');
-    }
+    // 2. Búsqueda en tiempo real
+    const searchInput = document.getElementById('globalSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.module-card');
+        let visibleCount = 0;
 
-    function scrollToShortcuts() {
-      document.getElementById('shortcutsGuideSection').scrollIntoView({ behavior: 'smooth' });
-    }
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const keywords = card.getAttribute('data-keywords') || '';
+          if (text.includes(query) || keywords.includes(query)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
 
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        const toast = document.getElementById('copyAlertToast');
-        toast.classList.remove('hidden');
-        setTimeout(() => {
-          toast.classList.add('hidden');
-        }, 2200);
+        const noResults = document.getElementById('noResults');
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
       });
     }
 
-    function triggerZipDownload() {
-      alert('Iniciando empaquetado del repositorio local MotoPro v2.4 (HTML5 + Tailwind CSS + Assets)...');
+    function resetSearch() {
+      if (searchInput) searchInput.value = '';
+      filterCategory('all', document.querySelector('.sidebar-btn'));
     }
 
-    // Tecla global Ctrl+K para enfocar el buscador
+    // 3. Modales
+    function toggleDocModal(show) {
+      const modal = document.getElementById('docModal');
+      if (show) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function toggleCommandPalette(show) {
+      const modal = document.getElementById('commandPaletteModal');
+      if (show) {
+        modal.classList.remove('hidden');
+        setTimeout(() => document.getElementById('cmdInput').focus(), 50);
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function triggerCommandPalette() {
+      toggleCommandPalette(true);
+    }
+
+    // Atajos de teclado (Ctrl+K, Esc)
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        const input = document.getElementById('searchModulesInput');
-        input.focus();
-        input.select();
+        toggleCommandPalette(true);
+      }
+      if (e.key === 'Escape') {
+        toggleDocModal(false);
+        toggleCommandPalette(false);
       }
     });
+
+    // 4. Tabs de la consola Mock Swagger
+    function switchApiTab(tabId, btn) {
+      document.querySelectorAll('.api-tab').forEach(b => {
+        b.classList.remove('border-brand-500', 'text-brand-600');
+        b.classList.add('border-transparent', 'text-slate-500');
+      });
+      btn.classList.add('border-brand-500', 'text-brand-600');
+      btn.classList.remove('border-transparent', 'text-slate-500');
+
+      document.querySelectorAll('.api-tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.getElementById('apiTab-' + tabId).classList.remove('hidden');
+    }
+
+    function executeMockTest(type) {
+      const output = document.getElementById('mockOutput-' + type);
+      if (output) {
+        output.innerText = '// Enviando petición HTTP mock a servidor local...\n// Latencia: 42ms\n// Código de respuesta: 200 OK (Simulation Verified)';
+        setTimeout(() => {
+          if (type === 'liquidar') {
+            output.innerText = JSON.stringify({
+              status: "success",
+              numeroRecibo: "REC-POS-" + Math.floor(10000 + Math.random() * 90000),
+              totalCobradoUSD: 311.15,
+              totalCobradoCOP: 1245000.00,
+              paseSalidaPorteriaQR: "MOTOPRO-PASS-OT1048-VALID-2023",
+              aperturaGavetaEjecutada: true,
+              timestamp: new Date().toISOString()
+            }, null, 2);
+          } else if (type === 'arqueo') {
+            output.innerText = JSON.stringify({
+              consecutivoZ: "Z-2023-10-18-001",
+              totalEsperadoUSD: 1980.50,
+              totalArqueadoFisicoUSD: 1980.50,
+              diferenciaCuadreUSD: 0.00,
+              estadoTerminal: "BLOQUEADA_REPORTE_Z",
+              impresionFiscalZ: "EXITOSA_EPSON_80MM"
+            }, null, 2);
+          } else {
+            output.innerText = JSON.stringify({
+              status: "DESPACHADO",
+              kardexMovimientoId: 89412,
+              stockRestante_KTM: 14.0,
+              stockRestante_MOTUL: 48.0,
+              almacenista: "USR-205",
+              firmaMecanicoRecepcion: "sha256-8c92f1b4a8..."
+            }, null, 2);
+          }
+        }, 300);
+      }
+    }
   </script>
-</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl py-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><span class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span>Sistema Operativo Activo</span><span>•</span><span>MotoPro Workshop ERP Suite</span><span>•</span><span>Node/Vite Engine v2.4</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">terminal</span>GitHub Repo</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">folder_zip</span>Descargar Release .zip</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">help</span>Soporte Técnico</a></div></footer></div></body></html>
+</body>
+</html>
