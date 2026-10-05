@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "on-surface": "#0b1c30", "on-primary": "#ffffff", "on-tertiary-fixed": "#001d31", "outline-variant": "#e0c0b1", "primary-container": "#f97316", "secondary-fixed-dim": "#bec6e0", "on-secondary": "#ffffff", "tertiary-fixed": "#cce5ff", "on-surface-variant": "#584237", "inverse-primary": "#ffb690", "on-background": "#0b1c30", "on-secondary-container": "#5c647a", "primary-fixed-dim": "#ffb690", "on-error-container": "#93000a", "tertiary-container": "#40a2e7", "surface": "#f8f9ff", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#93ccff", "surface-bright": "#f8f9ff", "on-primary-container": "#582200", "on-tertiary-container": "#003655", "on-secondary-fixed": "#131b2e", "on-primary-fixed-variant": "#783200", "secondary": "#565e74", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "on-secondary-fixed-variant": "#3f465c", "tertiary": "#006398", "primary": "#9d4300", "surface-container-high": "#dce9ff", "surface-variant": "#d3e4fe", "outline": "#8c7164", "on-tertiary-fixed-variant": "#004b73", "inverse-on-surface": "#eaf1ff", "surface-dim": "#cbdbf5", "background": "#f8f9ff", "on-tertiary": "#ffffff", "surface-tint": "#9d4300", "on-primary-fixed": "#341100", "surface-container-highest": "#d3e4fe", "surface-container": "#e5eeff", "secondary-container": "#dae2fd", "on-error": "#ffffff", "primary-fixed": "#ffdbca", "inverse-surface": "#213145", "secondary-fixed": "#dae2fd" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin": "1.5rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-sm": "0.5rem", "gutter-dense": "0.5rem", "space-lg": "1rem", "margin-mobile": "0.75rem", "space-xl": "1.5rem", "space-md": "0.75rem", "space-2xl": "2rem" }, fontFamily: { "body-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "label-xs": ["Inter"], "body-lg": ["Inter"], "tabular-mono-lg": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "display-lg-mobile": ["Inter"], "tabular-mono-md": ["Inter"], "headline-xl": ["Inter"] }, fontSize: { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-xs": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "tabular-mono-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "tabular-mono-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-xl": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-dense flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">MotoPro</span><span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded-lg bg-surface-container text-tertiary uppercase tracking-wider font-semibold">Bay B-02</span></div><h1 class="font-headline-md text-headline-md text-on-surface truncate leading-none mt-0.5">Bahía Cronómetro</h1></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden sm:flex flex-col items-end text-right"><span class="font-label-md text-label-md text-on-surface truncate max-w-[110px]">Andrés López</span><span class="font-label-xs text-label-xs text-primary font-bold">MASTER TECH</span></div><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XGH2JZwq0yw-ueAZDBjoHLlC6xa_gKOeccBO2SCLr0ywaLkYYqM3qezx_n_a0LfBNFBMsDaZZMcJr8SdiTp7LAWBeqLfXOnyN7gqTQKnb_EAOEeyYNRCu2aQ3rUaYs7KKvwydIBLG4wNrQ4TAGQlxSEBm0xLMx2yBXDhR3w8LK_2rgXIwV5DSDdVtoTL9wIrYiaPFc_h9zIQt_4lxQdeg6ncYXHb-S59OEFpjVelIkTcKTiper7UMJ3_0"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen px-gutter-dense"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- CONTEXT & STATUS HEADER CARD -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Volver" class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[26px]">arrow_back</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Evidencias OT-1048</span>
+<span class="px-2 py-0.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs uppercase">En Bahía</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">KTM 1290 Super Adventure S • Placa JKL-92D</p>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-xs text-label-xs">2 Fotos • 1 Audio</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">Bahía B-02</span>
+</div>
+</div>
+</div>
+<!-- WORKSHOP GLOVE-FRIENDLY SECTION TABS -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container p-1 rounded-xl">
+<button class="h-12 flex items-center justify-center gap-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md transition-all" id="tab-cam-btn" onclick="switchWorkshopTab('cam')">
+<span class="material-symbols-outlined text-[20px] text-primary-container">photo_camera</span>
+<span>Cámara &amp; Fotos</span>
+</button>
+<button class="h-12 flex items-center justify-center gap-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="tab-voice-btn" onclick="switchWorkshopTab('voice')">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span>Dictado de Bahía</span>
+</button>
+</div>
+<!-- PANEL 1: CÁMARA & FOTOGRAFÍA -->
+<div class="flex flex-col space-y-space-md" id="panel-camera">
+<!-- CAMERA VIEWFINDER (HIGH-CONTRAST BAY MONITOR MODE) -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-inverse-surface shadow-md flex items-center justify-center">
+<!-- Live Motor Bay Texture Preview -->
+<img class="w-full h-full object-cover opacity-85" data-alt="Close-up macro mechanical view of a high-performance motorcycle engine bay and rear sprocket, heavy metallic textures, workshop ambient safety lighting, oil stains, technical inspection precision view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBObx2N4J5AYEemhSGFZyMzXlyiO1XjbWRkrIG0nJhP7p0CLrisMspipp5cwplPbixVGrtCEJbGs7lFpM0ocKEVWowDWYMI_KEhNR_laMfo8vJFzb_lNkr9DPyoAdXZYuWgqn_jWb_mcAaelu-V2bT9lYLmv3G7IexCxNU_a9EWknlt2TZ_wTEqYmywBQtgB80qIU4BJXDdmzrtuCCea_gK4SMoh5NjuRrmy4cKDfqPweIjrzQrTwqX"/>
+<!-- 3x3 Calibration Centering Grid -->
+<div class="absolute inset-0 grid grid-cols-3 grid-rows-3 pointer-events-none opacity-40">
+<div class="border-r border-b border-surface-container-lowest/30"></div>
+<div class="border-r border-b border-surface-container-lowest/30"></div>
+<div class="border-b border-surface-container-lowest/30"></div>
+<div class="border-r border-b border-surface-container-lowest/30"></div>
+<div class="border-r border-b border-surface-container-lowest/30 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full border border-primary-container/80 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+</div>
+<div class="border-b border-surface-container-lowest/30"></div>
+<div class="border-r border-surface-container-lowest/30"></div>
+<div class="border-r border-surface-container-lowest/30"></div>
+<div></div>
+</div>
+<!-- Top Overlay Controls for Greasy Gloves -->
+<div class="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-auto">
+<span class="px-2.5 py-1 rounded-lg bg-inverse-surface/80 text-inverse-on-surface font-label-xs text-label-xs backdrop-blur-md flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+          SENSOR 48MP • ISO 400
+        </span>
+<div class="flex items-center gap-2">
+<button class="w-12 h-12 rounded-lg bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md flex items-center justify-center active:scale-90 transition-transform" id="torch-btn" onclick="toggleTorch()" type="button">
+<span class="material-symbols-outlined text-[24px]">flash_on</span>
+</button>
+<button class="w-12 h-12 rounded-lg bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md flex items-center justify-center active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">flip_camera_ios</span>
+</button>
+</div>
+</div>
+<!-- Live Alignment Level Helper -->
+<div class="absolute bottom-3 left-3 px-2 py-1 rounded bg-inverse-surface/80 text-inverse-on-surface font-label-xs text-label-xs backdrop-blur-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">straighten</span>
+<span>PLANO HORIZONTAL: 0.2°</span>
+</div>
+</div>
+<!-- QUICK MECHANIC TAG CHIPS (Single-tap categorized tagging) -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wide">Clasificar Evidencia (Tocar Chip)</span>
+<span class="font-label-xs text-label-xs text-primary font-semibold">1 Seleccionado</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="flex-shrink-0 min-h-[44px] px-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+          Pieza Averiada (Garantía)
+        </button>
+<button class="flex-shrink-0 min-h-[44px] px-3.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 active:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[18px]">oil_barrel</span>
+          Filtro / Aceite
+        </button>
+<button class="flex-shrink-0 min-h-[44px] px-3.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 active:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[18px]">broken_image</span>
+          Daño Previo (Recepción)
+        </button>
+<button class="flex-shrink-0 min-h-[44px] px-3.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 active:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[18px]">new_releases</span>
+          Repuesto Instalado
+        </button>
+</div>
+</div>
+<!-- LARGE MECHANICAL SHUTTER CONTROLLER -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-around">
+<button aria-label="Abrir Galería" class="flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-surface-container text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[26px]">photo_library</span>
+<span class="font-label-xs text-label-xs mt-0.5">Galería</span>
+</button>
+<!-- GIANT TACTILE SHUTTER (Engineered for workshop gloves) -->
+<button class="w-20 h-20 rounded-full bg-primary-container p-1.5 flex items-center justify-center shadow-lg active:scale-90 transition-transform" id="shutter-trigger" onclick="simulateShutter()" type="button">
+<div class="w-full h-full rounded-full bg-on-primary flex items-center justify-center shadow-inner">
+<span class="w-5 h-5 rounded-full bg-primary-container"></span>
+</div>
+</button>
+<button aria-label="Añadir Marcador Técnico" class="flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-surface-container text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[26px]">draw</span>
+<span class="font-label-xs text-label-xs mt-0.5">Anotar</span>
+</button>
+</div>
+<!-- RECENT WORK ORDER THUMBNAILS CAROUSEL -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Fotos en esta OT (2)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Sincronizado con Servidor</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Photo 1 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col space-y-2">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Mechanical diagnostic photo of dirty motorcycle oil filter with microscopic metal shavings and brass glitter particles during engine teardown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEZ1DyMKbm2W7FY7Xuc7nCYm-Eb17sNifXj4SRo_twbnAa7yGwHqqwm4teXu9bdnbhRxtEnoeIlGcRudF-UOozL_PVXJk8qUwHYUan39rCAUC2K2LHIj6wTDQJ-1_lXaVDay8qzGHW0chryhItVSdBENvtKQdK6NpSq84YC8TOyPvd0A6NBpkgSShjZPnf8b6XLL_QQ2e7Scl5_zSTmMB8_QQo_qvaTKJENGZBtnp1iXK8ngafVYH3"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-inverse-surface/85 text-inverse-on-surface font-label-xs text-label-xs">10:14 AM</span>
+<button aria-label="Ampliar" class="absolute bottom-1.5 right-1.5 w-7 h-7 rounded bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+</div>
+<div class="flex items-center justify-between min-w-0">
+<div class="min-w-0">
+<span class="font-label-xs text-label-xs text-primary font-bold block truncate">Daño interno viruta</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Filtro de aceite primario</p>
+</div>
+<button aria-label="Eliminar" class="text-error p-1 hover:bg-error-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Photo 2 Card -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm flex flex-col space-y-2">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Precision workshop photo measuring spark plug electrode gap with stainless steel feeler gauge tool in mechanic hands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy4Ink6DQvVm1SKCEuMD8y4mLG6etoIdoxgvMJIuTZCYxenJeU7ya8e5giwI5voQsA_wj3CknxBK53XxCYInORWzIGrkDk6_VXoddfOa3pAfq-mY_2ZxA0qhpbqODLXiSgeR47ku3FwP77oRhVcf4vM8Kwi5xfYm6mc5Jf2EjjEYH2PcxNIodvdIlrjFE_nIZs2yruRbRnXjUOksb4fdD0Qbl29vqM1D8Sejg59R9gvGjfXtX0Xb7G"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-inverse-surface/85 text-inverse-on-surface font-label-xs text-label-xs">10:32 AM</span>
+<button aria-label="Ampliar" class="absolute bottom-1.5 right-1.5 w-7 h-7 rounded bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+</div>
+<div class="flex items-center justify-between min-w-0">
+<div class="min-w-0">
+<span class="font-label-xs text-label-xs text-tertiary font-bold block truncate">Calibración 0.8mm</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bujía NGK LMAR9AI-8</p>
+</div>
+<button aria-label="Eliminar" class="text-error p-1 hover:bg-error-container rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PANEL 2: NOTA DE VOZ & DICTADO MECÁNICO -->
+<div class="hidden flex flex-col space-y-space-md" id="panel-voice">
+<!-- ACTIVE RECORDER HERO MODULE -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col items-center text-center space-y-space-md">
+<div class="flex items-center justify-between w-full">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-label-xs text-label-xs text-on-surface uppercase tracking-wider font-semibold">
+          Canal Bahía B-02
+        </span>
+<div class="flex items-center gap-1.5 text-error">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold">REC ACTIVO</span>
+</div>
+</div>
+<!-- Elapsed Timer Display -->
+<div class="flex flex-col items-center">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight" id="timer-readout">00:38</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grabando hallazgo mecánico...</span>
+</div>
+<!-- Dynamic Live Audio Waveform (SVG Animated Simulation) -->
+<div class="w-full h-16 bg-surface-container rounded-lg px-4 flex items-center justify-center overflow-hidden">
+<svg class="w-full h-10" fill="none" preserveaspectratio="none" viewbox="0 0 240 40">
+<rect fill="#9d4300" height="12" opacity="0.6" rx="2" width="4" x="0" y="14"></rect>
+<rect fill="#f97316" height="20" rx="2" width="4" x="8" y="10"></rect>
+<rect fill="#f97316" height="28" rx="2" width="4" x="16" y="6"></rect>
+<rect fill="#9d4300" height="16" rx="2" width="4" x="24" y="12"></rect>
+<rect fill="#f97316" height="32" rx="2" width="4" x="32" y="4"></rect>
+<rect fill="#f97316" height="24" rx="2" width="4" x="40" y="8"></rect>
+<rect fill="#9d4300" height="8" opacity="0.5" rx="2" width="4" x="48" y="16"></rect>
+<rect fill="#f97316" height="36" rx="2" width="4" x="56" y="2"></rect>
+<rect fill="#f97316" height="28" rx="2" width="4" x="64" y="6"></rect>
+<rect fill="#9d4300" height="12" rx="2" width="4" x="72" y="14"></rect>
+<rect fill="#f97316" height="20" rx="2" width="4" x="80" y="10"></rect>
+<rect fill="#f97316" height="32" rx="2" width="4" x="88" y="4"></rect>
+<rect fill="#f97316" height="24" rx="2" width="4" x="96" y="8"></rect>
+<rect fill="#9d4300" height="10" rx="2" width="4" x="104" y="15"></rect>
+<rect fill="#f97316" height="38" rx="2" width="4" x="112" y="1"></rect>
+<rect fill="#f97316" height="30" rx="2" width="4" x="120" y="5"></rect>
+<rect fill="#9d4300" height="18" rx="2" width="4" x="128" y="11"></rect>
+<rect fill="#f97316" height="26" rx="2" width="4" x="136" y="7"></rect>
+<rect fill="#f97316" height="34" rx="2" width="4" x="144" y="3"></rect>
+<rect fill="#9d4300" height="16" rx="2" width="4" x="152" y="12"></rect>
+<rect fill="#f97316" height="24" rx="2" width="4" x="160" y="8"></rect>
+<rect fill="#f97316" height="36" rx="2" width="4" x="168" y="2"></rect>
+<rect fill="#f97316" height="20" rx="2" width="4" x="176" y="10"></rect>
+<rect fill="#9d4300" height="12" opacity="0.6" rx="2" width="4" x="184" y="14"></rect>
+<rect fill="#f97316" height="30" rx="2" width="4" x="192" y="5"></rect>
+<rect fill="#f97316" height="22" rx="2" width="4" x="200" y="9"></rect>
+<rect fill="#9d4300" height="8" opacity="0.4" rx="2" width="4" x="208" y="16"></rect>
+<rect fill="#f97316" height="16" rx="2" width="4" x="216" y="12"></rect>
+<rect fill="#f97316" height="26" rx="2" width="4" x="224" y="7"></rect>
+<rect fill="#9d4300" height="12" rx="2" width="4" x="232" y="14"></rect>
+</svg>
+</div>
+<!-- HUGE PUSH-TO-TALK BUTTON (GLOVE ERGONOMICS) -->
+<div class="relative flex items-center justify-center py-2">
+<div class="absolute w-28 h-28 rounded-full bg-primary-container/20 animate-ping pointer-events-none"></div>
+<button aria-label="Grabar audio de diagnóstico" class="relative z-10 w-24 h-24 rounded-full bg-primary-container text-on-primary flex flex-col items-center justify-center shadow-xl active:scale-95 transition-transform" id="record-trigger" type="button">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="font-label-xs text-label-xs mt-0.5">PULSAR</span>
+</button>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant max-w-xs">
+        Toca para pausar o mantén presionado. Filtro de ruido activo para pistolas neumáticas y compresor.
+      </p>
+<!-- SPEECH-TO-TEXT REAL-TIME TRANSCRIBER CARD -->
+<div class="w-full bg-surface-container rounded-lg p-3 text-left">
+<div class="flex items-center gap-1.5 mb-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span class="font-label-xs text-label-xs font-semibold">Transcripción Automática (Voz a Texto)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">
+          “Cliente reporta crujido en carga; se detecta juego axial de 3mm en catalina trasera y rodamientos resecos. Requiere reemplazo de kit de arrastre.”
+        </p>
+</div>
+</div>
+<!-- SAVED AUDIO EVIDENCE LIST -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Audios Guardados en OT (1)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Formato WAV 48kHz</span>
+</div>
+<!-- Audio Item Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Reproducir Nota" class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Diagnóstico holgura transmisión.wav</p>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-xs text-label-xs text-primary font-bold">0:24s</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">• 10:28 AM</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-xs text-label-xs text-tertiary">Mecánico: Andrés L.</span>
+</div>
+</div>
+</div>
+<button aria-label="Borrar nota de audio" class="text-on-surface-variant p-2 hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Scrubber Progress bar -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-2/5 rounded-full"></div>
+</div>
+<!-- Warranty Claim Checklist Toggle -->
+<label class="flex items-center justify-between pt-1 cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface">Adjuntar a Expediente de Garantía KTM</span>
+</div>
+<input checked="" class="w-6 h-6 rounded accent-primary-container" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- WHATSAPP CUSTOMER SHARING TOGGLE -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<label class="flex items-start gap-space-sm cursor-pointer">
+<input checked="" class="w-6 h-6 mt-0.5 rounded accent-primary-container flex-shrink-0" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Notificar Peritaje al Cliente por WhatsApp</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs font-semibold">+57 312...</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Envía enlace de consulta con las 2 fotos y el audio transcripto para autorización de repuestos.
+        </p>
+</div>
+</label>
+</div>
+<!-- PRIMARY SAVE & LINK CTA (GLOVE CERTIFIED 56PX HEIGHT) -->
+<div class="w-full flex flex-col space-y-space-xs pt-1">
+<button class="w-full min-h-[56px] rounded-xl bg-primary-container text-on-primary font-headline-md text-headline-md flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all" id="save-evidences-btn" onclick="saveAndLinkOT()" type="button">
+<span class="material-symbols-outlined text-[24px]">save</span>
+<span>Guardar y Vincular a OT-1048</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+<span class="font-label-xs text-label-xs">Bahía B-02 conectada al ERP MotoPro Central</span>
+</div>
+</div>
+</div>
+<script>
+  function switchWorkshopTab(target) {
+    const camBtn = document.getElementById('tab-cam-btn');
+    const voiceBtn = document.getElementById('tab-voice-btn');
+    const camPanel = document.getElementById('panel-camera');
+    const voicePanel = document.getElementById('panel-voice');
+
+    if (target === 'cam') {
+      camPanel.classList.remove('hidden');
+      voicePanel.classList.add('hidden');
+      
+      camBtn.className = "h-12 flex items-center justify-center gap-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md transition-all";
+      voiceBtn.className = "h-12 flex items-center justify-center gap-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all";
+    } else {
+      camPanel.classList.add('hidden');
+      voicePanel.classList.remove('hidden');
+
+      voiceBtn.className = "h-12 flex items-center justify-center gap-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md transition-all";
+      camBtn.className = "h-12 flex items-center justify-center gap-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all";
+    }
+  }
+
+  function toggleTorch() {
+    const btn = document.getElementById('torch-btn');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon.innerText === 'flash_on') {
+      icon.innerText = 'flash_off';
+      btn.classList.add('text-primary-container');
+    } else {
+      icon.innerText = 'flash_on';
+      btn.classList.remove('text-primary-container');
+    }
+  }
+
+  function simulateShutter() {
+    const trigger = document.getElementById('shutter-trigger');
+    trigger.classList.add('scale-75');
+    setTimeout(() => {
+      trigger.classList.remove('scale-75');
+    }, 150);
+  }
+
+  function saveAndLinkOT() {
+    const saveBtn = document.getElementById('save-evidences-btn');
+    const originalText = saveBtn.innerHTML;
+    saveBtn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">sync</span><span>Sincronizando con OT-1048...</span>';
+    saveBtn.disabled = true;
+
+    setTimeout(() => {
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[24px]">task_alt</span><span>¡Evidencias Vinculadas con Éxito!</span>';
+      setTimeout(() => {
+        saveBtn.innerHTML = originalText;
+        saveBtn.disabled = false;
+      }, 2000);
+    }, 1000);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mis-ots" href="#"><span class="material-symbols-outlined text-[22px]">build_circle</span><span class="font-label-xs text-label-xs mt-0.5">Mis OTs</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="bahia-cronometro" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="font-label-xs text-label-xs mt-0.5">Bahía</span></a><a class="flex flex-col items-center justify-center -mt-5 min-w-[56px] min-h-[44px] group" data-path="escanear-qr" href="#"><div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-md active:scale-95 transition-transform"><span class="material-symbols-outlined text-2xl">qr_code_scanner</span></div><span class="font-label-xs text-label-xs text-on-surface-variant mt-1 group-hover:text-primary transition-colors">Escanear</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="repuestos" href="#"><span class="material-symbols-outlined text-[22px]">precision_manufacturing</span><span class="font-label-xs text-label-xs mt-0.5">Repuestos</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="perfil-turno" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-xs text-label-xs mt-0.5">Turno</span></a></div></nav></body></html>

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb690","on-error-container":"#93000a","tertiary":"#006398","surface-container-lowest":"#ffffff","surface":"#f8f9ff","primary-fixed":"#ffdbca","outline-variant":"#e0c0b1","primary":"#9d4300","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","surface-tint":"#9d4300","background":"#f8f9ff","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","error-container":"#ffdad6","on-surface-variant":"#584237","inverse-primary":"#ffb690","on-secondary-container":"#5c647a","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","primary-container":"#f97316","on-background":"#0b1c30","on-tertiary-fixed":"#001d31","surface-variant":"#d3e4fe","on-tertiary-container":"#003655","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#783200","surface-container-highest":"#d3e4fe","on-tertiary-fixed-variant":"#004b73","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","tertiary-fixed":"#cce5ff","secondary-fixed-dim":"#bec6e0","tertiary-fixed-dim":"#93ccff","on-tertiary":"#ffffff","secondary":"#565e74","on-surface":"#0b1c30","inverse-surface":"#213145","secondary-fixed":"#dae2fd","surface-container":"#e5eeff","secondary-container":"#dae2fd","on-primary-container":"#582200","on-primary-fixed":"#341100","tertiary-container":"#40a2e7","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem","space-md":"0.75rem","gutter-dense":"0.5rem","space-xs":"0.25rem","space-2xs":"0.125rem","space-lg":"1rem","gutter":"1rem","margin":"1.5rem","margin-mobile":"0.75rem"},"fontFamily":{"display-lg":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"display-lg-mobile":["Inter"],"label-xs":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 flex items-center px-space-lg gap-space-sm bg-surface-container-lowest"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface leading-tight">MotoPro</span><span class="font-label-xs text-label-xs text-primary font-bold uppercase tracking-wider">Workshop ERP</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface font-medium">Entorno</span></div><select aria-label="Seleccionar entorno de ejecución" class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg px-space-xs py-space-2xs outline-none cursor-pointer"><option value="gh-pages">GitHub Pages</option><option value="local">Local Dev (3000)</option></select></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider font-bold">Directorio Central</span></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="directorio-modulos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Todos los Módulos</span></div><span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-bold">24</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="erp-administracion" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">ERP &amp; Administración</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="taller-bahias" href="#"><span class="material-symbols-outlined text-[18px]">two_wheeler</span><span class="font-body-md text-body-md">Taller &amp; Bahías</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="punto-de-venta-pos" href="#"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span class="font-body-md text-body-md">Punto de Venta &amp; POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="movil-pwa-operarios" href="#"><span class="material-symbols-outlined text-[18px]">smartphone</span><span class="font-body-md text-body-md">Móvil &amp; PWA Operarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="portal-clientes-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-body-md text-body-md">Portal WhatsApp</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentacion-readme" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Documentación &amp; README</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-xs text-label-xs">REPOSITORIO v2.4</span><span class="flex items-center gap-space-2xs font-label-xs text-label-xs text-on-surface font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Producción</span></div><div class="flex items-center gap-space-xs pt-space-xs"><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">code</span>Repo</a><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">download</span>ZIP</a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" placeholder="Buscar módulo, orden, chasis o parte... (Ctrl + K)" type="text"/><kbd class="absolute right-space-sm px-space-xs py-space-2xs bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs rounded shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold">v2.4 Prod</span></div><button aria-label="Estado del sistema sincronizado" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">sync</span></button><button aria-label="Notificaciones y alertas operativas" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button></div><div class="flex items-center gap-space-sm pl-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XGH2JZwq0yw-ueAZDBjoHLlC6xa_gKOeccBO2SCLr0ywaLkYYqM3qezx_n_a0LfBNFBMsDaZZMcJr8SdiTp7LAWBeqLfXOnyN7gqTQKnb_EAOEeyYNRCu2aQ3rUaYs7KKvwydIBLG4wNrQ4TAGQlxSEBm0xLMx2yBXDhR3w8LK_2rgXIwV5DSDdVtoTL9wIrYiaPFc_h9zIQt_4lxQdeg6ncYXHb-S59OEFpjVelIkTcKTiper7UMJ3_0"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold leading-none">Carlos M.</span><span class="font-label-xs text-label-xs text-on-surface-variant font-medium">Jefe de Taller</span></div></div></div></header><main class="flex-1 pt-16 bg-surface w-full px-space-xl py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Global API Context Banner -->
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<!-- Breadcrumb & Direct Screen Switcher -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="flex items-center gap-space-2xs text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">terminal</span> API Explorer
+        </span>
+<span>/</span>
+<span class="text-on-surface font-semibold">Swagger UI OAS 3.0.3</span>
+<span>/</span>
+<span class="px-space-xs py-space-2xs bg-surface-container rounded font-tabular-mono-md text-tabular-mono-md">v2.4.0-stable</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+          Volver al Directorio (24 Módulos)
+        </a>
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-secondary-fixed text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors" id="btnCopyConfig" type="button">
+<span class="material-symbols-outlined text-[16px]">integration_instructions</span>
+<span>MOTOPRO_CONFIG</span>
+</button>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded-lg flex items-center gap-space-xs shadow-sm hover:opacity-95 transition-all" id="btnDownloadYaml" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>OpenAPI YAML</span>
+</button>
+</div>
+</div>
+<!-- Main API Spec Billboard & Live Endpoint Badge Bar -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-xl shadow-sm overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-gradient-to-br from-primary-container/10 via-tertiary/5 to-transparent blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-xl relative z-10">
+<div class="flex flex-col gap-space-sm max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-space-2xs bg-surface-container-high text-on-surface font-label-xs text-label-xs rounded font-bold uppercase tracking-wider">OAS 3.0.3 Specification</span>
+<span class="px-space-sm py-space-2xs bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs rounded font-bold uppercase tracking-wider">DIAN UBL 2.1 Fiscal Sync</span>
+<span class="px-space-sm py-space-2xs bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs rounded font-bold uppercase tracking-wider">ESC/POS 80mm Print Daemon</span>
+<span class="px-space-sm py-space-2xs bg-surface-variant text-tertiary font-label-xs text-label-xs rounded font-bold uppercase tracking-wider">WebSocket Bi-Directional Bus</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:font-display-lg lg:text-display-lg text-on-surface font-bold tracking-tight">
+            ⚡ MotoPro REST API Reference &amp; Interactive Swagger
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Consola interactiva de despacho telemático y persistencia operativa para talleres de alta densidad. Expone microservicios de peritaje visual pericial 360°, control de bahías con telemetría de reloj en tiempo real, catálogo de tiempos baremo flat-rate por cilindraje, Kardex multi-bodega con trazabilidad de lotes, punto de venta multimoneda POS y certificación fiscal DIAN UBL 2.1.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+              Base Gateway: <code class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold bg-surface-container px-space-xs py-space-2xs rounded">https://api.tu-taller.com/v1</code>
+</span>
+<span>•</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+              Bearer JWT + Header <code class="text-on-surface font-semibold bg-surface-container px-space-2xs rounded">X-Workshop-Branch-Id</code>
+</span>
+<span>•</span>
+<span class="text-on-surface font-medium">Latencia Media Sede: <strong>11ms</strong></span>
+</div>
+</div>
+<!-- Telemetry Summary Metric Tile -->
+<div class="flex lg:flex-col sm:flex-row flex-col gap-space-md min-w-[280px]">
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Total Operaciones</span>
+<span class="font-display-lg text-display-lg font-bold text-on-surface">14</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold">Throughput Actual</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">2,410 req/min</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Filter Bar (Utilitarian Navigation Chips) -->
+<div class="flex flex-wrap items-center gap-space-xs py-space-xs overflow-x-auto">
+<button class="cat-pill active px-space-md py-space-xs bg-on-surface text-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="all" type="button">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+        Todos los Endpoints (14)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="auth" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+        Autenticación &amp; Sedes (2)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="reception" type="button">
+<span class="material-symbols-outlined text-[16px]">two_wheeler</span>
+        Recepción &amp; Peritaje (1)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="workshop" type="button">
+<span class="material-symbols-outlined text-[16px]">build</span>
+        Taller &amp; Bahías (4)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="baremo" type="button">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+        Baremo &amp; Flat-Rate (1)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="inventory" type="button">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+        Inventario &amp; Kardex (2)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="pos" type="button">
+<span class="material-symbols-outlined text-[16px]">point_of_sale</span>
+        Caja POS &amp; Pagos (3)
+      </button>
+<button class="cat-pill px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors" data-filter="fiscal" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+        Facturación DIAN (1)
+      </button>
+</div>
+</div>
+<!-- Endpoints Accordion List -->
+<div class="flex flex-col gap-space-md" id="endpointContainer">
+<!-- 1. POST /auth/login -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="auth">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/auth/login</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Autenticación multiusuario, rol y PIN supervisor</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Público / SSL</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Payload de Entrada (JSON Body)</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"username"</span>: <span class="text-secondary-fixed">"carlos.m@motopro.co"</span>,
+  <span class="text-primary-fixed">"password"</span>: <span class="text-secondary-fixed">"• • • • • • • •"</span>,
+  <span class="text-primary-fixed">"sede_id"</span>: <span class="text-secondary-fixed">"SEDE-NORTE-BOG"</span>,
+  <span class="text-primary-fixed">"supervisor_pin"</span>: <span class="text-secondary-fixed">"4819"</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'login')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Simulada (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 8ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para ejecutar la llamada telemática...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. GET /sedes -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="auth">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold rounded">GET</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/sedes</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Sedes operativas, bahías activas y tipos de elevadores</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Bearer Token</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Parámetros Query</span>
+<div class="p-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">include_bays</span>
+<span class="text-tertiary font-medium">boolean (default: true)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">status</span>
+<span class="text-tertiary font-medium">enum [active, maintenance]</span>
+</div>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'sedes')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Servidor (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-tertiary font-bold hidden">Latencia: 12ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para consultar sedes y bahías...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. POST /recepciones -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="reception">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/recepciones</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Inspección pericial 360°, daños, odómetro y firma digital</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Mobile PWA / Tablet</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Request Payload (Check-In 360°)</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"placa"</span>: <span class="text-secondary-fixed">"KTM-99F"</span>,
+  <span class="text-primary-fixed">"odometro"</span>: <span class="text-secondary-fixed">14250</span>,
+  <span class="text-primary-fixed">"nivel_combustible"</span>: <span class="text-secondary-fixed">"3/4"</span>,
+  <span class="text-primary-fixed">"danos_preexistentes"</span>: [
+    <span class="text-tertiary-fixed">{</span> <span class="text-primary-fixed">"zona"</span>: <span class="text-secondary-fixed">"carenaje_derecho"</span>, <span class="text-primary-fixed">"tipo"</span>: <span class="text-secondary-fixed">"rayon_profundo"</span> <span class="text-tertiary-fixed">}</span>
+  ],
+  <span class="text-primary-fixed">"firma_cliente_b64"</span>: <span class="text-secondary-fixed">"data:image/png;base64,iVBORw..."</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'recepcion')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Asignación OT (201 Created)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 14ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para emitir acta de peritaje...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. GET /ordenes -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="workshop">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold rounded">GET</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/ordenes</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Kanban de órdenes activas filtrado por sede y estado</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Bahía Telemetría</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Filtros Kanban (Query String)</span>
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface flex flex-col gap-space-xs">
+<div><strong class="text-primary">sede:</strong> SEDE-NORTE-BOG</div>
+<div><strong class="text-primary">estado:</strong> [en_diagnostico, esperando_repuestos, en_elevador]</div>
+<div><strong class="text-primary">limite:</strong> 25</div>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'ordenes')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Kanban (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-tertiary font-bold hidden">Latencia: 9ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para consultar el tablero activo...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. GET /ordenes/{otId} -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="workshop">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold rounded">GET</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/ordenes/{otId}</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Detalle completo de OT-1048, repuestos y mano de obra</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Core Work Order</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Path Parameter</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">otId :</span>
+<input class="bg-surface-container-low rounded px-space-sm py-space-xs font-tabular-mono-md text-tabular-mono-md text-primary font-bold outline-none border-0" type="text" value="OT-1048"/>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'otDetail')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Detalle (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-tertiary font-bold hidden">Latencia: 11ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para obtener el expediente OT-1048...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. POST /ordenes/{otId}/labor -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="workshop">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/ordenes/{otId}/labor</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Clock-in / Clock-out de mecánico en bahía</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Reloj Taller</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Body Marcaje Bahía</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"tecnico_id"</span>: <span class="text-secondary-fixed">"MEC-04-JAVIER"</span>,
+  <span class="text-primary-fixed">"bahia_id"</span>: <span class="text-secondary-fixed">"BAHIA-ELEVADOR-02"</span>,
+  <span class="text-primary-fixed">"accion"</span>: <span class="text-secondary-fixed">"CLOCK_IN"</span>,
+  <span class="text-primary-fixed">"servicio_codigo"</span>: <span class="text-secondary-fixed">"MO-DESM-CULATA"</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'clockin')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Marcaje (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 7ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para estampar hora en bahía...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. POST /ordenes/{otId}/evidencias -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="workshop">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/ordenes/{otId}/evidencias</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Carga de fotos de desgaste o nota de voz</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Multipart / S3</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Payload Evidencia Multimedia</span>
+<div class="p-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm flex flex-col gap-space-xs">
+<div><strong>file:</strong> desgaste_valvula_ktm.jpg (image/jpeg, 2.4MB)</div>
+<div><strong>tipo:</strong> "FOTO_DESGASTE"</div>
+<div><strong>comentario:</strong> "Juego axial excesivo detectado en admisión cil 1."</div>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'evidencias')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta CDN (201 Created)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 18ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para cargar archivo...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 8. GET /baremo/servicios -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="baremo">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold rounded">GET</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/baremo/servicios</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Catálogo de tiempos flat-rate por cilindraje</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Estándar OEM</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Parámetros Baremo</span>
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md flex flex-col gap-space-xs">
+<div>cilindraje: <strong>&gt;= 1000cc (Alta Cilindrada)</strong></div>
+<div>sistema: <strong>FRENOS_TRANSMISION</strong></div>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'baremo')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Catálogo UT (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-tertiary font-bold hidden">Latencia: 6ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para consultar tabla UT...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 9. GET /inventario/items/{sku} -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="inventory">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold rounded">GET</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/inventario/items/{sku}</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Stock disponible, costo promedio y ubicación en bodega</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Kardex Tiempo Real</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">SKU a Consultar</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">SKU :</span>
+<input class="bg-surface-container-low rounded px-space-sm py-space-xs font-tabular-mono-md text-tabular-mono-md text-primary font-bold outline-none border-0 w-64" type="text" value="MOTUL-7100-10W50-4T"/>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'sku')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Stock Multibodega (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-tertiary font-bold hidden">Latencia: 10ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para consultar Kardex...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 10. POST /inventario/despacho -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="inventory">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/inventario/despacho</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Despacho blindado de piezas a OT con firma de entrega</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Vales de Salida</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Despacho Solicitud</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"ot_id"</span>: <span class="text-secondary-fixed">"OT-1048"</span>,
+  <span class="text-primary-fixed">"sku"</span>: <span class="text-secondary-fixed">"KIT-EMPAQUES-KTM1290"</span>,
+  <span class="text-primary-fixed">"cantidad"</span>: <span class="text-secondary-fixed">1</span>,
+  <span class="text-primary-fixed">"bodeguero_id"</span>: <span class="text-secondary-fixed">"USER-BOD-01"</span>,
+  <span class="text-primary-fixed">"mecanico_recibe_pin"</span>: <span class="text-secondary-fixed">"9012"</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'despacho')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Comprobante Despacho (201 Created)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 13ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para confirmar salida de Kardex...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 11. POST /caja/liquidaciones -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="pos">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/caja/liquidaciones</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Cobro mixto multimoneda USD/COP y datáfono + QR pase de salida</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Split Tender POS</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Payload Liquidación Mixta</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"ot_id"</span>: <span class="text-secondary-fixed">"OT-1048"</span>,
+  <span class="text-primary-fixed">"caja_sesion_id"</span>: <span class="text-secondary-fixed">"SES-POS-2024-88"</span>,
+  <span class="text-primary-fixed">"total_cop"</span>: <span class="text-secondary-fixed">1450000</span>,
+  <span class="text-primary-fixed">"metodos_pago"</span>: [
+    <span class="text-tertiary-fixed">{</span> <span class="text-primary-fixed">"medio"</span>: <span class="text-secondary-fixed">"TARJETA_CREDITO"</span>, <span class="text-primary-fixed">"monto"</span>: <span class="text-secondary-fixed">1000000</span>, <span class="text-primary-fixed">"voucher"</span>: <span class="text-secondary-fixed">"992812"</span> <span class="text-tertiary-fixed">}</span>,
+    <span class="text-tertiary-fixed">{</span> <span class="text-primary-fixed">"medio"</span>: <span class="text-secondary-fixed">"EFECTIVO_USD"</span>, <span class="text-primary-fixed">"monto_usd"</span>: <span class="text-secondary-fixed">115</span>, <span class="text-primary-fixed">"trm"</span>: <span class="text-secondary-fixed">3913.04</span> <span class="text-tertiary-fixed">}</span>
+  ]
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'liquidacion')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Ticket Liquidación &amp; Pase QR (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 11ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para liquidar OT y emitir pase...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 12. POST /caja/egresos-menores -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="pos">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/caja/egresos-menores</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Vale rápido de caja menor (Ctrl+M)</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Atajo Rápido</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Vale de Salida</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"cajero_id"</span>: <span class="text-secondary-fixed">"CARLOS-M"</span>,
+  <span class="text-primary-fixed">"concepto"</span>: <span class="text-secondary-fixed">"Compra arandelas cobre urgentes en ferretería"</span>,
+  <span class="text-primary-fixed">"monto_cop"</span>: <span class="text-secondary-fixed">18500</span>,
+  <span class="text-primary-fixed">"beneficiario"</span>: <span class="text-secondary-fixed">"Ferretería El Tornillo"</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'egreso')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta Vale (201 Created)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 5ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para registrar salida menor...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 13. POST /caja/cierres/reporte-z -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="pos">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/caja/cierres/reporte-z</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Arqueo ciego físico por billetes y cierre Reporte Z</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">Auditoría Fiscal</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Desglose Físico Arqueo</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"sesion_caja_id"</span>: <span class="text-secondary-fixed">"SES-POS-2024-88"</span>,
+  <span class="text-primary-fixed">"conteo_billetes"</span>: <span class="text-tertiary-fixed">{</span>
+    <span class="text-primary-fixed">"100000"</span>: <span class="text-secondary-fixed">12</span>,
+    <span class="text-primary-fixed">"50000"</span>: <span class="text-secondary-fixed">30</span>,
+    <span class="text-primary-fixed">"20000"</span>: <span class="text-secondary-fixed">15</span>
+  <span class="text-tertiary-fixed">}</span>,
+  <span class="text-primary-fixed">"supervisor_autoriza_pin"</span>: <span class="text-secondary-fixed">"4819"</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'reporteZ')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Cierre Fiscal Z (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 15ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para cerrar y generar Z...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 14. POST /fiscal/dian/facturas -->
+<div class="endpoint-card bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden" data-category="fiscal">
+<div class="accordion-trigger flex flex-col md:flex-row md:items-center justify-between p-space-md bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors gap-space-sm" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold rounded">POST</span>
+<code class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">/fiscal/dian/facturas</code>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Emisión UBL 2.1 con CUFE y QR ante la DIAN</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-xs text-label-xs uppercase font-bold">
+<span class="px-space-xs py-space-2xs bg-surface-container rounded">DIAN Validado</span>
+<span class="material-symbols-outlined chevron transition-transform text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="accordion-body hidden p-space-xl flex-col gap-space-lg bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Payload Documento Electrónico UBL 2.1</span>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-tertiary-fixed">{</span>
+  <span class="text-primary-fixed">"tipo_documento"</span>: <span class="text-secondary-fixed">"FACTURA_VENTA_01"</span>,
+  <span class="text-primary-fixed">"ot_referencia"</span>: <span class="text-secondary-fixed">"OT-1048"</span>,
+  <span class="text-primary-fixed">"cliente"</span>: <span class="text-tertiary-fixed">{</span>
+    <span class="text-primary-fixed">"nit"</span>: <span class="text-secondary-fixed">"900.542.128-4"</span>,
+    <span class="text-primary-fixed">"razon_social"</span>: <span class="text-secondary-fixed">"RACING TEAM SAS"</span>,
+    <span class="text-primary-fixed">"email_fe"</span>: <span class="text-secondary-fixed">"fe@racingteam.com"</span>
+  <span class="text-tertiary-fixed">}</span>
+<span class="text-tertiary-fixed">}</span></pre>
+</div>
+<button class="btn-try mt-space-xs self-start px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs hover:opacity-90 shadow-sm" onclick="runSimulation(this, 'dian')" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span> Probar Simulación (Try it out)
+            </button>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant font-bold tracking-wider">Respuesta DIAN con CUFE (200 OK)</span>
+<span class="sim-badge font-tabular-mono-md text-tabular-mono-md text-primary font-bold hidden">Latencia: 19ms</span>
+</div>
+<div class="response-box bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed text-secondary-fixed-dim">// Presione "Probar Simulación" para certificar ante DIAN...</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Integration Quickstart Block -->
+<div class="mt-space-2xl bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-primary font-bold tracking-wider">Integración Frontend / PWA</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Cliente JavaScript Universal (SDK Boilerplate)</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Ready for Browser &amp; Electron</span>
+</div>
+</div>
+<div class="bg-inverse-surface rounded-lg p-space-lg text-inverse-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto shadow-inner">
+<pre class="m-0 leading-relaxed"><span class="text-secondary-fixed-dim">// 1. Inicialización de configuración global en Shell o Window</span>
+<span class="text-tertiary-fixed">window</span>.<span class="text-primary-fixed">MOTOPRO_CONFIG</span> = {
+  <span class="text-primary-fixed">apiBaseUrl</span>: <span class="text-secondary-fixed">'https://api.tu-taller.com/v1'</span>,
+  <span class="text-primary-fixed">activeBranchId</span>: <span class="text-secondary-fixed">'SEDE-NORTE-BOG'</span>,
+  <span class="text-primary-fixed">hardwareEscPosEndpoint</span>: <span class="text-secondary-fixed">'http://localhost:9100/escpos'</span>,
+  <span class="text-primary-fixed">syncIntervalMs</span>: <span class="text-secondary-fixed">5000</span>
+};
+
+<span class="text-secondary-fixed-dim">// 2. MotoPro HTTP Client con auto-inyectado de Token y Sede</span>
+<span class="text-tertiary-fixed">class</span> <span class="text-primary-fixed">MotoProApiClient</span> {
+  <span class="text-tertiary-fixed">static async</span> <span class="text-secondary-fixed">request</span>(endpoint, options = {}) {
+    <span class="text-tertiary-fixed">const</span> token = localStorage.getItem(<span class="text-secondary-fixed">'motopro_jwt'</span>);
+    <span class="text-tertiary-fixed">const</span> headers = {
+      <span class="text-secondary-fixed">'Content-Type'</span>: <span class="text-secondary-fixed">'application/json'</span>,
+      <span class="text-secondary-fixed">'X-Workshop-Branch-Id'</span>: window.MOTOPRO_CONFIG.activeBranchId,
+      ...(token &amp;&amp; { <span class="text-secondary-fixed">'Authorization'</span>: `Bearer ${token}` }),
+      ...options.headers
+    };
+    <span class="text-tertiary-fixed">return fetch</span>(`${window.MOTOPRO_CONFIG.apiBaseUrl}${endpoint}`, { ...options, headers })
+      .then(res =&gt; res.json());
+  }
+}</pre>
+</div>
+</div>
+</div>
+<script>
+  // Accordion Expand/Collapse
+  function toggleEndpoint(element) {
+    const card = element.closest('.endpoint-card');
+    const body = card.querySelector('.accordion-body');
+    const chevron = card.querySelector('.chevron');
+    
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      body.classList.add('flex');
+      chevron.style.transform = 'rotate(180deg)';
+    } else {
+      body.classList.add('hidden');
+      body.classList.remove('flex');
+      chevron.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Filter Categories
+  document.querySelectorAll('.cat-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-pill').forEach(b => {
+        b.classList.remove('active', 'bg-on-surface', 'text-surface');
+        b.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      btn.classList.add('active', 'bg-on-surface', 'text-surface');
+      btn.classList.remove('bg-surface-container', 'text-on-surface');
+
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.endpoint-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Simulated Responses Data Mock
+  const mockResponses = {
+    login: {
+      status: "200 OK",
+      data: {
+        "success": true,
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYXJsb3MubSIsInJvbGUiOiJXRVJfSEVBRCJ9...",
+        "user": {
+          "id": "USR-004",
+          "nombre": "Carlos Mendoza",
+          "rol": "JEFE_TALLER",
+          "sede_activa": "SEDE-NORTE-BOG",
+          "permisos": ["ALL_MODULES", "ANULAR_VENTA", "AUTORIZAR_DESCUENTO"]
+        }
+      }
+    },
+    sedes: {
+      status: "200 OK",
+      data: {
+        "sedes": [
+          {
+            "id": "SEDE-NORTE-BOG",
+            "nombre": "MotoPro Principal Bogotá Norte",
+            "bahias_activas": 8,
+            "elevadores": [
+              { "id": "BAHIA-01", "tipo": "TIJERA_1000KG", "estado": "OCUPADA", "ot_actual": "OT-1048" },
+              { "id": "BAHIA-02", "tipo": "NEUMATICO_500KG", "estado": "DISPONIBLE" }
+            ]
+          }
+        ]
+      }
+    },
+    recepcion: {
+      status: "201 Created",
+      data: {
+        "ot_id": "OT-1049",
+        "fecha_ingreso": "2024-11-20T10:14:00Z",
+        "placa": "KTM-99F",
+        "acta_inspeccion_url": "https://storage.motopro.co/actas/2024/OT-1049.pdf",
+        "estado": "ASIGNADA_A_DIAGNOSTICO"
+      }
+    },
+    ordenes: {
+      status: "200 OK",
+      data: {
+        "total_activas": 12,
+        "kanban": {
+          "en_diagnostico": ["OT-1047", "OT-1049"],
+          "esperando_repuestos": ["OT-1042"],
+          "en_elevador": ["OT-1048"]
+        }
+      }
+    },
+    otDetail: {
+      status: "200 OK",
+      data: {
+        "ot_id": "OT-1048",
+        "vehiculo": "KTM Super Adventure 1290 R",
+        "placa": "KTM-99F",
+        "cliente": "Federico Gómez - Racing Team",
+        "mecanico_lider": "Javier Torres (MEC-04)",
+        "bahia": "ELEVADOR-02",
+        "totales": {
+          "repuestos": 890000,
+          "mano_obra": 320000,
+          "iva": 229900,
+          "total_pagar": 1439900
+        }
+      }
+    },
+    clockin: {
+      status: "200 OK",
+      data: {
+        "registro_id": "CLK-9941",
+        "estado": "EN_CURSO",
+        "inicio_timestamp": "2024-11-20T10:35:12Z",
+        "servicio": "MO-DESM-CULATA",
+        "tarifa_ut_hora": 45000
+      }
+    },
+    evidencias: {
+      status: "201 Created",
+      data: {
+        "evidencia_id": "EVID-5501",
+        "archivo_cdn": "https://cdn.motopro.co/evidence/ot1048/valvula_desgaste_1048.webp",
+        "tamano_kb": 312,
+        "notificacion_whatsapp_cliente": "ENVIADA"
+      }
+    },
+    baremo: {
+      status: "200 OK",
+      data: {
+        "categoria": "ALTA_CILINDRADA",
+        "servicios": [
+          { "codigo": "MO-FRE-01", "nombre": "Cambio Pastillas Delanteras Brembo", "ut_estandar": 0.5, "minutos": 30 },
+          { "codigo": "MO-DESM-CULATA", "nombre": "Desmonte y Calibración Pastas Valvulares", "ut_estandar": 3.8, "minutos": 228 }
+        ]
+      }
+    },
+    sku: {
+      status: "200 OK",
+      data: {
+        "sku": "MOTUL-7100-10W50-4T",
+        "descripcion": "Aceite Sintético 100% Ester 4T 1L",
+        "stock_bodega_central": 48,
+        "stock_vitrina": 6,
+        "ubicacion_pasillo": "ESTANTE-C / NIVEL-2 / BIN-14",
+        "costo_promedio_cop": 54000,
+        "precio_venta_cop": 82000
+      }
+    },
+    despacho: {
+      status: "201 Created",
+      data: {
+        "vale_despacho_nro": "VALE-0941",
+        "ot_id": "OT-1048",
+        "sku": "KIT-EMPAQUES-KTM1290",
+        "kardex_movimiento_id": "KDX-88192",
+        "stock_remanente": 2
+      }
+    },
+    liquidacion: {
+      status: "200 OK",
+      data: {
+        "transaccion_id": "POS-TX-9901",
+        "pase_de_salida_qr": "MOTO-PASS-OT1048-VALID-UNTIL-1800",
+        "estado": "PAGADO_TOTAL",
+        "cambio_cop": 0
+      }
+    },
+    egreso: {
+      status: "201 Created",
+      data: {
+        "recibo_caja_menor": "REC-CM-2024-114",
+        "saldo_disponible_caja": 381500,
+        "autorizado": true
+      }
+    },
+    reporteZ: {
+      status: "200 OK",
+      data: {
+        "cierre_z_consecutivo": "Z-2024-11-20-001",
+        "total_ventas_brutas": 8450000,
+        "total_iva_recaudado": 1349000,
+        "diferencia_sobrante_faltante": 0,
+        "impresion_termica": "ENVIADA_A_PRINTER_01"
+      }
+    },
+    dian: {
+      status: "200 OK",
+      data: {
+        "cufe": "9a7f34b210c4d8123ef980145ba2201994e1d51a657e2bb193e430d4a9749103e3a",
+        "factura_numero": "SETP-99214",
+        "qr_cadena": "NumFac=SETP99214&FecFac=2024-11-20&ValFac=1450000&CUFE=9a7f34b2...",
+        "estado_dian": "DOCUMENTO_VALIDADO_NOTIFICADO"
+      }
+    }
+  };
+
+  // Run Simulation Function
+  function runSimulation(btn, endpointKey) {
+    const card = btn.closest('.endpoint-card');
+    const respBox = card.querySelector('.response-box');
+    const badge = card.querySelector('.sim-badge');
+
+    btn.disabled = true;
+    btn.classList.add('opacity-50');
+
+    // Simulate Network latency
+    setTimeout(() => {
+      const result = mockResponses[endpointKey];
+      if (result) {
+        respBox.innerHTML = `<pre class="m-0 leading-relaxed text-secondary-fixed font-bold">${JSON.stringify(result.data, null, 2)}</pre>`;
+        badge.classList.remove('hidden');
+      }
+      btn.disabled = false;
+      btn.classList.remove('opacity-50');
+    }, 280);
+  }
+
+  // Copy MOTOPRO_CONFIG Button
+  document.getElementById('btnCopyConfig').addEventListener('click', () => {
+    const code = `window.MOTOPRO_CONFIG = {\n  apiBaseUrl: 'https://api.tu-taller.com/v1',\n  activeBranchId: 'SEDE-NORTE-BOG',\n  hardwareEscPosEndpoint: 'http://localhost:9100/escpos'\n};`;
+    navigator.clipboard.writeText(code).then(() => {
+      alert("Configuración MOTOPRO_CONFIG copiada al portapapeles.");
+    });
+  });
+
+  // Download Simulated YAML
+  document.getElementById('btnDownloadYaml').addEventListener('click', () => {
+    const yamlSample = `openapi: 3.0.3\ninfo:\n  title: MotoPro Workshop ERP API\n  version: 2.4.0\nservers:\n  - url: https://api.tu-taller.com/v1`;
+    const blob = new Blob([yamlSample], { type: 'text/yaml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'motopro-openapi-v2.4.0.yaml';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl py-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><span class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span>Sistema Operativo Activo</span><span>•</span><span>MotoPro Workshop ERP Suite</span><span>•</span><span>Node/Vite Engine v2.4</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">terminal</span>GitHub Repo</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">folder_zip</span>Descargar Release .zip</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">help</span>Soporte Técnico</a></div></footer></div></body></html>

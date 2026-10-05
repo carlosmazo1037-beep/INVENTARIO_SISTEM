@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#f8f9ff", "inverse-surface": "#213145", "inverse-on-surface": "#eaf1ff", "on-secondary-container": "#5c647a", "surface-variant": "#d3e4fe", "on-tertiary": "#ffffff", "primary-container": "#f97316", "primary-fixed": "#ffdbca", "on-error-container": "#93000a", "surface-tint": "#9d4300", "surface-bright": "#f8f9ff", "on-tertiary-fixed-variant": "#004b73", "on-secondary": "#ffffff", "primary": "#9d4300", "on-tertiary-fixed": "#001d31", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "outline-variant": "#e0c0b1", "background": "#f8f9ff", "tertiary-container": "#40a2e7", "on-secondary-fixed-variant": "#3f465c", "on-primary-fixed": "#341100", "inverse-primary": "#ffb690", "on-secondary-fixed": "#131b2e", "tertiary-fixed": "#cce5ff", "on-tertiary-container": "#003655", "tertiary-fixed-dim": "#93ccff", "on-background": "#0b1c30", "secondary-container": "#dae2fd", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#bec6e0", "secondary-fixed": "#dae2fd", "on-primary": "#ffffff", "on-primary-fixed-variant": "#783200", "surface-container": "#e5eeff", "secondary": "#565e74", "on-error": "#ffffff", "on-surface-variant": "#584237", "error-container": "#ffdad6", "error": "#ba1a1a", "tertiary": "#006398", "surface-container-highest": "#d3e4fe", "outline": "#8c7164", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#ffb690", "on-surface": "#0b1c30", "on-primary-container": "#582200" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.75rem", "space-2xs": "0.125rem", "margin": "1.5rem", "space-2xl": "2rem", "space-sm": "0.5rem", "gutter": "1rem", "space-lg": "1rem", "space-xs": "0.25rem", "gutter-dense": "0.5rem", "margin-mobile": "0.75rem", "space-xl": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "display-lg": ["Inter"], "tabular-mono-lg": ["Inter"], "label-xs": ["Inter"], "body-md": ["Inter"], "headline-xl": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "tabular-mono-md": ["Inter"], "body-sm": ["Inter"], "display-lg-mobile": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "tabular-mono-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-xs": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "tabular-mono-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold text-on-surface truncate">MotoPro</span><span class="inline-flex items-center gap-0.5 px-space-xs py-0.5 rounded-lg bg-surface-container-high text-tertiary text-[10px] font-semibold leading-none"><span class="material-symbols-outlined text-[12px]">lock</span>SSL</span><span class="px-space-xs py-0.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-tabular-mono-md text-[11px] font-bold tracking-tight">OT-1048</span></div><span class="font-label-md text-label-md text-on-surface-variant truncate">Portal de Aprobación de Servicio</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface px-margin-mobile pt-20 pb-28"><div class="flex flex-col w-full gap-space-md">
+<!-- WhatsApp Verified Inbound Banner -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary">chat</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Origen: Notificación WhatsApp</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs">Hace 8 min</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-secondary font-medium">+57 312 458 9021 (Roberto Valencia)</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-xs text-label-xs text-primary font-bold uppercase">Pendiente</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        «Hola Roberto, tu mecánico <span class="font-semibold text-on-surface">Andrés López</span> ha adjuntado nuevas evidencias periciales para autorizar repuestos de tu KTM.»
+      </p>
+</div>
+</div>
+<!-- Vehicle & Mechanic Identity Bento Card -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Top Bar: Motorcycle & Plate -->
+<div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-0.5 rounded-lg bg-primary-container text-on-primary font-label-xs text-label-xs font-bold uppercase tracking-wider">KTM Oficial</span>
+<span class="font-label-xs text-label-xs text-secondary font-medium">Sede Calle 80</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-2xs leading-tight">
+            KTM 1290 Super Adventure S
+          </h2>
+<span class="font-body-sm text-body-sm text-secondary">Año Modelo: 2023 • LC8 V-Twin 1301cc</span>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface font-tabular-mono-lg text-tabular-mono-lg font-bold tracking-wider shadow-sm">
+            JKL-92D
+          </span>
+<span class="font-label-xs text-label-xs text-secondary mt-1">Placa Vehicular</span>
+</div>
+</div>
+<!-- Quick Metrics Row -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary leading-none">Odómetro Ingreso</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-bold">11.450 km</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">garage</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary leading-none">Ubicación Taller</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-bold">Bahía B-02 • Elev. 2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assigned Master Tech Micro Bar -->
+<div class="px-space-md py-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="relative w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 overflow-hidden">
+<span class="material-symbols-outlined text-secondary text-[22px]">engineering</span>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-container ring-1 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Andrés López</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">Master Tech KTM Certificado</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-xs text-label-xs font-semibold whitespace-nowrap">
+        En Servicio Activo
+      </span>
+</div>
+</div>
+<!-- Interactive Voice Note Section -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Audio del Mecánico</span>
+<span class="font-label-xs text-label-xs text-secondary">Explicación pericial directa</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-lg bg-surface-container-high text-secondary font-tabular-mono-md text-tabular-mono-md">
+        1:12 min
+      </span>
+</div>
+<!-- Custom Player Component -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md active:scale-95 transition-all flex-shrink-0" id="audio-play-btn" type="button">
+<span class="material-symbols-outlined text-[24px]" id="audio-play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Animated / Frequency Waveform Visualizer -->
+<div class="flex-1 flex items-center gap-[3px] h-9 px-space-2xs overflow-hidden">
+<span class="w-1 bg-primary-container rounded-full h-3"></span>
+<span class="w-1 bg-primary-container rounded-full h-5"></span>
+<span class="w-1 bg-primary-container rounded-full h-8"></span>
+<span class="w-1 bg-primary-container rounded-full h-4"></span>
+<span class="w-1 bg-primary-container rounded-full h-6"></span>
+<span class="w-1 bg-primary-container rounded-full h-7"></span>
+<span class="w-1 bg-primary-container rounded-full h-9"></span>
+<span class="w-1 bg-primary-container rounded-full h-5"></span>
+<span class="w-1 bg-primary-container rounded-full h-6"></span>
+<span class="w-1 bg-primary-container rounded-full h-8"></span>
+<span class="w-1 bg-primary-container rounded-full h-4"></span>
+<span class="w-1 bg-outline-variant rounded-full h-3"></span>
+<span class="w-1 bg-outline-variant rounded-full h-5"></span>
+<span class="w-1 bg-outline-variant rounded-full h-7"></span>
+<span class="w-1 bg-outline-variant rounded-full h-4"></span>
+<span class="w-1 bg-outline-variant rounded-full h-6"></span>
+<span class="w-1 bg-outline-variant rounded-full h-3"></span>
+<span class="w-1 bg-outline-variant rounded-full h-5"></span>
+<span class="w-1 bg-outline-variant rounded-full h-2"></span>
+<span class="w-1 bg-outline-variant rounded-full h-4"></span>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-secondary flex-shrink-0">0:34 / 1:12</span>
+</div>
+<!-- Speech-to-Text Transcription Accordion -->
+<details class="group mt-space-2xs" open="">
+<summary class="list-none flex items-center justify-between cursor-pointer py-1 text-secondary hover:text-on-surface">
+<span class="flex items-center gap-space-xs font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px] text-tertiary">subtitles</span>
+            Transcripción de Voz (IA MotoPro)
+          </span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-space-2xs p-space-xs rounded-lg bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+          «Hola Roberto, al retirar la tapa de embrague y revisar el filtro primario encontramos <strong class="text-on-surface font-semibold">viruta metálica anómala</strong>. Te sugiero autorizar el cambio preventivo del kit de retenes y el filtro tamiz OEM para evitar daños mayores en la bomba de aceite y los inyectores de cabezal...»
+        </div>
+</details>
+</div>
+</div>
+<!-- Interactive Photographic Evidence Gallery -->
+<div class="w-full flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Evidencias Periciales</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-tertiary font-tabular-mono-md text-[11px] font-bold">2 FOTOS HD</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">Toca para ampliar</span>
+</div>
+<!-- Evidence 1: Oil Filter Metal Shavings -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro extreme close-up technical photograph of a motorcycle engine oil filter cartridge covered in dark synthetic oil with tiny glittering brass and aluminum metal shavings visible in the paper pleats, illuminated by bright workshop LED inspection ring light in a professional KTM garage setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlsubCjUZKHiIM76C9293U4WVG-eHpVbTIB7aG7IWQPGTiXUJxOQZrlQ9mbliNkkMjlDoBClD7lWUXDvTRWZmdhM47SgfWxbPPe2CDJmFtyHMPrnpSHXN1H7BmY54YrrtR636k1TtiqXY_grEHLQ_h30jdQgCkc7cllwpQ33zMx_Jptq4wgoPsHFALJ57WCCM-obmXGwAArpehfoQ8oZDbrDBm2TZznqiUjlgLcFkyOGvxaYgPDAM"/>
+<!-- Diagnostic Callout Overlay Tag -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary-container">warning</span>
+<span class="font-label-md text-label-md font-bold tracking-tight">Viruta Anómala Detectada</span>
+</div>
+<!-- Damaged Area Focus Crosshair Indicator -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 rounded-full border-2 border-primary-container bg-primary-container/20 flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary-container text-[18px]">adjust</span>
+</div>
+</div>
+<button class="absolute bottom-2.5 right-2.5 px-space-xs py-1 rounded-lg bg-surface-container-lowest/90 backdrop-blur text-on-surface flex items-center gap-space-xs shadow-sm hover:bg-surface-container-lowest active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">zoom_in</span>
+<span class="font-label-md text-label-md font-semibold">Lupa Pericial</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Filtro de Aceite Primario OEM</span>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-bold uppercase">Riesgo Alto</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Partículas metálicas en micraje perjudicial para las levas. Riesgo de obturación de lubricación si no se renueva el tamiz y empaques en este mantenimiento.
+        </p>
+<div class="flex items-center gap-space-xs pt-space-2xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">compare</span>
+<span>Inspección pericial contrastada vs. tolerancia KTM de fábrica</span>
+</div>
+</div>
+</div>
+<!-- Evidence 2: Spark Plug Feeler Gauge Calibration -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Technical macro photography showing a motorcycle spark plug tip with noticeable carbon deposits and electrode erosion, being measured with an automotive metal feeler gauge ruler by a mechanic with blue nitrile gloves inside a motorcycle repair workshop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxV9u6dobdB76Fo7uHhD6nDdX9Tw2FIEmmLZrqvrQ_Ur1tIhLz0R6wEjTBAn-DZANTgKETZfUBj0xUyo_BpbSSaSMC7qpqge2i6JT5VcsQN3Ar1z4d44fDoe_uo3QQvKBiy4Ep3tIOj4P3BRefIzyCNBfovn7quKwwxXe99mvapV7B5Gas_Dn13ndIA5UxtOd_WXCtGFJVTlhji1QTU3D5jZPbTACbhTdggU0VQae5xpIczHUk_xKy"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-inverse-surface/90 text-inverse-on-surface backdrop-blur-md shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary-container">straighten</span>
+<span class="font-label-md text-label-md font-bold tracking-tight">Holgura Medida: 0.85 mm</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 px-space-xs py-1 rounded-lg bg-surface-container-lowest/90 backdrop-blur text-on-surface flex items-center gap-space-xs shadow-sm hover:bg-surface-container-lowest active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">zoom_in</span>
+<span class="font-label-md text-label-md font-semibold">Lupa Pericial</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Juego Bujías NGK Laser Iridium</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold uppercase">Límite Superado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Separación nominal de electrodo 0.65 mm excedida a 0.85 mm. Provoca micro-fallas de encendido y sobrecalentamiento en bobinas secundarias.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Quotation Breakdown & Itemized Authorization -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Desglose de Cotización</span>
+<span class="font-label-xs text-label-xs text-secondary">Selecciona qué adicionales autorizas</span>
+</div>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline" id="toggle-all-btn" type="button">
+        Autorizar Todos
+      </button>
+</div>
+<!-- Items List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Base Contracted Item (Locked / Pre-approved) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs opacity-90">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_box</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">
+                Mantenimiento Mayor 10.000 km
+              </span>
+<span class="font-body-sm text-body-sm text-secondary truncate">
+                Mano de obra especializada + Aceite Motorex 10W-50
+              </span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-xs text-label-xs font-bold">
+                  Aprobado al Ingreso
+                </span>
+<span class="font-label-xs text-label-xs text-secondary">Contrato base</span>
+</div>
+</div>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface flex-shrink-0">
+            $185.00
+          </span>
+</div>
+</div>
+<!-- Additional Item 1 (Interactive Approval) -->
+<label class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs cursor-pointer active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs min-w-0">
+<input checked="" class="custom-item-checkbox mt-1 w-5 h-5 rounded text-primary-container accent-primary-container cursor-pointer" data-price="42.50" id="item-filter" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">
+                  Filtro Primario OEM + Kit O-Rings
+                </span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs font-bold uppercase">
+                  Recomendado Urgente
+                </span>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary mt-0.5">
+                Ref. KTM OEM: #61338015200
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Incluye empaque de tapa de embrague y tamiz de fondo de cárter.
+              </span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-primary">
+              +$42.50
+            </span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+</div>
+</label>
+<!-- Additional Item 2 (Interactive Approval) -->
+<label class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs cursor-pointer active:scale-[0.99] transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs min-w-0">
+<input checked="" class="custom-item-checkbox mt-1 w-5 h-5 rounded text-primary-container accent-primary-container cursor-pointer" data-price="38.00" id="item-plugs" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">
+                  Juego (2) Bujías NGK Laser Iridium
+                </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-xs text-label-xs font-bold uppercase">
+                  Desgaste
+                </span>
+</div>
+<span class="font-tabular-mono-md text-tabular-mono-md text-secondary mt-0.5">
+                Ref: #90139093000 • LMAR9AI-8
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Reemplazo en culata delantera y trasera con torque calibrado 11 Nm.
+              </span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-primary">
+              +$38.00
+            </span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Calculation Subtotal Box -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-2xs mt-space-2xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-secondary">
+<span>Base Contratada (Mantenimiento):</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface">$185.00 USD</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-secondary">
+<span>Adicionales Seleccionados:</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-primary font-bold" id="label-additionals">+$80.50 USD</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-secondary">
+<span>IVA Legal (19%):</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface" id="label-tax">$50.45 USD</span>
+</div>
+<div class="my-space-2xs h-px bg-outline-variant/40 w-full"></div>
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Gran Total Actualizado</span>
+<span class="font-label-xs text-label-xs text-secondary">Liquidación oficial OT-1048</span>
+</div>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">$</span>
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary tracking-tight" id="label-grand-total">315.95</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">USD</span>
+</div>
+</div>
+</div>
+<!-- SLA / Estimated Completion Time Badge -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</span>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Promesa de Entrega: Hoy 5:30 PM</span>
+<span class="font-body-sm text-body-sm text-secondary leading-snug">Válido autorizando antes de las 2:00 PM para despacho inmediato de repuestos en bodega.</span>
+</div>
+</div>
+</div>
+<!-- Transparent Guarantees & Policy Bento -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Políticas de Transparencia MotoPro</span>
+<div class="grid grid-cols-1 gap-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary flex-shrink-0">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">Repuestos 100% Genuinos KTM</span>
+<span class="font-body-sm text-body-sm text-secondary">Garantía por escrito de 6 meses o 5.000 kilómetros.</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0">inventory_2</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">Devolución de Piezas Usadas</span>
+<span class="font-body-sm text-body-sm text-secondary">Recibirás tus piezas reemplazadas en bolsa sellada al retirar tu moto.</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary flex-shrink-0">receipt_long</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">Facturación Electrónica DIAN</span>
+<span class="font-body-sm text-body-sm text-secondary">Enviada automáticamente con trazabilidad de impuestos a tu correo.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Chat with Service Advisor Assistance Button -->
+<div class="w-full p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm items-center text-center">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">¿Deseas aclarar algún detalle técnico?</span>
+<span class="font-body-sm text-body-sm text-secondary">Tu asesor de servicio Juan Pérez está disponible en línea para responder tus preguntas.</span>
+</div>
+<a class="w-full min-h-[44px] flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-headline-md text-headline-md hover:bg-surface-container-high active:scale-95 transition-all" href="https://wa.me/573124589021?text=Hola%20Juan,%20tengo%20una%20consulta%20sobre%20la%20OT-1048%20de%20mi%20KTM%201290" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-tertiary">chat</span>
+<span>Consultar por WhatsApp con Juan</span>
+</a>
+</div>
+<!-- Digital Signature Security Seal Micro Note -->
+<div class="w-full pb-space-sm flex flex-col items-center justify-center gap-space-2xs text-center text-secondary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+<span class="font-label-xs text-label-xs uppercase font-bold tracking-wider">Aprobación vinculante encriptada por MotoPro Trust™</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">IP: 190.27.18.204 • Hash Criptográfico: #8F2B9D-OT1048</span>
+</div>
+</div>
+<!-- Client-side Micro-Interactions -->
+<script>
+  (function initPortalInteractions() {
+    const checkboxes = document.querySelectorAll('.custom-item-checkbox');
+    const labelAdditionals = document.getElementById('label-additionals');
+    const labelTax = document.getElementById('label-tax');
+    const labelGrandTotal = document.getElementById('label-grand-total');
+    const toggleAllBtn = document.getElementById('toggle-all-btn');
+    const audioBtn = document.getElementById('audio-play-btn');
+    const audioIcon = document.getElementById('audio-play-icon');
+
+    const BASE_PRICE = 185.00;
+    const TAX_RATE = 0.19;
+
+    function recalculateTotal() {
+      let additionalTotal = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          additionalTotal += parseFloat(cb.dataset.price || '0');
+        }
+      });
+
+      const subtotal = BASE_PRICE + additionalTotal;
+      const tax = subtotal * TAX_RATE;
+      const grandTotal = subtotal + tax;
+
+      if (labelAdditionals) {
+        labelAdditionals.textContent = `+$${additionalTotal.toFixed(2)} USD`;
+      }
+      if (labelTax) {
+        labelTax.textContent = `$${tax.toFixed(2)} USD`;
+      }
+      if (labelGrandTotal) {
+        labelGrandTotal.textContent = grandTotal.toFixed(2);
+      }
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', recalculateTotal);
+    });
+
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', () => {
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        checkboxes.forEach(cb => {
+          cb.checked = !allChecked;
+        });
+        toggleAllBtn.textContent = !allChecked ? 'Desmarcar Adicionales' : 'Autorizar Todos';
+        recalculateTotal();
+      });
+    }
+
+    // Audio Playback Simulation
+    let isPlaying = false;
+    if (audioBtn && audioIcon) {
+      audioBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        audioIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+      });
+    }
+  })();
+</script></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]"><div class="px-margin-mobile py-space-sm flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-xs"><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Presupuesto</span><span class="font-body-sm text-body-sm text-secondary">IVA incluido</span></div><div class="flex items-baseline gap-space-2xs"><span class="font-headline-lg text-headline-lg text-on-surface font-semibold">$</span><span class="font-display-lg-mobile text-display-lg-mobile text-primary font-bold tracking-tight">385.400</span></div></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] flex-1 flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-headline-md text-headline-md hover:bg-surface-container-high active:scale-[0.98] transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">edit_note</span><span>Revisar</span></button><button class="min-h-[44px] flex-[2] flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-headline-md text-headline-md font-semibold hover:bg-primary active:scale-[0.98] transition-all shadow-[0_2px_8px_rgba(249,115,22,0.25)]" type="button"><span class="material-symbols-outlined text-[18px]">check_circle</span><span>Aprobar OT</span></button></div></div></footer></body></html>

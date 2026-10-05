@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface":"#0b1c30","background":"#f8f9ff","tertiary":"#006398","on-tertiary":"#ffffff","secondary-container":"#dae2fd","surface-dim":"#cbdbf5","on-tertiary-container":"#003655","on-error":"#ffffff","primary-container":"#f97316","inverse-on-surface":"#eaf1ff","on-error-container":"#93000a","on-tertiary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","tertiary-fixed-dim":"#93ccff","on-primary-fixed-variant":"#783200","surface-container-high":"#dce9ff","primary-fixed":"#ffdbca","on-primary-fixed":"#341100","surface":"#f8f9ff","primary":"#9d4300","surface-container-highest":"#d3e4fe","on-secondary-container":"#5c647a","tertiary-fixed":"#cce5ff","outline-variant":"#e0c0b1","surface-container":"#e5eeff","secondary-fixed-dim":"#bec6e0","on-tertiary-fixed":"#001d31","error-container":"#ffdad6","surface-container-lowest":"#ffffff","primary-fixed-dim":"#ffb690","on-primary-container":"#582200","on-surface-variant":"#584237","secondary-fixed":"#dae2fd","inverse-surface":"#213145","surface-container-low":"#eff4ff","outline":"#8c7164","tertiary-container":"#40a2e7","on-secondary":"#ffffff","surface-tint":"#9d4300","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","inverse-primary":"#ffb690","error":"#ba1a1a","on-secondary-fixed":"#131b2e","on-background":"#0b1c30","secondary":"#565e74","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-sm":"0.5rem","space-2xs":"0.125rem","margin-mobile":"0.75rem","space-lg":"1rem","space-2xl":"2rem","gutter":"1rem","margin":"1.5rem","gutter-dense":"0.5rem","space-md":"0.75rem","space-xs":"0.25rem"},"fontFamily":{"body-md":["Inter"],"tabular-mono-lg":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"display-lg-mobile":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"tabular-mono-md":["Inter"],"label-xs":["Inter"],"headline-xl":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard-caja-pos" href="#">Dashboard &amp; Caja POS</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="inventario-movimientos" href="#">Inventario &amp; Movimientos</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="taller-ordenes-operarios" href="#">Taller, Órdenes &amp; Operarios</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md pl-space-lg" data-path="recepcion-inspeccion-motocicletas" href="#">Recepción e Inspección Visual</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md pl-space-lg" data-path="diagnostico-tecnico-y-cotizacion-de-reparacion" href="#">Diagnóstico &amp; Cotización</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="clientes-proveedores" href="#">Clientes &amp; Proveedores</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="facturacion-finanzas" href="#">Facturación &amp; Finanzas</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuracion-sedes" href="#">Configuración &amp; Sedes</a><a class="block px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md pl-space-lg" data-path="configuracion-de-sedes-tarifas-de-mano-de-obra-usuarios" href="#">Sedes, Tarifas &amp; Usuarios</a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Workshop Canvas Behind (Dimmed / Contextual Workspace Layer) -->
+<div class="relative w-full pb-space-2xl opacity-40 pointer-events-none select-none filter blur-[1px]">
+<!-- Sede Master Header Underlay -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Infraestructura &amp; Puestos Operativos</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold">Configuración de Sedes: Sede Calle 80 - Pista &amp; Dyno</h1>
+<p class="font-body-sm text-body-sm text-secondary">Control de capacidad instalada, elevadores electrohidráulicos y tarifarios por especialidad.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="px-space-md py-space-xs bg-surface-container rounded-lg text-center">
+<span class="block font-label-xs text-label-xs text-secondary">Capacidad Bahías</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">6 / 10 Puestos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mock Grid of Existing Bays -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-01</span>
+<span class="font-label-xs text-label-xs text-tertiary font-bold">DISPONIBLE</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Mecánica Rápida &amp; Service</div>
+<div class="text-body-sm text-secondary mt-space-2xs">Técnico: Jorge Ramírez (Nivel 2)</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-02</span>
+<span class="font-label-xs text-label-xs text-primary-container font-bold">OCUPADA (OT-1044)</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Motor &amp; Caja Mayor</div>
+<div class="text-body-sm text-secondary mt-space-2xs">Técnico: Andrés López (Senior)</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="bg-primary-container text-on-primary font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">DYNO-01</span>
+<span class="font-label-xs text-label-xs text-primary-container font-bold">ACTIVO</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Banco Dinamómetro 250i</div>
+<div class="text-body-sm text-secondary mt-space-2xs">Técnico: Carlos H. Morales</div>
+</div>
+</div>
+</div>
+<!-- ACTIVE MODAL OVERLAY: Registrar Nueva Bahía de Trabajo -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-xs sm:p-space-md md:p-space-lg bg-inverse-surface/65 backdrop-blur-[3px] overflow-y-auto" id="modal-new-bay">
+<div class="bg-surface-container-lowest w-full max-w-4xl rounded-xl shadow-2xl flex flex-col max-h-[962px] overflow-hidden my-auto">
+<!-- MODAL HEADER -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-start justify-between gap-space-md shrink-0">
+<div class="space-y-space-2xs">
+<div class="flex items-center flex-wrap gap-space-xs">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs font-bold px-space-xs py-space-2xs rounded">
+              SEDE ACTIVA: SED-03
+            </span>
+<span class="inline-flex items-center gap-space-2xs bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+              Sede Calle 80 - Pista &amp; Dyno
+            </span>
+<span class="text-secondary font-label-xs text-label-xs font-mono">
+              Capacidad actual: 6 de 10 Puestos en Uso (4 Libres)
+            </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+            Registrar Nueva Bahía de Trabajo
+          </h2>
+<p class="font-body-sm text-body-sm text-secondary">
+            Parametrización de puesto físico, elevador hidráulico certificado, equipamiento neumático y técnico titular.
+          </p>
+</div>
+<button aria-label="Cerrar modal" class="text-secondary hover:text-on-surface hover:bg-surface-container p-space-xs rounded transition-colors" onclick="document.getElementById('modal-new-bay').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- CAPACITY QUICK TRACKER BAR -->
+<div class="bg-surface-container px-space-lg py-space-xs flex items-center justify-between shrink-0 font-label-xs text-label-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-primary-container">garage</span>
+<span>Configuración de bahía física en Taller Principal (Hangar 2)</span>
+</div>
+<div class="flex items-center gap-space-xs font-mono">
+<span class="text-secondary">Próximo slot sugerido:</span>
+<span class="bg-primary-container text-on-primary px-space-xs py-0.5 rounded font-bold">B-07</span>
+</div>
+</div>
+<!-- MODAL SCROLLABLE BODY -->
+<div class="p-space-lg overflow-y-auto flex-1 space-y-space-lg bg-surface/40">
+<!-- SECCIÓN 1: NOMENCLATURA & IDENTIFICACIÓN -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-lg">badge</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                1. Nomenclatura &amp; Especialidad Operativa
+              </h3>
+</div>
+<span class="bg-surface-container text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Paso Obligatorio</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">
+                Código de Bahía
+              </label>
+<div class="flex items-center gap-space-xs">
+<input class="w-full bg-surface-container-low text-on-surface font-tabular-mono-lg text-tabular-mono-lg px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container font-bold text-center" id="bay-code-input" type="text" value="B-07"/>
+</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<button class="font-label-xs text-label-xs bg-surface-container-low hover:bg-surface-container px-space-xs py-space-2xs rounded text-secondary font-mono" onclick="document.getElementById('bay-code-input').value='B-07'" type="button">B-XX</button>
+<button class="font-label-xs text-label-xs bg-surface-container-low hover:bg-surface-container px-space-xs py-space-2xs rounded text-secondary font-mono" onclick="document.getElementById('bay-code-input').value='DYNO-02'" type="button">DYNO-X</button>
+<button class="font-label-xs text-label-xs bg-surface-container-low hover:bg-surface-container px-space-xs py-space-2xs rounded text-secondary font-mono" onclick="document.getElementById('bay-code-input').value='EXP-03'" type="button">EXP-X</button>
+<button class="font-label-xs text-label-xs bg-surface-container-low hover:bg-surface-container px-space-xs py-space-2xs rounded text-secondary font-mono" onclick="document.getElementById('bay-code-input').value='SUS-01'" type="button">SUS-X</button>
+</div>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">
+                Nombre Descriptivo de la Bahía
+              </label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container" placeholder="Ej. Bahía 07 - Puesto Frenos &amp; Ruedas" type="text" value="Bahía 07 - Suspensión Especializada &amp; Telemetría Dinámica"/>
+<span class="block font-label-xs text-label-xs text-secondary mt-space-2xs">
+                Visible para asesores de servicio en la asignación de Órdenes de Trabajo (OT).
+              </span>
+</div>
+</div>
+<!-- Especialidades Cards Selector -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="block font-label-xs text-label-xs uppercase font-semibold text-secondary">
+              Especialidad Asignada al Puesto (Seleccione una)
+            </span>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-space-sm">
+<!-- Selected: Frenos & Suspensión -->
+<div class="p-space-sm bg-primary-fixed/20 rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">play_pass</span>
+</div>
+<span class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-xs py-0.5 rounded font-bold">Activo</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface block leading-tight">Frenos, Chasis &amp; Suspensión</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Retenes, barras Öhlins/WP, tren rodante y ABS</span>
+</div>
+</div>
+<!-- Option 2: Rápida -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">oil_barrel</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">1.0h max</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-tight">Service Express &amp; Rápida</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Aceites, kit de arrastre, pastillas y fluidos</span>
+</div>
+</div>
+<!-- Option 3: Motor Mayor -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">settings</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Desarme</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-tight">Motor &amp; Transmisión Mayor</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Ajuste culata, válvulas, embrague y caja de cambios</span>
+</div>
+</div>
+<!-- Option 4: Diagnóstico Scanner -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">troubleshoot</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-bold">TEXA OBD</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-tight">Diagnóstico &amp; Scanner DTC</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Red CAN bus, inyección electrónica y mapas</span>
+</div>
+</div>
+<!-- Option 5: Banco Dyno -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">speed</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">HP / Torque</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-tight">Banco Dinamómetro</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Pruebas en rodillo Dynojet y curva de potencia</span>
+</div>
+</div>
+<!-- Option 6: Lavado Técnico -->
+<div class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer flex flex-col justify-between transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-base">cleaning_services</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Acabado</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface block leading-tight">Detailing &amp; Lavado Técnico</span>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Desengrase por vapor y protección cerámica</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 2: VINCULACIÓN DE ELEVADOR & SUMINISTROS -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-lg">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                2. Elevador Hidráulico &amp; Maquinaria de Puesto
+              </h3>
+</div>
+<span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-tertiary font-semibold">
+<span class="material-symbols-outlined text-sm">verified_user</span> ISO 9001 Taller Seguro
+            </span>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary">
+              Elevador Asignado a la Bahía
+            </label>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">hardware</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Weber Electrohidráulico HD-800kg</span>
+<span class="bg-secondary-container text-on-secondary-fixed font-mono text-label-xs font-bold px-space-xs py-0.5 rounded">#E-04</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm text-secondary mt-0.5">
+<span>Capacidad: <strong>800 kg</strong> (Motos Touring &amp; Maxi-Trail)</span>
+<span>•</span>
+<span class="text-tertiary font-semibold">Certificación Vigente (Vence Nov 2025)</span>
+</div>
+</div>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center justify-center gap-space-2xs transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+<span>Cambiar Elevador</span>
+</button>
+</div>
+</div>
+<!-- Tomas y Equipamiento de Bahía -->
+<div class="space-y-space-xs pt-space-2xs">
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary">
+              Instalaciones Fijas &amp; Tomas Auxiliares Disponibles
+            </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-xs font-body-sm">
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Toma de Aire Comprimido</span>
+<span class="text-secondary text-label-xs block">Línea directa 10 Bar regulada con trampa de agua</span>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Extracción Gases de Escape</span>
+<span class="text-secondary text-label-xs block">Manguera térmica y boquilla acoplable a mofles</span>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Carro de Herramientas RFID</span>
+<span class="text-secondary text-label-xs block">Gabinete rodante con control de llaves y torquímetro</span>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Red Eléctrica 220V / 110V</span>
+<span class="text-secondary text-label-xs block">Línea estabilizada para soldadura o soldador TIG</span>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Brazo Terminal Tablet POS</span>
+<span class="text-secondary text-label-xs block">Soporte articulado con alimentación y escáner Bluetooth</span>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input class="mt-1 accent-primary-container" type="checkbox"/>
+<div class="text-on-surface">
+<span class="font-semibold block text-body-sm">Doble Rampa de Anclaje</span>
+<span class="text-secondary text-label-xs block">Apto para triciclos / Can-Am Spyder o Quads</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 3: ASIGNACIÓN DE TÉCNICO & TURNO -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-lg">person_pin</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                3. Técnico Titular Responsable &amp; Régimen de Turno
+              </h3>
+</div>
+<span class="bg-surface-container text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Asignación bay-lead</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">
+                Mecánico Titular Responsable
+              </label>
+<div class="relative">
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-center justify-between cursor-pointer hover:bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Professional motorcycle technician in clean workshop attire with safety goggles in modern repair facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGtNNc67ntQE21QwCQJiYcXmDVZV_3iQfAGPTOY5d27n47SCFpK-JtoCqyumVgVpRrZmCnh_-3M6LWBmLnrkGSObzERA2uPCpeJ8SPz3-EfKEfUh-AIWUPGS5ifap7l8oSTDejSSLSOgkpeoaBJ0vqViY4eUDnm4FoAZsRV0k4vgS7dosRciG83dSJLdSoy0l6b4v8eVE2_bOBNZHu2vDc3Bwv7BtRuhhRmUPImP7gqZQdpCk4FIqX"/>
+<div>
+<span class="font-semibold text-body-md text-on-surface block">Andrés López Morales</span>
+<span class="font-label-xs text-label-xs text-secondary block">Master Technician • Especialista Chasis BMW/KTM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-base">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-2xs text-label-xs text-secondary">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span>Nivel de certificación requerido: <strong>Senior / Nivel 3</strong> (Cumple)</span>
+</div>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">
+                Turno de Operación en Taller
+              </label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-2xs">
+<label class="flex flex-col items-center justify-center p-space-xs bg-surface-container rounded-lg cursor-pointer text-center">
+<input checked="" class="accent-primary-container" name="turno_bay" type="radio"/>
+<span class="font-semibold text-body-sm text-on-surface mt-1">Completa</span>
+<span class="text-label-xs text-secondary">08:00 - 18:00</span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer text-center">
+<input class="accent-primary-container" name="turno_bay" type="radio"/>
+<span class="font-semibold text-body-sm text-on-surface mt-1">Matutino</span>
+<span class="text-label-xs text-secondary">07:00 - 14:00</span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer text-center">
+<input class="accent-primary-container" name="turno_bay" type="radio"/>
+<span class="font-semibold text-body-sm text-on-surface mt-1">Vespertino</span>
+<span class="text-label-xs text-secondary">13:30 - 20:30</span>
+</label>
+</div>
+<span class="block font-label-xs text-label-xs text-secondary mt-space-2xs">
+                La bahía figurará en el programador de citas sólo durante el turno activo.
+              </span>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 4: TARIFAS & ESTADO DE DISPONIBILIDAD -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Regla Tarifaria Específica -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="material-symbols-outlined text-primary-container text-lg">monetization_on</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">
+                Tarifa Horaria de la Bahía
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Factor de ajuste por complejidad técnica de maquinaria y herramientas calibradas.
+            </p>
+<div class="pt-space-xs space-y-space-sm">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div>
+<span class="font-label-xs text-label-xs uppercase text-secondary font-semibold block">Mano de Obra Calculada</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface">$32.00</span>
+<span class="text-secondary font-label-xs text-label-xs">USD / hora facturable</span>
+</div>
+</div>
+<div class="bg-surface-container px-space-sm py-space-2xs rounded-lg text-right">
+<span class="font-label-xs text-label-xs text-primary-container font-bold">+15% Factor Especializado</span>
+<span class="block font-label-xs text-label-xs text-secondary">Frente a base de $28.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm">
+<span class="text-secondary">Multiplicador Baremo:</span>
+<div class="flex items-center gap-space-2xs">
+<button class="w-7 h-7 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-bold flex items-center justify-center" type="button">-</button>
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold px-space-xs">1.15x</span>
+<button class="w-7 h-7 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-bold flex items-center justify-center" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Estado Inicial al Habilitar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="material-symbols-outlined text-primary-container text-lg">published_with_changes</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">
+                Estado Inicial de Entrada en Servicio
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Determina si entra de inmediato a la cola de turnos o a fase de rodaje.
+            </p>
+<div class="pt-space-xs space-y-space-xs font-body-sm">
+<label class="flex items-center gap-space-sm p-space-xs bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="accent-primary-container" name="initial_bay_state" type="radio"/>
+<div>
+<span class="font-semibold text-on-surface block text-body-sm">Operativa &amp; Lista para Asignar OTs</span>
+<span class="text-secondary text-label-xs">Disponible en POS y tablero Kanban de taller inmediatamente</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer">
+<input class="accent-primary-container" name="initial_bay_state" type="radio"/>
+<div>
+<span class="font-semibold text-on-surface block text-body-sm">Bloqueada por Calibración Preventiva</span>
+<span class="text-secondary text-label-xs">No permite asignación hasta chequeo técnico de elevador</span>
+</div>
+</label>
+<div class="pt-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer text-label-xs text-secondary">
+<input checked="" class="accent-primary-container" type="checkbox"/>
+<span>Notificar al Jefe de Taller y registrar log de alta en auditoría ERP</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL FOOTER ACTION BAR -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md shrink-0">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs text-secondary">
+<span class="material-symbols-outlined text-base text-primary-container">info</span>
+<span>Al confirmar, la sede pasará a contar con <strong>7 Bahías Habilitadas</strong>.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-none bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors" onclick="document.getElementById('modal-new-bay').classList.add('hidden')" type="button">
+            Cancelar
+          </button>
+<button class="flex-1 sm:flex-none bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors shadow-sm hidden md:inline-flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>Guardar &amp; Crear Otra</span>
+</button>
+<button class="flex-1 sm:flex-none bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-lg py-space-xs rounded flex items-center justify-center gap-space-xs transition-colors shadow-md" onclick="document.getElementById('modal-new-bay').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-base">check</span>
+<span>Confirmar y Habilitar Bahía B-07</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer><div class="fixed inset-0 z-50 flex items-center justify-center p-space-sm md:p-space-lg bg-inverse-surface/60 backdrop-blur-sm overflow-y-auto" id="modal-edit-sede"><div class="bg-surface-container-lowest w-full max-w-5xl rounded-xl shadow-2xl flex flex-col max-h-[942px] overflow-hidden my-auto border-0"><div class="px-space-lg py-space-md bg-surface-container-low border-b border-surface-container flex items-start justify-between gap-space-md"><div class="flex-1"><div class="flex items-center flex-wrap gap-space-xs mb-space-2xs"><span class="bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs font-bold px-space-xs py-space-2xs rounded">CÓDIGO: SED-03</span><span class="inline-flex items-center gap-1 bg-surface-container text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Activa / En Línea</span><span class="text-secondary font-label-xs text-label-xs font-mono">ID: LOC-80-BOG</span></div><h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Editar Sede Operativa: Sede Calle 80 - Pista &amp; Dyno</h2><p class="font-body-sm text-body-sm text-secondary mt-space-2xs">Configure los parámetros físicos de la sucursal, distribución de bahías de trabajo, elevadores hidráulicos y hardware local.</p></div><div class="flex items-center gap-space-xs"><button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button"><span class="material-symbols-outlined text-sm">history</span><span class="hidden sm:inline">Historial</span></button><button aria-label="Cerrar" class="text-secondary hover:text-on-surface hover:bg-surface-container p-space-xs rounded transition-colors" onclick="document.getElementById('modal-edit-sede').remove()" type="button"><span class="material-symbols-outlined text-xl">close</span></button></div></div><div class="px-space-lg bg-surface-container-lowest border-b border-surface-container flex items-center gap-space-sm overflow-x-auto text-label-md"><button class="py-space-sm px-space-xs text-secondary hover:text-on-surface whitespace-nowrap flex items-center gap-space-2xs transition-colors" type="button"><span class="material-symbols-outlined text-base">store</span><span>1. Datos Generales &amp; Ubicación</span></button><button class="py-space-sm px-space-xs text-primary-container font-semibold border-b-2 border-primary-container whitespace-nowrap flex items-center gap-space-2xs" type="button"><span class="material-symbols-outlined text-base text-primary-container">garage</span><span>2. Bahías de Trabajo &amp; Asignación</span><span class="bg-primary-fixed text-on-primary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded-full">6 Bahías</span></button><button class="py-space-sm px-space-xs text-secondary hover:text-on-surface whitespace-nowrap flex items-center gap-space-2xs transition-colors" type="button"><span class="material-symbols-outlined text-base">precision_manufacturing</span><span>3. Maquinaria &amp; Elevadores</span></button><button class="py-space-sm px-space-xs text-secondary hover:text-on-surface whitespace-nowrap flex items-center gap-space-2xs transition-colors" type="button"><span class="material-symbols-outlined text-base">router</span><span>4. Red Local &amp; Periféricos POS</span></button></div><div class="p-space-lg overflow-y-auto flex-1 space-y-space-xl bg-surface/50"><div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm"><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-lg">info</span><h3 class="font-headline-md text-headline-md text-on-surface font-bold">A. Información General de la Sucursal</h3></div><span class="bg-surface-container text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded">Sincronizado con Central</span></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-md font-body-sm"><div class="md:col-span-2 space-y-space-xs"><div><label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">Nombre Oficial de la Sede</label><input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container border-0" type="text" value="Sede Calle 80 - Pista &amp; Dyno"/></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-2xs"><div><label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">Tipo de Sede / Especialidad</label><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center justify-between text-on-surface"><span class="font-semibold text-body-sm">Taller Especializado Alta Cilindrada</span><span class="material-symbols-outlined text-secondary text-base">arrow_drop_down</span></div></div><div><label class="block font-label-xs text-label-xs uppercase font-semibold text-secondary mb-space-2xs">Encargado de Sede / Jefe Taller</label><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-sm py-space-xs rounded focus:outline-none focus:bg-surface-container border-0" type="text" value="Carlos H. Morales (+57 1 680-4411)"/></div></div></div><div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between space-y-space-xs"><div class="space-y-space-2xs"><span class="font-label-xs text-label-xs uppercase font-semibold text-secondary block">Dirección &amp; Capacidad</span><div class="flex items-center gap-space-xs text-on-surface-variant text-body-sm"><span class="material-symbols-outlined text-secondary text-sm">pin_drop</span><span>Calle 80 # 69K-18, Las Ferias</span></div><div class="flex items-center gap-space-xs text-on-surface-variant text-body-sm"><span class="material-symbols-outlined text-secondary text-sm">schedule</span><span>Lun - Sáb: 08:30 - 19:00</span></div><div class="flex items-center gap-space-xs text-on-surface-variant text-body-sm"><span class="material-symbols-outlined text-secondary text-sm">local_parking</span><span>Patio de Espera: <strong>15 Motos</strong></span></div></div><div class="pt-space-xs border-t border-surface-container flex items-center justify-between font-label-xs"><span class="text-secondary">Estado Red POS:</span><span class="text-tertiary font-bold">Subred 192.168.3.x OK</span></div></div></div></div><div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md"><div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-lg">grid_view</span><h3 class="font-headline-md text-headline-md text-on-surface font-bold">B. Matriz y Asignación de Bahías Físicas (6 Bahías)</h3></div><p class="font-body-sm text-body-sm text-secondary">Configure tipo de servicio por bahía, técnico responsable y elevador asignado.</p></div><div class="flex items-center gap-space-xs"><button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button"><span class="material-symbols-outlined text-sm">tune</span><span>Reordenar</span></button><button class="bg-primary-container hover:bg-primary text-on-primary font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-sm">add</span><span>+ Añadir Bahía</span></button></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"><div class="bg-surface-container-low p-space-sm rounded-lg border border-surface-container flex flex-col justify-between hover:border-primary-container transition-colors"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-01</span><span class="font-semibold text-on-surface text-body-md">Mecánica Rápida &amp; Service</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-tertiary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Disponible</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Técnico: <strong class="text-on-surface">Jorge Ramírez</strong> (Nivel 2)</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">hardware</span><span>Elevador Tijera Ravaglioli 600kg #E-01</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-secondary">Tipo: Express / Básico</span><button class="text-primary-container font-semibold hover:underline" type="button">Configurar</button></div></div><div class="bg-surface-container-low p-space-sm rounded-lg border border-surface-container flex flex-col justify-between hover:border-primary-container transition-colors"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-02</span><span class="font-semibold text-on-surface text-body-md">Motor &amp; Caja Mayor</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-primary-container font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> Ocupada (OT-1044)</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Técnico: <strong class="text-on-surface">Andrés López</strong> (Senior)</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">hardware</span><span>Plataforma Electrohidráulica 800kg #E-02</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-secondary">Tipo: Complejo / Desarme</span><button class="text-primary-container font-semibold hover:underline" type="button">Configurar</button></div></div><div class="bg-surface-container-low p-space-sm rounded-lg border border-surface-container flex flex-col justify-between hover:border-primary-container transition-colors"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-03</span><span class="font-semibold text-on-surface text-body-md">Diagnóstico &amp; Scanner</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-tertiary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Disponible</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Técnico: <strong class="text-on-surface">Carlos Medina</strong> (Junior)</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">hardware</span><span>Texa Axone Nemo + PicoScope #E-03</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-secondary">Tipo: Electrónica / DTC</span><button class="text-primary-container font-semibold hover:underline" type="button">Configurar</button></div></div><div class="bg-surface-container-low p-space-sm rounded-lg border border-surface-container flex flex-col justify-between hover:border-primary-container transition-colors"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-secondary-container text-on-secondary-fixed font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-04</span><span class="font-semibold text-on-surface text-body-md">Frenos, Chasis &amp; Suspensión</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-secondary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Sin Asignar</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Operario: <em>Rotativo según demanda</em></span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">hardware</span><span>Elevador Moto-Lift 500kg #E-04</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-secondary">Tipo: Tren Rodante</span><button class="text-primary-container font-semibold hover:underline" type="button">Configurar</button></div></div><div class="bg-surface-container-low p-space-sm rounded-lg border border-surface-container flex flex-col justify-between hover:border-primary-container transition-colors"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-surface-container-high text-secondary font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">B-05</span><span class="font-semibold text-on-surface text-body-md">Detailing &amp; Lavado Técnico</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-tertiary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Operativo</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Operario: Personal Lavado</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">hardware</span><span>Rampa inoxidable + Kärcher Pro 160bar</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-secondary">Tipo: Estética &amp; Entrega</span><button class="text-primary-container font-semibold hover:underline" type="button">Configurar</button></div></div><div class="bg-surface-container-high/60 p-space-sm rounded-lg border-2 border-primary-container/40 flex flex-col justify-between"><div class="space-y-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="bg-primary-container text-on-primary font-bold font-mono text-label-xs px-space-xs py-space-2xs rounded">DYNO</span><span class="font-semibold text-on-surface text-body-md">Banco Dinamómetro</span></div><span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-primary-container font-bold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Exclusivo</span></div><div class="space-y-1 text-body-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">person</span><span>Especialista: <strong class="text-on-surface">Carlos H. Morales</strong></span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">speed</span><span>Dynojet 250i + Doble Extractor Gases</span></div></div></div><div class="flex items-center justify-between pt-space-xs mt-space-xs border-t border-surface-container font-label-xs text-label-xs"><span class="text-on-surface-variant font-semibold">Tarifa Especial Dyno</span><button class="text-primary-container font-bold hover:underline" type="button">Calibrar</button></div></div></div></div><div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm"><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-lg">verified</span><h3 class="font-headline-md text-headline-md text-on-surface font-bold">C. Inventario de Elevadores &amp; Certificaciones de Seguridad</h3></div><button class="text-primary-container font-label-xs text-label-xs font-semibold hover:underline" type="button">+ Registrar Elevador</button></div><div class="overflow-x-auto"><table class="w-full text-left font-body-sm"><thead class="bg-surface-container-low font-label-xs text-label-xs uppercase text-secondary"><tr><th class="py-space-xs px-space-sm">ID / Código</th><th class="py-space-xs px-space-sm">Marca &amp; Modelo</th><th class="py-space-xs px-space-sm">Capacidad</th><th class="py-space-xs px-space-sm">Última Inspección Preventiva</th><th class="py-space-xs px-space-sm">Próx. Mantenimiento</th><th class="py-space-xs px-space-sm text-right">Certificado</th></tr></thead><tbody class="divide-y-0 text-on-surface"><tr class="hover:bg-surface-container-low transition-colors"><td class="py-space-xs px-space-sm font-mono font-bold text-label-xs">#E-01</td><td class="py-space-xs px-space-sm">Ravaglioli RAV1450 Tijera</td><td class="py-space-xs px-space-sm font-mono">600 kg</td><td class="py-space-xs px-space-sm"><span class="text-tertiary font-semibold">15 Sep 2024</span> (Aprobada ISO)</td><td class="py-space-xs px-space-sm text-secondary font-mono">15 Mar 2025</td><td class="py-space-xs px-space-sm text-right"><span class="material-symbols-outlined text-tertiary text-base align-middle">check_circle</span></td></tr><tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/30"><td class="py-space-xs px-space-sm font-mono font-bold text-label-xs">#E-02</td><td class="py-space-xs px-space-sm">Weber Electrohidráulico HD-80</td><td class="py-space-xs px-space-sm font-mono font-semibold text-primary">800 kg</td><td class="py-space-xs px-space-sm"><span class="text-tertiary font-semibold">02 Oct 2024</span> (Aprobada ISO)</td><td class="py-space-xs px-space-sm text-secondary font-mono">02 Abr 2025</td><td class="py-space-xs px-space-sm text-right"><span class="material-symbols-outlined text-tertiary text-base align-middle">check_circle</span></td></tr><tr class="hover:bg-surface-container-low transition-colors"><td class="py-space-xs px-space-sm font-mono font-bold text-label-xs">#E-03</td><td class="py-space-xs px-space-sm">Moto-Lift Pro Series 500</td><td class="py-space-xs px-space-sm font-mono">500 kg</td><td class="py-space-xs px-space-sm"><span class="text-tertiary font-semibold">20 Ago 2024</span> (Vigente)</td><td class="py-space-xs px-space-sm text-secondary font-mono">20 Feb 2025</td><td class="py-space-xs px-space-sm text-right"><span class="material-symbols-outlined text-tertiary text-base align-middle">check_circle</span></td></tr><tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/30"><td class="py-space-xs px-space-sm font-mono font-bold text-label-xs">#E-04</td><td class="py-space-xs px-space-sm">Moto-Lift Compact 500</td><td class="py-space-xs px-space-sm font-mono">500 kg</td><td class="py-space-xs px-space-sm"><span class="text-tertiary font-semibold">11 Nov 2024</span> (Reciente)</td><td class="py-space-xs px-space-sm text-secondary font-mono">11 May 2025</td><td class="py-space-xs px-space-sm text-right"><span class="material-symbols-outlined text-tertiary text-base align-middle">check_circle</span></td></tr></tbody></table></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md"><div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm space-y-space-xs"><div class="flex items-center gap-space-xs mb-space-2xs"><span class="material-symbols-outlined text-primary-container text-lg">payments</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Regla de Tarifa Mano de Obra</h4></div><p class="font-body-sm text-body-sm text-secondary">Seleccione si esta sucursal aplica el baremo base o un tarifario premium.</p><div class="space-y-space-xs pt-space-xs"><label class="flex items-center gap-space-sm p-space-xs bg-surface-container-low rounded-lg cursor-pointer"><input class="accent-primary-container" name="tarifa_sede" type="radio"/><div class="text-body-sm"><span class="font-semibold text-on-surface block">Heredar Tarifa Base Global ($28.00 USD/h)</span><span class="text-secondary text-body-sm">Multiplicador estándar por cilindraje sin variaciones</span></div></label><label class="flex items-center gap-space-sm p-space-xs bg-surface-container rounded-lg cursor-pointer border border-primary-container/40"><input checked="" class="accent-primary-container" name="tarifa_sede" type="radio"/><div class="text-body-sm"><span class="font-bold text-on-surface block">Tarifa Propia: Taller Alta Cilindrada ($32.00 USD/h)</span><span class="text-primary-container font-semibold text-body-sm">+15% recargo en servicios y calibraciones Dyno</span></div></label></div></div><div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm space-y-space-xs"><div class="flex items-center gap-space-xs mb-space-2xs"><span class="material-symbols-outlined text-primary-container text-lg">lan</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Hardware &amp; Periféricos Vinculados</h4></div><p class="font-body-sm text-body-sm text-secondary">Equipos locales conectados a esta sucursal física.</p><div class="space-y-1.5 pt-space-xs font-body-sm"><div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-base">print</span><span>Impresora Recibos Térmica</span></div><span class="font-mono text-label-xs bg-surface-container px-space-xs py-space-2xs rounded">192.168.3.150:9100</span></div><div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span>Escáner Honeywell VIN</span></div><span class="font-mono text-label-xs bg-surface-container px-space-xs py-space-2xs rounded">USB Port #02 / HID</span></div><div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-base">point_of_sale</span><span>Gaveta de Efectivo</span></div><span class="font-mono text-label-xs bg-surface-container px-space-xs py-space-2xs rounded">RJ11 Pulso (Activo)</span></div></div></div></div></div><div class="px-space-lg py-space-md bg-surface-container-low border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs font-label-xs text-label-xs text-secondary"><span class="material-symbols-outlined text-base text-tertiary">analytics</span><span>6 Bahías Operativas • 4 Elevadores Certificados ISO • 1 Banco Dyno Activo</span></div><div class="flex items-center gap-space-sm w-full sm:w-auto"><button class="flex-1 sm:flex-none bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors" onclick="document.getElementById('modal-edit-sede').remove()" type="button">Cancelar</button><button class="flex-1 sm:flex-none bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors shadow-sm" type="button">Guardar Borrador</button><button class="flex-1 sm:flex-none bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-lg py-space-xs rounded flex items-center justify-center gap-space-xs transition-colors shadow-md" onclick="document.getElementById('modal-edit-sede').remove()" type="button"><span class="material-symbols-outlined text-base">save</span><span>Guardar Cambios de Sede</span></button></div></div></div></div></body></html>

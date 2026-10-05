@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="#"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="#"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="taller-ordenes" href="#"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="#"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="#"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="#"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs text-secondary">
+<span class="hover:text-on-surface cursor-pointer">Configuración &amp; Sedes</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-semibold">Métodos &amp; Formas de Pago</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Gestión y Configuración de Formas de Pago</h1>
+<div class="bg-surface-container-high px-space-sm py-space-2xs rounded-full flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">8 Métodos Activos • Multi-moneda USD / COP</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="bg-surface-container-lowest px-space-sm py-space-xs rounded shadow-sm flex items-center gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary uppercase font-semibold">Pagos Mixtos / Split POS</span>
+<span class="font-label-md text-label-md text-tertiary">Activo para OT &amp; Mostrador</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="splitPaymentGlobalToggle" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded shadow-sm flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-base text-secondary">account_balance_wallet</span>
+<span>Auditoría de Comisiones</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded shadow-sm flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-base">add_card</span>
+<span>+ Agregar Nuevo Método</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Metric / KPI Summary Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Cash -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-end justify-start p-2 pointer-events-none opacity-40">
+<span class="material-symbols-outlined text-2xl text-on-surface">payments</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Efectivo en Caja (Caja POS)</span>
+<span class="font-label-xs text-label-xs font-semibold bg-surface-container-low text-on-surface px-space-xs py-space-2xs rounded">38% Vol.</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">$14,250.00</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Comisión bancaria 0% • Arqueo directo en gaveta RJ11</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">lock</span> Sincro con Turno Mañana
+        </span>
+<span class="font-label-xs text-label-xs font-mono text-on-surface-variant">TRM $4,001.20</span>
+</div>
+</div>
+<!-- Metric 2: Terminals & Cards -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-end justify-start p-2 pointer-events-none opacity-40">
+<span class="material-symbols-outlined text-2xl text-on-surface">point_of_sale</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Datáfonos &amp; Tarjetas</span>
+<span class="font-label-xs text-label-xs font-semibold bg-surface-container-low text-on-surface px-space-xs py-space-2xs rounded">42% Vol.</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">$15,800.00</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Tasa promedio: 1.85% + IVA • Redeban &amp; Credibanco</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> 2 Terminales Conectados
+        </span>
+<span class="font-label-xs text-label-xs font-mono text-secondary">Retenciones: 1.91%</span>
+</div>
+</div>
+<!-- Metric 3: QR & Digital -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-end justify-start p-2 pointer-events-none opacity-40">
+<span class="material-symbols-outlined text-2xl text-on-surface">qr_code_scanner</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">QR Interoperable &amp; Digital</span>
+<span class="font-label-xs text-label-xs font-semibold bg-surface-container-low text-on-surface px-space-xs py-space-2xs rounded">14% Vol.</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">$5,240.00</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Bancolombia, Nequi, Bre-B • Webhook API activo</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">bolt</span> Conciliación Inmediata
+        </span>
+<span class="font-label-xs text-label-xs font-mono text-secondary">Comisión: 0.60%</span>
+</div>
+</div>
+<!-- Metric 4: Workshop Credit -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-low rounded-full flex items-end justify-start p-2 pointer-events-none opacity-40">
+<span class="material-symbols-outlined text-2xl text-on-surface">assignment_ind</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Crédito Taller &amp; Flotas</span>
+<span class="font-label-xs text-label-xs font-semibold bg-surface-container-low text-on-surface px-space-xs py-space-2xs rounded">6% Vol.</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">$2,250.00</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Plazo 30/60 días con validación de cupo corporativo</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs text-primary-container">shield</span> 9 Clientes Habilitados
+        </span>
+<span class="font-label-xs text-label-xs font-mono text-secondary">Mora: 0.0%</span>
+</div>
+</div>
+</div>
+<!-- Main Work Surface: Split Grid (Left: Config Tabs & Cards, Right: Interactive Split Tender Simulator) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (8 cols): Methods Grid & Tabs -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter Tabs & Actions -->
+<div class="bg-surface-container-lowest p-space-xs rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs md:pb-0" id="methodsNavTabs">
+<button class="px-space-md py-space-xs rounded bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-space-2xs whitespace-nowrap">
+<span>Todos los Métodos</span>
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded text-xs font-mono">8</span>
+</button>
+<button class="px-space-md py-space-xs rounded text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md whitespace-nowrap">
+            Pagos Presenciales / POS
+          </button>
+<button class="px-space-md py-space-xs rounded text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md whitespace-nowrap">
+            Canales Digitales &amp; Links
+          </button>
+<button class="px-space-md py-space-xs rounded text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md whitespace-nowrap">
+            Crédito y Cartera
+          </button>
+<button class="px-space-md py-space-xs rounded text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-space-2xs whitespace-nowrap">
+<span class="material-symbols-outlined text-sm">receipt</span>
+<span>Parámetros Fiscales &amp; DIAN</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs">
+<span class="font-label-xs text-label-xs text-secondary whitespace-nowrap">Hardware Sede:</span>
+<span class="bg-surface-container-low px-space-xs py-space-2xs rounded font-label-xs text-label-xs font-semibold text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">lan</span> LAN Workshop-01
+          </span>
+</div>
+</div>
+<!-- Payment Method Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Method Card 1: Cash -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Efectivo en Moneda Local &amp; Divisas</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: CASH-01 • COP / USD</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-semibold">Predeterminado POS</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">Sin Comisión Bancaria</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-secondary px-space-xs py-0.5 rounded">RJ11 Pulse OK</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Apertura automática de gaveta con tirilla fiscal. Redondeo automático a la centena más cercana. Conversión automática con TRM sincronizada.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Contable:</span>
+<span class="font-mono text-on-surface font-semibold">110505 - Caja General</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Gaveta Conectada:</span>
+<span class="text-on-surface">Puerto Epson TM-T20III (Pin 2)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Arqueo Z Obligatorio
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Configurar Reglas</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</button>
+</div>
+</div>
+<!-- Method Card 2: Redeban SmartPOS -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">contactless</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Datáfono Integrado Redeban</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: POS-RDB-01 • Visa / Master / ApplePay</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-semibold">IP: 192.168.1.180</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">SmartPOS Protocol</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-on-surface px-space-xs py-0.5 rounded">Contactless NFC</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Envío de monto automático desde caja POS sin digitación manual. Concilia recibo voucher con la OT-1048.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Comisiones:</span>
+<span class="font-mono text-on-surface font-semibold">Déb: 1.20% | Créd: 2.10%</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Retenciones Ley:</span>
+<span class="font-mono text-on-surface font-semibold">ReteFte 1.5% | ReteICA 0.414%</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Contable:</span>
+<span class="font-mono text-on-surface">111005 - Redeban Adquirencia</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> Terminal Listo (Echo OK)
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Probar Test Ping</span>
+<span class="material-symbols-outlined text-sm">wifi_tethering</span>
+</button>
+</div>
+</div>
+<!-- Method Card 3: Credibanco POS -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">credit_card</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Datáfono Credibanco Terminal</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: POS-CRD-02 • Amex / Diners / Éxito</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-low text-on-surface px-space-xs py-0.5 rounded">USB Terminal POS-01</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">1 a 36 Cuotas Diferidas</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Dispositivo físico con conexión USB serial en mostrador de repuestos. Admite tarjetas de marcas privadas y cobro diferido con o sin interés.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Comisión Crédito:</span>
+<span class="font-mono text-on-surface font-semibold">2.60% Flat</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Contable:</span>
+<span class="font-mono text-on-surface font-semibold">111006 - Credibanco Cobros</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Standby Mostrador
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Configurar Puerto</span>
+<span class="material-symbols-outlined text-sm">settings_input_component</span>
+</button>
+</div>
+</div>
+<!-- Method Card 4: QR Interoperable -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">qr_code_2</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Código QR Interoperable (Bre-B / Nequi)</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: QR-INTER-01 • Bancolombia / Daviplata</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-semibold">QR Dinámico en Tirilla</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">Webhook Instantáneo</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Genera código QR único por cada orden. Cuando el cliente escanea y paga desde su app bancaria, la caja se desbloquea automáticamente sin comprobante manual.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Comisión fija:</span>
+<span class="font-mono text-on-surface font-semibold">0.60% (Sin ReteICA)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Receptora:</span>
+<span class="font-mono text-on-surface">111010 - Cta Cte Bancolombia #4829</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">sync</span> API Bancaria En Línea
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Ver Plantilla QR</span>
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+</div>
+</div>
+<!-- Method Card 5: Wompi Payment Link -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Wompi Link &amp; WhatsApp Pay</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: LNK-WMP-01 • Pasarela Remota</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">Despacho Domicilio / Taller</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-on-surface px-space-xs py-0.5 rounded">Soporta PSE &amp; Tarjetas</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Envío de enlace de cobro por WhatsApp o SMS cuando la moto está lista en bahía de mecánica. Notifica al mecánico para liberación de llaves.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Comisión Pasarela:</span>
+<span class="font-mono text-on-surface font-semibold">2.65% + $900 COP</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Receptora:</span>
+<span class="font-mono text-on-surface">111020 - Wompi Fiduciaria</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">send</span> SMS / WhatsApp API OK
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Token y Claves</span>
+<span class="material-symbols-outlined text-sm">key</span>
+</button>
+</div>
+</div>
+<!-- Method Card 6: Direct Wire Transfer / PSE -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Transferencia Bancaria &amp; PSE</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: TRX-DIR-01 • Bancos Nacionales</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-low text-on-surface px-space-xs py-0.5 rounded">Comprobante Obligatorio</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">0% Comisión POS</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Transferencias ACH entre cuentas empresariales. Requiere adjuntar foto del comprobante o número de aprobación antes del cierre de caja.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Cuentas Habilitadas:</span>
+<span class="text-on-surface font-semibold">Bancolombia, Davivienda, Bogotá</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Conciliación:</span>
+<span class="text-on-surface">Extracto Bancario Nocturno</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">attach_file</span> OCR de Comprobantes Activo
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Gestionar Cuentas</span>
+<span class="material-symbols-outlined text-sm">settings</span>
+</button>
+</div>
+</div>
+<!-- Method Card 7: Workshop Corporate Credit -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">badge</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Crédito Taller / Cartera Corporativa</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: CRD-FLEET-30 • Flotas &amp; Aseguradoras</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-semibold">Plazos 15, 30 y 45 días</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-on-surface px-space-xs py-0.5 rounded">Validación de Cupo</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Exclusivo para empresas con contrato vigente (ej. Rappi, Envíos Express, Seguros Sura). Bloquea liquidación si sobrepasa el cupo asignado.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Límite por Defecto:</span>
+<span class="font-mono text-on-surface font-semibold">$500.00 USD por Moto</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Cartera:</span>
+<span class="font-mono text-on-surface">130505 - Clientes Nacionales</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs text-primary-container">warning</span> Bloqueo por Mora Activo
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Reglas de Cupo</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</button>
+</div>
+</div>
+<!-- Method Card 8: Workshop Down Payment / Advance -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">savings</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Anticipos &amp; Saldos a Favor Taller</h2>
+<span class="font-label-xs text-label-xs text-secondary font-mono">COD: ADV-OT-01 • Cruce de Cuentas</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap gap-space-2xs mb-space-sm">
+<span class="font-label-xs text-label-xs bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-semibold">Depósitos Recepción 50%</span>
+<span class="font-label-xs text-label-xs bg-surface-container-low text-tertiary px-space-xs py-0.5 rounded">Cruce Automático</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">
+              Permite imputar el anticipo abonado durante la creación de la OT al momento del cierre en caja POS, reflejando únicamente la diferencia a pagar.
+            </p>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-col gap-space-2xs font-body-sm text-body-sm mb-space-sm">
+<div class="flex justify-between">
+<span class="text-secondary">Depósito Promedio:</span>
+<span class="font-mono text-on-surface font-semibold">50% en Repuestos Importados</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Cuenta Pasivo:</span>
+<span class="font-mono text-on-surface">280505 - Anticipos de Clientes</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">verified</span> Auto-conciliable en Factura
+            </span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary-container flex items-center gap-space-2xs transition-colors">
+<span>Auditar Saldos</span>
+<span class="material-symbols-outlined text-sm">history</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hardware Terminals & Peripherals Section -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-lg text-primary-container">devices</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Periféricos de Cobro &amp; Protocolos Activos</h2>
+<span class="font-body-sm text-body-sm text-secondary">Estado del enlace de caja, datáfonos en red e impresoras de voucher</span>
+</div>
+</div>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-base">refresh</span>
+<span>Escanear Red LAN</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-xs text-label-xs uppercase">
+<th class="p-space-xs rounded-l">Dispositivo / Modelo</th>
+<th class="p-space-xs">Método Asignado</th>
+<th class="p-space-xs">Dirección / Puerto</th>
+<th class="p-space-xs">Latencia</th>
+<th class="p-space-xs">Estado</th>
+<th class="p-space-xs rounded-r text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container-low/50">
+<td class="p-space-xs font-semibold text-on-surface flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-secondary">wifi</span>
+<span>Ingenico Move 2500 SmartPOS</span>
+</td>
+<td class="p-space-xs text-on-surface">Redeban Tarjetas (Débito/Crédito)</td>
+<td class="p-space-xs font-mono text-xs text-secondary">192.168.1.180:8088</td>
+<td class="p-space-xs font-mono text-xs text-on-surface">14 ms</td>
+<td class="p-space-xs">
+<span class="bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-label-xs text-label-xs font-semibold">Listo / Online</span>
+</td>
+<td class="p-space-xs text-right">
+<button class="font-label-md text-label-md text-primary-container hover:underline">Reconectar</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="p-space-xs font-semibold text-on-surface flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-secondary">usb</span>
+<span>Pax D200 Multicobro</span>
+</td>
+<td class="p-space-xs text-on-surface">Credibanco POS Mostrador</td>
+<td class="p-space-xs font-mono text-xs text-secondary">COM4 (USB Serial)</td>
+<td class="p-space-xs font-mono text-xs text-on-surface">0 ms</td>
+<td class="p-space-xs">
+<span class="bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-label-xs text-label-xs font-semibold">Conectado</span>
+</td>
+<td class="p-space-xs text-right">
+<button class="font-label-md text-label-md text-primary-container hover:underline">Reconectar</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="p-space-xs font-semibold text-on-surface flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-secondary">print</span>
+<span>Epson TM-T20III Térmica 80mm</span>
+</td>
+<td class="p-space-xs text-on-surface">Tirilla Fiscal DIAN &amp; Recibo Voucher</td>
+<td class="p-space-xs font-mono text-xs text-secondary">192.168.1.195:9100</td>
+<td class="p-space-xs font-mono text-xs text-on-surface">6 ms</td>
+<td class="p-space-xs">
+<span class="bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-label-xs text-label-xs font-semibold">Papel OK</span>
+</td>
+<td class="p-space-xs text-right">
+<button class="font-label-md text-label-md text-primary-container hover:underline">Imprimir Test</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column (4 cols): Live Interactive Split-Tender Simulator -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Split Payment Sandbox Card -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-lg">call_split</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Simulador de Cobro Mixto</h2>
+</div>
+<span class="bg-surface-container-high text-on-surface font-mono text-xs font-semibold px-space-xs py-space-2xs rounded">POS v4.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+            Prueba en vivo cómo interactúan los métodos de pago durante la liquidación de la orden de taller <span class="font-mono font-semibold text-on-surface">OT-1048</span>.
+          </p>
+<!-- Order Summary Ticket Header -->
+<div class="bg-inverse-surface text-inverse-on-surface p-space-md rounded mb-space-md">
+<div class="flex justify-between items-center mb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-inverse-on-surface/70">Orden de Taller en Caja</span>
+<span class="font-headline-md text-headline-md font-mono text-inverse-on-surface">OT-1048 • YAMAHA MT-09</span>
+</div>
+<span class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-xs py-space-2xs rounded uppercase font-bold">Por Liquidar</span>
+</div>
+<div class="flex justify-between items-end mt-space-sm pt-space-xs">
+<div>
+<span class="block font-label-xs text-label-xs text-inverse-on-surface/70">Total Factura (Inc. IVA)</span>
+<span class="block font-display-lg text-display-lg font-mono text-primary-fixed">$311.15</span>
+</div>
+<div class="text-right">
+<span class="block font-label-xs text-label-xs text-inverse-on-surface/70">Equivalente TRM</span>
+<span class="block font-body-md text-body-md font-mono text-inverse-on-surface">$1,244,973 COP</span>
+</div>
+</div>
+</div>
+<!-- Active Tender Allocations in Sandbox -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<span class="font-label-xs text-label-xs uppercase font-semibold text-secondary tracking-wider">Desglose de Formas de Pago Aplicadas</span>
+<!-- Tender Row 1: Cash -->
+<div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-base">payments</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-semibold">1. Efectivo (Caja General)</span>
+<span class="block font-label-xs text-label-xs text-secondary">Recibido: $120.00 USD • Cambio: $8.85</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">$111.15</span>
+<span class="block font-label-xs text-label-xs text-tertiary font-semibold">35.7% Cubierto</span>
+</div>
+</div>
+<!-- Tender Row 2: Redeban Debit Card -->
+<div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-base">contactless</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-semibold">2. Redeban Débito NFC</span>
+<span class="block font-label-xs text-label-xs text-secondary">Voucher #99421 • Aut: 48201</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">$200.00</span>
+<span class="block font-label-xs text-label-xs text-tertiary font-semibold">64.3% Cubierto</span>
+</div>
+</div>
+<!-- Split Balance Bar -->
+<div class="p-space-xs bg-surface-container-high rounded flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-xs text-label-xs font-semibold">
+<span class="text-on-surface">Cobertura Total del Pago</span>
+<span class="text-primary-container">$311.15 de $311.15 (100%)</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 35.7%;" title="Efectivo $111.15"></div>
+<div class="h-full bg-tertiary" style="width: 64.3%;" title="Tarjeta Débito $200.00"></div>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-secondary mt-1">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Efectivo $111.15
+                </span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Débito $200.00
+                </span>
+<span class="text-on-surface font-semibold font-mono">Diferencia: $0.00</span>
+</div>
+</div>
+</div>
+<!-- Fiscal Dispatch / DIAN Preview -->
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-space-xs mb-space-md">
+<span class="font-label-xs text-label-xs uppercase font-semibold text-secondary">Impacto Contable &amp; Fiscal (Factura Electrónica FE-89240)</span>
+<div class="grid grid-cols-2 gap-space-xs font-body-sm text-body-sm">
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<span class="block font-label-xs text-label-xs text-secondary">Comisión Banco (1.2%)</span>
+<span class="font-mono font-semibold text-on-surface">$2.40 USD</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<span class="block font-label-xs text-label-xs text-secondary">ReteFuente (1.5%)</span>
+<span class="font-mono font-semibold text-on-surface">$3.00 USD</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<span class="block font-label-xs text-label-xs text-secondary">Ingreso Neto Líquido</span>
+<span class="font-mono font-semibold text-tertiary">$305.75 USD</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded">
+<span class="block font-label-xs text-label-xs text-secondary">Reporte Z Cierre</span>
+<span class="font-mono font-semibold text-on-surface">Caja POS-01 OK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md py-space-xs px-space-sm rounded shadow-sm flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+<span>Simular Cierre &amp; Generar Factura DIAN</span>
+</button>
+<button class="w-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md py-space-xs px-space-sm rounded flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-base text-secondary">restore</span>
+<span>Restablecer Montos de Prueba</span>
+</button>
+</div>
+</div>
+<!-- Quick Regulatory Notice -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-xl">verified_user</span>
+<div class="flex flex-col gap-space-2xs">
+<h2 class="font-label-md text-label-md text-on-surface font-bold">Normativa DIAN y Bancaria 2025</h2>
+<p class="font-body-sm text-body-sm text-secondary">
+              Los pagos mixtos se transmiten en el XML UBL 2.1 con sus respectivos códigos de medio de pago: 10 (Efectivo) y 48 (Tarjeta Débito). Las retenciones se calculan únicamente sobre la porción con tarjeta.
+            </p>
+<a class="font-label-xs text-label-xs text-tertiary hover:underline font-semibold flex items-center gap-1 mt-1" href="#">
+<span>Ver manual de codificación de medios</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for active tab highlight
+  document.querySelectorAll('#methodsNavTabs button').forEach(button => {
+    button.addEventListener('click', function() {
+      document.querySelectorAll('#methodsNavTabs button').forEach(b => {
+        b.classList.remove('bg-surface-container-high', 'text-on-surface');
+        b.classList.add('text-secondary', 'hover:text-on-surface', 'hover:bg-surface-container-low');
+      });
+      this.classList.add('bg-surface-container-high', 'text-on-surface');
+      this.classList.remove('text-secondary', 'hover:text-on-surface', 'hover:bg-surface-container-low');
+    });
+  });
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer></body></html>
