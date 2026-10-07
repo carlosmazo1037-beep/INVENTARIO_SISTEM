@@ -1,4 +1,42 @@
-﻿(function() {
+# 1. Crear carpetas de la nueva arquitectura
+"desktop", "mobile", "assets\css", "assets\js", "database", "api" | ForEach-Object { if (-not (Test-Path $_)) { New-Item -ItemType Directory -Path $_ -Force | Out-Null } }
+
+# 2. Extraer index.html a la raiz
+Get-ChildItem -Recurse -Filter "code.html" | Where-Object { $_.FullName -like "*index*" } | Select-Object -First 1 | ForEach-Object { Copy-Item $_.FullName "index.html" -Force }
+
+# 3. Mapear y mover pantallas a la carpeta desktop/
+$map = @{
+    "*taller*ordenes*"         = "desktop\ordenes-taller.html"
+    "*dashboard*pos*"          = "desktop\dashboard-pos.html"
+    "*perfil*usuario*"         = "desktop\perfil-usuario.html"
+    "*inventario*movimientos*" = "desktop\inventario-movimientos.html"
+    "*recepcion*inspeccion*"   = "desktop\recepcion-inspeccion.html"
+    "*diagnostico*cotizacion*" = "desktop\diagnostico-cotizacion.html"
+    "*factura*liquidacion*"    = "desktop\factura-liquidacion.html"
+    "*arqueo*cierre*"          = "desktop\arqueo-cierre-reporte-z.html"
+    "*egresos*caja*"           = "desktop\egresos-caja-menor.html"
+    "*formas*pago*"            = "desktop\formas-de-pago.html"
+    "*garantias*reclamos*"     = "desktop\garantias-reclamos.html"
+    "*configuracion*sedes*"    = "desktop\configuracion-sedes.html"
+    "*login*"                  = "desktop\login-multiusuario.html"
+}
+foreach ($pattern in $map.Keys) {
+    Get-ChildItem -Recurse -Filter "code.html" | Where-Object { $_.DirectoryName -like $pattern } | Select-Object -First 1 | ForEach-Object { Copy-Item $_.FullName $map[$pattern] -Force }
+}
+
+# 4. Mapear pantallas moviles a mobile/
+$mobileMap = @{
+    "*portal*cliente*whatsapp*" = "mobile\portal-cliente-whatsapp.html"
+    "*bahia*mecanico*tactil*"   = "mobile\bahia-mecanico-tactil.html"
+    "*captura*evidencias*voz*"  = "mobile\captura-evidencias-voz.html"
+}
+foreach ($pattern in $mobileMap.Keys) {
+    Get-ChildItem -Recurse -Filter "code.html" | Where-Object { $_.DirectoryName -like $pattern } | Select-Object -First 1 | ForEach-Object { Copy-Item $_.FullName $mobileMap[$pattern] -Force }
+}
+
+# 5. Generar componente universal e infalible de Menú Lateral (assets/js/motopro-sidebar.js)
+$sidebar = @'
+(function() {
   function render() {
     var mount = document.getElementById("motopro-sidebar-container");
     if (!mount) return;
@@ -63,3 +101,8 @@
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render); else render();
 })();
+'@
+Set-Content -Path "assets\js\motopro-sidebar.js" -Value $sidebar -Encoding UTF8
+
+Write-Host "`n[✓] ¡Listo! Carpetas organizadas, index.html extraído y menú JS reparado." -ForegroundColor Green
+Write-Host "Arrastra la carpeta completa a Netlify ahora." -ForegroundColor Yellow

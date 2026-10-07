@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>🏍️ MotoPro Workshop ERP &amp; POS System | INVENTARIO_SISTEM</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="🏍️ MotoPro Workshop ERP &amp; POS System" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sistema de inventario para taller de motos" />
+<meta property="og:description" content="Sistema de inventario para taller de motos" />
+<link rel="canonical" href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/readme.md_documentaci_n_del_repositorio_motopro_erp.html" />
+<meta property="og:url" content="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/readme.md_documentaci_n_del_repositorio_motopro_erp.html" />
+<meta property="og:site_name" content="INVENTARIO_SISTEM" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="🏍️ MotoPro Workshop ERP &amp; POS System" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Sistema de inventario para taller de motos","headline":"🏍️ MotoPro Workshop ERP &amp; POS System","url":"https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/readme.md_documentaci_n_del_repositorio_motopro_erp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/INVENTARIO_SISTEM/assets/css/style.css?v=d44c795c0b6870c208803ed56770a4c592338f40">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/INVENTARIO_SISTEM/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/">INVENTARIO_SISTEM</a></h1>
+      
+
+      <h1 id="️-motopro-workshop-erp--pos-system">🏍️ MotoPro Workshop ERP &amp; POS System</h1>
+
+<p><a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-orange.svg" alt="License: MIT" /></a>
+<a href=""><img src="https://img.shields.io/badge/Status-Production%20Ready-success.svg" alt="Status: Production Ready" /></a>
+<a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/TailwindCSS-v3.x-38B2AC.svg" alt="Tailwind CSS: v3.x" /></a>
+<a href=""><img src="https://img.shields.io/badge/DIAN-UBL%202.1%20Compliant-blue.svg" alt="DIAN: Facturación Electrónica" /></a>
+<a href=""><img src="https://img.shields.io/badge/Hardware-Epson%20ESC%2FPOS%2080mm-black.svg" alt="Hardware: ESC/POS 80mm" /></a></p>
+
+<blockquote>
+  <p><strong>MotoPro Workshop ERP</strong> es una plataforma integral de gestión operativa, técnica y financiera diseñada específicamente para talleres mecánicos de motocicletas, centros de servicio multimarcas y redes multi-sede. Integra control de inventarios (Kardex), recepción pericial 360°, diagnóstico y baremo de tiempos, punto de venta (POS) con tirilla térmica y arqueo ciego, facturación electrónica fiscal y portal móvil en tiempo real para mecánicos y clientes vía WhatsApp.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-tabla-de-contenidos">📑 Tabla de Contenidos</h2>
+<ul>
+  <li><a href="#-características-principales">Características Principales</a></li>
+  <li><a href="#-arquitectura-y-estructura-del-repositorio">Arquitectura y Estructura del Repositorio</a></li>
+  <li><a href="#-mapeo-completo-de-pantallas-y-módulos">Mapeo Completo de Pantallas y Módulos</a>
+    <ul>
+      <li><a href="#1-módulos-desktop-administración-taller--pos">1. Módulos Desktop (Administración, Taller &amp; POS)</a></li>
+      <li><a href="#2-módulos-mobile--pwa-operarios--clientes">2. Módulos Mobile &amp; PWA (Operarios &amp; Clientes)</a></li>
+    </ul>
+  </li>
+  <li><a href="#-integración-de-hardware-pos">Integración de Hardware POS</a></li>
+  <li><a href="#-atajos-de-teclado-operativos">Atajos de Teclado Operativos</a></li>
+  <li><a href="#-credenciales-y-datos-demo">Credenciales y Datos Demo</a></li>
+  <li><a href="#-guía-de-instalación-y-despliegue-rápido">Guía de Instalación y Despliegue Rápido</a>
+    <ul>
+      <li><a href="#prueba-local-sin-servidor">Prueba Local sin Servidor</a></li>
+      <li><a href="#despliegue-gratis-en-github-pages">Despliegue Gratis en GitHub Pages</a></li>
+      <li><a href="#despliegue-en-vercel--netlify">Despliegue en Vercel / Netlify</a></li>
+    </ul>
+  </li>
+  <li><a href="#-variables-y-parámetros-de-configuración">Variables y Parámetros de Configuración</a></li>
+  <li><a href="#-licencia-y-contribuciones">Licencia y Contribuciones</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-características-principales">⚡ Características Principales</h2>
+
+<ul>
+  <li><strong>Multi-Sede Centralizado:</strong> Control de sedes independientes con consolidación en tiempo real (ej. <em>Sede Central - Taller Norte</em>, <em>Sede Occidente</em>, etc.).</li>
+  <li><strong>Recepción con Peritaje Visual 360°:</strong> Checklist táctil con marcado de rayones, abolladuras, accesorios y nivel de combustible. Firma de consentimiento digital al ingreso.</li>
+  <li><strong>Baremo Técnico &amp; Diagnóstico:</strong> Cotizaciones estructuradas con cálculo de tiempos de mano de obra (flat rate), repuestos OEM y consumibles.</li>
+  <li><strong>Control de Inventario Kardex:</strong> Entradas por compra con soporte de código de barras, despachos blindados con validación de OT y alertas de stock crítico.</li>
+  <li><strong>Terminal de Caja POS &amp; Pagos Mixtos (Split Payment):</strong>
+    <ul>
+      <li>Múltiples formas de cobro por orden: Efectivo (bimoneda USD / COP con TRM en vivo), Datáfonos Redeban/Credibanco (SmartPOS LAN/USB), QR Bancolombia/Bre-B/Nequi, pasarelas remotas (Wompi/WhatsApp Pay) y crédito de flotas.</li>
+      <li>Apertura automática de gaveta monedero mediante pulso eléctrico RJ11.</li>
+      <li>Vales rápidos de salida y caja menor con atajo <code class="language-plaintext highlighter-rouge">Ctrl + M</code>.</li>
+      <li>Arqueo y Cierre Fiscal (Reporte Z) con protocolo ciego de denominaciones físicas.</li>
+    </ul>
+  </li>
+  <li><strong>Impresión Fiscal &amp; Comprobantes:</strong>
+    <ul>
+      <li>Factura Electrónica fiscal formato A4 / PDF (compatible normativa DIAN UBL 2.1).</li>
+      <li>Simulador térmico de tirilla ESC/POS 80mm con código QR, CUFE y talón desprendible para guardia/portería.</li>
+    </ul>
+  </li>
+  <li><strong>Flujo Táctil Móvil Bahía:</strong> Vista simplificada para mecánicos en elevador con registro de tiempos de labor, toma de fotos y notas de voz periciales.</li>
+  <li><strong>Portal Cliente en WhatsApp:</strong> Enlace seguro para que el cliente revise evidencias fotográficas, desglose presupuestario y autorice o rechace servicios con firma digital vinculante.</li>
+</ul>
+
+<hr />
+
+<h2 id="-arquitectura-y-estructura-del-repositorio">📁 Arquitectura y Estructura del Repositorio</h2>
+
+<p>El proyecto está diseñado bajo estándares web puros (HTML5, Tailwind CSS, FontAwesome/Lucide Icons y JavaScript vanilla), lo que permite ejecutarlo directamente en cualquier navegador moderno sin requerir compiladores o runtimes pesados:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>motopro-erp/
+├── index.html                           # Portal principal de acceso y directorio interactivo
+├── README.md                            # Documentación técnica completa del proyecto
+│
+├── desktop/                             # Vistas de Escritorio (ERP, Taller &amp; POS)
+│   ├── login-multiusuario.html          # Acceso de usuarios, selección de sede y roles
+│   ├── dashboard-pos.html               # Terminal de Caja POS, métricas y órdenes activas
+│   ├── ordenes-taller.html              # Tablero Kanban de OT por bahías y mecánicos
+│   ├── recepcion-inspeccion.html        # Recepción 360° y checklist de daños de la moto
+│   ├── diagnostico-cotizacion.html      # Cotización técnica, repuestos y tiempos de labor
+│   ├── inventario-movimientos.html      # Kardex multi-sede, catálogo y stock valorizado
+│   ├── entrada-compra.html              # Formulario de ingreso de compras a proveedores
+│   ├── salida-despacho.html             # Registro de salida/despacho de piezas a OT
+│   ├── facturacion-contabilidad.html    # Facturación masiva, cartera y clientes
+│   ├── factura-liquidacion.html         # Liquidación final de caja al retirar la moto
+│   ├── factura-dian-pdf-a4.html         # Factura electrónica oficial DIAN en formato A4
+│   ├── tirilla-pos-80mm.html            # Simulador de ticket térmico 80mm Epson ESC/POS
+│   ├── arqueo-cierre-reporte-z.html     # Arqueo físico, conciliación bancaria y Reporte Z
+│   ├── egresos-caja-menor.html          # Registro de vales de salida de efectivo (Ctrl+M)
+│   ├── formas-de-pago.html              # Parametrización de métodos y simulación Split
+│   ├── garantias-reclamos.html          # Control de garantías y reclamos a ensambladora
+│   ├── modal-radicar-garantia.html      # Modal radicación de garantía y diagnóstico Texa
+│   ├── configuracion-sedes.html         # Sedes, tarifas de mano de obra y usuarios
+│   └── modal-bahias-elevadores.html     # Modal de equipamiento de bahías y elevadores
+│
+├── mobile/                              # Vistas Optimizadas para Móvil y PWA
+│   ├── bahia-mecanico-tactil.html       # Terminal táctil del mecánico en elevador
+│   ├── captura-evidencias-voz.html      # Cámara de bahía y grabación de audio técnico
+│   ├── portal-cliente-whatsapp.html     # Vista cliente: visor de evidencias y presupuesto
+│   └── confirmacion-firma-digital.html  # Comprobante de aprobación con firma criptográfica
+│
+└── assets/                              # Recursos gráficos y multimedia
+    ├── logo-motopro.png                 # Logotipo institucional vectorial
+    ├── avatar-carlos-supervisor.png     # Avatar demo del jefe de taller
+    └── favicon.ico                      # Ícono del navegador
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="️-mapeo-completo-de-pantallas-y-módulos">🖥️ Mapeo Completo de Pantallas y Módulos</h2>
+
+<h3 id="1-módulos-desktop-administración-taller--pos">1. Módulos Desktop (Administración, Taller &amp; POS)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Pantalla / Archivo</th>
+      <th style="text-align: left">Función Principal</th>
+      <th style="text-align: left">Perfil Sugerido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">login-multiusuario.html</code></td>
+      <td style="text-align: left">Selector de sede activa, autenticación y políticas de acceso.</td>
+      <td style="text-align: left">Todos los usuarios</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">dashboard-pos.html</code></td>
+      <td style="text-align: left">Panel principal de caja, resumen de ingresos diarios y búsqueda de OT.</td>
+      <td style="text-align: left">Cajero / Administrador</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">ordenes-taller.html</code></td>
+      <td style="text-align: left">Monitoreo Kanban de bahías (<code class="language-plaintext highlighter-rouge">B-01</code> a <code class="language-plaintext highlighter-rouge">B-08</code>), estados de trabajo y técnicos.</td>
+      <td style="text-align: left">Jefe de Taller / Asesor</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">recepcion-inspeccion.html</code></td>
+      <td style="text-align: left">Inspección pericial 360° con silueta de moto, fotos previas e inventario de accesorios.</td>
+      <td style="text-align: left">Asesor de Servicio</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">diagnostico-cotizacion.html</code></td>
+      <td style="text-align: left">Desglose de piezas OEM solicitadas, cálculo de margen y mano de obra.</td>
+      <td style="text-align: left">Asesor / Jefe Técnico</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">inventario-movimientos.html</code></td>
+      <td style="text-align: left">Kardex de repuestos, cálculo de costo promedio ponderado y stock mínimo.</td>
+      <td style="text-align: left">Almacenista / Inventarios</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">entrada-compra.html</code></td>
+      <td style="text-align: left">Registro de facturas de compras a proveedores con lote y ubicación en bodega.</td>
+      <td style="text-align: left">Almacenista</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">salida-despacho.html</code></td>
+      <td style="text-align: left">Despacho controlado a mecánicos con validación de número de orden.</td>
+      <td style="text-align: left">Almacenista</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">factura-liquidacion.html</code></td>
+      <td style="text-align: left">Retiro de la moto, cobro mixto (efectivo, tarjetas, QR) y pase de portería.</td>
+      <td style="text-align: left">Cajero Mostrador</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">tirilla-pos-80mm.html</code></td>
+      <td style="text-align: left">Previsualizador de impresión térmica Epson ESC/POS 80mm con código CUFE y QR.</td>
+      <td style="text-align: left">Cajero / Auditoría</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">factura-dian-pdf-a4.html</code></td>
+      <td style="text-align: left">Plantilla formal fiscal para impresión A4 o envío por correo electrónico.</td>
+      <td style="text-align: left">Contabilidad / Clientes</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">arqueo-cierre-reporte-z.html</code></td>
+      <td style="text-align: left">Cuadre ciego por denominación de billetes, vouchers datáfono y Reporte Z.</td>
+      <td style="text-align: left">Cajero / Supervisor</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">egresos-caja-menor.html</code></td>
+      <td style="text-align: left">Registro de compras de emergencia, refrigerios y fletes con atajo <code class="language-plaintext highlighter-rouge">Ctrl+M</code>.</td>
+      <td style="text-align: left">Cajero</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">formas-de-pago.html</code></td>
+      <td style="text-align: left">Configuración de pasarelas, comisiones bancarias y datáfonos en red.</td>
+      <td style="text-align: left">Administrador</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">garantias-reclamos.html</code></td>
+      <td style="text-align: left">Seguimiento de piezas defectuosas reclamadas a ensambladora o fabricante.</td>
+      <td style="text-align: left">Jefe de Taller</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">configuracion-sedes.html</code></td>
+      <td style="text-align: left">Parámetros de sedes, tarifas horarias de mano de obra y permisos.</td>
+      <td style="text-align: left">Administrador General</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="2-módulos-mobile--pwa-operarios--clientes">2. Módulos Mobile &amp; PWA (Operarios &amp; Clientes)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Pantalla / Archivo</th>
+      <th style="text-align: left">Función Principal</th>
+      <th style="text-align: left">Perfil Sugerido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">bahia-mecanico-tactil.html</code></td>
+      <td style="text-align: left">Cronómetro de labor en tiempo real, checklist técnico y llamado a bodega.</td>
+      <td style="text-align: left">Mecánico de Bahía</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">captura-evidencias-voz.html</code></td>
+      <td style="text-align: left">Captura de fotografías de piezas dañadas y dictado de nota de voz técnica.</td>
+      <td style="text-align: left">Mecánico de Bahía</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">portal-cliente-whatsapp.html</code></td>
+      <td style="text-align: left">Portal web ligero que recibe el cliente por WhatsApp para aprobar cotización.</td>
+      <td style="text-align: left">Propietario de la Moto</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">confirmacion-firma-digital.html</code></td>
+      <td style="text-align: left">Pantalla de confirmación con firma manuscrita digitalizada y comprobante.</td>
+      <td style="text-align: left">Propietario de la Moto</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-integración-de-hardware-pos">🖨️ Integración de Hardware POS</h2>
+
+<p>MotoPro Workshop ERP cuenta con soporte para directivas de hardware estándar de la industria del retail y automotriz:</p>
+
+<ul>
+  <li><strong>Impresoras Térmicas de Recibos:</strong>
+    <ul>
+      <li>Compatibilidad nativa: <strong>Epson TM-T20III</strong>, <strong>Star Micronics</strong>, <strong>Bixolon</strong> (80mm / 48 o 64 columnas).</li>
+      <li>Protocolos de enlace: Raw TCP/IP Socket (<code class="language-plaintext highlighter-rouge">Puerto 9100</code>), USB Virtual COM o Spooler de sistema.</li>
+      <li>Comandos directos: Corte de guillotina (<code class="language-plaintext highlighter-rouge">GS V 66 0</code>), Densidad térmica (100% High Contrast) y código QR bidimensional.</li>
+    </ul>
+  </li>
+  <li><strong>Gaveta de Dinero Monedero:</strong>
+    <ul>
+      <li>Puerto RJ11 conectado a la impresora de recibos.</li>
+      <li>Pulso estándar de apertura eléctrica: <code class="language-plaintext highlighter-rouge">DLE DC4 1</code> (24V, 50ms) accionado automáticamente al liquidar o con tecla <code class="language-plaintext highlighter-rouge">F9</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Datáfonos &amp; Terminales de Pago:</strong>
+    <ul>
+      <li>Enlace LAN SmartPOS (Redeban / Credibanco) en el puerto local <code class="language-plaintext highlighter-rouge">8088</code>.</li>
+      <li>Pasarelas web con webhook instantáneo para validación de QRs interoperables.</li>
+    </ul>
+  </li>
+  <li><strong>Escáner de Código de Barras / QR:</strong>
+    <ul>
+      <li>Emulación de teclado HID (USB / Bluetooth) para lectura instantánea de SKU de repuestos, cédulas y números de chasis (VIN).</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="️-atajos-de-teclado-operativos">⌨️ Atajos de Teclado Operativos</h2>
+
+<p>Diseñado para operar en mostradores de alto tráfico sin necesidad de usar el ratón:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Atajo</th>
+      <th style="text-align: left">Acción en el Sistema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><kbd>Ctrl</kbd> + <kbd>K</kbd></td>
+      <td style="text-align: left">Búsqueda rápida global (OT, Placa, VIN, Cliente o SKU de Repuesto).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>Ctrl</kbd> + <kbd>M</kbd></td>
+      <td style="text-align: left">Apertura instantánea del modal de <strong>Egresos y Vales de Caja Menor</strong>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>Ctrl</kbd> + <kbd>P</kbd></td>
+      <td style="text-align: left">Imprimir tirilla térmica actual o factura activa.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>F9</kbd></td>
+      <td style="text-align: left">Disparo manual de apertura eléctrica de la <strong>Gaveta de Dinero</strong>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><kbd>Esc</kbd></td>
+      <td style="text-align: left">Cerrar cualquier modal, visor o menú flotante activo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-credenciales-y-datos-demo">🔑 Credenciales y Datos Demo</h2>
+
+<p>Para pruebas y navegación de demostración del sistema se han configurado los siguientes datos por defecto:</p>
+
+<h3 id="usuarios-y-roles">Usuarios y Roles</h3>
+<ul>
+  <li><strong>Jefe de Taller / Administrador:</strong>
+    <ul>
+      <li>Usuario: <code class="language-plaintext highlighter-rouge">carlos.m@motopro.com</code></li>
+      <li>PIN de Supervisor: <code class="language-plaintext highlighter-rouge">8921</code></li>
+      <li>Perfil: Acceso total a configuración, arqueos, garantías y tarifas.</li>
+    </ul>
+  </li>
+  <li><strong>Cajera Principal (Mostrador):</strong>
+    <ul>
+      <li>Usuario: <code class="language-plaintext highlighter-rouge">laura.gomez</code></li>
+      <li>Código: <code class="language-plaintext highlighter-rouge">USR-892</code></li>
+      <li>Perfil: Facturación, cobros mixtos, vales de caja y cierre Reporte Z.</li>
+    </ul>
+  </li>
+  <li><strong>Mecánico Especialista Bahía:</strong>
+    <ul>
+      <li>Usuario: <code class="language-plaintext highlighter-rouge">andres.lopez</code></li>
+      <li>Bahía asignada: <code class="language-plaintext highlighter-rouge">Bahía B-04 (Elevador Hidráulico #2)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="orden-de-trabajo-demo-en-contexto">Orden de Trabajo Demo en Contexto</h3>
+<ul>
+  <li><strong>Orden de Trabajo:</strong> <code class="language-plaintext highlighter-rouge">OT-1048</code></li>
+  <li><strong>Vehículo:</strong> <code class="language-plaintext highlighter-rouge">KTM 1290 Super Adventure S 2023</code> (Placa: <code class="language-plaintext highlighter-rouge">JKL-92D</code> • 11,452 km).</li>
+  <li><strong>Propietario:</strong> <code class="language-plaintext highlighter-rouge">Roberto Valencia Ospina</code> (Tel: <code class="language-plaintext highlighter-rouge">+57 312 458 9021</code>).</li>
+  <li><strong>Monto de Liquidación:</strong> <code class="language-plaintext highlighter-rouge">$311.15 USD</code> (Equivalente oficial TRM <code class="language-plaintext highlighter-rouge">$4,001.20 COP</code> = <code class="language-plaintext highlighter-rouge">$1'245.000 COP</code>).</li>
+</ul>
+
+<hr />
+
+<h2 id="-guía-de-instalación-y-despliegue-rápido">🚀 Guía de Instalación y Despliegue Rápido</h2>
+
+<h3 id="prueba-local-sin-servidor">Prueba Local sin Servidor</h3>
+<ol>
+  <li>Clona el repositorio o descarga el archivo <code class="language-plaintext highlighter-rouge">.zip</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/TU_USUARIO/motopro-erp.git
+<span class="nb">cd </span>motopro-erp
+</code></pre></div>    </div>
+  </li>
+  <li>Abre cualquier archivo <code class="language-plaintext highlighter-rouge">.html</code> (por ejemplo <code class="language-plaintext highlighter-rouge">index.html</code> o <code class="language-plaintext highlighter-rouge">desktop/dashboard-pos.html</code>) haciendo doble clic o arrastrándolo a Google Chrome, Firefox, Safari o Microsoft Edge. No se requiere Node.js, PHP ni bases de datos para previsualizar los flujos.</li>
+</ol>
+
+<hr />
+
+<h3 id="despliegue-gratis-en-github-pages">Despliegue Gratis en GitHub Pages</h3>
+<ol>
+  <li>Sube tu código a un repositorio público o privado en GitHub:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"feat: Despliegue inicial MotoPro ERP"</span>
+git branch <span class="nt">-M</span> main
+git remote add origin https://github.com/TU_USUARIO/motopro-erp.git
+git push <span class="nt">-u</span> origin main
+</code></pre></div>    </div>
+  </li>
+  <li>En GitHub, ingresa a la pestaña <strong>Settings &gt; Pages</strong>.</li>
+  <li>En la sección <strong>Build and deployment &gt; Source</strong>, selecciona:
+    <ul>
+      <li>Branch: <code class="language-plaintext highlighter-rouge">main</code></li>
+      <li>Folder: <code class="language-plaintext highlighter-rouge">/ (root)</code></li>
+    </ul>
+  </li>
+  <li>Haz clic en <strong>Save</strong>. En un par de minutos tu proyecto estará disponible en:
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://TU_USUARIO.github.io/motopro-erp/
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="despliegue-en-vercel--netlify">Despliegue en Vercel / Netlify</h3>
+<ul>
+  <li><strong>Con Vercel CLI:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i <span class="nt">-g</span> vercel
+vercel
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Con Netlify:</strong> Simplemente arrastra la carpeta <code class="language-plaintext highlighter-rouge">motopro-erp/</code> a la consola web de <a href="https://app.netlify.com/drop">app.netlify.com/drop</a>.</li>
+</ul>
+
+<hr />
+
+<h2 id="️-variables-y-parámetros-de-configuración">⚙️ Variables y Parámetros de Configuración</h2>
+
+<p>Si conectas esta plantilla a un backend API (Node.js, Laravel, Python FastAPI o Django), puedes configurar los siguientes endpoints y tokens en tu script de entorno o cabecera:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Configuración global MotoPro ERP</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">MOTOPRO_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">API_BASE_URL</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://api.tu-taller.com/v1</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">SEDE_ID</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SEDE-CENTRAL-01</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">TERMINAL_POS_ID</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POS-01-MOSTRADOR</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">EPSON_PRINTER_IP</span><span class="p">:</span> <span class="dl">"</span><span class="s2">192.168.1.150</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">EPSON_PRINTER_PORT</span><span class="p">:</span> <span class="mi">9100</span><span class="p">,</span>
+  <span class="na">REDEBAN_POS_IP</span><span class="p">:</span> <span class="dl">"</span><span class="s2">192.168.1.180:8088</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">TRM_DEFAULT_COP_USD</span><span class="p">:</span> <span class="mf">4001.20</span><span class="p">,</span>
+  <span class="na">ENABLE_AUTO_DRAWER_PULSE</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-licencia-y-contribuciones">📄 Licencia y Contribuciones</h2>
+
+<p>Este proyecto está bajo la Licencia <strong>MIT</strong>. Eres libre de usarlo, modificarlo e implementarlo en talleres comerciales, concesionarios y proyectos privados.</p>
+
+<p>Desarrollado con pasión para la comunidad de especialistas en dos ruedas y gestión automotriz. 🏍️💨</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
