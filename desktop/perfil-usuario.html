@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="dashboard-pos.html"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="inventario-movimientos.html"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors bg-surface-container-high font-semibold" data-path="taller-ordenes" href="ordenes-taller.html"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="facturacion-contabilidad.html"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="factura-liquidacion.html"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="configuracion-sedes.html"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="../index.html"><span class="material-symbols-outlined text-lg text-secondary">apps</span><span class="font-body-md text-body-md">Directorio General</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full pb-12">
+<!-- Top Profile Banner & Hero Section -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-sm mb-space-lg">
+<!-- Gradient Background Graphic with Industrial Tone -->
+<div class="h-36 w-full bg-gradient-to-r from-inverse-surface via-secondary to-inverse-surface relative overflow-hidden">
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-container/20 blur-2xl"></div>
+<!-- Top Action Ribbon -->
+<div class="relative z-10 p-space-md flex items-center justify-between text-inverse-on-surface">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs uppercase tracking-wider bg-inverse-surface/60 backdrop-blur-sm px-space-sm py-space-2xs rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Matriz Central • Taller Mecánico Principal</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-2xs bg-inverse-surface/80 px-space-sm py-space-2xs rounded text-inverse-on-surface font-label-xs text-label-xs shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-sm">cloud_sync</span>
+<span>Supabase Sync: Activo (12ms)</span>
+</div>
+<button class="bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 backdrop-blur-sm text-inverse-on-surface font-label-xs text-label-xs px-space-sm py-space-2xs rounded flex items-center gap-space-2xs transition-colors" id="toggle-sidebar-trigger" type="button">
+<span class="material-symbols-outlined text-sm">dock_to_left</span>
+<span>Modo Compacto</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Identity Row Overlap -->
+<div class="px-space-xl pb-space-lg pt-0 relative flex flex-col md:flex-row md:items-end justify-between gap-space-md -mt-14">
+<div class="flex flex-col md:flex-row items-center md:items-end gap-space-lg">
+<!-- Big Avatar Container -->
+<div class="relative">
+<img alt="Carlos Mendoza - Supervisor" class="w-28 h-28 rounded-full object-cover shadow-md ring-4 ring-surface-container-lowest bg-surface-container-high" data-alt="Portrait of Carlos Mendoza, a 38-year-old experienced motorcycle workshop supervisor wearing a dark grey professional MotoPro mechanics utility shirt with embroidered badges, clean garage setting in the background with soft ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTCdptxmw2s41MWwbjsIE9eT-Y0B1hizLeYzGeDUOQN1XtKwuXUNWHTUbO1K2KMCq-yTOYK5Je5-ujgYApLOorq-15ra-pDl-yAYqShjetRxxRbsBfULANkOdymOj0Jx4ZtuuHymguiUnaGq9LfETxyxJ17FC5hc-pem04FhBZDryDXB7UaUd-KMhxpam8fODptAfCwA-kRcL8-N-7aCri60mKY08b54fvL7W7bJk"/>
+<span class="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md text-xs">
+<span class="material-symbols-outlined text-sm">verified</span>
+</span>
+</div>
+<div class="text-center md:text-left pt-2 md:pt-0">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-space-xs mb-space-2xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">Carlos Mendoza</h1>
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded uppercase tracking-wider font-bold">USR-001</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              En Servicio Activo
+            </span>
+</div>
+<p class="font-body-md text-body-md text-secondary flex flex-wrap items-center justify-center md:justify-start gap-space-sm">
+<span class="flex items-center gap-space-2xs font-medium text-on-surface">
+<span class="material-symbols-outlined text-base text-primary-container">engineering</span>
+              Supervisor &amp; Jefe de Taller
+            </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-secondary">store</span>
+              Sede Central - Principal Norte
+            </span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-xs text-label-xs text-tertiary font-semibold uppercase">Turno Mañana (07:00 - 16:30)</span>
+</p>
+</div>
+</div>
+<!-- Quick Action Group Header -->
+<div class="flex items-center gap-space-sm justify-center md:justify-end">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm transition-colors" id="quick-pin-dialog" type="button">
+<span class="material-symbols-outlined text-base text-primary">key</span>
+<span>Cambiar PIN Supervisor</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-lg py-space-xs rounded flex items-center gap-space-xs shadow-md transition-colors" id="save-main-top" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+<span>Guardar Cambios</span>
+</button>
+</div>
+</div>
+<!-- Profile Nav Tabs -->
+<div class="px-space-xl bg-surface-container-low pt-space-xs flex overflow-x-auto gap-space-md">
+<button class="tab-btn active pb-space-sm pt-space-xs px-space-xs font-label-md text-label-md text-primary-container font-semibold border-b-2 border-primary-container flex items-center gap-space-xs whitespace-nowrap" data-target="tab-datos">
+<span class="material-symbols-outlined text-base">badge</span>
+<span>Datos Personales &amp; Turno</span>
+</button>
+<button class="tab-btn pb-space-sm pt-space-xs px-space-xs font-label-md text-label-md text-secondary hover:text-on-surface flex items-center gap-space-xs whitespace-nowrap transition-colors" data-target="tab-seguridad">
+<span class="material-symbols-outlined text-base">lock_clock</span>
+<span>Seguridad &amp; PIN Supervisor</span>
+</button>
+<button class="tab-btn pb-space-sm pt-space-xs px-space-xs font-label-md text-label-md text-secondary hover:text-on-surface flex items-center gap-space-xs whitespace-nowrap transition-colors" data-target="tab-rendimiento">
+<span class="material-symbols-outlined text-base">speed</span>
+<span>Rendimiento &amp; Bahías Asignadas</span>
+</button>
+<button class="tab-btn pb-space-sm pt-space-xs px-space-xs font-label-md text-label-md text-secondary hover:text-on-surface flex items-center gap-space-xs whitespace-nowrap transition-colors" data-target="tab-auditoria">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+<span>Historial de Actividad &amp; Auditoría</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Main Content Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Primary Workspace (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- CARD 1: Informacion Basica & Turno Operativo -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl px-space-xl pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs rounded bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined text-lg">person_edit</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Información de Operario &amp; Contrato</h2>
+<p class="font-body-sm text-body-sm text-secondary">Ficha técnica del supervisor editable para gestión de nómina y facturación horaria.</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-xs text-label-xs px-space-xs py-space-2xs rounded uppercase font-semibold">Taller Nivel IV</span>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="form-perfil-personal">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="full-name">Nombre y Apellidos</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">person</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="full-name" type="text" value="Carlos Enrique Mendoza Salazar"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="corp-email">Email Corporativo Oficial</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="corp-email" type="email" value="carlos.m@motopro.com"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="whatsapp-phone">WhatsApp de Taller / Notificaciones</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">call</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="whatsapp-phone" type="text" value="+57 310 892 1100"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="hourly-cost">Tarifa de Costo Operativo por Hora (USD)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">attach_money</span>
+<input class="w-full bg-surface-container-low text-on-surface font-tabular-mono-md text-tabular-mono-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="hourly-cost" type="text" value="35.00"/>
+<span class="absolute right-3 font-label-xs text-label-xs text-secondary">USD / HORA</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="hire-date">Fecha de Ingreso a la Organización</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">calendar_month</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="hire-date" type="date" value="2021-03-15"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs" for="default-hub">Sede Primaria Asignada</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-base">location_on</span>
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="default-hub">
+<option selected="" value="1">Sede Central - Principal Norte (Bogotá D.C.)</option>
+<option value="2">Sede Taller Calle 80 (Express)</option>
+<option value="3">Hub Logístico &amp; Repuestos Autopista</option>
+</select>
+</div>
+</div>
+</form>
+<!-- Turno Actual Box -->
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-base">schedule</span>
+</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Jornada Laboral Configurada</span>
+<span class="block font-body-sm text-body-sm text-secondary">Lunes a Viernes • 07:00 a 16:30 hrs (Descanso 12:30 - 13:30) • Sábados rotativos</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-tabular-mono-md text-tabular-mono-md text-tertiary bg-surface-container-lowest px-space-sm py-space-2xs rounded font-semibold">44h / Semanales</span>
+</div>
+</div>
+</section>
+<!-- CARD 2: Credenciales de Seguridad, PIN de Supervisor & 2FA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl px-space-xl pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs rounded bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined text-lg">admin_panel_settings</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Seguridad, Llaves &amp; PIN Supervisor</h2>
+<p class="font-body-sm text-body-sm text-secondary">Autorizaciones de caja, descuentos especiales, garantías y credenciales.</p>
+</div>
+</div>
+<span class="bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded uppercase font-semibold">Nivel Alto</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+<!-- Left: PIN Supervisor & Dual Factor -->
+<div class="flex flex-col gap-space-md">
+<!-- Supervisor PIN Widget -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-start justify-between mb-space-xs">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-primary-container">pin</span>
+                    PIN Supervisor para Bypass Taller
+                  </h3>
+<p class="font-body-sm text-body-sm text-secondary">Requerido en POS al aplicar &gt;15% de descuento o anular repuestos.</p>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-label-xs font-label-xs px-space-xs py-space-2xs rounded">CRÍTICO</span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-sm">
+<div class="flex-1 bg-surface-container-lowest px-space-md py-space-xs rounded flex items-center justify-between font-tabular-mono-lg text-tabular-mono-lg tracking-widest text-on-surface">
+<span id="pin-display">••••</span>
+<button class="text-secondary hover:text-on-surface transition-colors" id="toggle-pin-visibility" title="Revelar temporalmente" type="button">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded transition-colors whitespace-nowrap" id="btn-change-pin-modal" type="button">
+                  Actualizar PIN
+                </button>
+</div>
+<span class="block font-body-sm text-body-sm text-secondary mt-space-xs italic">Última actualización: hace 18 días por Auditoría.</span>
+</div>
+<!-- Two Factor Auth -->
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-lg">phonelink_lock</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Autenticación de 2 Factores (2FA)</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-label-xs font-label-xs px-space-xs py-space-2xs rounded font-bold">ACTIVO</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-sm">Solicitar token cada vez que se inicie sesión desde una terminal nueva o IP externa al taller.</p>
+<div class="space-y-space-xs">
+<label class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary-container">chat</span>
+<span class="font-body-md text-body-md text-on-surface">WhatsApp Token OTP (+57 310 892 1100)</span>
+</div>
+<input checked="" class="accent-primary-container" name="2fa_type" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-space-xs bg-surface-container-lowest rounded cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-tertiary">security</span>
+<span class="font-body-md text-body-md text-on-surface">Google Authenticator / TOTP App</span>
+</div>
+<input class="accent-primary-container" name="2fa_type" type="radio"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Right: Password Update & Active Session Details -->
+<div class="flex flex-col justify-between gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<h3 class="font-label-md text-label-md text-on-surface mb-space-xs flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-base text-secondary">password</span>
+                Cambio de Contraseña de Acceso
+              </h3>
+<div class="space-y-space-xs mt-space-sm">
+<div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Contraseña actual" type="password"/>
+</div>
+<div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Nueva contraseña (mínimo 10 caracteres)" type="password"/>
+</div>
+<div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Confirmar nueva contraseña" type="password"/>
+</div>
+<button class="w-full mt-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md py-space-xs rounded transition-colors text-center" type="button">
+                  Actualizar Contraseña
+                </button>
+</div>
+</div>
+<!-- Current Session Info Card -->
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Sesión Actual en Este Dispositivo</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-mono">190.158.42.112</span>
+</div>
+<div class="mt-space-xs text-secondary font-body-sm text-body-sm space-y-space-2xs">
+<p class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">laptop_mac</span>
+<span>Chrome 122 en macOS Sonoma (Terminal Taller T-01)</span>
+</p>
+<p class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">history</span>
+<span>Iniciada: Hoy a las 06:48 AM • Expira en 7 horas</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Terminal Destructive Action -->
+<div class="mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-xl">power_settings_new</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-semibold">Cerrar Sesión Activa</span>
+<span class="block font-body-sm text-body-sm text-secondary">Finalizar el turno de trabajo y bloquear la interfaz de supervisión de caja.</span>
+</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-error-container text-error font-label-md text-label-md px-space-md py-space-xs rounded transition-colors flex items-center gap-space-2xs shadow-sm" id="btn-logout" type="button">
+<span class="material-symbols-outlined text-base">logout</span>
+<span>Cerrar Sesión</span>
+</button>
+</div>
+</section>
+<!-- Auditoria Reciente Inline Log -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="p-space-xs rounded bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Auditoría Reciente de Acciones Críticas</h2>
+<p class="font-body-sm text-body-sm text-secondary">Registro inmutable de validaciones con PIN de Carlos Mendoza.</p>
+</div>
+</div>
+<button class="text-tertiary hover:underline font-label-md text-label-md flex items-center gap-space-2xs" type="button">
+<span>Ver Registro Completo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-xs text-label-xs uppercase tracking-wider">
+<th class="py-space-xs px-space-sm rounded-l">Hora</th>
+<th class="py-space-xs px-space-sm">Acción Ejecutada</th>
+<th class="py-space-xs px-space-sm">Referencia / Moto</th>
+<th class="py-space-xs px-space-sm">Módulo</th>
+<th class="py-space-xs px-space-sm rounded-r text-right">Resultado</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-sm font-tabular-mono-md text-tabular-mono-md text-secondary">10:42 AM</td>
+<td class="py-space-sm px-space-sm font-medium text-on-surface">Aprobación Descuento 20% Repuesto Original</td>
+<td class="py-space-sm px-space-sm text-secondary">OT-4892 (Yamaha MT-09)</td>
+<td class="py-space-sm px-space-sm"><span class="bg-surface-container px-space-xs py-space-2xs rounded font-label-xs text-label-xs">Caja POS</span></td>
+<td class="py-space-sm px-space-sm text-right"><span class="text-tertiary font-label-xs text-label-xs font-semibold bg-tertiary-fixed px-space-xs py-space-2xs rounded">AUTORIZADO</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-sm font-tabular-mono-md text-tabular-mono-md text-secondary">09:15 AM</td>
+<td class="py-space-sm px-space-sm font-medium text-on-surface">Cierre de Inspección &amp; Control Calidad</td>
+<td class="py-space-sm px-space-sm text-secondary">OT-4889 (BMW R1250 GS)</td>
+<td class="py-space-sm px-space-sm"><span class="bg-surface-container px-space-xs py-space-2xs rounded font-label-xs text-label-xs">Bahía B-03</span></td>
+<td class="py-space-sm px-space-sm text-right"><span class="text-tertiary font-label-xs text-label-xs font-semibold bg-tertiary-fixed px-space-xs py-space-2xs rounded">LIBERADA</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-sm font-tabular-mono-md text-tabular-mono-md text-secondary">08:04 AM</td>
+<td class="py-space-sm px-space-sm font-medium text-on-surface">Apertura Gaveta de Turno Mañana</td>
+<td class="py-space-sm px-space-sm text-secondary">Fondo Inicial $4,280.00</td>
+<td class="py-space-sm px-space-sm"><span class="bg-surface-container px-space-xs py-space-2xs rounded font-label-xs text-label-xs">Caja Central</span></td>
+<td class="py-space-sm px-space-sm text-right"><span class="text-tertiary font-label-xs text-label-xs font-semibold bg-tertiary-fixed px-space-xs py-space-2xs rounded">CONFORME</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Metrics, Bays & Workshop Live Scope (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- CARD 3: Métricas de Rendimiento del Supervisor -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl px-space-xl pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-primary-container text-base">monitoring</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Métricas de Turno</h2>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Hoy, 24 Octubre</span>
+</div>
+<!-- Big Efficiency Gauge / Ring -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between gap-space-md mb-space-md">
+<div class="flex-1">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Eficiencia de Taller</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">98.4</span>
+<span class="font-headline-md text-headline-md text-primary-container font-semibold">%</span>
+</div>
+<span class="text-tertiary font-body-sm text-body-sm flex items-center gap-space-2xs mt-space-2xs">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+3.2% vs. meta semanal</span>
+</span>
+</div>
+<!-- Inline SVG Ring -->
+<div class="relative w-20 h-20 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="98.4, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-xl">precision_manufacturing</span>
+</div>
+</div>
+</div>
+<!-- Dual KPI Blocks -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between text-secondary mb-space-2xs">
+<span class="font-label-xs text-label-xs">Órdenes Hoy</span>
+<span class="material-symbols-outlined text-base text-primary-container">assignment_turned_in</span>
+</div>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold block">14 OT</span>
+<span class="font-body-sm text-body-sm text-secondary">Supervisadas</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between text-secondary mb-space-2xs">
+<span class="font-label-xs text-label-xs">Diag. Promedio</span>
+<span class="material-symbols-outlined text-base text-tertiary">timer</span>
+</div>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold block">24 min</span>
+<span class="font-body-sm text-body-sm text-tertiary">Meta &lt; 30 min</span>
+</div>
+</div>
+<!-- Sparkline Diagnostics Speed -->
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs text-secondary">Tiempos de Ciclo por Bahía (minutos)</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-primary font-semibold">Óptimo</span>
+</div>
+<!-- Simple Inline SVG Sparkline -->
+<svg class="w-full h-10 text-primary-container" fill="none" viewbox="0 0 200 40">
+<path d="M0,28 L30,22 L60,30 L90,15 L120,18 L150,10 L180,14 L200,8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0,28 L30,22 L60,30 L90,15 L120,18 L150,10 L180,14 L200,8 L200,40 L0,40 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+</section>
+<!-- Assigned Bays (Bahías bajo su Supervisión) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl px-space-xl pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-secondary text-base">garage</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Bahías Asignadas</h2>
+</div>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-bold">6 Bahías</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+          Supervisión directa de elevadores neumáticos y técnicos asignados a cada puesto.
+        </p>
+<!-- Bay List Grid -->
+<div class="space-y-space-xs">
+<!-- Bay Item B-01 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-01</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Elevador Hidráulico 1</span>
+<span class="block font-label-xs text-label-xs text-secondary">Téc: Andrés Mora • Ducati Multistrada</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Ocupada - En Reparación"></span>
+</div>
+<!-- Bay Item B-02 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-02</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Elevador Hidráulico 2</span>
+<span class="block font-label-xs text-label-xs text-secondary">Téc: Felipe Gómez • KTM Duke 390</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Ocupada - En Diagnóstico"></span>
+</div>
+<!-- Bay Item B-03 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-03</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Elevador Rápido 3</span>
+<span class="block font-label-xs text-label-xs text-secondary">Téc: Cristian Ruiz • BMW R1250 GS</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container" title="Inspección Final"></span>
+</div>
+<!-- Bay Item B-04 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-04</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Banco Eléctrico 4</span>
+<span class="block font-label-xs text-label-xs text-secondary">Téc: Andrés Mora • Kawasaki Z900</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="Ocupada"></span>
+</div>
+<!-- Bay Item B-05 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-05</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Bahía Suspensión 5</span>
+<span class="block font-label-xs text-label-xs text-secondary">Disponible para asignación</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container" title="Libre"></span>
+</div>
+<!-- Bay Item B-06 -->
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded">B-06</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Cabina de Lavado &amp; Entrega</span>
+<span class="block font-label-xs text-label-xs text-secondary">Téc: Rodrigo Silva • Honda Africa Twin</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container" title="En Proceso"></span>
+</div>
+</div>
+<div class="mt-space-md p-space-xs bg-surface-container-low rounded flex items-center justify-between font-label-xs text-label-xs text-secondary">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>5 Ocupadas</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>1 Disponible</span>
+</div>
+<span class="font-semibold text-on-surface">Capacidad: 83%</span>
+</div>
+</section>
+<!-- Workshop Tools Certification Card with Visual Workshop Photo -->
+<section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-28 w-full relative">
+<img alt="Taller MotoPro" class="w-full h-full object-cover" data-alt="High tech modern clean motorcycle workshop service bays with red hydraulic lifts, organized mechanical tool chests, diagnostic tablets mounted on stands, bright shop lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUFdzA2m98eqk9Lww-n59WH095XmSYoD6l2iZZKeJGznOIKwONNdyOuxwQ2CGQnE_HHpi5AaJO149arYPHyOoRPbssOq4bpG9SYlkdqCKM550C1TJcugTA1ZL02sxXqP-CBFe5-m-JkONcUdPaIotrffPc8SQluTRpspB3EOC_nH951CYx-j_xdBN94lHeY7b7-Mud_uGwVwJtCLl8KA62cvSce-8lB-rXDSpGII0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/40 to-transparent flex items-end p-space-md">
+<div>
+<span class="font-label-xs text-label-xs uppercase text-primary-fixed font-bold tracking-wider">Certificación Master</span>
+<h3 class="font-headline-md text-headline-md text-inverse-on-surface">Mecatrónica Multimarca</h3>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Certificado Vigente hasta:</span>
+<span class="font-tabular-mono-md text-tabular-mono-md font-semibold text-on-surface">Nov 2026</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="bg-surface-container-lowest text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">OBD-II CAN</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">TEXA AXONE</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">DESMO CERT</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Bottom Global Action Bar Sticky -->
+<div class="sticky bottom-9 mt-space-xl z-30 bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-base">cached</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-medium">Todos los cambios locales están preparados para sincronizar</span>
+<span class="block font-label-xs text-label-xs text-secondary">Última modificación guardada: Hoy a las 11:02 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded transition-colors" type="button">
+        Descartar
+      </button>
+<button class="px-space-xl py-space-xs bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs shadow-md transition-colors" id="btn-save-bottom" type="button">
+<span class="material-symbols-outlined text-base">save</span>
+<span>Guardar Cambios de Perfil</span>
+</button>
+</div>
+</div>
+<!-- MODAL: Cambiar PIN Supervisor (Hidden by default, controlled via JS) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modal-pin">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-md w-full p-space-xl relative">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="p-space-xs rounded bg-surface-container-high text-primary-container">
+<span class="material-symbols-outlined text-lg">lock_person</span>
+</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Nuevo PIN Supervisor</h3>
+</div>
+<button class="text-secondary hover:text-on-surface p-space-2xs rounded" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+        El PIN debe contener 4 dígitos numéricos únicos. Este código autoriza descuentos extraordinarios, anulaciones de factura y liberaciones de garantías en caja.
+      </p>
+<div class="space-y-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs">PIN Actual</label>
+<input class="w-full text-center tracking-widest font-tabular-mono-lg text-tabular-mono-lg bg-surface-container-low text-on-surface py-space-xs rounded focus:outline-none focus:bg-surface-container-high" id="input-pin-current" maxlength="4" placeholder="••••" type="password"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs">Nuevo PIN (4 dígitos)</label>
+<input class="w-full text-center tracking-widest font-tabular-mono-lg text-tabular-mono-lg bg-surface-container-low text-on-surface py-space-xs rounded focus:outline-none focus:bg-surface-container-high" id="input-pin-new" maxlength="4" placeholder="••••" type="password"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-space-2xs">Confirmar Nuevo PIN</label>
+<input class="w-full text-center tracking-widest font-tabular-mono-lg text-tabular-mono-lg bg-surface-container-low text-on-surface py-space-xs rounded focus:outline-none focus:bg-surface-container-high" id="input-pin-confirm" maxlength="4" placeholder="••••" type="password"/>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded" id="btn-cancel-modal" type="button">
+          Cancelar
+        </button>
+<button class="px-space-lg py-space-xs bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded flex items-center gap-space-xs" id="btn-save-pin" type="button">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Actualizar PIN Ahora</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-12 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none" id="toast-notify">
+<span class="material-symbols-outlined text-primary-container text-base">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toast-message">Perfil de supervisor guardado exitosamente.</span>
+</div>
+</div>
+<script>
+  (function() {
+    // PIN visibility toggle
+    const pinDisplay = document.getElementById('pin-display');
+    const togglePinBtn = document.getElementById('toggle-pin-visibility');
+    let pinRevealed = false;
+    const realPin = '8921';
+
+    if (togglePinBtn && pinDisplay) {
+      togglePinBtn.addEventListener('click', function() {
+        pinRevealed = !pinRevealed;
+        if (pinRevealed) {
+          pinDisplay.textContent = realPin;
+          togglePinBtn.innerHTML = '<span class="material-symbols-outlined text-base text-primary-container">visibility_off</span>';
+        } else {
+          pinDisplay.textContent = '••••';
+          togglePinBtn.innerHTML = '<span class="material-symbols-outlined text-base">visibility</span>';
+        }
+      });
+    }
+
+    // Modal Control
+    const modalPin = document.getElementById('modal-pin');
+    const openPinDialogBtn = document.getElementById('btn-change-pin-modal');
+    const openPinDialogTop = document.getElementById('quick-pin-dialog');
+    const closePinDialogBtn = document.getElementById('btn-close-modal');
+    const cancelPinDialogBtn = document.getElementById('btn-cancel-modal');
+    const savePinBtn = document.getElementById('btn-save-pin');
+
+    function openModal() {
+      if (modalPin) {
+        modalPin.classList.remove('hidden');
+        modalPin.classList.add('flex');
+        document.getElementById('input-pin-current').value = '';
+        document.getElementById('input-pin-new').value = '';
+        document.getElementById('input-pin-confirm').value = '';
+      }
+    }
+
+    function closeModal() {
+      if (modalPin) {
+        modalPin.classList.add('hidden');
+        modalPin.classList.remove('flex');
+      }
+    }
+
+    if (openPinDialogBtn) openPinDialogBtn.addEventListener('click', openModal);
+    if (openPinDialogTop) openPinDialogTop.addEventListener('click', openModal);
+    if (closePinDialogBtn) closePinDialogBtn.addEventListener('click', closeModal);
+    if (cancelPinDialogBtn) cancelPinDialogBtn.addEventListener('click', closeModal);
+
+    // Save PIN Action
+    if (savePinBtn) {
+      savePinBtn.addEventListener('click', function() {
+        const newPin = document.getElementById('input-pin-new').value;
+        const confirmPin = document.getElementById('input-pin-confirm').value;
+
+        if (newPin.length !== 4 || isNaN(newPin)) {
+          showToast('El PIN debe tener exactamente 4 dígitos numéricos.');
+          return;
+        }
+
+        if (newPin !== confirmPin) {
+          showToast('Los nuevos PIN ingresados no coinciden.');
+          return;
+        }
+
+        closeModal();
+        showToast('PIN de Supervisor actualizado con éxito a: ' + newPin);
+      });
+    }
+
+    // Toast Trigger
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notify');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(function() {
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 3500);
+      }
+    }
+
+    // Save changes buttons
+    const saveTop = document.getElementById('save-main-top');
+    const saveBottom = document.getElementById('btn-save-bottom');
+
+    if (saveTop) {
+      saveTop.addEventListener('click', function() {
+        showToast('Perfil de Carlos Mendoza sincronizado con Supabase.');
+      });
+    }
+
+    if (saveBottom) {
+      saveBottom.addEventListener('click', function() {
+        showToast('Datos de usuario y tarifas de taller guardadas correctamente.');
+      });
+    }
+
+    // Logout confirmation trigger
+    const logoutBtn = document.getElementById('btn-logout');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', function() {
+        if (confirm('¿Confirmas que deseas cerrar la sesión actual de Supervisor (USR-001)?')) {
+          showToast('Cerrando sesión de taller...');
+        }
+      });
+    }
+
+    // Interactive Tab styling
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabs.forEach(t => {
+          t.classList.remove('text-primary-container', 'border-b-2', 'border-primary-container', 'font-semibold');
+          t.classList.add('text-secondary');
+        });
+        this.classList.remove('text-secondary');
+        this.classList.add('text-primary-container', 'border-b-2', 'border-primary-container', 'font-semibold');
+      });
+    });
+
+    // Sidebar mode compact trigger
+    const toggleSidebarBtn = document.getElementById('toggle-sidebar-trigger');
+    if (toggleSidebarBtn) {
+      toggleSidebarBtn.addEventListener('click', function() {
+        const aside = document.querySelector('aside');
+        const mainContainer = document.querySelector('.pl-64');
+        if (aside && mainContainer) {
+          if (aside.classList.contains('w-64')) {
+            aside.classList.remove('w-64');
+            aside.classList.add('w-20');
+            mainContainer.classList.remove('pl-64');
+            mainContainer.classList.add('pl-20');
+            toggleSidebarBtn.innerHTML = '<span class="material-symbols-outlined text-sm">dock_to_right</span><span>Expandir</span>';
+          } else {
+            aside.classList.add('w-64');
+            aside.classList.remove('w-20');
+            mainContainer.classList.add('pl-64');
+            mainContainer.classList.remove('pl-20');
+            toggleSidebarBtn.innerHTML = '<span class="material-symbols-outlined text-sm">dock_to_left</span><span>Modo Compacto</span>';
+          }
+        }
+      });
+    }
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer></body></html>
