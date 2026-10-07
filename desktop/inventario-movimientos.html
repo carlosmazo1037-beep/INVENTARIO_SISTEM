@@ -765,7 +765,46 @@
     e.preventDefault();
     closeDrawer();
   });
-</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer><!-- MotoPro Universal Sidebar Injection -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<script src="../assets/js/motopro-sidebar.js"></script>
-</body></html>
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'/><script src='../assets/js/motopro-sidebar.js'></script><div id="modal-oem-inspector" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl flex flex-col border border-slate-200">
+    <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+      <div><h3 id="modal-oem-title" class="font-bold text-slate-900 text-base">Inspección de Autenticidad OEM - Zoom 2.5x</h3><p id="modal-oem-sku" class="text-xs text-orange-600 font-bold">KTM-6030-8015</p></div>
+      <button onclick="document.getElementById('modal-oem-inspector').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-600 flex items-center justify-center text-sm font-bold">✕</button>
+    </div>
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <div class="relative overflow-hidden rounded-xl bg-slate-100 border border-slate-200 cursor-zoom-in group aspect-square flex items-center justify-center">
+        <img id="modal-oem-img" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=85" alt="OEM" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-150">
+        <span class="absolute bottom-2 left-2 bg-slate-900/70 text-white text-[10px] font-bold px-2 py-1 rounded">Pasa el ratón para Zoom 2.5x</span>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-orange-50 border border-orange-200 p-4 rounded-xl"><p class="text-xs font-bold text-orange-800 uppercase tracking-wide">Control de Calidad OEM</p><p id="modal-oem-desc" class="text-xs text-slate-700 mt-1">Verificación de sellos holográficos, código de molde troquelado y tamiz metálico original sin deformaciones.</p></div>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-slate-400 block text-[10px]">Tolerancia</span><strong class="text-slate-900">Grado A (0.01mm)</strong></div>
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-100"><span class="text-slate-400 block text-[10px]">Lote Fabricación</span><strong class="text-slate-900">2024-Q3 AUT</strong></div>
+        </div>
+        <button onclick="document.getElementById('modal-oem-inspector').classList.add('hidden')" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold rounded-xl shadow-md">Cerrar Inspección</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function openOemInspector(title, sku, imgUrl, desc) {
+    document.getElementById("modal-oem-title").innerText = title || "Inspección de Autenticidad OEM";
+    document.getElementById("modal-oem-sku").innerText = sku || "SKU: OEM-PART";
+    document.getElementById("modal-oem-img").src = imgUrl || "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=85";
+    if (desc) document.getElementById("modal-oem-desc").innerText = desc;
+    var m = document.getElementById("modal-oem-inspector");
+    m.classList.remove("hidden"); m.classList.add("flex");
+  }
+  document.querySelectorAll("table tbody tr, table img").forEach(function(row) {
+    row.addEventListener("click", function(e) {
+      if (e.target.tagName !== "BUTTON" && e.target.tagName !== "A") {
+        var sku = row.querySelector("td:first-child, [class*='font-mono']") ? row.querySelector("td:first-child, [class*='font-mono']").innerText.trim() : "OEM-PRODUCT";
+        var title = row.querySelector("h4, strong, .font-bold") ? row.querySelector("h4, strong, .font-bold").innerText.trim() : "Repuesto Técnico OEM";
+        var img = row.querySelector("img") ? row.querySelector("img").src : "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=85";
+        openOemInspector(title, sku, img, "Inspección detallada de tolerancias de fábrica y sellos holográficos.");
+      }
+    });
+  });
+</script></body></html>
+

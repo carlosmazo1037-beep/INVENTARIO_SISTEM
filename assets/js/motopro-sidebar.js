@@ -1,6 +1,9 @@
 ﻿(function() {
   function initMotoProSidebar() {
     if (document.getElementById("motopro-sidebar-wrapper")) return;
+    document.querySelectorAll("aside:not(#motopro-aside-panel), #motopro-sidebar, #sidebar").forEach(function(el) {
+      if (!el.closest("#motopro-sidebar-wrapper")) el.style.display = "none";
+    });
 
     var path = window.location.pathname || "";
     var isDesktop = path.indexOf("/desktop/") !== -1 || path.indexOf("\\desktop\\") !== -1;
@@ -8,7 +11,6 @@
     var desktopBase = (isDesktop || isMobile) ? "" : "desktop/";
     var rootBase = (isDesktop || isMobile) ? "../" : "";
     var curFile = path.split("/").pop().split("\\").pop() || "index.html";
-
     var isCollapsed = localStorage.getItem("motopro_sb_collapsed") === "true";
     var isHidden = localStorage.getItem("motopro_sb_hidden") === "true";
 
@@ -48,10 +50,7 @@
       navHtml += '<div class="sb-sec-title px-3 pt-3 pb-1 text-[10px] font-black tracking-wider text-slate-400 uppercase' + (isCollapsed ? ' hidden' : '') + '">' + sec.title + '</div>';
       sec.items.forEach(function(item) {
         var isActive = curFile === item.file;
-        var activeClass = isActive 
-          ? "bg-orange-50 text-orange-600 font-bold border-l-4 border-orange-500 shadow-sm" 
-          : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 font-medium";
-
+        var activeClass = isActive ? "bg-orange-50 text-orange-600 font-bold border-l-4 border-orange-500 shadow-sm" : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 font-medium";
         navHtml += '<a href="' + desktopBase + item.file + '" title="' + item.name + '" class="flex items-center gap-3 px-3 py-2 rounded-lg text-xs transition-all ' + activeClass + '">' +
           '<i class="fa-solid ' + item.icon + ' w-4 text-center text-sm shrink-0 ' + (isActive ? 'text-orange-500' : 'text-slate-400') + '"></i>' +
           '<span class="sb-text truncate flex-1' + (isCollapsed ? ' hidden' : '') + '">' + item.name + '</span>' +
@@ -60,8 +59,7 @@
       });
     });
 
-    var logoSvg = '<svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-4l-3 6.5h7.5z"/><path d="M12 17.5V14l-2.5-4"/><path d="M18.5 14h-3.5"/></svg>';
-
+    var logoSvg = '<svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-4l-3 6.5h7.5z"/><path d="M12 17.5V14l-2.5-4"/><path d="M18.5 14h-3.5"/></svg>';
     var wrapper = document.createElement("div");
     wrapper.id = "motopro-sidebar-wrapper";
     wrapper.className = "shrink-0 select-none z-50 relative";
@@ -102,15 +100,13 @@
         '<span>Mostrar Menú</span>' +
       '</button>';
 
-    var existingMount = document.getElementById("motopro-sidebar-container");
-    if (existingMount) {
-      existingMount.innerHTML = "";
-      existingMount.appendChild(wrapper);
+    var mountPoint = document.getElementById("motopro-sidebar-container");
+    if (mountPoint) {
+      mountPoint.innerHTML = "";
+      mountPoint.appendChild(wrapper);
     } else {
       var targetParent = document.querySelector("body > div.flex") || document.body;
-      if (targetParent === document.body) {
-        document.body.classList.add("flex");
-      }
+      if (targetParent === document.body) document.body.classList.add("flex");
       targetParent.insertBefore(wrapper, targetParent.firstChild);
     }
 
@@ -121,31 +117,23 @@
 
     function updateView() {
       if (isCollapsed) {
-        asidePanel.classList.remove("w-60");
-        asidePanel.classList.add("w-16");
+        asidePanel.classList.remove("w-60"); asidePanel.classList.add("w-16");
         collapseBtn.innerHTML = '<i class="fa-solid fa-angles-right text-xs"></i>';
         collapseBtn.title = "Expandir menú lateral";
         document.querySelectorAll(".sb-text, .sb-badge, .sb-brand, .sb-sec-title, .sb-hide-lbl, .sb-user").forEach(function(el) { el.classList.add("hidden"); });
       } else {
-        asidePanel.classList.remove("w-16");
-        asidePanel.classList.add("w-60");
+        asidePanel.classList.remove("w-16"); asidePanel.classList.add("w-60");
         collapseBtn.innerHTML = '<i class="fa-solid fa-angles-left text-xs"></i>';
         collapseBtn.title = "Compactar a modo iconos";
         document.querySelectorAll(".sb-text, .sb-brand, .sb-sec-title, .sb-hide-lbl, .sb-user, .sb-badge").forEach(function(el) { el.classList.remove("hidden"); });
       }
 
       if (isHidden) {
-        asidePanel.classList.add("-translate-x-full");
-        wrapper.classList.add("w-0");
-        wrapper.classList.remove("shrink-0");
-        reopenBtn.classList.remove("hidden");
-        reopenBtn.classList.add("flex");
+        asidePanel.classList.add("-translate-x-full"); wrapper.classList.add("w-0"); wrapper.classList.remove("shrink-0");
+        reopenBtn.classList.remove("hidden"); reopenBtn.classList.add("flex");
       } else {
-        asidePanel.classList.remove("-translate-x-full");
-        wrapper.classList.remove("w-0");
-        wrapper.classList.add("shrink-0");
-        reopenBtn.classList.add("hidden");
-        reopenBtn.classList.remove("flex");
+        asidePanel.classList.remove("-translate-x-full"); wrapper.classList.remove("w-0"); wrapper.classList.add("shrink-0");
+        reopenBtn.classList.add("hidden"); reopenBtn.classList.remove("flex");
       }
 
       localStorage.setItem("motopro_sb_collapsed", isCollapsed ? "true" : "false");
@@ -158,9 +146,5 @@
     updateView();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMotoProSidebar);
-  } else {
-    initMotoProSidebar();
-  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initMotoProSidebar); else initMotoProSidebar();
 })();
