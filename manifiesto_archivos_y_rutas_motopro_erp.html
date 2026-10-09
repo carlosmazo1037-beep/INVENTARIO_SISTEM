@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>📦 MANIFIESTO OFICIAL DE ARCHIVOS Y RUTAS - MOTOPRO WORKSHOP ERP v2.5 | INVENTARIO_SISTEM</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="📦 MANIFIESTO OFICIAL DE ARCHIVOS Y RUTAS - MOTOPRO WORKSHOP ERP v2.5" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sistema de inventario para taller de motos" />
+<meta property="og:description" content="Sistema de inventario para taller de motos" />
+<link rel="canonical" href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manifiesto_archivos_y_rutas_motopro_erp.html" />
+<meta property="og:url" content="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manifiesto_archivos_y_rutas_motopro_erp.html" />
+<meta property="og:site_name" content="INVENTARIO_SISTEM" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="📦 MANIFIESTO OFICIAL DE ARCHIVOS Y RUTAS - MOTOPRO WORKSHOP ERP v2.5" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Sistema de inventario para taller de motos","headline":"📦 MANIFIESTO OFICIAL DE ARCHIVOS Y RUTAS - MOTOPRO WORKSHOP ERP v2.5","url":"https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manifiesto_archivos_y_rutas_motopro_erp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/INVENTARIO_SISTEM/assets/css/style.css?v=d44c795c0b6870c208803ed56770a4c592338f40">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/INVENTARIO_SISTEM/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/">INVENTARIO_SISTEM</a></h1>
+      
+
+      <h1 id="-manifiesto-oficial-de-archivos-y-rutas---motopro-workshop-erp-v25">📦 MANIFIESTO OFICIAL DE ARCHIVOS Y RUTAS - MOTOPRO WORKSHOP ERP v2.5</h1>
+
+<p>Este documento define la asignación canónica de carpetas y nombres exactos para cada uno de los archivos del repositorio, garantizando cero errores 404, rutas relativas impecables e integración total con Netlify, GitHub Pages o servidores locales.</p>
+
+<hr />
+
+<h2 id="️-árbol-de-directorios-y-archivos-canónicos">🗂️ ÁRBOL DE DIRECTORIOS Y ARCHIVOS CANÓNICOS</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>motopro-workshop-erp/
+│
+├── index.html                                 # Portal interactivo, consola Swagger y directorio
+├── README.md                                  # Documentación técnica completa
+├── LEEME.txt                                  # Guía rápida de comandos de terminal
+├── setup.sh                                   # Script de automatización y despliegue
+│
+├── assets/                                    # Recursos transversales del sistema
+│   ├── css/
+│   │   └── motopro-global.css                 # Estilos centralizados y variables corporativas (#f97316)
+│   ├── js/
+│   │   ├── motopro-sidebar.js                # Componente único del Menú Lateral colapsable
+│   │   └── motopro-core.js                   # Lógica central (TRM, atajos Ctrl+M/F9, toasts, Supabase)
+│   └── images/
+│       ├── logo-motopro.png                   # Logotipo oficial MotoPro ERP
+│       └── avatar-carlos-supervisor.png       # Avatar del supervisor de taller
+│
+├── desktop/                                   # Pantallas ERP y POS de escritorio (usan motopro-sidebar.js)
+│   ├── login-multiusuario.html                # Acceso multi-sede, selección de roles y PIN
+│   ├── perfil-usuario.html                    # Ficha de perfil de usuario, PIN y métricas
+│   ├── dashboard-pos.html                     # Terminal de caja POS y monitoreo de periféricos
+│   ├── ordenes-taller.html                    # Tablero Kanban de órdenes, bahías y elevadores
+│   ├── recepcion-inspeccion.html              # Recepción pericial 360° con silueta de daños
+│   ├── diagnostico-cotizacion.html            # Cotización técnica, baremo flat-rate y repuestos
+│   ├── inventario-movimientos.html            # Kardex multisede y galería técnica OEM con zoom 2.5x
+│   ├── entrada-compra.html                    # Registro de recepción de compra a proveedor
+│   ├── salida-despacho.html                   # Despacho controlado de repuestos a OT
+│   ├── factura-liquidacion.html               # Liquidación final Split Payment y pase de portería
+│   ├── factura-dian-pdf-a4.html               # Factura electrónica oficial DIAN en formato A4
+│   ├── tirilla-pos-80mm.html                  # Tirilla térmica de 80mm para Epson ESC/POS
+│   ├── arqueo-cierre-reporte-z.html           # Arqueo físico ciego y Reporte Z fiscal
+│   ├── egresos-caja-menor.html                # Registro rápido de vales de caja menor (Ctrl+M)
+│   ├── formas-de-pago.html                    # Configuración de medios de pago y pasarelas
+│   ├── garantias-reclamos.html                # Gestión de garantías y reclamos a ensambladora
+│   └── configuracion-sedes.html               # Configuración de sedes, tarifas horarias y personal
+│
+├── mobile/                                    # Vistas móviles PWA y WhatsApp táctiles
+│   ├── bahia-mecanico-tactil.html             # Terminal táctil de mecánico con cronómetro de labor
+│   ├── captura-evidencias-voz.html            # Visor pericial de fotos y grabación de audio
+│   ├── portal-cliente-whatsapp.html           # Visor web de cotización y evidencias para el cliente
+│   └── confirmacion-firma-digital.html        # Confirmación de aprobación con firma criptográfica
+│
+├── database/                                  # Persistencia relacional PostgreSQL 15+ / Supabase
+│   ├── schema.sql                             # DDL: 14 tablas, ENUMs, triggers y vistas
+│   └── seed.sql                               # DML: Datos demo KTM 1290, Laura Gómez y Carlos M.
+│
+└── api/                                       # Especificación de microservicios REST
+    └── openapi-motopro-erp-v2.4.yaml          # Especificación Swagger / OpenAPI 3.0.3
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-tabla-maestra-de-equivalencia-nombre-en-repositorio-vs-pantalla-en-canvas">📋 TABLA MAESTRA DE EQUIVALENCIA: NOMBRE EN REPOSITORIO VS PANTALLA EN CANVAS</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Ruta Exacta en el Repositorio</th>
+      <th style="text-align: left">Título de la Pantalla en el Sistema</th>
+      <th style="text-align: left">Tipo</th>
+      <th style="text-align: left">Propósito Principal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">index.html</code></strong></td>
+      <td style="text-align: left"><em>Directorio Interactivo &amp; Swagger UI</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Portal de acceso y selector de flujos guiados</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">assets/css/motopro-global.css</code></strong></td>
+      <td style="text-align: left"><em>Estilos Centralizados</em></td>
+      <td style="text-align: left">CSS</td>
+      <td style="text-align: left">Paleta de colores, tipografía Inter y animación de colapso</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">assets/js/motopro-sidebar.js</code></strong></td>
+      <td style="text-align: left"><em>Componente Menú Lateral</em></td>
+      <td style="text-align: left">JS</td>
+      <td style="text-align: left">Inyección dinámica de navegación, colapso y tooltips</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">assets/js/motopro-core.js</code></strong></td>
+      <td style="text-align: left"><em>Núcleo Modular MotoPro</em></td>
+      <td style="text-align: left">JS</td>
+      <td style="text-align: left">TRM en vivo, atajos globales y toasts de notificación</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/perfil-usuario.html</code></strong></td>
+      <td style="text-align: left"><em>Mi Perfil de Usuario &amp; Seguridad</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Ficha del operario, cambio de PIN supervisor y métricas</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/login-multiusuario.html</code></strong></td>
+      <td style="text-align: left"><em>Acceso Multiusuario &amp; Sedes</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Autenticación con credenciales demo rápidas de 1 clic</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/dashboard-pos.html</code></strong></td>
+      <td style="text-align: left"><em>Dashboard &amp; Terminal Caja POS</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Terminal de mostrador, saldo diario y periféricos</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/ordenes-taller.html</code></strong></td>
+      <td style="text-align: left"><em>Taller, Órdenes &amp; Operarios</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Tablero Kanban en tiempo real con 8 bahías</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/recepcion-inspeccion.html</code></strong></td>
+      <td style="text-align: left"><em>Recepción e Inspección de Motocicletas</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Peritaje 360°, checklist de daños y custodia</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/diagnostico-cotizacion.html</code></strong></td>
+      <td style="text-align: left"><em>Diagnóstico Técnico y Cotización</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Cotización baremada, repuestos y token de WhatsApp</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/inventario-movimientos.html</code></strong></td>
+      <td style="text-align: left"><em>Inventario &amp; Movimientos de Stock</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Kardex, visor de lote y modal de zoom OEM 2.5x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/entrada-compra.html</code></strong></td>
+      <td style="text-align: left"><em>Registrar Entrada de Compra</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Ingreso de mercancía por factura de proveedor</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/salida-despacho.html</code></strong></td>
+      <td style="text-align: left"><em>Registrar Salida / Despacho a OT</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Salida blindada de almacén firmada por mecánico</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/factura-liquidacion.html</code></strong></td>
+      <td style="text-align: left"><em>Factura y Liquidación Final POS</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Cobro mixto multimoneda y generación de pase portería</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/factura-dian-pdf-a4.html</code></strong></td>
+      <td style="text-align: left"><em>Factura Electrónica DIAN PDF A4</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Plantilla UBL 2.1 con CUFE y QR fiscal</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/tirilla-pos-80mm.html</code></strong></td>
+      <td style="text-align: left"><em>Tirilla Térmica de Caja POS 80mm</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Simulación térmica Epson ESC/POS con corte guillotina</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/arqueo-cierre-reporte-z.html</code></strong></td>
+      <td style="text-align: left"><em>Arqueo y Cierre de Turno - Reporte Z</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Conteo ciego por billetes y bloqueo de caja</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/egresos-caja-menor.html</code></strong></td>
+      <td style="text-align: left"><em>Registro de Egresos y Vales (Ctrl+M)</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Salidas rápidas de efectivo con PIN supervisor</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/formas-de-pago.html</code></strong></td>
+      <td style="text-align: left"><em>Gestión de Formas de Pago POS</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Parametrización de datáfonos SmartPOS y pasarelas</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/garantias-reclamos.html</code></strong></td>
+      <td style="text-align: left"><em>Gestión de Garantías y Reclamos</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Trazabilidad de fallas de fábrica y cuarentena</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">desktop/configuracion-sedes.html</code></strong></td>
+      <td style="text-align: left"><em>Configuración de Sedes &amp; Tarifas</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Gestión de sucursales físicas y baremos por cc</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">mobile/bahia-mecanico-tactil.html</code></strong></td>
+      <td style="text-align: left"><em>Bahía Mecánico - Modo Táctil OT</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">PWA para operarios con cronómetro y checklist</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">mobile/captura-evidencias-voz.html</code></strong></td>
+      <td style="text-align: left"><em>Captura de Evidencias y Nota de Voz</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Cámara en elevador y grabadora de audio 60s</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">mobile/portal-cliente-whatsapp.html</code></strong></td>
+      <td style="text-align: left"><em>Portal Cliente WhatsApp</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Visor ligero de aprobación enviado al cliente</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">mobile/confirmacion-firma-digital.html</code></strong></td>
+      <td style="text-align: left"><em>Confirmación Exitosa Firma Digital</em></td>
+      <td style="text-align: left">HTML</td>
+      <td style="text-align: left">Acta pericial y comprobante firmado con SHA-256</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">database/schema.sql</code></strong></td>
+      <td style="text-align: left"><em>Base de Datos Relacional PostgreSQL</em></td>
+      <td style="text-align: left">SQL</td>
+      <td style="text-align: left">Esquema relacional con 14 tablas, tipos e índices</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">database/seed.sql</code></strong></td>
+      <td style="text-align: left"><em>Datos Demo Completos</em></td>
+      <td style="text-align: left">SQL</td>
+      <td style="text-align: left">Inserción de sedes, KTM 1290, usuarios y OT-1048</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong><code class="language-plaintext highlighter-rouge">api/openapi-motopro-erp-v2.4.yaml</code></strong></td>
+      <td style="text-align: left"><em>Especificación REST OpenAPI 3.0.3</em></td>
+      <td style="text-align: left">YAML</td>
+      <td style="text-align: left">Definición completa de endpoints para backend</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-instrucciones-de-integración-en-netlify">⚙️ INSTRUCCIONES DE INTEGRACIÓN EN NETLIFY</h2>
+
+<ol>
+  <li>Si al exportar desde la plataforma algún archivo se nombró <code class="language-plaintext highlighter-rouge">code.html</code>, renómbralo a <strong><code class="language-plaintext highlighter-rouge">index.html</code></strong> y colócalo en la raíz.</li>
+  <li>Crea las carpetas <strong><code class="language-plaintext highlighter-rouge">assets/css/</code></strong>, <strong><code class="language-plaintext highlighter-rouge">assets/js/</code></strong>, <strong><code class="language-plaintext highlighter-rouge">desktop/</code></strong>, <strong><code class="language-plaintext highlighter-rouge">mobile/</code></strong>, <strong><code class="language-plaintext highlighter-rouge">database/</code></strong> y <strong><code class="language-plaintext highlighter-rouge">api/</code></strong>.</li>
+  <li>Guarda cada archivo exactamente con el nombre de la tabla anterior.</li>
+  <li>En cada archivo dentro de <code class="language-plaintext highlighter-rouge">desktop/</code>, verifica que las rutas apunten a <code class="language-plaintext highlighter-rouge">../assets/css/motopro-global.css</code> y <code class="language-plaintext highlighter-rouge">../assets/js/motopro-sidebar.js</code>.</li>
+  <li>Arrastra la carpeta completa a Netlify (<strong>Deploys &gt; Drag &amp; Drop</strong>) y tu sitio funcionará de inmediato con navegación 100% fluida y sin pantallas en blanco ni 404.</li>
+</ol>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

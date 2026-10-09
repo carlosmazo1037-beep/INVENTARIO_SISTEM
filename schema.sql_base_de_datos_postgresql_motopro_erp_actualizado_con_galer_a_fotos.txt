@@ -1,0 +1,715 @@
+-- ============================================================================
+-- 🏍️ MOTOPRO WORKSHOP ERP & POS SYSTEM
+-- Archivo: schema.sql (PostgreSQL 14+)
+-- Descripción: Esquema relacional completo para gestión multi-sede de talleres mecánicos,
+--              Kardex de inventario con galería fotográfica de repuestos OEM,
+--              peritaje 360°, órdenes de trabajo, cronómetro de bahía,
+--              caja POS con split payment, arqueo ciego (Reporte Z) y facturación DIAN.
+-- ============================================================================
+
+-- Habilitar extensiones necesarias
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+-- ============================================================================
+-- 1. TIPOS ENUMERADOS (DOMINIOS Y ESTADOS)
+-- ============================================================================
+CREATE TYPE rol_usuario AS ENUM (
+    'ADMINISTRADOR',
+    'JEFE_TALLER',
+    'ASESOR_SERVICIO',
+    'MECANICO',
+    'CAJERO_POS',
+    'ALMACENISTA',
+    'VIGILANTE_PORTERIA'
+);
+
+CREATE TYPE estado_bahia AS ENUM (
+    'LIBRE',
+    'OCUPADA',
+    'MANTENIMIENTO',
+    'BLOQUEADA'
+);
+
+CREATE TYPE nivel_combustible AS ENUM (
+    'RESERVA',
+    '1_4',
+    '1_2',
+    '3_4',
+    'FULL'
+);
+
+CREATE TYPE estado_ot AS ENUM (
+    'EN_ESPERA',
+    'DIAGNOSTICO',
+    'COTIZACION_PENDIENTE',
+    'APROBADA_CLIENTE',
+    'ESPERANDO_REPUESTOS',
+    'EN_REPARACION',
+    'CONTROL_CALIDAD',
+    'LISTO_ENTREGA',
+    'LIQUIDADO_PAGADO',
+    'ENTREGADO_CERRADO',
+    'CANCELADO'
+);
+
+CREATE TYPE tipo_dano_peritaje AS ENUM (
+    'RAYON',
+    'GOLPE',
+    'ROTURA',
+    'PIEZA_FALTANTE',
+    'DESGASTE_CRITICO',
+    'FUGA_LIQUIDO'
+);
+
+CREATE TYPE severidad_dano AS ENUM (
+    'LEVE',
+    'MODERADO',
+    'SEVERO'
+);
+
+CREATE TYPE tipo_movimiento_kardex AS ENUM (
+    'ENTRADA_COMPRA_PROVEEDOR',
+    'SALIDA_DESPACHO_OT',
+    'DEVOLUCION_SOBRANTE_OT',
+    'AJUSTE_INVENTARIO_POSITIVO',
+    'AJUSTE_INVENTARIO_NEGATIVO',
+    'TRASLADO_ENTRE_SEDES',
+    'BAJA_GARANTIA_FABRICA'
+);
+
+CREATE TYPE metodo_pago AS ENUM (
+    'EFECTIVO_USD',
+    'EFECTIVO_COP',
+    'DATAFONO_REDEBAN',
+    'DATAFONO_CREDIBANCO',
+    'QR_BANCOLOMBIA',
+    'QR_NEQUI',
+    'TRANSFERENCIA_BANCARIA',
+    'CREDITO_FLOTA',
+    'VALE_GARANTIA'
+);
+
+CREATE TYPE estado_reclamo_garantia AS ENUM (
+    'RADICADO_PENDIENTE_ENVIO',
+    'EN_EVALUACION_FABRICA',
+    'APROBADO_NOTA_CREDITO',
+    'RECHAZADO_FABRICA',
+    'PIEZA_DEVUELTA'
+);
+
+CREATE TYPE tipo_foto_producto AS ENUM (
+    'PRINCIPAL_PIEZA',
+    'EMPAQUE_OEM',
+    'CODIGO_BARRAS_ETIQUETA',
+    'DETALLE_CONECTOR_TROQUEL',
+    'FICHA_TECNICA_DIAGRAMA'
+);
+
+-- ============================================================================
+-- 2. INFRAESTRUCTURA ORGANIZACIONAL (SEDES & ACCESOS)
+-- ============================================================================
+
+-- Tabla de Sedes / Sucursales
+CREATE TABLE sedes (
+    id VARCHAR(32) PRIMARY KEY, -- Ej: 'SEDE-CENTRAL-01', 'SEDE-NORTE'
+    nombre VARCHAR(120) NOT NULL,
+    nit_identificacion VARCHAR(30) NOT NULL,
+    direccion VARCHAR(255) NOT NULL,
+    telefono VARCHAR(50) NOT NULL,
+    email VARCHAR(100),
+    ciudad VARCHAR(80) NOT NULL DEFAULT 'Bogotá D.C.',
+    pais VARCHAR(50) NOT NULL DEFAULT 'Colombia',
+    prefijo_facturacion VARCHAR(10) NOT NULL DEFAULT 'SETE',
+    consecutivo_factura_actual INTEGER NOT NULL DEFAULT 1000,
+    resolucion_dian VARCHAR(100),
+    fecha_limite_resolucion DATE,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de Usuarios y Operarios
+CREATE TABLE usuarios (
+    id VARCHAR(32) PRIMARY KEY, -- Ej: 'USR-892', 'USR-001'
+    username VARCHAR(60) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    pin_supervisor VARCHAR(10), -- Para autorizaciones rápidas (ej: '8921')
+    nombre_completo VARCHAR(120) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    telefono VARCHAR(50),
+    rol rol_usuario NOT NULL,
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    tarifa_costo_hora NUMERIC(12, 2) DEFAULT 0.00,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    ultimo_acceso TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_usuarios_sede ON usuarios(sede_id);
+CREATE INDEX idx_usuarios_rol ON usuarios(rol);
+
+-- Bahías y Elevadores de Trabajo
+CREATE TABLE bahias (
+    id VARCHAR(32) PRIMARY KEY, -- Ej: 'B-01', 'B-04'
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE CASCADE,
+    codigo_visual VARCHAR(20) NOT NULL, -- 'Elevador 1 - Bahía Central'
+    tipo_elevador VARCHAR(100) NOT NULL DEFAULT 'Hidráulico 2 Postes (800 kg)',
+    mecanico_asignado_id VARCHAR(32) REFERENCES usuarios(id) ON DELETE SET NULL,
+    estado estado_bahia NOT NULL DEFAULT 'LIBRE',
+    orden_trabajo_activa_id VARCHAR(32), -- Relación circular manejada por trigger
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_bahias_sede ON bahias(sede_id);
+
+-- ============================================================================
+-- 3. CLIENTES & MOTOCICLETAS
+-- ============================================================================
+
+CREATE TABLE clientes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tipo_documento VARCHAR(10) NOT NULL DEFAULT 'CC', -- CC, NIT, CE, PASAPORTE
+    documento VARCHAR(30) UNIQUE NOT NULL,
+    nombre VARCHAR(150) NOT NULL,
+    email VARCHAR(120),
+    telefono_whatsapp VARCHAR(50) NOT NULL,
+    direccion VARCHAR(200),
+    ciudad VARCHAR(80) DEFAULT 'Bogotá D.C.',
+    es_flota_comercial BOOLEAN NOT NULL DEFAULT FALSE,
+    cupo_credito_flota NUMERIC(14, 2) DEFAULT 0.00,
+    saldo_pendiente_credito NUMERIC(14, 2) DEFAULT 0.00,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_clientes_documento ON clientes(documento);
+CREATE INDEX idx_clientes_telefono ON clientes(telefono_whatsapp);
+
+CREATE TABLE vehiculos (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    placa VARCHAR(15) UNIQUE NOT NULL, -- Ej: 'JKL-92D'
+    vin_chasis VARCHAR(50) UNIQUE,
+    marca VARCHAR(60) NOT NULL, -- Ej: 'KTM', 'Yamaha', 'BMW'
+    modelo VARCHAR(80) NOT NULL, -- Ej: '1290 Super Adventure S'
+    anio_modelo INTEGER NOT NULL,
+    cilindraje_cc INTEGER NOT NULL,
+    color VARCHAR(40),
+    propietario_id UUID NOT NULL REFERENCES clientes(id) ON DELETE RESTRICT,
+    odometro_ultimo_km INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_vehiculos_placa ON vehiculos(placa);
+CREATE INDEX idx_vehiculos_cliente ON vehiculos(propietario_id);
+
+-- ============================================================================
+-- 4. RECEPCIÓN PERICIAL 360° & ÓRDENES DE TRABAJO (OT)
+-- ============================================================================
+
+CREATE TABLE ordenes_trabajo (
+    id VARCHAR(32) PRIMARY KEY, -- Ej: 'OT-1048'
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    vehiculo_id UUID NOT NULL REFERENCES vehiculos(id) ON DELETE RESTRICT,
+    cliente_id UUID NOT NULL REFERENCES clientes(id) ON DELETE RESTRICT,
+    asesor_id VARCHAR(32) NOT NULL REFERENCES usuarios(id) ON DELETE RESTRICT,
+    mecanico_lider_id VARCHAR(32) REFERENCES usuarios(id) ON DELETE SET NULL,
+    bahia_id VARCHAR(32) REFERENCES bahias(id) ON DELETE SET NULL,
+    
+    estado estado_ot NOT NULL DEFAULT 'EN_ESPERA',
+    odometro_entrada_km INTEGER NOT NULL,
+    nivel_combustible nivel_combustible NOT NULL DEFAULT '1_2',
+    
+    -- Diagnóstico e Inventario de Accesorios al ingreso
+    motivo_ingreso_falla TEXT NOT NULL,
+    diagnostico_inicial TEXT,
+    accesorios_inventario JSONB DEFAULT '[]'::jsonb, -- ['Top Case Givi', 'Defensas Outback', 'Exploradoras']
+    
+    -- Totales y Presupuestos
+    total_mano_obra_estimada NUMERIC(12, 2) DEFAULT 0.00,
+    total_repuestos_estimado NUMERIC(12, 2) DEFAULT 0.00,
+    descuento_valor NUMERIC(12, 2) DEFAULT 0.00,
+    subtotal_usd NUMERIC(12, 2) DEFAULT 0.00,
+    impuesto_iva_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_general_usd NUMERIC(12, 2) DEFAULT 0.00,
+    trm_aplicada NUMERIC(10, 2) DEFAULT 4001.20,
+    total_general_cop NUMERIC(14, 2) DEFAULT 0.00,
+    
+    -- Trazabilidad y Aprobaciones Digitales WhatsApp
+    token_aprobacion_whatsapp VARCHAR(64) UNIQUE,
+    aprobada_por_cliente BOOLEAN DEFAULT FALSE,
+    fecha_aprobacion_cliente TIMESTAMP WITH TIME ZONE,
+    firma_digital_aprobacion_hash VARCHAR(128),
+    
+    -- Pase de salida y portería
+    pase_porteria_qr_token VARCHAR(100),
+    salida_autorizada_porteria BOOLEAN DEFAULT FALSE,
+    fecha_salida_porteria TIMESTAMP WITH TIME ZONE,
+    guardia_porteria_id VARCHAR(32) REFERENCES usuarios(id),
+
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    fecha_promesa_entrega TIMESTAMP WITH TIME ZONE,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_ot_sede ON ordenes_trabajo(sede_id);
+CREATE INDEX idx_ot_estado ON ordenes_trabajo(estado);
+CREATE INDEX idx_ot_vehiculo ON ordenes_trabajo(vehiculo_id);
+CREATE INDEX idx_ot_cliente ON ordenes_trabajo(cliente_id);
+
+-- Detalle Pericial de Daños Físicos 360° (Marcadores sobre la moto)
+CREATE TABLE peritaje_danos_360 (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE CASCADE,
+    zona_silueta VARCHAR(60) NOT NULL, -- 'lateral_izquierdo_carenaje', 'tubo_escape', 'tanque'
+    coordenada_x_pct NUMERIC(5, 2) NOT NULL, -- Coordenada % en visor interactivo
+    coordenada_y_pct NUMERIC(5, 2) NOT NULL,
+    tipo_dano tipo_dano_peritaje NOT NULL,
+    severidad severidad_dano NOT NULL,
+    observacion VARCHAR(255),
+    foto_evidencia_url VARCHAR(500),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_peritaje_ot ON peritaje_danos_360(ot_id);
+
+-- Evidencias Multimedia de Bahía (Fotos periciales y Notas de Voz Técnicas)
+CREATE TABLE evidencias_bahia (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE CASCADE,
+    operario_id VARCHAR(32) NOT NULL REFERENCES usuarios(id) ON DELETE RESTRICT,
+    tipo_archivo VARCHAR(30) NOT NULL, -- 'FOTO_DESGASTE', 'AUDIO_VOZ_TECNICA', 'VIDEO_DIAGNOSTICO'
+    url_almacenamiento VARCHAR(500) NOT NULL,
+    duracion_segundos INTEGER, -- Para notas de voz
+    tamano_bytes BIGINT,
+    descripcion TEXT,
+    compartido_al_cliente_whatsapp BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_evidencias_ot ON evidencias_bahia(ot_id);
+
+-- ============================================================================
+-- 5. BAREMO TÉCNICO & REGISTRO DE MANO DE OBRA (CLOCK-IN / CLOCK-OUT)
+-- ============================================================================
+
+-- Catálogo de Tiempos Estandarizados (Flat Rate)
+CREATE TABLE catalogo_baremo (
+    id VARCHAR(32) PRIMARY KEY, -- Ej: 'MO-MANT-10K', 'BAR-FREN-DEL'
+    codigo_interno VARCHAR(40) UNIQUE NOT NULL,
+    descripcion VARCHAR(200) NOT NULL,
+    categoria_servicio VARCHAR(80) NOT NULL, -- 'Frenos', 'Motor', 'Suspensión', 'Eléctrico'
+    cilindraje_segmento VARCHAR(30) NOT NULL, -- 'HASTA_200CC', '250_500CC', 'MAYOR_600CC'
+    horas_estandar NUMERIC(5, 2) NOT NULL, -- Ej: 3.5 horas
+    tarifa_base_usd NUMERIC(10, 2) NOT NULL,
+    activo BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+-- Mano de Obra Cotizada y Asignada a la OT
+CREATE TABLE ot_mano_obra_items (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE CASCADE,
+    baremo_id VARCHAR(32) REFERENCES catalogo_baremo(id) ON DELETE SET NULL,
+    descripcion_tarea VARCHAR(255) NOT NULL,
+    horas_cotizadas NUMERIC(5, 2) NOT NULL,
+    tarifa_hora_usd NUMERIC(10, 2) NOT NULL,
+    subtotal_usd NUMERIC(12, 2) NOT NULL,
+    mecanico_asignado_id VARCHAR(32) REFERENCES usuarios(id),
+    aprobado_por_cliente BOOLEAN DEFAULT TRUE,
+    completado BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_ot_mo_ot ON ot_mano_obra_items(ot_id);
+
+-- Tiempos Reales de Labor de Operarios (Clock-in / Clock-out)
+CREATE TABLE labor_operario_cronometro (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE CASCADE,
+    ot_item_mo_id UUID REFERENCES ot_mano_obra_items(id) ON DELETE SET NULL,
+    operario_id VARCHAR(32) NOT NULL REFERENCES usuarios(id) ON DELETE RESTRICT,
+    bahia_id VARCHAR(32) REFERENCES bahias(id) ON DELETE SET NULL,
+    hora_inicio TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    hora_fin TIMESTAMP WITH TIME ZONE,
+    minutos_laborados INTEGER,
+    observacion_trabajo TEXT,
+    costo_mano_obra_calculado NUMERIC(10, 2)
+);
+
+CREATE INDEX idx_labor_ot ON labor_operario_cronometro(ot_id);
+CREATE INDEX idx_labor_operario ON labor_operario_cronometro(operario_id);
+
+-- ============================================================================
+-- 6. INVENTARIO MULTI-SEDE, REPUESTOS OEM & GALERÍA DE IMÁGENES
+-- ============================================================================
+
+CREATE TABLE proveedores (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nit_rut VARCHAR(30) UNIQUE NOT NULL,
+    razon_social VARCHAR(150) NOT NULL,
+    contacto_nombre VARCHAR(100),
+    telefono VARCHAR(50),
+    email VARCHAR(100),
+    direccion VARCHAR(200),
+    plazo_dias_credito INTEGER DEFAULT 0,
+    activo BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE productos_repuestos (
+    sku VARCHAR(40) PRIMARY KEY, -- Ej: 'KTM-6030-8015', 'MOTUL-7100-10W50'
+    codigo_barras VARCHAR(50) UNIQUE,
+    descripcion VARCHAR(200) NOT NULL,
+    categoria VARCHAR(80) NOT NULL, -- 'Lubricantes', 'Filtros', 'Frenos', 'Llantas'
+    marca_fabricante VARCHAR(80),
+    unidad_medida VARCHAR(20) DEFAULT 'UNIDAD', -- 'UNIDAD', 'LITRO', 'KIT'
+    precio_venta_usd NUMERIC(12, 2) NOT NULL,
+    porcentaje_iva NUMERIC(5, 2) NOT NULL DEFAULT 19.00,
+    aplica_garantia_fabrica BOOLEAN DEFAULT TRUE,
+    
+    -- Imágenes directas principales para acceso rápido y CDN
+    foto_principal_url VARCHAR(500),         -- Imagen nítida del producto/pieza
+    foto_miniatura_url VARCHAR(500),         -- Thumbnail optimizado WebP (150x150) para tablas y POS
+    foto_empaque_oem_url VARCHAR(500),       -- Fotografía de la caja/blíster con sellos de autenticidad OEM
+    ficha_tecnica_pdf_url VARCHAR(500),      -- Documento o diagrama de despiece oficial
+    
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_repuestos_categoria ON productos_repuestos(categoria);
+CREATE INDEX idx_repuestos_barras ON productos_repuestos(codigo_barras);
+
+-- Galería Fotográfica Técnica Multi-Foto para Repuestos OEM
+CREATE TABLE productos_galeria_fotos (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    sku VARCHAR(40) NOT NULL REFERENCES productos_repuestos(sku) ON DELETE CASCADE,
+    tipo_foto tipo_foto_producto NOT NULL DEFAULT 'PRINCIPAL_PIEZA',
+    url_foto VARCHAR(500) NOT NULL,
+    url_thumbnail VARCHAR(500),
+    titulo_vista VARCHAR(120),             -- Ej: 'Vista Frontal Sensor', 'Troquel de Número de Parte OEM'
+    descripcion_tecnica TEXT,              -- Notas de verificación visual para operario de almacén
+    tamano_bytes BIGINT,
+    ancho_px INTEGER,
+    alto_px INTEGER,
+    formato_mime VARCHAR(30) DEFAULT 'image/webp',
+    orden_visualizacion INTEGER DEFAULT 1,
+    es_activa BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_galeria_sku ON productos_galeria_fotos(sku);
+CREATE INDEX idx_galeria_tipo ON productos_galeria_fotos(tipo_foto);
+
+-- Stock por Sede y Almacén
+CREATE TABLE inventario_stock_sedes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    sku VARCHAR(40) NOT NULL REFERENCES productos_repuestos(sku) ON DELETE RESTRICT,
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    ubicacion_estanteria VARCHAR(60), -- Ej: 'Pasillo C - Estante 04 - Gaveta 12'
+    stock_actual NUMERIC(10, 2) NOT NULL DEFAULT 0.00,
+    stock_minimo_alerta NUMERIC(10, 2) NOT NULL DEFAULT 2.00,
+    stock_maximo NUMERIC(10, 2) NOT NULL DEFAULT 20.00,
+    costo_promedio_ponderado_cop NUMERIC(14, 2) NOT NULL DEFAULT 0.00,
+    costo_promedio_ponderado_usd NUMERIC(10, 2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT uq_sku_sede UNIQUE (sku, sede_id)
+);
+
+CREATE INDEX idx_stock_sku ON inventario_stock_sedes(sku);
+CREATE INDEX idx_stock_sede ON inventario_stock_sedes(sede_id);
+
+-- Kardex de Movimientos (Trazabilidad estricta de Entradas y Salidas)
+CREATE TABLE kardex_movimientos (
+    id BIGSERIAL PRIMARY KEY,
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    sku VARCHAR(40) NOT NULL REFERENCES productos_repuestos(sku) ON DELETE RESTRICT,
+    tipo_movimiento tipo_movimiento_kardex NOT NULL,
+    cantidad NUMERIC(10, 2) NOT NULL,
+    costo_unitario_usd NUMERIC(10, 2) NOT NULL,
+    costo_total_usd NUMERIC(12, 2) NOT NULL,
+    saldo_stock_resultante NUMERIC(10, 2) NOT NULL,
+    
+    -- Relaciones opcionales según el tipo de movimiento
+    ot_id VARCHAR(32) REFERENCES ordenes_trabajo(id) ON DELETE SET NULL,
+    proveedor_id UUID REFERENCES proveedores(id) ON DELETE SET NULL,
+    numero_factura_proveedor VARCHAR(50),
+    mecanico_solicitante_id VARCHAR(32) REFERENCES usuarios(id) ON DELETE SET NULL,
+    usuario_registro_id VARCHAR(32) NOT NULL REFERENCES usuarios(id) ON DELETE RESTRICT,
+    foto_remision_soporte_url VARCHAR(500), -- Evidencia fotográfica de la remisión física/factura del proveedor
+    
+    motivo_detalle VARCHAR(255),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_kardex_sku ON kardex_movimientos(sku);
+CREATE INDEX idx_kardex_ot ON kardex_movimientos(ot_id);
+CREATE INDEX idx_kardex_sede ON kardex_movimientos(sede_id);
+CREATE INDEX idx_kardex_fecha ON kardex_movimientos(created_at);
+
+-- Ítems de Repuestos Despachados / Cotizados a la Orden de Trabajo
+CREATE TABLE ot_repuestos_items (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE CASCADE,
+    sku VARCHAR(40) NOT NULL REFERENCES productos_repuestos(sku) ON DELETE RESTRICT,
+    cantidad NUMERIC(10, 2) NOT NULL,
+    precio_unitario_usd NUMERIC(10, 2) NOT NULL,
+    subtotal_usd NUMERIC(12, 2) NOT NULL,
+    despachado_desde_almacen BOOLEAN DEFAULT FALSE,
+    fecha_despacho TIMESTAMP WITH TIME ZONE,
+    almacenista_id VARCHAR(32) REFERENCES usuarios(id),
+    aprobado_por_cliente BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_ot_repuestos_ot ON ot_repuestos_items(ot_id);
+
+-- ============================================================================
+-- 7. TERMINAL DE CAJA POS, SPLIT PAYMENT & ARQUEO CIEGO (REPORTE Z)
+-- ============================================================================
+
+-- Turnos de Caja POS
+CREATE TABLE caja_turnos (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    terminal_codigo VARCHAR(32) NOT NULL, -- 'POS-01-MOSTRADOR'
+    cajero_id VARCHAR(32) NOT NULL REFERENCES usuarios(id) ON DELETE RESTRICT,
+    fecha_apertura TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    saldo_base_apertura_usd NUMERIC(12, 2) NOT NULL DEFAULT 200.00,
+    saldo_base_apertura_cop NUMERIC(14, 2) NOT NULL DEFAULT 800000.00,
+    
+    -- Cierre y Reporte Z
+    fecha_cierre TIMESTAMP WITH TIME ZONE,
+    supervisor_cierre_id VARCHAR(32) REFERENCES usuarios(id),
+    consecutivo_reporte_z VARCHAR(50) UNIQUE, -- Ej: 'Z-2023-10-18-001'
+    
+    -- Saldos del Sistema Teórico vs Arqueo Físico Ciego
+    total_ventas_brutas_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_vales_menores_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_esperado_caja_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_arqueado_fisico_usd NUMERIC(12, 2) DEFAULT 0.00,
+    diferencia_cuadre_usd NUMERIC(12, 2) DEFAULT 0.00, -- 0.00 es Cuadre Exacto
+    
+    estado_terminal VARCHAR(30) DEFAULT 'ABIERTA', -- 'ABIERTA', 'CERRADA_REPORTED_Z'
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_caja_turnos_terminal ON caja_turnos(terminal_codigo);
+CREATE INDEX idx_caja_turnos_cajero ON caja_turnos(cajero_id);
+
+-- Arqueo Ciego Físico por Denominación de Billetes (Conteo Tangible)
+CREATE TABLE arqueo_ciego_denominaciones (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    caja_turno_id UUID NOT NULL REFERENCES caja_turnos(id) ON DELETE CASCADE,
+    -- Dólares (USD)
+    denominacion_100_usd INTEGER DEFAULT 0,
+    denominacion_50_usd INTEGER DEFAULT 0,
+    denominacion_20_usd INTEGER DEFAULT 0,
+    denominacion_10_usd INTEGER DEFAULT 0,
+    denominacion_5_usd INTEGER DEFAULT 0,
+    denominacion_1_usd INTEGER DEFAULT 0,
+    total_conteo_usd NUMERIC(12, 2) NOT NULL,
+    -- Pesos Colombianos (COP)
+    denominacion_100k_cop INTEGER DEFAULT 0,
+    denominacion_50k_cop INTEGER DEFAULT 0,
+    denominacion_20k_cop INTEGER DEFAULT 0,
+    denominacion_10k_cop INTEGER DEFAULT 0,
+    denominacion_5k_cop INTEGER DEFAULT 0,
+    denominacion_monedas_cop INTEGER DEFAULT 0,
+    total_conteo_cop NUMERIC(14, 2) NOT NULL,
+    -- Comprobantes Bancarios Vouchers
+    total_vouchers_redeban_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_vouchers_credibanco_usd NUMERIC(12, 2) DEFAULT 0.00,
+    total_qr_transferencias_usd NUMERIC(12, 2) DEFAULT 0.00,
+    cantidad_comprobantes_vouchers INTEGER DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Egresos y Vales de Caja Menor (Ctrl+M)
+CREATE TABLE vales_caja_menor (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    caja_turno_id UUID NOT NULL REFERENCES caja_turnos(id) ON DELETE RESTRICT,
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    monto_usd NUMERIC(10, 2) NOT NULL,
+    monto_cop NUMERIC(12, 2) NOT NULL,
+    concepto_gasto VARCHAR(255) NOT NULL,
+    beneficiario VARCHAR(120) NOT NULL,
+    numero_comprobante VARCHAR(40) UNIQUE NOT NULL,
+    cajero_id VARCHAR(32) NOT NULL REFERENCES usuarios(id),
+    autorizado_supervisor_id VARCHAR(32) NOT NULL REFERENCES usuarios(id),
+    recibo_soporte_foto_url VARCHAR(500),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Liquidación de Caja y Recibos POS
+CREATE TABLE liquidaciones_caja (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    caja_turno_id UUID NOT NULL REFERENCES caja_turnos(id) ON DELETE RESTRICT,
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE RESTRICT,
+    numero_recibo VARCHAR(40) UNIQUE NOT NULL, -- Ej: 'REC-POS-00892'
+    total_orden_usd NUMERIC(12, 2) NOT NULL,
+    total_cobrado_usd NUMERIC(12, 2) NOT NULL,
+    total_cobrado_cop NUMERIC(14, 2) NOT NULL,
+    saldo_pendiente_usd NUMERIC(12, 2) DEFAULT 0.00,
+    trm_cobro NUMERIC(10, 2) NOT NULL DEFAULT 4001.20,
+    apertura_gaveta_ejecutada BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_liquidaciones_ot ON liquidaciones_caja(ot_id);
+CREATE INDEX idx_liquidaciones_recibo ON liquidaciones_caja(numero_recibo);
+
+-- Desglose Split Payment Multimoneda (Múltiples formas de cobro por orden)
+CREATE TABLE liquidacion_pagos_split (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    liquidacion_id UUID NOT NULL REFERENCES liquidaciones_caja(id) ON DELETE CASCADE,
+    metodo metodo_pago NOT NULL,
+    monto_usd NUMERIC(12, 2) NOT NULL,
+    monto_cop NUMERIC(14, 2) NOT NULL,
+    referencia_voucher_autorizacion VARCHAR(80), -- Código de datáfono, ID de Nequi o cheque
+    entidad_financiera VARCHAR(60), -- 'Redeban Visa', 'Bancolombia QR', 'Credibanco Master'
+    porcentaje_sobre_total NUMERIC(5, 2) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_split_liquidacion ON liquidacion_pagos_split(liquidacion_id);
+
+-- ============================================================================
+-- 8. FACTURACIÓN ELECTRÓNICA DIAN (UBL 2.1 & CUFE)
+-- ============================================================================
+
+CREATE TABLE facturas_electronicas_dian (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE RESTRICT,
+    cliente_id UUID NOT NULL REFERENCES clientes(id) ON DELETE RESTRICT,
+    liquidacion_id UUID REFERENCES liquidaciones_caja(id) ON DELETE SET NULL,
+    
+    numero_factura VARCHAR(40) UNIQUE NOT NULL, -- Ej: 'SETT-99000148'
+    prefijo VARCHAR(10) NOT NULL DEFAULT 'SETT',
+    consecutivo INTEGER NOT NULL,
+    
+    -- Totales e Impuestos Fiscales
+    subtotal_bruto_cop NUMERIC(14, 2) NOT NULL,
+    descuentos_cop NUMERIC(14, 2) DEFAULT 0.00,
+    base_gravable_cop NUMERIC(14, 2) NOT NULL,
+    iva_19_cop NUMERIC(14, 2) NOT NULL,
+    retencion_fuente_cop NUMERIC(14, 2) DEFAULT 0.00,
+    retencion_ica_cop NUMERIC(14, 2) DEFAULT 0.00,
+    total_neto_factura_cop NUMERIC(14, 2) NOT NULL,
+    
+    -- Firma Digital DIAN
+    cufe VARCHAR(255) UNIQUE NOT NULL, -- Código Único de Facturación Electrónica
+    algoritmo_firma VARCHAR(50) DEFAULT 'SHA-384',
+    xml_ubl_firmado TEXT,
+    qr_cadena_validacion TEXT NOT NULL,
+    estado_dian VARCHAR(50) NOT NULL DEFAULT 'ACEPTADA_CON_NOTIFICACION',
+    codigo_respuesta_dian VARCHAR(10) DEFAULT '00',
+    descripcion_respuesta_dian TEXT,
+    
+    url_pdf_a4_descarga VARCHAR(500),
+    enviada_email_cliente BOOLEAN DEFAULT FALSE,
+    fecha_emision TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_facturas_dian_cufe ON facturas_electronicas_dian(cufe);
+CREATE INDEX idx_facturas_dian_numero ON facturas_electronicas_dian(numero_factura);
+CREATE INDEX idx_facturas_dian_ot ON facturas_electronicas_dian(ot_id);
+
+-- ============================================================================
+-- 9. GESTIÓN DE GARANTÍAS Y RECLAMOS A FÁBRICA
+-- ============================================================================
+
+CREATE TABLE reclamos_garantia_fabrica (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    numero_radicado_expediente VARCHAR(50) UNIQUE NOT NULL, -- 'GAR-KTM-2023-089'
+    sede_id VARCHAR(32) NOT NULL REFERENCES sedes(id) ON DELETE RESTRICT,
+    ot_id VARCHAR(32) NOT NULL REFERENCES ordenes_trabajo(id) ON DELETE RESTRICT,
+    sku_repuesto VARCHAR(40) REFERENCES productos_repuestos(sku) ON DELETE RESTRICT,
+    marca_ensambladora VARCHAR(60) NOT NULL, -- 'KTM Colombia / Auteco', 'Yamaha Incolmotos'
+    
+    estado estado_reclamo_garantia NOT NULL DEFAULT 'RADICADO_PENDIENTE_ENVIO',
+    descripcion_falla_defecto TEXT NOT NULL,
+    diagnostico_escaner_texa TEXT, -- Log de errores de telemetría OBD2
+    foto_pieza_averiada_url VARCHAR(500),
+    etiqueta_qr_cuarentena VARCHAR(100) UNIQUE,
+    
+    -- Resolución financiera
+    monto_reclamado_usd NUMERIC(12, 2) NOT NULL,
+    monto_aprobado_usd NUMERIC(12, 2) DEFAULT 0.00,
+    numero_nota_credito_proveedor VARCHAR(50),
+    fecha_resolucion DATE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_garantias_ot ON reclamos_garantia_fabrica(ot_id);
+CREATE INDEX idx_garantias_radicado ON reclamos_garantia_fabrica(numero_radicado_expediente);
+
+-- ============================================================================
+-- 10. VISTAS RECURRENTES & FUNCIONES DE TELEMETRÍA (VIEWS & TRIGGERS)
+-- ============================================================================
+
+-- Vista de Tablero Kanban Taller en Vivo
+CREATE OR REPLACE VIEW vista_kanban_taller_en_vivo AS
+SELECT 
+    ot.id AS ot_id,
+    ot.sede_id,
+    ot.estado,
+    v.placa,
+    CONCAT(v.marca, ' ', v.modelo) AS vehiculo_nombre,
+    c.nombre AS cliente_nombre,
+    c.telefono_whatsapp,
+    b.codigo_visual AS bahia_codigo,
+    u_mec.nombre_completo AS mecanico_lider,
+    ot.total_general_usd,
+    ot.total_general_cop,
+    COALESCE(SUM(l.minutos_laborados), 0) AS total_minutos_clockeados,
+    ot.fecha_promesa_entrega,
+    ot.created_at AS fecha_ingreso
+FROM ordenes_trabajo ot
+JOIN vehiculos v ON ot.vehiculo_id = v.id
+JOIN clientes c ON ot.cliente_id = c.id
+LEFT JOIN bahias b ON ot.bahia_id = b.id
+LEFT JOIN usuarios u_mec ON ot.mecanico_lider_id = u_mec.id
+LEFT JOIN labor_operario_cronometro l ON ot.id = l.ot_id
+GROUP BY ot.id, v.placa, v.marca, v.modelo, c.nombre, c.telefono_whatsapp, b.codigo_visual, u_mec.nombre_completo;
+
+-- Vista Catálogo de Productos con Stock Total Consolidado e Imagen Principal
+CREATE OR REPLACE VIEW vista_catalogo_repuestos_con_stock AS
+SELECT 
+    p.sku,
+    p.codigo_barras,
+    p.descripcion,
+    p.categoria,
+    p.marca_fabricante,
+    p.unidad_medida,
+    p.precio_venta_usd,
+    p.foto_principal_url,
+    p.foto_miniatura_url,
+    p.foto_empaque_oem_url,
+    p.ficha_tecnica_pdf_url,
+    COALESCE(SUM(s.stock_actual), 0) AS stock_total_red,
+    COUNT(DISTINCT g.id) AS cantidad_fotos_galeria
+FROM productos_repuestos p
+LEFT JOIN inventario_stock_sedes s ON p.sku = s.sku
+LEFT JOIN productos_galeria_fotos g ON p.sku = g.sku AND g.es_activa = TRUE
+GROUP BY p.sku, p.codigo_barras, p.descripcion, p.categoria, p.marca_fabricante, p.unidad_medida, p.precio_venta_usd, p.foto_principal_url, p.foto_miniatura_url, p.foto_empaque_oem_url, p.ficha_tecnica_pdf_url;
+
+-- Función Trigger para actualizar fecha de modificación
+CREATE OR REPLACE FUNCTION trigger_actualizar_timestamp()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_sedes_updated_at BEFORE UPDATE ON sedes FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();
+CREATE TRIGGER trg_usuarios_updated_at BEFORE UPDATE ON usuarios FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();
+CREATE TRIGGER trg_clientes_updated_at BEFORE UPDATE ON clientes FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();
+CREATE TRIGGER trg_vehiculos_updated_at BEFORE UPDATE ON vehiculos FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();
+CREATE TRIGGER trg_ordenes_updated_at BEFORE UPDATE ON ordenes_trabajo FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();
+CREATE TRIGGER trg_productos_updated_at BEFORE UPDATE ON productos_repuestos FOR EACH ROW EXECUTE FUNCTION trigger_actualizar_timestamp();

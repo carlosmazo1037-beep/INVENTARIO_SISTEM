@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="#"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="#"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="taller-ordenes" href="#"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="#"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="#"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="#"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Cabecera de Página & Miga de Pan -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-xs text-label-xs">
+<span>Inventario &amp; Movimientos</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Salidas de Almacén</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-semibold">Nuevo Vale de Despacho</span>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm mt-space-2xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Registrar Salida / Despacho de Repuestos</h1>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-space-sm py-space-2xs rounded font-mono">
+            VALE #SAL-2024-0312
+          </span>
+<span class="bg-surface-container-low text-secondary font-label-xs text-label-xs px-space-sm py-space-2xs rounded flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            Sede Emisora: Sede Central - Principal
+          </span>
+</div>
+</div>
+</div>
+<!-- Acciones Superiores -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-md text-label-md px-space-md py-space-sm rounded shadow-sm transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base text-secondary">bookmark_border</span>
+<span>Guardar Pendiente</span>
+</button>
+<button class="bg-surface-container-lowest text-error hover:bg-error-container font-label-md text-label-md px-space-md py-space-sm rounded shadow-sm transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">close</span>
+<span>Cancelar</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded shadow-md transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">task_alt</span>
+<span>Confirmar Despacho &amp; Rebajar Stock</span>
+</button>
+</div>
+</div>
+<!-- Selector de Tipo de Salida (Tabs Segmented Control) -->
+<div class="bg-surface-container-lowest p-space-xs rounded shadow-sm mb-space-lg overflow-x-auto">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-xs min-w-[720px]">
+<button class="bg-primary text-on-primary px-space-md py-space-sm rounded font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">build_circle</span>
+<span>Despacho a Orden de Trabajo (Taller)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">verified_user</span>
+<span>Reclamo Garantía / Devolución Proveedor</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">package_2</span>
+<span>Consumo Interno / Insumos Taller</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-space-md py-space-sm rounded font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">move_down</span>
+<span>Transferencia a Otra Sede</span>
+</button>
+</div>
+</div>
+<!-- Panel de Datos de Destino y Validación (3 Cards Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Tarjeta A: Orden de Trabajo y Vehículo -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm text-primary-container">two_wheeler</span>
+            Destino del Material
+          </span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold">
+            Bahía 02
+          </span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded mb-space-sm flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">OT-1044 — YAMAHA MT-07</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">KTW-44F</span>
+</div>
+<div class="space-y-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span class="text-secondary">Propietario:</span>
+<span class="font-semibold text-on-surface">Carlos Medina</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Odómetro / Horas:</span>
+<span class="font-mono text-on-surface">18,450 km</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Estado OT:</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs rounded">En Banco / Desarme</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs">
+<button class="w-full text-left font-label-xs text-label-xs text-tertiary hover:underline flex items-center justify-between" type="button">
+<span>Cambiar Orden de Trabajo (F4)</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta B: Operario / Mecánico Receptor -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm text-tertiary">badge</span>
+            Mecánico que Retira
+          </span>
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            Carnet Verificado
+          </span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded mb-space-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-headline-md">
+            AL
+          </div>
+<div>
+<span class="block font-label-md text-label-md font-bold text-on-surface">Andrés López</span>
+<span class="block font-label-xs text-label-xs text-secondary">Mecánico Senior L-3 • Turno Mañana</span>
+</div>
+</div>
+<div class="space-y-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span class="text-secondary">Código ID Técnico:</span>
+<span class="font-mono text-on-surface">MEC-0089</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Especialidad:</span>
+<span class="text-on-surface">Tren Motriz &amp; Inyección</span>
+</div>
+<div class="flex justify-between">
+<span class="text-secondary">Autorización Almacén:</span>
+<span class="text-primary-container font-semibold">Nivel 2 (Piezas &gt; $50)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs">
+<button class="w-full text-left font-label-xs text-label-xs text-tertiary hover:underline flex items-center justify-between" type="button">
+<span>Re-escanear gafete / Cambiar operador</span>
+<span class="material-symbols-outlined text-xs">pin</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta C: Condiciones de Despacho & Trazabilidad -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm text-secondary">warehouse</span>
+            Trazabilidad &amp; Cargo
+          </span>
+<span class="bg-surface-container text-on-surface-variant font-label-xs text-label-xs px-space-xs py-space-2xs rounded">
+            24 Oct 2024, 11:48 AM
+          </span>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-xs text-label-xs text-secondary mb-space-2xs">Almacén de Egreso:</label>
+<div class="bg-surface-container-low px-space-sm py-space-xs rounded text-on-surface font-label-md text-label-md flex items-center justify-between">
+<span>Almacén Principal - Pasillos Repuestos</span>
+<span class="material-symbols-outlined text-sm text-secondary">lock</span>
+</div>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs text-secondary mb-space-2xs">Imputación Contable:</label>
+<div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Cargo a la Cuenta de la OT (Facturable)</span>
+<span class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-xs rounded">Cliente</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-secondary font-label-xs text-label-xs">
+<span>Despachador: Miguel (Almacenero)</span>
+<span class="font-mono">Kardex Live</span>
+</div>
+</div>
+</div>
+<!-- Barra de Escaneo Rápido (Lector Óptico & Atajo F2) -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm mb-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex-1">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-tertiary text-xl">barcode_scanner</span>
+<input class="w-full bg-surface-container-low text-on-surface font-tabular-mono-md text-tabular-mono-md pl-11 pr-24 py-space-sm rounded focus:bg-surface-container-high focus:outline-none transition-colors" id="barcode-input" placeholder="Escanear código de barras o teclear SKU / Código OEM / Referencia [F2]..." type="text"/>
+<button class="absolute right-2 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs text-secondary font-label-xs text-label-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span>Pistola Honeywell 1900G: <strong>En Línea</strong></span>
+</div>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base text-secondary">manage_search</span>
+<span>Catálogo Completo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tabla de Repuestos e Insumos a Despachar -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden mb-space-lg">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface">Piezas Cargadas para Despacho</span>
+<span class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-bold">
+          4 Artículos
+        </span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">
+        Revisión automatizada de existencias en tiempo real
+      </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<th class="py-space-sm px-space-md">SKU / OEM</th>
+<th class="py-space-sm px-space-md">Descripción &amp; Compatibilidad</th>
+<th class="py-space-sm px-space-md">Ubicación Físc.</th>
+<th class="py-space-sm px-space-md text-right">Disp. Sede</th>
+<th class="py-space-sm px-space-md text-center">Cant. Despacho</th>
+<th class="py-space-sm px-space-md text-right">P. Unitario ($)</th>
+<th class="py-space-sm px-space-md text-right">Subtotal ($)</th>
+<th class="py-space-sm px-space-md">Estado / Imputación</th>
+<th class="py-space-sm px-space-md text-center">Quitar</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent">
+<!-- Fila 1: Aceite Motul -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md font-mono font-bold text-on-surface text-label-md">
+              MOT-7100-10W40
+              <span class="block text-secondary font-label-xs text-label-xs font-normal">OEM #MOT-00129</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-semibold text-on-surface block">Aceite Sintético Motul 7100 10W-40 4T (1L)</span>
+<span class="font-label-xs text-label-xs text-secondary">Estér JASO MA2 • Apto MT-07 / R7</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-space-xs py-space-2xs rounded font-mono font-semibold text-label-xs">
+                Pasillo A / G-02
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right font-mono font-semibold text-tertiary">
+              48 u
+            </td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center justify-center gap-space-xs">
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">-</button>
+<input class="w-10 text-center font-tabular-mono-md text-tabular-mono-md font-bold bg-surface-container-low rounded py-0.5" type="text" value="3"/>
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">+</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md">
+              $24.00
+            </td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">
+              $72.00
+            </td>
+<td class="py-space-sm px-space-md">
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+                Aprobado en OT
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<button class="p-space-2xs rounded hover:bg-error-container hover:text-error text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</td>
+</tr>
+<!-- Fila 2: Pastillas EBC -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md font-mono font-bold text-on-surface text-label-md">
+              EBC-FA209-HH
+              <span class="block text-secondary font-label-xs text-label-xs font-normal">OEM #4SV-W0045-00</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-semibold text-on-surface block">Pastillas Sinterizadas EBC Doble-H Delanteras</span>
+<span class="font-label-xs text-label-xs text-secondary">Calipers Sumitomo Yamaha 298mm</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-space-xs py-space-2xs rounded font-mono font-semibold text-label-xs">
+                Pasillo B / F-04
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right font-mono font-semibold text-tertiary">
+              20 u
+            </td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center justify-center gap-space-xs">
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">-</button>
+<input class="w-10 text-center font-tabular-mono-md text-tabular-mono-md font-bold bg-surface-container-low rounded py-0.5" type="text" value="1"/>
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">+</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md">
+              $45.00
+            </td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">
+              $45.00
+            </td>
+<td class="py-space-sm px-space-md">
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+                Aprobado en OT
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<button class="p-space-2xs rounded hover:bg-error-container hover:text-error text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</td>
+</tr>
+<!-- Fila 3: Líquido DOT 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md font-mono font-bold text-on-surface text-label-md">
+              FLUID-DOT4-500
+              <span class="block text-secondary font-label-xs text-label-xs font-normal">OEM #MOT-102718</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-semibold text-on-surface block">Líquido de Frenos Motul DOT 3 &amp; 4 (500ml)</span>
+<span class="font-label-xs text-label-xs text-secondary">Punto de ebullición seco 245°C</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-space-xs py-space-2xs rounded font-mono font-semibold text-label-xs">
+                Pasillo A / C-01
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right font-mono font-semibold text-tertiary">
+              15 u
+            </td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center justify-center gap-space-xs">
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">-</button>
+<input class="w-10 text-center font-tabular-mono-md text-tabular-mono-md font-bold bg-surface-container-low rounded py-0.5" type="text" value="1"/>
+<button class="w-6 h-6 rounded bg-surface-container-high hover:bg-surface-container-highest flex items-center justify-center text-on-surface font-bold" type="button">+</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md">
+              $12.50
+            </td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md font-bold text-on-surface">
+              $12.50
+            </td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">handyman</span>
+                Insumo de Banco
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<button class="p-space-2xs rounded hover:bg-error-container hover:text-error text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</td>
+</tr>
+<!-- Fila 4: Pieza de Garantía Defectuosa -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10">
+<td class="py-space-sm px-space-md font-mono font-bold text-error text-label-md">
+              FLTR-KN-YA3215
+              <span class="block text-error font-label-xs text-label-xs font-bold">RECLAMO GARANTÍA</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-semibold text-on-surface block">Filtro de Aire Alto Flujo K&amp;N Lavable</span>
+<span class="font-label-xs text-label-xs text-error font-medium">Defecto en empaque de goma perimetral / Devolución a Proveedor</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-error-container text-on-error-container px-space-xs py-space-2xs rounded font-mono font-semibold text-label-xs">
+                Jaula Cuarentena
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-right font-mono font-semibold text-error">
+              1 u
+            </td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center justify-center gap-space-xs">
+<span class="font-tabular-mono-md text-tabular-mono-md font-bold text-error">1 u</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md text-error">
+              $52.00 (Costo)
+            </td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md text-tabular-mono-md font-bold text-error">
+              $52.00
+            </td>
+<td class="py-space-sm px-space-md">
+<span class="bg-error text-on-error font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">assignment_return</span>
+                Garantía Taller
+              </span>
+</td>
+<td class="py-space-sm px-space-md text-center">
+<button class="p-space-2xs rounded hover:bg-error-container hover:text-error text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="bg-surface-container-low font-label-md text-label-md text-on-surface">
+<td class="py-space-sm px-space-md text-secondary" colspan="4">
+              Total Físico a Retirar: <strong class="text-on-surface font-tabular-mono-md">6 Unidades en Mano</strong>
+</td>
+<td class="py-space-sm px-space-md text-center font-bold font-tabular-mono-md">
+              6 u
+            </td>
+<td class="py-space-sm px-space-md text-right text-secondary">
+              Total Imputado:
+            </td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-lg text-tabular-mono-lg font-bold text-primary">
+              $181.50
+            </td>
+<td class="py-space-sm px-space-md text-right font-label-xs text-label-xs text-secondary" colspan="2">
+              4 líneas validadas
+            </td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Panel Inferior de Doble Columna -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Columna Izquierda: Protocolo Físico & Firma (7 Cols) -->
+<div class="lg:col-span-7 space-y-space-md">
+<!-- Checklist de Inspección -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-base">fact_check</span>
+          Protocolo de Entrega en Mostrador de Almacén
+        </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-body-sm text-body-sm text-on-surface mb-space-md">
+<label class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Inspección visual de sellos y empaques intactos</span>
+</label>
+<label class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Lote y serial verificados contra ficha de taller</span>
+</label>
+<label class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Presupuesto previamente aprobado por el cliente</span>
+</label>
+<label class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox"/>
+<span>Pieza sustituida devuelta a caja de rezago</span>
+</label>
+</div>
+<!-- Área de Firma y Verificación de Retiro -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md items-end">
+<div>
+<label class="block font-label-xs text-label-xs text-secondary uppercase mb-space-2xs">Firma Electrónica / Huella de Retiro</label>
+<div class="h-24 bg-surface-container-low rounded flex flex-col items-center justify-center p-space-xs relative overflow-hidden">
+<!-- Trazo SVG representativo de firma -->
+<svg class="w-40 h-14 text-on-surface stroke-current fill-none stroke-[2]" viewbox="0 0 200 60">
+<path d="M 10 40 Q 40 10 70 35 T 120 20 T 150 45 Q 170 50 190 25"></path>
+</svg>
+<span class="absolute bottom-1 right-2 font-mono text-[9px] text-secondary">HASH: 9F84-219C-AL</span>
+</div>
+<span class="block font-label-xs text-label-xs text-on-surface mt-space-2xs">
+              Mecánico: <strong>Andrés López (ID: MEC-0089)</strong> • 11:49:12 AM
+            </span>
+</div>
+<div>
+<label class="block font-label-xs text-label-xs text-secondary mb-space-2xs">Observaciones Técnicas de Salida</label>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm p-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors resize-none" placeholder="Ingresar notas sobre lote especial, estado de la moto en bahía o motivo de sustitución..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Resumen de Imputación & Liquidación (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm pb-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Liquidación de Vale</span>
+<span class="bg-surface-container text-on-surface-variant font-mono font-bold text-label-xs px-space-xs py-space-2xs rounded">SAL-2024-0312</span>
+</div>
+<!-- Desglose Financiero -->
+<div class="space-y-space-xs mb-space-md text-body-md text-body-md">
+<div class="flex justify-between py-space-2xs">
+<span class="text-secondary">Repuestos OT-1044 (Facturable):</span>
+<span class="font-tabular-mono-md font-semibold text-on-surface">$117.00 USD</span>
+</div>
+<div class="flex justify-between py-space-2xs">
+<span class="text-secondary">Insumos de Bahía (Operación):</span>
+<span class="font-tabular-mono-md font-semibold text-on-surface">$12.50 USD</span>
+</div>
+<div class="flex justify-between py-space-2xs">
+<span class="text-error">Piezas Garantía (Costo Taller):</span>
+<span class="font-tabular-mono-md font-semibold text-error">($52.00 USD)</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded flex justify-between items-center text-secondary font-label-xs text-label-xs">
+<span>Impuestos y Tasa Sede:</span>
+<span>Incluido en Presupuesto OT</span>
+</div>
+</div>
+<!-- Configuración de Post-Despacho (Switches) -->
+<div class="space-y-space-xs mb-space-md pt-space-xs">
+<label class="flex items-center justify-between cursor-pointer p-space-2xs rounded hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary">print</span>
+<span class="font-label-md text-label-md text-on-surface">Imprimir ticket para manillar de la moto</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer p-space-2xs rounded hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary">sync_alt</span>
+<span class="font-label-md text-label-md text-on-surface">Sincronizar Kardex multi-sede de inmediato</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer p-space-2xs rounded hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary">sms</span>
+<span class="font-label-md text-label-md text-on-surface">Notificar avance al cliente por WhatsApp</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+</label>
+</div>
+<!-- Total Prominente Industrial -->
+<div class="bg-inverse-surface text-inverse-on-surface p-space-md rounded mb-space-md shadow-md">
+<div class="flex justify-between items-baseline mb-space-2xs">
+<span class="font-label-xs text-label-xs text-inverse-on-surface/70 uppercase tracking-wider">Total Imputación a Cobro</span>
+<span class="font-label-xs text-label-xs text-tertiary-container font-mono">6 UNIDADES FÍSICAS</span>
+</div>
+<div class="font-display-lg text-display-lg text-primary-container font-mono tracking-tight leading-none">
+            $129.50 <span class="text-headline-md font-sans text-inverse-on-surface font-normal">USD</span>
+</div>
+<span class="block text-[11px] text-inverse-on-surface/60 mt-space-2xs">
+            + $52.00 a cuenta de Garantía Proveedor (K&amp;N Filters)
+          </span>
+</div>
+</div>
+<!-- Botón de Ejecución Primaria -->
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-headline-md text-headline-md py-space-sm rounded shadow-lg transition-all flex items-center justify-center gap-space-sm active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span>Emitir Vale &amp; Descontar Stock</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interacción: Atajo de teclado F2 para foco automático en el escáner
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F2') {
+      event.preventDefault();
+      const input = document.getElementById('barcode-input');
+      if (input) {
+        input.focus();
+        input.select();
+      }
+    }
+  });
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'/><script src='../assets/js/motopro-sidebar.js'></script></body></html>

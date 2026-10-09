@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="#"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="#"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="taller-ordenes" href="#"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="#"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="#"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="#"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase tracking-widest text-primary-container bg-primary-fixed px-space-xs py-space-2xs rounded">Módulo Oficial OEM &amp; Service Bay</span>
+<span class="font-label-xs text-label-xs text-secondary">• Homologación Baremos v4.8</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Gestión de Garantías &amp; Reclamos a Fábrica</h1>
+<p class="font-body-md text-body-md text-secondary">
+        Tramitación de expedientes periciales, validación de recalls oficiales, custodia de repuestos averiados y conciliación de baremos de mano de obra.
+      </p>
+</div>
+<!-- Context Filters & CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-secondary text-base">verified</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option>Todas las Marcas / Ensambladoras</option>
+<option selected="">KTM / Husqvarna Group</option>
+<option>Yamaha Motor Corp</option>
+<option>Bajaj / Auteco Mobility</option>
+<option>BMW Motorrad</option>
+<option>Honda Racing</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-secondary text-base">apartment</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer">
+<option selected="">Sede Calle 80 - Pista &amp; Dyno</option>
+<option>Sede Norte - Taller Central</option>
+<option>Sede Occidente - Almacén Repuestos</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-secondary text-base">date_range</span>
+<span class="font-label-md text-label-md text-on-surface">Octubre 2024 (Mes en Curso)</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Exportar Dossier a Marca</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>Radicar Nuevo Reclamo</span>
+</button>
+</div>
+</div>
+<!-- KPI & Executive Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Total en Reclamación Activa</span>
+<span class="material-symbols-outlined text-primary-container text-lg">receipt_long</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tabular-nums">$18,420</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-2xs text-secondary font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>34 expedientes técnicos en gestión activa</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[68%]"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Aprobado por Fábrica (Por Liquidar)</span>
+<span class="material-symbols-outlined text-tertiary text-lg">fact_check</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tabular-nums">$11,650</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-2xs font-body-sm text-body-sm text-tertiary font-medium">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>Tasa de aprobación técnica: 88.4%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[88.4%]"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Piezas en Cuarentena Física</span>
+<span class="material-symbols-outlined text-primary text-lg">shelves</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tabular-nums">19</span>
+<span class="font-label-xs text-label-xs text-secondary">Repuestos clasificados</span>
+</div>
+<div class="flex items-center justify-between mt-space-2xs font-label-xs text-label-xs text-secondary">
+<span>8 pend. envío a planta</span>
+<span>11 en Scrap autorizado</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full w-[42%]"></div>
+<div class="bg-secondary h-full w-[58%]"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold tracking-wider">Tiempo Promedio Dictamen</span>
+<span class="material-symbols-outlined text-secondary text-lg">timer</span>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-bold text-on-surface tabular-nums">4.2</span>
+<span class="font-label-xs text-label-xs text-secondary">Días hábiles</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-2xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span>
+<span>SLA Planta homologado: &lt; 7 días hábiles</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full w-[60%]"></div>
+</div>
+</div>
+</div>
+<!-- Main Work Surface: Split View (Claims Grid + Detailed Peritaje Dossier Pane) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left / Center Section: Queue & Matrix (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Nav Tabs & Quick Query Utility -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-md">
+<!-- Tabs -->
+<div class="flex items-center justify-between overflow-x-auto pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="bg-on-surface text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm" type="button">
+<span>Tablero de Expedientes</span>
+<span class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-xs py-0.5 rounded-full">34</span>
+</button>
+<button class="text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md px-space-md py-space-xs rounded transition-colors flex items-center gap-space-xs" type="button">
+<span>Dossier &amp; Peritaje</span>
+</button>
+<button class="text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md px-space-md py-space-xs rounded transition-colors flex items-center gap-space-xs" type="button">
+<span>Custodia &amp; Logística Retorno</span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-0.5 rounded-full">8</span>
+</button>
+<button class="text-secondary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md px-space-md py-space-xs rounded transition-colors flex items-center gap-space-xs" type="button">
+<span>Baremos &amp; NC Facturación</span>
+</button>
+</div>
+</div>
+<!-- Filter bar -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm">
+<div class="relative w-full flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-base">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-space-md py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar por VIN/Chasis, Placa, N° OT, Código OEM o Radicado Oficial..." type="text" value="GAR-2024"/>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary px-space-sm py-space-xs rounded font-label-md text-label-md flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Filtros (5)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary px-space-sm py-space-xs rounded font-label-md text-label-md flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">tune</span>
+<span>Ordenar</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-semibold">Estado:</span>
+<button class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs" type="button">
+<span>Todos (34)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Aprobadas (14)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>En Dictamen Fábrica (11)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Recalls Oficiales (5)</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-secondary font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>En Apelación (4)</span>
+</button>
+</div>
+</div>
+<!-- Warranty Dossiers Stack -->
+<div class="flex flex-col gap-space-sm">
+<!-- Record 1: SELECTED / KTM Active -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-md relative overflow-hidden transition-all bg-gradient-to-r from-primary-container/10 via-surface-container-lowest to-surface-container-lowest">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col gap-space-sm pl-space-xs">
+<!-- Header Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface bg-surface-container px-space-xs py-space-2xs rounded">#GAR-2024-089</span>
+<span class="font-label-xs text-label-xs uppercase font-bold text-on-surface bg-primary-fixed px-space-xs py-space-2xs rounded">KTM SPORTMOTORCYCLE</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Radicado: #KTM-WW-984210</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Aprobada por Fábrica • Repuesto en Tránsito</span>
+</span>
+</div>
+</div>
+<!-- Motorcycle & Repair Job Context -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Vehículo &amp; Placa</span>
+<span class="font-headline-md text-headline-md text-on-surface">KTM 890 Adventure R (2023)</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Placa: WXJ-45E | Km: 8,420 km</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Chasis VIN &amp; Orden</span>
+<span class="font-body-md text-body-md text-on-surface font-mono">VBKKTC407PM238910</span>
+<span class="font-body-sm text-body-sm text-secondary">OT-1044 • Mec. Andrés López</span>
+</div>
+<div class="flex flex-col sm:items-end justify-center">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Liquidación Reclamada</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-primary-container font-bold">$592.50</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary">Baremo Aprobado: 2.5h</span>
+</div>
+</div>
+<!-- Failure Breakdown & Evidence -->
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Diagnóstico Pericial Homologado:</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Falla prematura de resistencia interna en cuerpo de aceleración y potenciómetro TPS secundario. Código DTC registrado en scanner oficial Texa Axone: <code class="bg-surface-container-high px-space-2xs rounded font-mono text-primary font-bold">P0122 Throttle Position Sensor 2 Circuit Low</code>.
+              </p>
+<div class="flex items-center gap-space-sm font-label-xs text-label-xs text-secondary mt-space-2xs">
+<span class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-xs text-tertiary">attach_file</span> 4 Fotografías Periciales HD</span>
+<span class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-xs text-tertiary">analytics</span> Log Escáner Texa (.pdf)</span>
+<span class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-xs text-primary-container">local_shipping</span> Guía DHL: #9948210348 (Entrega: 24h)</span>
+</div>
+</div>
+<!-- Footer Action Row -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary">Pieza OEM: #63541010000 (TPS Bosch OEM Assembly)</span>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">print</span>
+<span>Rótulo Cuarentena QR</span>
+</button>
+<button class="bg-on-surface text-on-primary hover:bg-inverse-surface font-label-xs text-label-xs px-space-md py-space-xs rounded flex items-center gap-space-2xs transition-colors shadow-sm" type="button">
+<span>Expediente Seleccionado</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Record 2: Yamaha MT-09 SP -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface bg-surface-container px-space-xs py-space-2xs rounded">#GAR-2024-092</span>
+<span class="font-label-xs text-label-xs uppercase font-bold text-on-surface bg-surface-container-high px-space-xs py-space-2xs rounded">YAMAHA MOTOR</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Radicado: #YAM-GAR-77341</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>En Análisis de Planta Ensambladora</span>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Vehículo &amp; Placa</span>
+<span class="font-headline-md text-headline-md text-on-surface">Yamaha MT-09 SP (2024)</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Placa: BRT-88F | Km: 2,150 km</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Chasis VIN &amp; Orden</span>
+<span class="font-body-md text-body-md text-on-surface font-mono">JYARN68100A001244</span>
+<span class="font-body-sm text-body-sm text-secondary">OT-1052 • Téc. Carlos Medina</span>
+</div>
+<div class="flex flex-col sm:items-end justify-center">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Reclamación Total</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">$1,425.00</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">Baremo Proyectado: 3.0h</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Fuga severa en retén y guardapolvo de suspensión delantera invertida Öhlins de 41mm por microporosidad en el cromado duro interior de botellón derecho.
+            </p>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">inventory</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">Ubicación Física: Almacén Bahía B-04 / Rack G-2 (En Cuarentena)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">upload_file</span>
+<span>Cargar Adicional</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button">
+<span>Ver Dossier</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Record 3: BMW Motorrad Recall -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface bg-surface-container px-space-xs py-space-2xs rounded">#GAR-2024-095</span>
+<span class="font-label-xs text-label-xs uppercase font-bold text-on-surface bg-secondary-container px-space-xs py-space-2xs rounded">BMW MOTORRAD</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Radicado: #BMW-AIRS-004921</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">campaign</span>
+<span>Recall de Fábrica • Pre-Aprobación Automática</span>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Vehículo &amp; Placa</span>
+<span class="font-headline-md text-headline-md text-on-surface">BMW R1250GS Adventure (2022)</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Placa: TLK-99C | Km: 18,900 km</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Chasis VIN &amp; Orden</span>
+<span class="font-body-md text-body-md text-on-surface font-mono">WB10M0105NZ883201</span>
+<span class="font-body-sm text-body-sm text-secondary">OT-1060 • Carlos H. Morales</span>
+</div>
+<div class="flex flex-col sm:items-end justify-center">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Presupuesto Amparado</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">$2,007.50</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary">Baremo Oficial: 3.5h</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Campaña técnica oficial #CR-2023-45: Inspección de holgura en cruceta del cardán / eje de transmisión oscilante e instalación mandatoria de válvula de drenaje de elastómero.
+            </p>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary">Pieza Amparada: Cardán Completo Ref OEM #33738561001</span>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<span>Generar Despacho a Planta</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Record 4: Bajaj / Auteco Settled -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface bg-surface-container px-space-xs py-space-2xs rounded">#GAR-2024-087</span>
+<span class="font-label-xs text-label-xs uppercase font-bold text-on-surface bg-surface-container-high px-space-xs py-space-2xs rounded">BAJAJ / AUTECO</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono">Radicado: #AUT-REC-33290</span>
+</div>
+<span class="bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-semibold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span>
+<span>Liquidada • NC-9014 Aplicada en Ledger</span>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Vehículo</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Dominar 400 UG (2023)</span>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Placa: KOP-12D | 14,200 km</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary">OT Vinculada</span>
+<span class="font-body-md text-body-md text-on-surface font-mono">OT-1038</span>
+<span class="font-body-sm text-body-sm text-secondary">Tensor hidráulico levas</span>
+</div>
+<div class="flex flex-col sm:items-end justify-center">
+<span class="font-label-xs text-label-xs uppercase text-secondary">Reembolsado</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">$227.00</span>
+<span class="font-label-xs text-label-xs text-secondary">USD</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary">4.0h Baremo liquidado</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-sm">delete_sweep</span>
+<span>Disposición de Pieza: Autorizado Scrap / Desecho Local Destructivo Certificado</span>
+</div>
+<button class="text-tertiary hover:underline font-label-xs text-label-xs flex items-center gap-space-2xs" type="button">
+<span>Ver Certificado Scrap</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Density Controller -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded shadow-sm font-label-xs text-label-xs text-secondary">
+<span>Mostrando 4 de 34 expedientes de garantía</span>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-2xs rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface disabled:opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<span class="px-space-xs font-semibold text-on-surface">Página 1 de 9</span>
+<button class="p-space-2xs rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface" type="button">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Section: Selected Claim Peritaje & Custody Panel (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Detailed Peritaje Dossier Container -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-md flex flex-col gap-space-md">
+<!-- Header with brand insignia -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase font-bold text-primary-container bg-primary-fixed px-space-xs py-space-2xs rounded">Dossier de Auditoría Activo</span>
+<span class="font-label-xs text-label-xs text-secondary">Expediente #GAR-2024-089</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-space-2xs">KTM 890 Adventure R</h2>
+<span class="font-body-sm text-body-sm text-secondary">VIN: VBKKTC407PM238910 • Matrícula: WXJ-45E</span>
+</div>
+<div class="bg-on-surface text-on-primary font-label-md text-label-md px-space-sm py-space-xs rounded font-bold uppercase tracking-wider">
+            KTM OEM
+          </div>
+</div>
+<!-- Peritaje Stepper Timeline -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Línea de Trazabilidad Técnica:</span>
+<div class="flex flex-col gap-space-sm mt-space-xs relative pl-space-lg">
+<!-- Timeline vertical connector -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-highest"></div>
+<!-- Step 1 -->
+<div class="flex flex-col relative">
+<span class="w-3 h-3 rounded-full bg-tertiary absolute -left-[1.45rem] top-1 ring-4 ring-surface-container-low"></span>
+<span class="font-label-xs text-label-xs font-semibold text-on-surface">Radicación Técnica en Taller (12 Oct, 09:14 AM)</span>
+<span class="font-body-sm text-body-sm text-secondary">Diagnóstico inicial en Dyno y extracción de informe Texa por Téc. Andrés López.</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col relative">
+<span class="w-3 h-3 rounded-full bg-tertiary absolute -left-[1.45rem] top-1 ring-4 ring-surface-container-low"></span>
+<span class="font-label-xs text-label-xs font-semibold text-on-surface">Validación de Perito Regional KTM (14 Oct, 03:20 PM)</span>
+<span class="font-body-sm text-body-sm text-secondary">Aprobación remota de garantía bajo protocolo KTM-WP-TPS-09.</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col relative">
+<span class="w-3 h-3 rounded-full bg-primary-container absolute -left-[1.45rem] top-1 ring-4 ring-surface-container-low animate-ping"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container absolute -left-[1.45rem] top-1 ring-4 ring-surface-container-low"></span>
+<span class="font-label-xs text-label-xs font-semibold text-primary">Despacho de Repuesto desde Austria / Hub Central (16 Oct, 11:00 AM)</span>
+<span class="font-body-sm text-body-sm text-secondary">En vuelo internacional DHL Express. Arribo estimado: Mañana 10:30 AM.</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col relative opacity-60">
+<span class="w-3 h-3 rounded-full bg-secondary absolute -left-[1.45rem] top-1 ring-4 ring-surface-container-low"></span>
+<span class="font-label-xs text-label-xs font-semibold text-on-surface">Instalación, Calibración &amp; Cierre de Baremo</span>
+<span class="font-body-sm text-body-sm text-secondary">Pendiente recepción de pieza en almacén Bahía A.</span>
+</div>
+</div>
+</div>
+<!-- Warranty Checklist Validation Matrix -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Auditoría de Requisitos de Garantía KTM:</span>
+<div class="grid grid-cols-1 gap-space-2xs">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+<span>Mantenimientos preventivos oficiales (1K y 5K)</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-bold bg-surface-container-highest px-space-xs py-space-2xs rounded">VALIDADO EN RED</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+<span>Sin reprogramación de ECU ni alteración de escape</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-bold bg-surface-container-highest px-space-xs py-space-2xs rounded">OEM GENUINO</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+<span>Coincidencia de odómetro digital con registro de ECU</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-bold bg-surface-container-highest px-space-xs py-space-2xs rounded">DELTA 0.0 KM</span>
+</div>
+</div>
+</div>
+<!-- Photographic Peritaje Evidence Gallery -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Evidencias Periciales Adjuntas (4)</span>
+<span class="font-label-xs text-label-xs text-tertiary cursor-pointer hover:underline">Ver tamaño completo</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="relative group rounded overflow-hidden aspect-video bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close-up forensic macro photograph of an automotive motorcycle electronic throttle body sensor showing copper pin sulfation and mechanical wear under diagnostic shop lighting with clean high-contrast automotive workshop backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJ2TMzxKQZOKEccZOu6fLTxhfv1m9eHY0UcfreGM4FYV9Ts2ret2xhjnrLv4NFSGAewwMl23v6a_gBW5yYwRHmQwlQEnwg6Qpbg_VOuCb8UZBWxwlAPJnXE_i_PsS7QiWnpJhGaiF9CBDAng1VHB5ADj_h-Eon63HEJdLYFt1Br3xlehRGi5MulIqEIsJj3G9JDhy69vpPanGB4WHDHZn3q5exMj2yDBjUOpOL5DcZNVyDl1lCQDw"/>
+<span class="absolute bottom-1 left-1 font-label-xs text-label-xs text-on-primary bg-inverse-surface/80 px-space-2xs py-0.5 rounded">Pin Conector</span>
+</div>
+<div class="relative group rounded overflow-hidden aspect-video bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="High precision automotive multimeter oscilloscope screen capturing electrical noise and aberrant square voltage waveform on a motorcycle throttle sensor in a clean modern racing workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPSykIGToaDi2d0VOJSvifA6yduBhzhP68msA7c01ad4heroJ0z6Eb-KuM9wIsmVgZWrZluXLz00vpnHgx8gR7Kxv_874yjw0P-jBRkxi9evsWhf8yuT_fmWqZsNPFeqmDuqd2nT8oNef58ep9cEZ-N0x8sX4O8vdNAoWMln3FfksBUNjBnJE9O5PKgC0zQQCPNUg-3Qbn3eRavGdqSRMbugxaQXIZUzYHt8TKRAoNuG-UeH5-yaGl"/>
+<span class="absolute bottom-1 left-1 font-label-xs text-label-xs text-on-primary bg-inverse-surface/80 px-space-2xs py-0.5 rounded">Oscilograma</span>
+</div>
+<div class="relative group rounded overflow-hidden aspect-video bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Industrial automotive motorcycle diagnostic scanner tool screen showing Texa DTC P0122 error code with motorcycle dashboard in soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzC_xF2NURZac-k7nPaZd-YtKjqYZwgM4mOxp9fEs7IJfjaL6a_YSGiZv4lpAglxoLcsExb91HlXVTLXhlG4zkIz2rXrQgoMsfX77iq6ZUGFJhIpZOVO75kNb_VGZxRtSb_joiNxNuUZ3in-6FkD34qIQWHNPVEK_I-ftCUPl_BNcNGvonVzd0dJ55Ho6qTFrzMPXmHWRcZS8b-aSNCw49ItBFCk88giQBhb6R6qrNZCew7CNZDbOu"/>
+<span class="absolute bottom-1 left-1 font-label-xs text-label-xs text-on-primary bg-inverse-surface/80 px-space-2xs py-0.5 rounded">Captura DTC</span>
+</div>
+</div>
+</div>
+<!-- Quarantine Physical Part Custody Badge with QR Simulation -->
+<div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-lowest p-space-xs rounded shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-3xl">qr_code_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase font-bold text-primary">Custodia Cuarentena: #KTM-BIN-89</span>
+<span class="font-headline-md text-headline-md text-on-surface">TPS Bosch Defectuoso</span>
+<span class="font-label-xs text-label-xs text-secondary">Rótulo pegado en caja ignífuga • Esperando recolección</span>
+</div>
+</div>
+<span class="font-label-xs text-label-xs bg-primary-fixed text-on-primary-fixed-variant px-space-xs py-space-2xs rounded font-bold uppercase tracking-wider">RETORNO A PLANTA</span>
+</div>
+<!-- Financial Baremo Settlement Breakdown -->
+<div class="bg-surface-container-highest/60 p-space-md rounded flex flex-col gap-space-xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Liquidación Proyectada a Conciliar con Fábrica:</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Repuesto OEM (TPS Bosch Ref: 63541010000):</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold">$480.00 USD</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Mano de Obra Baremo Oficial (2.5h x $45.00/h):</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold">$112.50 USD</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-xs bg-surface-container-low p-space-xs rounded">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase">Total a Reembolsar por Ensambladora:</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-primary font-bold">$592.50 USD</span>
+</div>
+</div>
+<!-- Action Triggers -->
+<div class="flex flex-col sm:flex-row items-center gap-space-xs pt-space-xs">
+<button class="w-full sm:flex-1 bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md py-space-xs px-space-md rounded flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Notificar a Perito KTM</span>
+</button>
+<button class="w-full sm:flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md py-space-xs px-space-md rounded flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">description</span>
+<span>Acta de Entrega Cliente</span>
+</button>
+</div>
+</div>
+<!-- Quick Mini Box: Factory Field Technical Bulletins -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">menu_book</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Boletines de Servicio Técnico (TI / Recall)</span>
+</div>
+<span class="font-label-xs text-label-xs text-primary-container font-semibold">2 Nuevos</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-xs bg-surface-container-low hover:bg-surface-container rounded transition-colors cursor-pointer flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs font-bold text-on-surface">TI-2024-KTM-08: Calibración Can-Bus 890/901</span>
+<span class="font-body-sm text-body-sm text-secondary">Ajuste de tolerancia de señal de potenciómetro electrónico.</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-base">chevron_right</span>
+</div>
+<div class="p-space-xs bg-surface-container-low hover:bg-surface-container rounded transition-colors cursor-pointer flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs font-bold text-on-surface">TI-2024-YAM-04: Retenes de Horquilla KYB / Öhlins</span>
+<span class="font-body-sm text-body-sm text-secondary">Nuevo par de apriete de tijas para MT-09 SP y Tracer 9 GT.</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-base">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Strip: Reverse Logistics & Factory Audit Calendar -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Scheduled Carrier Pickups -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded text-primary-container">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Recolección Semanal de Scrap &amp; Repuestos</span>
+<span class="font-headline-md text-headline-md text-on-surface">KTM Logistics &amp; DHL Express</span>
+<span class="font-body-sm text-body-sm text-secondary">Próximo retiro: Viernes 18 Octubre (02:00 PM)</span>
+</div>
+</div>
+<span class="font-label-xs text-label-xs bg-surface-container-high px-space-xs py-space-2xs rounded font-bold text-on-surface">8 BULTOS LISTOS</span>
+</div>
+<!-- Factory Technical Audit Warning -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded text-tertiary">
+<span class="material-symbols-outlined text-2xl">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Auditoría Presencial de Fábrica</span>
+<span class="font-headline-md text-headline-md text-on-surface">Inspección Pericial Auteco &amp; Yamaha</span>
+<span class="font-body-sm text-body-sm text-secondary">Programada en taller: 28 Octubre (En 10 días)</span>
+</div>
+</div>
+<span class="font-label-xs text-label-xs bg-secondary-container px-space-xs py-space-2xs rounded font-bold text-on-secondary-container">ALMACÉN PREPARADO</span>
+</div>
+<!-- Settlement Reconciliation Summary -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded text-primary">
+<span class="material-symbols-outlined text-2xl">price_check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-secondary font-bold">Corte de Liquidación de Baremos</span>
+<span class="font-headline-md text-headline-md text-on-surface">NC Acumuladas: $34,810 USD</span>
+<span class="font-body-sm text-body-sm text-secondary">Conciliado con ERP Contable al 99.1%</span>
+</div>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-xs rounded flex items-center gap-space-2xs transition-colors" type="button">
+<span>Conciliar</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer></body></html>

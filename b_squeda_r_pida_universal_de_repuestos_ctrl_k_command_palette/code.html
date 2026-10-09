@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#e0c0b1","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#3f465c","secondary-fixed":"#dae2fd","tertiary":"#006398","primary-container":"#f97316","surface-container-low":"#eff4ff","primary-fixed":"#ffdbca","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","on-primary-fixed":"#341100","inverse-surface":"#213145","error":"#ba1a1a","primary":"#9d4300","secondary-container":"#dae2fd","surface":"#f8f9ff","inverse-primary":"#ffb690","background":"#f8f9ff","on-secondary-fixed":"#131b2e","secondary":"#565e74","inverse-on-surface":"#eaf1ff","tertiary-container":"#40a2e7","tertiary-fixed":"#cce5ff","on-background":"#0b1c30","surface-bright":"#f8f9ff","on-secondary":"#ffffff","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-container":"#582200","secondary-fixed-dim":"#bec6e0","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#783200","on-surface":"#0b1c30","primary-fixed-dim":"#ffb690","surface-tint":"#9d4300","on-tertiary":"#ffffff","on-tertiary-fixed":"#001d31","surface-dim":"#cbdbf5","surface-container-lowest":"#ffffff","on-tertiary-container":"#003655","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","on-surface-variant":"#584237","tertiary-fixed-dim":"#93ccff","on-secondary-container":"#5c647a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"0.75rem","space-2xs":"0.125rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","margin":"1.5rem","space-2xl":"2rem","space-xs":"0.25rem","space-xl":"1.5rem"},"fontFamily":{"body-md":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"label-xs":["Inter"],"display-lg-mobile":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MotoPro ERP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bj1zdU25UHU27LvLizAxOGEcOJz3de-iWp2CmAnU0d7Kguzgofy4OjnrdK5e6iaq8WedYc_tdPCEqoTeU0yIV8CwvVUAyyZowturDithJYA9HKioAVoTeV7KVQf2Is4v3DJpqyV-b1mqrLRv7BUC6heeWokIf3fkMjO_S3Tod5Miftg-fZw33LTW5ZxcimjIyhz4S-jVVXKdHRv6H4sQ3w0KoDTtsSYXiSIott5oeUpju46v5N29"/><span class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-tight">MotoPro</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-sm"><div class="bg-surface-container-low px-space-sm py-space-xs rounded flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-base">store</span><span class="font-label-md text-label-md text-on-surface">Sede Central - Principal</span><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div><div class="bg-secondary-container text-on-secondary-container font-label-xs text-label-xs px-space-xs py-space-2xs rounded flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Caja Abierta: Turno Mañana $4,280.00</span></div></div></div><div class="flex-1 max-w-xl hidden md:block mx-space-sm"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Buscar repuesto, código SKU, placa / VIN o cliente..." type="text"/><span class="absolute right-3 font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded">Ctrl + K</span></div></div><div class="flex items-center gap-space-sm"><button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-[0_1px_4px_rgba(249,115,22,0.3)] transition-colors" type="button"><span class="material-symbols-outlined text-base">add</span><span class="hidden sm:inline">Nueva Órden</span></button><div class="hidden sm:flex items-center gap-space-2xs bg-surface-container-low px-space-xs py-space-2xs rounded text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-base">barcode_scanner</span><span class="font-label-xs text-label-xs font-semibold text-tertiary">SCANNER OK</span></div><button aria-label="Notificaciones" class="p-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-secondary transition-colors relative" type="button"><span class="material-symbols-outlined text-lg">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden xl:block"><span class="block font-label-md text-label-md text-on-surface">Miguel</span><span class="block font-label-xs text-label-xs text-secondary">Administrador</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3RM1utrm6pfWbWf3lxK5UQFjShFp902p19aEI4IOXpeQtDDePwdWlYhTTqQdD3eclUKMT2__HnKJPS4vf3xeD7UHj9fUm5rlftMcsgs87rniHa67ocaLWsAsLKc6HsWgr3UxvHAw46d7hZvrF9vy7TjGWMFQ-faaHPhRnlsP-5ipQ2DIeusWAksvsyqLP3FpRzyj2EJDhftZBsAg5nxDOTphVGh4e88cdwTELg6xugkKqjWZ1Djm"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md overflow-y-auto"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-2xs mb-space-xs"><span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Operaciones Taller</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-caja-pos" href="#"><span class="material-symbols-outlined text-lg text-secondary">point_of_sale</span><span class="font-body-md text-body-md">Dashboard &amp; Caja POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-movimientos" href="#"><span class="material-symbols-outlined text-lg text-secondary">inventory_2</span><span class="font-body-md text-body-md">Inventario &amp; Movimientos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="taller-ordenes" href="#"><span class="material-symbols-outlined text-lg text-secondary">build_circle</span><span class="font-body-md text-body-md">Taller &amp; Órdenes</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="clientes-proveedores" href="#"><span class="material-symbols-outlined text-lg text-secondary">group</span><span class="font-body-md text-body-md">Clientes &amp; Proveedores</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="facturacion-finanzas" href="#"><span class="material-symbols-outlined text-lg text-secondary">receipt_long</span><span class="font-body-md text-body-md">Facturación &amp; Finanzas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion-sedes" href="#"><span class="material-symbols-outlined text-lg text-secondary">settings</span><span class="font-body-md text-body-md">Configuración &amp; Sedes</span></a></nav></div><div class="px-space-sm pt-space-md"><div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-base">two_wheeler</span><div><span class="block font-label-xs text-label-xs font-semibold text-on-surface">Bahías de Taller</span><span class="block font-label-xs text-label-xs text-secondary">8 de 10 ocupadas</span></div></div><span class="font-label-xs text-label-xs bg-surface-container-highest text-on-surface-variant px-space-xs py-space-2xs rounded font-bold">80%</span></div></div></aside><div class="pl-64 pb-7"><main class="w-full pt-16 bg-surface px-space-lg min-h-screen"><div class="flex flex-col w-full relative">
+<!-- BACKGROUND LAYER: DASHBOARD DE INVENTARIO Y MOVIMIENTOS -->
+<div class="w-full flex flex-col gap-space-lg select-none opacity-40 pointer-events-none filter blur-[1.5px] transition-all duration-300">
+<!-- Header Contextual Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary font-label-xs text-label-xs uppercase tracking-wider">
+<span>Módulo Central</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Almacén General &amp; Bahías</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-space-2xs">Inventario &amp; Movimientos de Stock</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-base">cloud_done</span>
+<span class="font-label-md text-label-md text-on-surface">Bodega 01 - Stock Físico</span>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-xs rounded flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-base">add_box</span>
+<span>Nuevo Registro SKU</span>
+</button>
+</div>
+</div>
+<!-- Inventory KPIs Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Total Referencias Activas</span>
+<div class="p-space-xs rounded bg-surface-container-low text-tertiary">
+<span class="material-symbols-outlined text-base">category</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">4,812</span>
+<span class="font-label-xs text-label-xs text-primary-container font-semibold ml-space-xs">98.4% Confiabilidad</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Valoración en Bodega</span>
+<div class="p-space-xs rounded bg-surface-container-low text-primary-container">
+<span class="material-symbols-outlined text-base">payments</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">$312,490</span>
+<span class="font-label-xs text-label-xs text-secondary ml-space-xs">USD Liquidado</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Stock Crítico / Mínimo</span>
+<div class="p-space-xs rounded bg-error-container text-error">
+<span class="material-symbols-outlined text-base">warning</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-error tracking-tight">28</span>
+<span class="font-label-xs text-label-xs text-error font-semibold ml-space-xs">14 en pedido abierto</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Despachos a Taller (Hoy)</span>
+<div class="p-space-xs rounded bg-surface-container-low text-tertiary">
+<span class="material-symbols-outlined text-base">outbox</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">84 <span class="font-body-md text-body-md text-secondary font-normal">piezas</span></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-semibold ml-space-xs">19 OT atendidas</span>
+</div>
+</div>
+</div>
+<!-- Data Table Showcase Underlay -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low/50">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface">Catálogo de Repuestos &amp; Kardex</span>
+<span class="bg-surface-container-high text-on-surface-variant px-space-xs py-space-2xs rounded font-label-xs text-label-xs">Vista Global</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Filtros activos: Línea KTM, Stock &gt; 0</span>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">SKU / Referencia</th>
+<th class="py-space-sm px-space-md">Descripción Técnica</th>
+<th class="py-space-sm px-space-md">Categoría OEM</th>
+<th class="py-space-sm px-space-md">Ubicación Pasillo</th>
+<th class="py-space-sm px-space-md text-right">Existencia</th>
+<th class="py-space-sm px-space-md text-right">PVP Público</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/30">
+<td class="py-space-sm px-space-md font-tabular-mono-md text-primary font-bold">KTM-6030-8015</td>
+<td class="py-space-sm px-space-md font-medium">Kit Filtro Aceite OEM KTM LC8 1290 / 1090</td>
+<td class="py-space-sm px-space-md text-secondary">Filtros &amp; Lubricación</td>
+<td class="py-space-sm px-space-md"><span class="bg-surface-container-high px-space-xs py-space-2xs rounded">C-04-12</span></td>
+<td class="py-space-sm px-space-md text-right font-semibold text-tertiary">14 UN</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md font-bold">$45.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30">
+<td class="py-space-sm px-space-md font-tabular-mono-md text-primary font-bold">KTM-6030-1002</td>
+<td class="py-space-sm px-space-md font-medium">Filtro de Aire Alto Rendimiento KTM 1290 R/S</td>
+<td class="py-space-sm px-space-md text-secondary">Admisión Aire</td>
+<td class="py-space-sm px-space-md"><span class="bg-surface-container-high px-space-xs py-space-2xs rounded">C-03-01</span></td>
+<td class="py-space-sm px-space-md text-right font-semibold text-error">6 UN</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md font-bold">$76.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30">
+<td class="py-space-sm px-space-md font-tabular-mono-md text-primary font-bold">NGK-LMAR9AI8</td>
+<td class="py-space-sm px-space-md font-medium">Bujía Láser Iridium NGK LMAR9AI-8 KTM</td>
+<td class="py-space-sm px-space-md text-secondary">Encendido &amp; Eléctrico</td>
+<td class="py-space-sm px-space-md"><span class="bg-surface-container-high px-space-xs py-space-2xs rounded">B-01-19</span></td>
+<td class="py-space-sm px-space-md text-right font-semibold text-tertiary">24 UN</td>
+<td class="py-space-sm px-space-md text-right font-tabular-mono-md font-bold">$19.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- FOREGROUND SPOTLIGHT MODAL OVERLAY: COMMAND PALETTE (CTRL + K) -->
+<div class="fixed inset-0 z-50 flex items-start justify-center pt-8 sm:pt-14 px-space-sm sm:px-space-md bg-inverse-surface/65 backdrop-blur-sm transition-all duration-200" id="commandPaletteOverlay">
+<!-- Center Modal HUD Container -->
+<div class="w-full max-w-3xl bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[88vh] animate-in fade-in zoom-in-95 duration-150">
+<!-- TOP COMMAND INPUT HEADER -->
+<div class="p-space-md sm:p-space-lg bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-inner">
+<!-- Icon Active Scanner / Search -->
+<div class="flex items-center gap-space-2xs text-primary-container">
+<span class="material-symbols-outlined text-2xl animate-pulse">barcode_scanner</span>
+</div>
+<!-- Input Element Simulation -->
+<div class="flex-1 flex items-center gap-space-2xs text-on-surface">
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface tracking-tight">KTM 6030</span>
+<span class="inline-block w-0.5 h-6 bg-primary-container animate-pulse rounded-full"></span>
+</div>
+<!-- Action Shortcuts -->
+<div class="hidden sm:flex items-center gap-space-xs">
+<span class="px-space-sm py-space-2xs font-label-xs text-label-xs bg-surface-container text-on-surface-variant font-mono rounded shadow-sm">ESC Salir</span>
+<span class="px-space-sm py-space-2xs font-label-xs text-label-xs bg-primary-container text-on-primary font-mono rounded shadow-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">keyboard_return</span> Seleccionar
+            </span>
+</div>
+</div>
+<!-- Filter Segment Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs">
+<button class="bg-inverse-surface text-inverse-on-surface font-label-xs text-label-xs px-space-md py-space-xs rounded-full flex items-center gap-space-xs shadow-sm whitespace-nowrap">
+<span>Todos los Resultados</span>
+<span class="bg-primary-container text-on-primary px-space-xs py-0.5 rounded-full text-label-xs">6</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-md py-space-xs rounded-full flex items-center gap-space-xs transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-tertiary">inventory_2</span>
+<span>Repuestos SKU</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-space-xs py-0.5 rounded-full text-label-xs">3</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-md py-space-xs rounded-full flex items-center gap-space-xs transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-primary-container">build</span>
+<span>Órdenes OT Taller</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-space-xs py-0.5 rounded-full text-label-xs">2</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-md py-space-xs rounded-full flex items-center gap-space-xs transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-secondary">person</span>
+<span>Clientes</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-space-xs py-0.5 rounded-full text-label-xs">1</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-md py-space-xs rounded-full flex items-center gap-space-xs transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-secondary">pin_drop</span>
+<span>Ubicación Pasillos</span>
+</button>
+</div>
+</div>
+<!-- RESULTS SCROLL CONTAINER -->
+<div class="overflow-y-auto px-space-md sm:px-space-lg py-space-sm flex flex-col gap-space-lg bg-surface-container-lowest">
+<!-- SECTION 1: REPUESTOS EN STOCK -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-xs text-label-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-primary-container">inventory</span>
+<span>Repuestos en Stock (OEM &amp; Aftermarket)</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">3 Coincidencias</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- ITEM 1: SELECTED / ACTIVE ROW -->
+<div class="p-space-md rounded-xl bg-orange-50/70 shadow-sm relative overflow-hidden transition-all duration-150">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md pl-space-xs">
+<!-- Left Details & Thumbnail -->
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden shadow-inner flex-shrink-0 flex items-center justify-center">
+<img alt="Kit Filtro Aceite OEM KTM LC8" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-xs py-0.5 rounded font-bold uppercase tracking-tight">KTM OEM GENUINE</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Kit Filtro Aceite OEM KTM LC8 1290 / 1090</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap text-secondary font-body-sm text-body-sm">
+<span class="font-tabular-mono-md text-primary font-bold">SKU: KTM-6030-8015</span>
+<span>•</span>
+<span class="font-tabular-mono-md text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm">barcode</span> 7613317058291
+                      </span>
+</div>
+</div>
+</div>
+<!-- Right Inventory Metrics -->
+<div class="flex sm:flex-col items-end justify-between sm:justify-center w-full sm:w-auto gap-space-xs pt-space-xs sm:pt-0">
+<div class="flex items-center gap-space-xs">
+<span class="bg-secondary-container text-on-secondary-fixed font-label-xs text-label-xs px-space-sm py-space-2xs rounded-full font-bold flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                      14 UN Disp.
+                    </span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">
+                      Pasillo C-04-12
+                    </span>
+</div>
+<div class="text-right">
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface tracking-tight">$45.00 <span class="font-body-sm text-body-sm text-secondary font-normal">USD</span></span>
+<span class="block font-label-xs text-label-xs text-secondary font-medium">$125,000 COP</span>
+</div>
+</div>
+</div>
+<!-- Contextual Hotkey Ribbon for Selected Item -->
+<div class="mt-space-sm pt-space-sm flex flex-wrap items-center gap-space-xs bg-surface-container-lowest/80 p-space-xs rounded-lg">
+<span class="font-label-xs text-label-xs text-secondary mr-space-xs font-semibold uppercase tracking-wider">Acciones Directas:</span>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-2xs rounded flex items-center gap-space-xs transition-colors">
+<span class="font-mono bg-surface-container px-space-2xs rounded text-primary font-bold">↵ Enter</span>
+<span>Ver Ficha Técnica</span>
+</button>
+<button class="bg-primary-container text-on-primary font-label-xs text-label-xs px-space-sm py-space-2xs rounded flex items-center gap-space-xs shadow-sm hover:bg-primary transition-colors">
+<span class="font-mono bg-primary px-space-2xs rounded text-on-primary font-bold">Ctrl+D</span>
+<span>Despachar a Bahía Taller</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-sm py-space-2xs rounded flex items-center gap-space-xs transition-colors">
+<span class="font-mono bg-surface-container px-space-2xs rounded text-secondary font-bold">Ctrl+E</span>
+<span>Añadir Stock / Entrada</span>
+</button>
+</div>
+</div>
+<!-- ITEM 2: SECONDARY ROW (CRITICAL STOCK) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md cursor-pointer transition-colors">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden shadow-inner flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High performance conical motorcycle air filter with orange anodized frame and high flow pleated mesh element on white clean background, technical studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsQBXCI3B5rCGVrMduYgHV5rh3F2enIKV94FTxuyLW-AOaYtuBDsZUOy2eief9BOFIFYEtiDcOEYkbFU3h_WllRpnhSGFqRHlbaL5dF_6se1L4Uc8F9cEMXB2o75ZC9NSboNAk-p9ZM6XROHm8uTc_jeK2cq0ppMVKPXxNWN5T5MUBqfTY1SeK0E0metkRsLwTkIbutqYTsrrN8TjqXVTgtxuzwbp2C-0RFxS9lUD1ZC5Ex9pBwbSd"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-xs py-0.5 rounded font-bold uppercase">AFTERMARKET RACE</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Filtro de Aire Alto Rendimiento KTM Adventure 1290 R/S</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap text-secondary font-body-sm text-body-sm">
+<span class="font-tabular-mono-md text-on-surface font-bold">SKU: KTM-6030-1002</span>
+<span>•</span>
+<span class="font-tabular-mono-md text-on-surface-variant">Código: 7613317051104</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between sm:justify-center w-full sm:w-auto gap-space-xs pt-space-xs sm:pt-0">
+<div class="flex items-center gap-space-xs">
+<span class="bg-error-container text-error font-label-xs text-label-xs px-space-sm py-space-2xs rounded-full font-bold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">priority_high</span>
+                    6 UN (Stock Mínimo)
+                  </span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">
+                    Pasillo C-03-01
+                  </span>
+</div>
+<div class="text-right">
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface tracking-tight">$76.00 <span class="font-body-sm text-body-sm text-secondary font-normal">USD</span></span>
+</div>
+</div>
+</div>
+<!-- ITEM 3: SPARK PLUG -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md cursor-pointer transition-colors">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden shadow-inner flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Laser Iridium premium spark plug with ceramic white insulator and sharp electrode tip, isolated on workshop slate background, automotive spare part" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr4i9XL1g7hFwXvLLzGfwGV8hbI4zg0x9c4Ydbjcb7bIBEhEhOxuCfIk5lz-L7KblCy8KPKGnhTz-YxJ3Fr05cedxCF44TJ4c5ROtAKrVsBzzpA7X314qz_vOYyIU_Ittlw4Pq_Z1Zqb5Xknc1uJ4p_X3XKGuIRmwsv-1YxBGLx-qQ5PVaDkYSLEhEesZjSIAslwWSxjDx858zKPPnUHRs3DlzG9TngcNaAG0USaW68T_U9dEZj987"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-surface-container-highest text-on-surface font-label-xs text-label-xs px-space-xs py-0.5 rounded font-bold uppercase">NGK SPARK PLUGS</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Bujía Láser Iridium NGK LMAR9AI-8 (KTM 1290 Spark Plug)</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap text-secondary font-body-sm text-body-sm">
+<span class="font-tabular-mono-md text-on-surface font-bold">SKU: NGK-LMAR9AI8</span>
+<span>•</span>
+<span class="font-tabular-mono-md text-on-surface-variant">Electrodo Fino 0.6mm</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-end justify-between sm:justify-center w-full sm:w-auto gap-space-xs pt-space-xs sm:pt-0">
+<div class="flex items-center gap-space-xs">
+<span class="bg-secondary-container text-on-secondary-fixed font-label-xs text-label-xs px-space-sm py-space-2xs rounded-full font-bold">
+                    24 UN Disp.
+                  </span>
+<span class="bg-surface-container-high text-on-surface font-label-xs text-label-xs px-space-xs py-space-2xs rounded font-mono">
+                    Pasillo B-01-19
+                  </span>
+</div>
+<div class="text-right">
+<span class="font-tabular-mono-lg text-tabular-mono-lg font-bold text-on-surface tracking-tight">$19.50 <span class="font-body-sm text-body-sm text-secondary font-normal">USD</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: ÓRDENES DE TRABAJO ACTIVAS RELACIONADAS -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-xs text-label-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-tertiary">build_circle</span>
+<span>Órdenes de Trabajo Activas Relacionadas (Bahía Taller)</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-bold">1 Solicitud Pendiente</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-highest text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">two_wheeler</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-inverse-surface text-inverse-on-surface font-label-xs text-label-xs px-space-xs py-0.5 rounded font-mono font-bold">OT-1048</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">KTM 1290 Super Adventure S</span>
+<span class="bg-secondary-container text-on-secondary-fixed font-label-xs text-label-xs px-space-xs py-0.5 rounded font-mono font-bold">Placa JKL-92D</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap text-secondary font-body-sm text-body-sm">
+<span class="text-on-surface font-medium">Cliente: Roberto Valencia Ospina</span>
+<span>•</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-sm text-primary">engineering</span>
+                    Bahía B-04 (Mecánico Andrés López)
+                  </span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="bg-primary-container/15 text-primary-container font-label-xs text-label-xs px-space-xs py-0.5 rounded font-semibold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-xs">pending</span> Pieza Requerida: Kit Filtro Aceite KTM-6030-8015 (1 UN)
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md px-space-md py-space-xs rounded flex items-center gap-space-xs shadow-sm transition-colors">
+<span>Ir a Orden OT-1048</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 3: ACCIONES RÁPIDAS Y ATAJOS GLOBALES -->
+<div class="flex flex-col gap-space-xs pb-space-sm">
+<div class="px-space-xs">
+<span class="font-label-xs text-label-xs uppercase text-secondary tracking-wider">Acciones Rápidas &amp; Atajos Globales</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-left flex items-center justify-between group transition-colors shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">post_add</span>
+<span class="font-label-md text-label-md text-on-surface">Registrar Compra KTM</span>
+</div>
+<span class="font-mono text-label-xs text-secondary bg-surface-container px-space-2xs rounded">Ctrl+N</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-left flex items-center justify-between group transition-colors shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-tertiary">forklift</span>
+<span class="font-label-md text-label-md text-on-surface">Despacho a Bahía</span>
+</div>
+<span class="font-mono text-label-xs text-secondary bg-surface-container px-space-2xs rounded">Ctrl+S</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high text-left flex items-center justify-between group transition-colors shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary-container">point_of_sale</span>
+<span class="font-label-md text-label-md text-on-surface">Cobro Caja POS</span>
+</div>
+<span class="font-mono text-label-xs text-secondary bg-surface-container px-space-2xs rounded">Ctrl+L</span>
+</button>
+</div>
+</div>
+</div>
+<!-- FOOTER COMMAND HUD STATUS BAR -->
+<div class="px-space-md sm:px-space-lg py-space-sm bg-surface-container text-on-surface-variant flex flex-col sm:flex-row items-center justify-between gap-space-xs shadow-inner">
+<!-- Scanner Peripheral Readiness -->
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="material-symbols-outlined text-sm text-tertiary">cable</span>
+<span>Escáner Óptico USB / Bluetooth: <strong class="text-on-surface font-semibold">LISTO PARA LECTURA (OpticSync)</strong></span>
+</div>
+<!-- Keyboard Navigation Instructions -->
+<div class="flex items-center gap-space-sm font-label-xs text-label-xs text-secondary">
+<span class="flex items-center gap-space-2xs"><kbd class="bg-surface-container-lowest px-1 rounded shadow-2xs font-mono">↑</kbd><kbd class="bg-surface-container-lowest px-1 rounded shadow-2xs font-mono">↓</kbd> Navegar</span>
+<span>•</span>
+<span class="flex items-center gap-space-2xs"><kbd class="bg-surface-container-lowest px-1 rounded shadow-2xs font-mono">↵</kbd> Seleccionar</span>
+<span>•</span>
+<span class="flex items-center gap-space-2xs"><kbd class="bg-surface-container-lowest px-1 rounded shadow-2xs font-mono">Tab</kbd> Filtro</span>
+<span>•</span>
+<span class="flex items-center gap-space-2xs"><kbd class="bg-surface-container-lowest px-1 rounded shadow-2xs font-mono">Esc</kbd> Salir</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 bg-inverse-surface text-inverse-on-surface z-50 flex items-center justify-between px-space-md font-label-xs text-label-xs shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span>Conexión Sede Central: <strong class="font-semibold">Online</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">print</span><span>Impresora Térmica: <strong class="font-semibold">Conectada</strong></span></div><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-sm text-tertiary-container">lock_open</span><span>Gaveta de Dinero: <strong class="font-semibold">Lista</strong></span></div></div><div class="flex items-center gap-space-sm text-inverse-on-surface/80"><span class="material-symbols-outlined text-sm">sync</span><span>Última sincro: Hace 2m</span></div></footer></body></html>

@@ -1,0 +1,144 @@
+================================================================================
+  🏍️  MOTOPRO WORKSHOP ERP & POS SYSTEM v2.4 (Enterprise Suite)
+  GUÍA RÁPIDA DE INSTALACIÓN, EMPAQUETADO Y DESPLIEGUE (LEEME.TXT)
+================================================================================
+
+¡Bienvenido a MotoPro Workshop ERP!
+Este paquete contiene el sistema completo e integral para la gestión técnica,
+operativa, contable y de punto de venta (POS) para talleres de motocicletas.
+
+--------------------------------------------------------------------------------
+1. 📂 CONTENIDO DEL PAQUETE
+--------------------------------------------------------------------------------
+motopro-workshop-erp/
+  ├── index.html                   -> Portal general, explorador y Swagger UI
+  ├── README.md                    -> Documentación técnica completa (Markdown)
+  ├── LEEME.txt                    -> Esta guía de inicio rápido y comandos
+  ├── setup.sh                     -> Script bash de automatización para Linux/macOS
+  │
+  ├── desktop/                     -> 16 Pantallas ERP de administración y caja
+  │     ├── login-multiusuario.html
+  │     ├── dashboard-pos.html
+  │     ├── ordenes-taller.html
+  │     ├── recepcion-inspeccion.html
+  │     ├── diagnostico-cotizacion.html
+  │     ├── inventario-movimientos.html
+  │     ├── entrada-compra.html
+  │     ├── salida-despacho.html
+  │     ├── factura-liquidacion.html
+  │     ├── factura-dian-pdf-a4.html
+  │     ├── tirilla-pos-80mm.html
+  │     ├── arqueo-cierre-reporte-z.html
+  │     ├── egresos-caja-menor.html
+  │     ├── formas-de-pago.html
+  │     ├── garantias-reclamos.html
+  │     └── configuracion-sedes.html
+  │
+  ├── mobile/                      -> 4 Pantallas táctiles PWA y WhatsApp
+  │     ├── bahia-mecanico-tactil.html
+  │     ├── captura-evidencias-voz.html
+  │     ├── portal-cliente-whatsapp.html
+  │     └── confirmacion-firma-digital.html
+  │
+  ├── database/                    -> Persistencia relacional en PostgreSQL 14+
+  │     ├── schema.sql             -> 14 tablas, tipos ENUM, triggers y vistas
+  │     └── seed.sql               -> Datos demo completos (KTM 1290, Laura Gómez)
+  │
+  ├── api/                         -> Especificación REST OpenAPI 3.0.3
+  │     └── openapi-motopro-erp-v2.4.yaml
+  │
+  └── assets/                      -> Logotipos, avatares y recursos gráficos
+
+--------------------------------------------------------------------------------
+2. ⚡ INICIO INMEDIATO (ZERO-CONFIG / SIN SERVIDOR)
+--------------------------------------------------------------------------------
+No necesitas instalar Node.js, Python ni bases de datos para auditar las 24 vistas:
+
+1. Extrae el archivo ZIP en cualquier carpeta.
+2. Haz doble clic en "index.html" o ábrelo en tu navegador favorito:
+   (Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge).
+3. Todas las pantallas, atajos de teclado (Ctrl+K, Ctrl+M), modales y la consola
+   Swagger UI interactiva funcionarán de forma autónoma.
+
+--------------------------------------------------------------------------------
+3. 🚀 EJECUCIÓN AUTOMATIZADA CON SCRIPT (setup.sh)
+--------------------------------------------------------------------------------
+En Linux, macOS o Windows (WSL / Git Bash), otorga permisos de ejecución y corre:
+
+   chmod +x setup.sh
+   ./setup.sh
+
+El script te permitirá con 1 solo clic:
+  [1] Desplegar un servidor web local inmediato (Python / PHP / Node / Caddy).
+  [2] Crear la base de datos PostgreSQL y migrar schema.sql + seed.sql.
+  [3] Empaquetar todo el proyecto en un archivo ZIP limpio listo para entrega.
+  [4] Verificar integridad de los 24 archivos HTML y dependencias.
+
+--------------------------------------------------------------------------------
+4. 🗄️ INSTALACIÓN DE BASE DE DATOS POSTGRESQL 14+ (MANUAL)
+--------------------------------------------------------------------------------
+Si vas a conectar el sistema con un backend en producción:
+
+1. Asegúrate de tener PostgreSQL 14 o superior instalado y en ejecución.
+2. Abre tu terminal y ejecuta:
+
+   # Crear la base de datos:
+   createdb -U postgres motopro_db
+
+   # Ejecutar el esquema (Tablas, ENUMs, Triggers y Vistas):
+   psql -U postgres -d motopro_db -f database/schema.sql
+
+   # Cargar datos de prueba consistentes:
+   psql -U postgres -d motopro_db -f database/seed.sql
+
+--------------------------------------------------------------------------------
+5. 🔑 CREDENCIALES DE ACCESO DEMO
+--------------------------------------------------------------------------------
+• Supervisor / Jefe de Taller:
+  - Usuario: carlos.m@motopro.com
+  - Clave:   MotoPro2024*
+  - PIN:     8921 (Para desbloqueo de arqueo y autorizaciones supervisor)
+
+• Cajera Principal Mostrador POS:
+  - Usuario: laura.gomez
+  - Clave:   MotoPro2024*
+
+• Mecánico Bahía B-04 (Elevador #2):
+  - Usuario: andres.lopez
+  - Clave:   MotoPro2024*
+
+• Asesor de Servicio:
+  - Usuario: felipe.sarmiento
+  - Clave:   MotoPro2024*
+
+• Almacenista Kardex:
+  - Usuario: jorge.bodega
+  - Clave:   MotoPro2024*
+
+--------------------------------------------------------------------------------
+6. 🔌 CONEXIÓN BACKEND & HARDWARE POS (window.MOTOPRO_CONFIG)
+--------------------------------------------------------------------------------
+En index.html o en el archivo de configuración global puedes ajustar los
+parámetros para enlazar periféricos y el backend REST:
+
+window.MOTOPRO_CONFIG = {
+  API_BASE_URL: "https://api.tu-taller.com/v1", // O http://localhost:8000/v1
+  SEDE_ID: "SEDE-CENTRAL-01",
+  TERMINAL_POS_ID: "POS-01-MOSTRADOR",
+  EPSON_PRINTER_IP: "192.168.1.150",
+  EPSON_PRINTER_PORT: 9100,
+  REDEBAN_POS_IP: "192.168.1.180:8088",
+  TRM_DEFAULT_COP_USD: 4001.20,
+  ENABLE_AUTO_DRAWER_PULSE: true
+};
+
+• Atajos de Teclado Operativos:
+  <Ctrl> + <K> : Búsqueda rápida global por OT, Placa, VIN o SKU.
+  <Ctrl> + <M> : Registro instantáneo de Vales de Caja Menor.
+  <Ctrl> + <P> : Imprimir tirilla de 80mm o Factura A4.
+  <F9>         : Disparo manual de apertura de la Gaveta de Dinero (RJ11).
+
+--------------------------------------------------------------------------------
+Soporte técnico: soporte@motopro.com | Licencia: MIT
+Desarrollado para la comunidad de especialistas en dos ruedas y retail motriz. 🏍️💨
+================================================================================

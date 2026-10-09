@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#ffb690","on-error-container":"#93000a","tertiary":"#006398","surface-container-lowest":"#ffffff","surface":"#f8f9ff","primary-fixed":"#ffdbca","outline-variant":"#e0c0b1","primary":"#9d4300","on-primary":"#ffffff","outline":"#8c7164","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","surface-tint":"#9d4300","background":"#f8f9ff","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","error-container":"#ffdad6","on-surface-variant":"#584237","inverse-primary":"#ffb690","on-secondary-container":"#5c647a","surface-bright":"#f8f9ff","on-secondary-fixed-variant":"#3f465c","primary-container":"#f97316","on-background":"#0b1c30","on-tertiary-fixed":"#001d31","surface-variant":"#d3e4fe","on-tertiary-container":"#003655","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#783200","surface-container-highest":"#d3e4fe","on-tertiary-fixed-variant":"#004b73","on-secondary-fixed":"#131b2e","on-secondary":"#ffffff","tertiary-fixed":"#cce5ff","secondary-fixed-dim":"#bec6e0","tertiary-fixed-dim":"#93ccff","on-tertiary":"#ffffff","secondary":"#565e74","on-surface":"#0b1c30","inverse-surface":"#213145","secondary-fixed":"#dae2fd","surface-container":"#e5eeff","secondary-container":"#dae2fd","on-primary-container":"#582200","on-primary-fixed":"#341100","tertiary-container":"#40a2e7","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-xl":"1.5rem","space-2xl":"2rem","space-md":"0.75rem","gutter-dense":"0.5rem","space-xs":"0.25rem","space-2xs":"0.125rem","space-lg":"1rem","gutter":"1rem","margin":"1.5rem","margin-mobile":"0.75rem"},"fontFamily":{"display-lg":["Inter"],"tabular-mono-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"headline-lg":["Inter"],"display-lg-mobile":["Inter"],"label-xs":["Inter"],"headline-xl":["Inter"],"tabular-mono-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-md":["Inter"]},"fontSize":{"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"tabular-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-xs":["10px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"tabular-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 flex items-center px-space-lg gap-space-sm bg-surface-container-lowest"><img alt="Geometric motorcycle gear and wrench emblem logo with clean modern typography 'MotoPro Workshop ERP', automotive orange #f97316 and dark slate, minimalist vector flat icon style. Design context: - Primary color: #f97316
+- Font: inter
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VrVBw6xcnXDUkN2wSpeEVdCrsJ7AYVSHm4THlHumFFc153Drx-490uOraAaReUgtyzjlXY61ef8EMVbV1foO6f6OPblFYjLWRAVFcg3uK_5uOt_Pb1VMhvUAiJsdKIfDUgqCkv_Qy8oCIkTnd-Dt3ExHYNsNSWTILxaVP3dZvLJw9JcRmC3LlBeiFQ2MTfNb8srJh-aGrmp8CrzmJqvWD8HmmOLszrD9CWZEyqH1KTK-b3IxicLR12Atc"/><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface leading-tight">MotoPro</span><span class="font-label-xs text-label-xs text-primary font-bold uppercase tracking-wider">Workshop ERP</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface font-medium">Entorno</span></div><select aria-label="Seleccionar entorno de ejecución" class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface rounded-lg px-space-xs py-space-2xs outline-none cursor-pointer"><option value="gh-pages">GitHub Pages</option><option value="local">Local Dev (3000)</option></select></div></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider font-bold">Directorio Central</span></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="directorio-modulos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Todos los Módulos</span></div><span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-bold">24</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="erp-administracion" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">ERP &amp; Administración</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="taller-bahias" href="#"><span class="material-symbols-outlined text-[18px]">two_wheeler</span><span class="font-body-md text-body-md">Taller &amp; Bahías</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="punto-de-venta-pos" href="#"><span class="material-symbols-outlined text-[18px]">point_of_sale</span><span class="font-body-md text-body-md">Punto de Venta &amp; POS</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="movil-pwa-operarios" href="#"><span class="material-symbols-outlined text-[18px]">smartphone</span><span class="font-body-md text-body-md">Móvil &amp; PWA Operarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="portal-clientes-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-body-md text-body-md">Portal WhatsApp</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentacion-readme" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Documentación &amp; README</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="flex items-center justify-between text-on-surface-variant"><span class="font-label-xs text-label-xs">REPOSITORIO v2.4</span><span class="flex items-center gap-space-2xs font-label-xs text-label-xs text-on-surface font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Producción</span></div><div class="flex items-center gap-space-xs pt-space-xs"><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">code</span>Repo</a><a class="flex-1 flex items-center justify-center gap-space-2xs py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">download</span>ZIP</a></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" placeholder="Buscar módulo, orden, chasis o parte... (Ctrl + K)" type="text"/><kbd class="absolute right-space-sm px-space-xs py-space-2xs bg-surface-container-lowest text-on-surface-variant font-label-xs text-label-xs rounded shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-semibold">v2.4 Prod</span></div><button aria-label="Estado del sistema sincronizado" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">sync</span></button><button aria-label="Notificaciones y alertas operativas" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button></div><div class="flex items-center gap-space-sm pl-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XGH2JZwq0yw-ueAZDBjoHLlC6xa_gKOeccBO2SCLr0ywaLkYYqM3qezx_n_a0LfBNFBMsDaZZMcJr8SdiTp7LAWBeqLfXOnyN7gqTQKnb_EAOEeyYNRCu2aQ3rUaYs7KKvwydIBLG4wNrQ4TAGQlxSEBm0xLMx2yBXDhR3w8LK_2rgXIwV5DSDdVtoTL9wIrYiaPFc_h9zIQt_4lxQdeg6ncYXHb-S59OEFpjVelIkTcKTiper7UMJ3_0"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-bold leading-none">Carlos M.</span><span class="font-label-xs text-label-xs text-on-surface-variant font-medium">Jefe de Taller</span></div></div></div></header><main class="flex-1 pt-16 bg-surface w-full px-space-xl py-space-xl"><div class="flex flex-col w-full">
+<!-- Top API Sandbox Specification & Engine Header -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl mb-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[28px]">api</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface">Swagger UI &amp; Mock Sandbox</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-label-xs text-label-xs uppercase">OAS 3.0.3</span>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary text-on-tertiary font-label-xs text-label-xs">DIAN UBL 2.1</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs">ESC/POS 80mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+            Entorno interactivo de prueba para integración de microservicios de taller, telemetría de bahías, POS multicaja y facturación fiscal electrónica.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-start lg:self-center shrink-0">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface">Mock Server: <strong class="text-primary-container">En Línea</strong></span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:opacity-90 transition-opacity" id="btn-export-spec">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Exportar OpenAPI JSON
+        </button>
+</div>
+</div>
+<!-- Telemetry & Base URL Ribbon -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-md bg-surface-container-low rounded-lg p-space-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Base URL Producción</span>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<code class="font-tabular-mono-md text-tabular-mono-md text-on-surface font-bold">https://api.tu-taller.com/v1</code>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="navigator.clipboard.writeText('https://api.tu-taller.com/v1')" title="Copiar URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Latencia Media P95</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">bolt</span> 11.4 ms
+        </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Throughput Mock Engine</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold mt-space-2xs flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">speed</span> 2,840 req/min
+        </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Token Auth de Sandbox</span>
+<span class="font-tabular-mono-md text-tabular-mono-md text-on-surface-variant mt-space-2xs truncate">Bearer moto_sbx_99a8f...092b</span>
+</div>
+</div>
+</div>
+<!-- Endpoints Category Filter Navigation -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-sm mb-space-lg scrollbar-none">
+<button class="cat-pill active-cat px-space-md py-space-xs rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface shrink-0 transition-colors" data-cat="all">
+      Todos (14)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="auth">
+      Autenticación (2)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="recepcion">
+      Recepción 360° (1)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="taller">
+      Taller &amp; Bahías (4)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="baremo">
+      Baremo (1)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="inventario">
+      Inventario (2)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="caja">
+      Caja POS &amp; Cierres (3)
+    </button>
+<button class="cat-pill px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container shrink-0 transition-colors" data-cat="dian">
+      Facturación DIAN (1)
+    </button>
+</div>
+<!-- Endpoints Accordion List -->
+<div class="flex flex-col gap-space-md mb-space-2xl" id="endpoints-container">
+<!-- 1. POST /caja/liquidaciones (POS Settlement) -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="caja">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/caja/liquidaciones</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Genera liquidación multicaja, ticket térmico ESC/POS y QR de portería</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface font-semibold">Priority 1</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg">
+<!-- Scenario selector bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Escenario Mock de Pago:</span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-primary-container text-on-primary font-bold shadow-sm" onclick="setLiquidacionScenario('split', this)">Split USD + Datáfono</button>
+<button class="scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-lowest text-on-surface hover:bg-surface-container font-medium" onclick="setLiquidacionScenario('cop', this)">Efectivo COP Exacto</button>
+<button class="scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-lowest text-error hover:bg-error-container font-medium" onclick="setLiquidacionScenario('error422', this)">Error 422 (Falta ID)</button>
+</div>
+</div>
+<!-- Parameter & Payload Area -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold">Request Body (application/json)</label>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Schema: SettlementPayload</span>
+</div>
+<textarea class="w-full h-72 font-tabular-mono-md text-tabular-mono-md p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface focus:outline-none resize-none leading-relaxed" id="pos-payload" spellcheck="false">{
+  "orden_taller_id": "OT-2025-0892",
+  "caja_id": "POS-CENTRAL-01",
+  "cajero_id": "OP-CARLOS-M",
+  "desglose_pagos": [
+    {
+      "metodo": "DATAFONO_VISA",
+      "monto_cop": 320000,
+      "referencia_voucher": "VISA-APPR-993812"
+    },
+    {
+      "metodo": "EFECTIVO_USD",
+      "monto_divisa": 50,
+      "tasa_trm": 4150,
+      "equivalente_cop": 207500
+    }
+  ],
+  "solicitar_factura_electronica": true,
+  "generar_qr_porteria": true
+}</textarea>
+<div class="mt-space-xs flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Comando cURL Equivalente:</span>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-x-auto flex items-center justify-between">
+<code class="truncate pr-space-md" id="pos-curl">curl -X POST "https://api.tu-taller.com/v1/caja/liquidaciones" -H "Authorization: Bearer moto_sbx_99a8f..." -d '{"orden_taller_id":"OT-2025-0892"}'</code>
+<button class="text-on-surface-variant hover:text-on-surface shrink-0" onclick="copySnippet('pos-curl')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm">
+<button class="w-full py-space-sm bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-space-xs" onclick="executeMockRequest('pos')">
+<span class="material-symbols-outlined text-[18px] hidden animate-spin" id="pos-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[18px]" id="pos-icon">play_arrow</span>
+<span>Execute / Probar Endpoint</span>
+</button>
+</div>
+</div>
+<!-- Response Panel -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Server Response</span>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container font-label-xs text-label-xs text-on-surface font-bold" id="pos-status-badge">Standby (Presiona Execute)</span>
+</div>
+</div>
+<div class="h-72 p-space-md rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-y-auto leading-relaxed flex flex-col justify-center items-center text-center text-on-surface-variant" id="pos-response-box">
+<span class="material-symbols-outlined text-[36px] mb-space-xs opacity-50">terminal</span>
+<p>Haz clic en "Execute" para emitir la petición a la sandbox virtual de MotoPro.</p>
+</div>
+<!-- Thermal & QR visual preview -->
+<div class="hidden p-space-md rounded-lg bg-surface-container flex items-center justify-between gap-space-md" id="pos-visual-preview">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-lg p-space-xs flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[40px] text-on-surface">qr_code_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Salida de Portería Habilitada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recibo: REC-POS-00892 | Validez: 25 min</span>
+<span class="font-label-xs text-label-xs text-primary font-bold">ESC/POS 80mm enviado a spooler</span>
+</div>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs hover:bg-surface-container-high transition-colors" onclick="alert('Ticket ESC/POS re-enviado a la impresora térmica.')">
+                  Imprimir Ticket
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. POST /caja/cierres/reporte-z (Reporte Z - Arqueo Ciego) -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="caja">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/caja/cierres/reporte-z</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Cierre fiscal diario, arqueo ciego y conciliación de turno</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface font-semibold">Priority 2</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-md text-label-md text-on-surface font-bold">Escenarios de Arqueo Físico:</span>
+<div class="flex items-center gap-space-xs">
+<button class="z-scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-primary-container text-on-primary font-bold shadow-sm" onclick="setReporteZScenario('cuadre', this)">Cuadre Exacto ($0)</button>
+<button class="z-scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="setReporteZScenario('descuadre', this)">Faltante -$20,000 COP</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Payload Declaración Arqueo Ciego</label>
+<textarea class="w-full h-64 font-tabular-mono-md text-tabular-mono-md p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface focus:outline-none resize-none leading-relaxed" id="reportez-payload" spellcheck="false">{
+  "caja_id": "POS-CENTRAL-01",
+  "turno_id": "TURNO-20250519-AM",
+  "usuario_supervisor": "SUP-8921",
+  "conteo_fisico_billetes": {
+    "100000": 12,
+    "50000": 24,
+    "20000": 15,
+    "10000": 8
+  },
+  "conteo_vouchers_tarjetas": 3450000,
+  "conteo_transferencias_nequi": 890000,
+  "notas_observacion": "Turno tarde cerrado sin novedad operativa"
+}</textarea>
+<button class="mt-space-sm w-full py-space-sm bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-space-xs" onclick="executeMockRequest('reportez')">
+<span class="material-symbols-outlined text-[18px] hidden animate-spin" id="reportez-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[18px]" id="reportez-icon">play_arrow</span>
+<span>Generar Reporte Z Auditado</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Certificado de Cierre Z</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container font-label-xs text-label-xs text-on-surface font-bold" id="reportez-status-badge">En espera</span>
+</div>
+<div class="h-64 p-space-md rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-y-auto leading-relaxed flex flex-col justify-center items-center text-center text-on-surface-variant" id="reportez-response-box">
+<span class="material-symbols-outlined text-[36px] mb-space-xs opacity-50">receipt_long</span>
+<p>Ejecuta la petición para auditar los cortes fiscales contra la base de datos de auditoría.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. POST /ordenes/{otId}/labor (Clock-in / Clock-out Técnico Bahía) -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="taller">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/ordenes/{otId}/labor</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Registro de tiempos de operarios, bahía y liquidación de baremo</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface font-semibold">Priority 3</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-md text-label-md text-on-surface font-bold">Acción de Telemetría:</span>
+<div class="flex items-center gap-space-xs">
+<button class="labor-scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-primary-container text-on-primary font-bold shadow-sm" onclick="setLaborScenario('clockin', this)">Clock-In Bahía B-04</button>
+<button class="labor-scenario-btn px-space-sm py-space-2xs rounded font-label-xs text-label-xs bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="setLaborScenario('clockout', this)">Clock-Out Finalizar Tarea</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Payload de Mano de Obra</label>
+<textarea class="w-full h-64 font-tabular-mono-md text-tabular-mono-md p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface focus:outline-none resize-none leading-relaxed" id="labor-payload" spellcheck="false">{
+  "bahia_id": "BAY-04-ELEVADOR-HIDRAULICO",
+  "tecnico_id": "MEC-014",
+  "servicio_baremo_id": "BAR-CALIPER-DUAL",
+  "accion": "START",
+  "odometro_taller": 24150,
+  "herramienta_especial_requerida": "TORQUIMETRO-MICROMETRICO-1/2"
+}</textarea>
+<button class="mt-space-sm w-full py-space-sm bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-space-xs" onclick="executeMockRequest('labor')">
+<span class="material-symbols-outlined text-[18px] hidden animate-spin" id="labor-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[18px]" id="labor-icon">play_arrow</span>
+<span>Procesar Registro de Labor</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Estado de la Bahía y Cronómetro</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container font-label-xs text-label-xs text-on-surface font-bold" id="labor-status-badge">Listo</span>
+</div>
+<div class="h-64 p-space-md rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-y-auto leading-relaxed flex flex-col justify-center items-center text-center text-on-surface-variant" id="labor-response-box">
+<span class="material-symbols-outlined text-[36px] mb-space-xs opacity-50">timer</span>
+<p>Simula el inicio o finalización de una intervención mecánica.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. POST /auth/login (Supervisor PIN & JWT Session) -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="auth">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/auth/login</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Autenticación rápida de cajero/supervisor mediante PIN o credenciales JWT</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface font-semibold">Priority 4</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Credenciales</label>
+<textarea class="w-full h-56 font-tabular-mono-md text-tabular-mono-md p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface focus:outline-none resize-none leading-relaxed" id="auth-payload" spellcheck="false">{
+  "sede_id": "SEDE-NORTE-BOG",
+  "identificador": "carlos.mora",
+  "pin_rapido": "8921",
+  "dispositivo_uuid": "POS-TERMINAL-01"
+}</textarea>
+<button class="mt-space-sm w-full py-space-sm bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-space-xs" onclick="executeMockRequest('auth')">
+<span class="material-symbols-outlined text-[18px] hidden animate-spin" id="auth-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[18px]" id="auth-icon">key</span>
+<span>Solicitar Token Bearer</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold">Token y Permisos Asignados</span>
+<div class="h-56 p-space-md rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-y-auto leading-relaxed flex flex-col justify-center items-center text-center text-on-surface-variant" id="auth-response-box">
+<span class="material-symbols-outlined text-[36px] mb-space-xs opacity-50">verified_user</span>
+<p>Presiona el botón para generar token JWT firmado con claims de supervisor.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. POST /recepciones (Peritaje 360 & Check-in) -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="recepcion">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/recepciones</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Check-in de motocicleta, peritaje 360°, silueta de daños y custodia</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-label-xs px-space-xs py-space-2xs rounded bg-surface-container text-on-surface font-semibold">Priority 5</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Payload de Recepción y Peritaje</label>
+<textarea class="w-full h-64 font-tabular-mono-md text-tabular-mono-md p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface focus:outline-none resize-none leading-relaxed" id="recep-payload" spellcheck="false">{
+  "placa": "XYZ-98F",
+  "vin_chasis": "9C2KD09210088912",
+  "marca": "YAMAHA",
+  "linea": "MT-09 SP",
+  "nivel_combustible_pct": 65,
+  "kilometraje_ingreso": 14230,
+  "danios_silueta": [
+    {"zona": "TAPA_LATERAL_IZQ", "tipo": "RAYON_PROFUNDO", "severidad": "MEDIA"},
+    {"zona": "LEVA_FRENO_DER", "tipo": "FISURA", "severidad": "ALTA"}
+  ],
+  "firma_custodia_cliente_base64": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0..."
+}</textarea>
+<button class="mt-space-sm w-full py-space-sm bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-space-xs" onclick="executeMockRequest('recep')">
+<span class="material-symbols-outlined text-[18px] hidden animate-spin" id="recep-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[18px]" id="recep-icon">assignment_turned_in</span>
+<span>Crear Orden y Peritaje</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold">Resultado de Admisión</span>
+<div class="h-64 p-space-md rounded-lg bg-surface-container-low font-tabular-mono-md text-tabular-mono-md text-on-surface overflow-y-auto leading-relaxed flex flex-col justify-center items-center text-center text-on-surface-variant" id="recep-response-box">
+<span class="material-symbols-outlined text-[36px] mb-space-xs opacity-50">two_wheeler</span>
+<p>Genera el comprobante de peritaje y notifica por WhatsApp al propietario.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Collapsible Endpoints -->
+<!-- GET /sedes -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="auth">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold">GET</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/sedes</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Listado de sedes activas, almacenes y puntos de servicio</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<span class="font-label-xs text-label-xs text-on-surface-variant block mb-space-xs">Respuesta Mock: 200 OK</span>
+<pre>[
+  {"id": "SEDE-NORTE-BOG", "nombre": "Sede Principal Norte Calle 127", "ciudad": "Bogotá", "bahias_activas": 8},
+  {"id": "SEDE-MED-POBLADO", "nombre": "Taller Express El Poblado", "ciudad": "Medellín", "bahias_activas": 5}
+]</pre>
+</div>
+</div>
+</div>
+<!-- GET /ordenes -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="taller">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold">GET</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/ordenes</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Consulta el pipeline de órdenes de trabajo en bahía con filtros de estado</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<span class="font-label-xs text-label-xs text-on-surface-variant block mb-space-xs">Query Params admitidos: ?estado=EN_PROCESO&amp;bahia_id=BAY-04</span>
+<pre>{
+  "total": 14,
+  "pagina": 1,
+  "items": [
+    {"ot_id": "OT-2025-0892", "placa": "XYZ-98F", "bahia": "BAY-04", "tecnico": "Carlos M.", "avance_pct": 80},
+    {"ot_id": "OT-2025-0893", "placa": "KTR-12B", "bahia": "BAY-02", "tecnico": "Javier L.", "avance_pct": 20}
+  ]
+}</pre>
+</div>
+</div>
+</div>
+<!-- GET /baremo/servicios -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="baremo">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold">GET</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/baremo/servicios</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Catálogo unificado de tarifas de horas-hombre y tiempos estándar</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<pre>{
+  "servicios": [
+    {"codigo": "BAR-CALIPER-DUAL", "descripcion": "Mantenimiento cáliper doble pistón", "tiempo_estimado_min": 75, "tarifa_base_cop": 95000},
+    {"codigo": "BAR-REV-DESMO", "descripcion": "Reglaje válvulas sistema desmodrómico", "tiempo_estimado_min": 240, "tarifa_base_cop": 380000}
+  ]
+}</pre>
+</div>
+</div>
+</div>
+<!-- GET /inventario/items/{sku} -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="inventario">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-tertiary text-on-tertiary font-tabular-mono-md text-tabular-mono-md font-bold">GET</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/inventario/items/{sku}</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Existencias multialmacén, ubicación en gaveta y compatibilidad OEM</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<pre>{
+  "sku": "BREMBO-07BB04SP",
+  "descripcion": "Pastillas Sinterizadas Brembo SP Delanteras",
+  "stock_global": 18,
+  "desglose": [
+    {"almacen": "ALM-PRINCIPAL-BOG", "ubicacion_estante": "PASILLO-03-GAVETA-14", "unidades": 12},
+    {"almacen": "TALLER-EXPRESS", "ubicacion_estante": "BAHIA-RAPIDA-B1", "unidades": 6}
+  ],
+  "precio_unitario_cop": 185000
+}</pre>
+</div>
+</div>
+</div>
+<!-- POST /inventario/despacho -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="inventario">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/inventario/despacho</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Descarga de repuestos de almacén con asignación directa a Orden de Trabajo</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<pre>{
+  "despacho_id": "DSP-9921",
+  "orden_taller_id": "OT-2025-0892",
+  "items_despachados": 2,
+  "costo_total_materiales_cop": 240000,
+  "estado": "APLICADO_EN_ORDEN"
+}</pre>
+</div>
+</div>
+</div>
+<!-- POST /fiscal/dian/facturas -->
+<div class="endpoint-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" data-category="dian">
+<div class="accordion-header p-space-md flex items-center justify-between cursor-pointer select-none bg-surface-container-lowest hover:bg-surface-container-low transition-colors" onclick="toggleEndpoint(this)">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary font-tabular-mono-md text-tabular-mono-md font-bold">POST</span>
+<span class="font-tabular-mono-lg text-tabular-mono-lg text-on-surface font-bold">/fiscal/dian/facturas</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Generación y firma UBL 2.1 XML con transmisión directa a DIAN</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform duration-200 chevron-icon">expand_more</span>
+</div>
+<div class="accordion-content hidden p-space-xl bg-surface-container-lowest">
+<div class="p-space-md bg-surface-container-low rounded-lg font-tabular-mono-md text-tabular-mono-md text-on-surface">
+<pre>{
+  "cufe": "78a9c011e089fae92bc443219aa432d0912384a0d9238e9203948e91823abce",
+  "numero_factura": "SETT-98124",
+  "dian_status": "ACEPTADA_CON_NOTIFICACION",
+  "qr_url": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=78a9c011...",
+  "xml_firmado_sha256": "3a9f02c0199e4b312..."
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-Side SDK Boilerplate & Configuration Snippet -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl shadow-sm p-space-xl mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">code_blocks</span>
+<span class="font-headline-md text-headline-md font-bold text-inverse-on-surface">SDK Boilerplate JavaScript (MotoPro Client v2.4)</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low text-on-surface rounded font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="copySnippet('sdk-code')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+        Copiar SDK
+      </button>
+</div>
+<pre class="p-space-md rounded-lg bg-surface-container-lowest text-on-surface font-tabular-mono-md text-tabular-mono-md overflow-x-auto leading-relaxed" id="sdk-code">// MotoPro Workshop ERP Client Setup
+window.MOTOPRO_CONFIG = {
+  baseUrl: 'https://api.tu-taller.com/v1',
+  apiKey: 'moto_sbx_99a8f4c01289b',
+  terminalId: 'POS-01',
+  timeoutMs: 8000
+};
+
+class MotoProApiClient {
+  constructor(config = window.MOTOPRO_CONFIG) {
+    this.config = config;
+  }
+
+  async request(path, options = {}) {
+    const url = `${this.config.baseUrl}${path}`;
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.config.apiKey}`,
+      'X-Terminal-ID': this.config.terminalId,
+      ...options.headers
+    };
+    
+    const response = await fetch(url, { ...options, headers });
+    if (!response.ok) {
+      throw new Error(`HTTP Error ${response.status}: ${await response.text()}`);
+    }
+    return response.json();
+  }
+
+  // POS &amp; Liquidaciones
+  liquidarOrden(payload) {
+    return this.request('/caja/liquidaciones', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+  }
+
+  // Cierre Reporte Z
+  cierreReporteZ(conteoData) {
+    return this.request('/caja/cierres/reporte-z', {
+      method: 'POST',
+      body: JSON.stringify(conteoData)
+    });
+  }
+
+  // Taller Clocking
+  registrarLabor(otId, laborData) {
+    return this.request(`/ordenes/${otId}/labor`, {
+      method: 'POST',
+      body: JSON.stringify(laborData)
+    });
+  }
+}
+
+// Ejemplo de uso:
+// const client = new MotoProApiClient();
+// client.liquidarOrden({ orden_taller_id: 'OT-2025-0892', ... });
+</pre>
+</div>
+</div>
+<script>
+  // Toggle Endpoint Accordion Function
+  function toggleEndpoint(headerEl) {
+    const card = headerEl.closest('.endpoint-card');
+    const content = card.querySelector('.accordion-content');
+    const chevron = headerEl.querySelector('.chevron-icon');
+    
+    const isHidden = content.classList.contains('hidden');
+    if (isHidden) {
+      content.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      chevron.classList.remove('rotate-180');
+    }
+  }
+
+  // Copy Snippet Utility
+  function copySnippet(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    const text = el.innerText || el.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Copiado al portapapeles');
+    });
+  }
+
+  // Filter Categories
+  document.querySelectorAll('.cat-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-pill').forEach(b => {
+        b.classList.remove('bg-inverse-surface', 'text-inverse-on-surface');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      btn.classList.add('bg-inverse-surface', 'text-inverse-on-surface');
+
+      const cat = btn.getAttribute('data-cat');
+      document.querySelectorAll('.endpoint-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Scenario Manager: Liquidaciones
+  function setLiquidacionScenario(scenario, btn) {
+    document.querySelectorAll('.scenario-btn').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary');
+      b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    btn.classList.add('bg-primary-container', 'text-on-primary');
+
+    const textarea = document.getElementById('pos-payload');
+    const curl = document.getElementById('pos-curl');
+
+    if (scenario === 'split') {
+      textarea.value = JSON.stringify({
+        "orden_taller_id": "OT-2025-0892",
+        "caja_id": "POS-CENTRAL-01",
+        "cajero_id": "OP-CARLOS-M",
+        "desglose_pagos": [
+          { "metodo": "DATAFONO_VISA", "monto_cop": 320000, "referencia_voucher": "VISA-APPR-993812" },
+          { "metodo": "EFECTIVO_USD", "monto_divisa": 50, "tasa_trm": 4150, "equivalente_cop": 207500 }
+        ],
+        "solicitar_factura_electronica": true,
+        "generar_qr_porteria": true
+      }, null, 2);
+      curl.textContent = `curl -X POST "https://api.tu-taller.com/v1/caja/liquidaciones" -H "Authorization: Bearer moto_sbx_99a8f..." -d '{"split":true,"total_cop":527500}'`;
+    } else if (scenario === 'cop') {
+      textarea.value = JSON.stringify({
+        "orden_taller_id": "OT-2025-0892",
+        "caja_id": "POS-CENTRAL-01",
+        "cajero_id": "OP-CARLOS-M",
+        "desglose_pagos": [
+          { "metodo": "EFECTIVO_COP", "monto_cop": 527500, "recibido": 550000, "cambio": 22500 }
+        ],
+        "solicitar_factura_electronica": false,
+        "generar_qr_porteria": true
+      }, null, 2);
+      curl.textContent = `curl -X POST "https://api.tu-taller.com/v1/caja/liquidaciones" -H "Authorization: Bearer moto_sbx_99a8f..." -d '{"metodo":"EFECTIVO_COP","monto":527500}'`;
+    } else if (scenario === 'error422') {
+      textarea.value = JSON.stringify({
+        "orden_taller_id": "",
+        "caja_id": "POS-CENTRAL-01",
+        "desglose_pagos": []
+      }, null, 2);
+      curl.textContent = `curl -X POST "https://api.tu-taller.com/v1/caja/liquidaciones" -H "Authorization: Bearer moto_sbx_99a8f..." -d '{"invalid":true}'`;
+    }
+  }
+
+  // Scenario Manager: Reporte Z
+  function setReporteZScenario(scenario, btn) {
+    document.querySelectorAll('.z-scenario-btn').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary');
+      b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    btn.classList.add('bg-primary-container', 'text-on-primary');
+
+    const textarea = document.getElementById('reportez-payload');
+    if (scenario === 'cuadre') {
+      textarea.value = JSON.stringify({
+        "caja_id": "POS-CENTRAL-01",
+        "turno_id": "TURNO-20250519-AM",
+        "usuario_supervisor": "SUP-8921",
+        "conteo_fisico_billetes": { "100000": 12, "50000": 24, "20000": 15, "10000": 8 },
+        "conteo_vouchers_tarjetas": 3450000,
+        "conteo_transferencias_nequi": 890000,
+        "notas_observacion": "Turno cerrado sin novedad"
+      }, null, 2);
+    } else {
+      textarea.value = JSON.stringify({
+        "caja_id": "POS-CENTRAL-01",
+        "turno_id": "TURNO-20250519-AM",
+        "usuario_supervisor": "SUP-8921",
+        "conteo_fisico_billetes": { "100000": 12, "50000": 24, "20000": 14, "10000": 8 },
+        "conteo_vouchers_tarjetas": 3450000,
+        "conteo_transferencias_nequi": 890000,
+        "notas_observacion": "Alerta de faltante de $20,000 en billetes de 20K"
+      }, null, 2);
+    }
+  }
+
+  // Scenario Manager: Labor
+  function setLaborScenario(scenario, btn) {
+    document.querySelectorAll('.labor-scenario-btn').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary');
+      b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    btn.classList.add('bg-primary-container', 'text-on-primary');
+
+    const textarea = document.getElementById('labor-payload');
+    if (scenario === 'clockin') {
+      textarea.value = JSON.stringify({
+        "bahia_id": "BAY-04-ELEVADOR-HIDRAULICO",
+        "tecnico_id": "MEC-014",
+        "servicio_baremo_id": "BAR-CALIPER-DUAL",
+        "accion": "START",
+        "odometro_taller": 24150,
+        "herramienta_especial_requerida": "TORQUIMETRO-MICROMETRICO-1/2"
+      }, null, 2);
+    } else {
+      textarea.value = JSON.stringify({
+        "bahia_id": "BAY-04-ELEVADOR-HIDRAULICO",
+        "tecnico_id": "MEC-014",
+        "servicio_baremo_id": "BAR-CALIPER-DUAL",
+        "accion": "STOP",
+        "minutos_laborados": 68,
+        "piezas_reemplazadas": ["BREMBO-07BB04SP"],
+        "observaciones_tecnicas": "Purgado completo de líquido DOT 5.1 realizado con éxito"
+      }, null, 2);
+    }
+  }
+
+  // Universal Mock Executor
+  function executeMockRequest(type) {
+    const spinner = document.getElementById(`${type}-spinner`);
+    const icon = document.getElementById(`${type}-icon`);
+    const responseBox = document.getElementById(`${type}-response-box`);
+    const statusBadge = document.getElementById(`${type}-status-badge`);
+    const visualPreview = document.getElementById('pos-visual-preview');
+
+    if (spinner && icon) {
+      spinner.classList.remove('hidden');
+      icon.classList.add('hidden');
+    }
+
+    if (statusBadge) {
+      statusBadge.textContent = 'Enviando...';
+      statusBadge.className = 'px-space-xs py-space-2xs rounded bg-surface-container-high font-label-xs text-label-xs text-on-surface font-bold animate-pulse';
+    }
+
+    setTimeout(() => {
+      if (spinner && icon) {
+        spinner.classList.add('hidden');
+        icon.classList.remove('hidden');
+      }
+
+      if (type === 'pos') {
+        const payloadVal = document.getElementById('pos-payload').value;
+        const isError = payloadVal.includes('"orden_taller_id": ""');
+
+        if (isError) {
+          statusBadge.textContent = '422 Unprocessable Entity';
+          statusBadge.className = 'px-space-xs py-space-2xs rounded bg-error-container text-on-error-container font-label-xs text-label-xs font-bold';
+          responseBox.innerHTML = `<pre class="text-left w-full text-error font-tabular-mono-md text-tabular-mono-md">{
+  "status": 422,
+  "error": "ValidationFailed",
+  "message": "orden_taller_id es un campo obligatorio y no puede estar vacío.",
+  "timestamp": "${new Date().toISOString()}"
+}</pre>`;
+          if (visualPreview) visualPreview.classList.add('hidden');
+        } else {
+          statusBadge.textContent = '200 OK (8ms)';
+          statusBadge.className = 'px-space-xs py-space-2xs rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs font-bold';
+          responseBox.innerHTML = `<pre class="text-left w-full text-on-surface font-tabular-mono-md text-tabular-mono-md">{
+  "status": 200,
+  "recibo_numero": "REC-POS-00892",
+  "orden_taller_id": "OT-2025-0892",
+  "monto_total_cop": 527500,
+  "qr_porteria_hash": "PORTERIA-VAL-98218-OK",
+  "cufe_dian": "91a82bc19401...8892",
+  "spooler_esc_pos": "SENT_TO_PRINTER_80MM",
+  "created_at": "${new Date().toISOString()}"
+}</pre>`;
+          if (visualPreview) visualPreview.classList.remove('hidden');
+        }
+      } else if (type === 'reportez') {
+        const payloadVal = document.getElementById('reportez-payload').value;
+        const isFaltante = payloadVal.includes('"20000": 14');
+        statusBadge.textContent = '200 OK Audited';
+        statusBadge.className = 'px-space-xs py-space-2xs rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs font-bold';
+
+        responseBox.innerHTML = `<pre class="text-left w-full text-on-surface font-tabular-mono-md text-tabular-mono-md">{
+  "cierre_z_id": "Z-20250519-01",
+  "arqueo_sistema_cop": 7120000,
+  "arqueo_fisico_cop": ${isFaltante ? 7100000 : 7120000},
+  "diferencia_cop": ${isFaltante ? -20000 : 0},
+  "estado_cuadre": "${isFaltante ? 'DESCUADRE_FALTANTE' : 'EXACTO'}",
+  "auditor_supervisor": "SUP-8921",
+  "hash_seguridad_bloque": "SHA256:7bc01...812"
+}</pre>`;
+      } else if (type === 'labor') {
+        statusBadge.textContent = '201 Created';
+        statusBadge.className = 'px-space-xs py-space-2xs rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs font-bold';
+        responseBox.innerHTML = `<pre class="text-left w-full text-on-surface font-tabular-mono-md text-tabular-mono-md">{
+  "labor_ticket_id": "LBR-9921",
+  "bahia": "BAY-04",
+  "tecnico": "Carlos Mora (MEC-014)",
+  "cronometro_activo": true,
+  "tiempo_acumulado_min": 68,
+  "tarifa_aplicada_cop": 95000,
+  "estado_orden": "EN_EJECUCION"
+}</pre>`;
+      } else if (type === 'auth') {
+        const authBox = document.getElementById('auth-response-box');
+        authBox.innerHTML = `<pre class="text-left w-full text-on-surface font-tabular-mono-md text-tabular-mono-md">{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDQVJMT1MtTSIsInJvbCI6IlNVUEVSVklTT1JfVEFMTEVSIiwiZXhwIjoxNzQ3Njc0MDUxfQ.82F...",
+  "token_type": "Bearer",
+  "expires_in": 28800,
+  "scope": ["pos:write", "caja:reporte_z", "taller:telemetria", "fiscal:dian"]
+}</pre>`;
+      } else if (type === 'recep') {
+        const recepBox = document.getElementById('recep-response-box');
+        recepBox.innerHTML = `<pre class="text-left w-full text-on-surface font-tabular-mono-md text-tabular-mono-md">{
+  "orden_taller_id": "OT-2025-0894",
+  "placa": "XYZ-98F",
+  "peritaje_id": "PER-0091",
+  "fotos_danios_procesadas": 2,
+  "notificacion_whatsapp": "ENVIADA_A_CLIENTE",
+  "bahia_asignada": "BAY-03-RECEPCION"
+}</pre>`;
+      }
+    }, 450);
+  }
+
+  // Export Swagger spec trigger
+  document.getElementById('btn-export-spec')?.addEventListener('click', () => {
+    const spec = {
+      openapi: "3.0.3",
+      info: { title: "MotoPro Workshop ERP Suite API", version: "2.4.0" },
+      servers: [{ url: "https://api.tu-taller.com/v1" }]
+    };
+    const blob = new Blob([JSON.stringify(spec, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "motopro-openapi-v2.4.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-xl py-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><span class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span>Sistema Operativo Activo</span><span>•</span><span>MotoPro Workshop ERP Suite</span><span>•</span><span>Node/Vite Engine v2.4</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">terminal</span>GitHub Repo</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">folder_zip</span>Descargar Release .zip</a><a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">help</span>Soporte Técnico</a></div></footer></div></body></html>

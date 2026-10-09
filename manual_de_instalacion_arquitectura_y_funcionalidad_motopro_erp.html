@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>📦 PAQUETE DE IMPLEMENTACIÓN &amp; MANUALES TÉCNICOS | INVENTARIO_SISTEM</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="📦 PAQUETE DE IMPLEMENTACIÓN &amp; MANUALES TÉCNICOS" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sistema de inventario para taller de motos" />
+<meta property="og:description" content="Sistema de inventario para taller de motos" />
+<link rel="canonical" href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manual_de_instalacion_arquitectura_y_funcionalidad_motopro_erp.html" />
+<meta property="og:url" content="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manual_de_instalacion_arquitectura_y_funcionalidad_motopro_erp.html" />
+<meta property="og:site_name" content="INVENTARIO_SISTEM" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="📦 PAQUETE DE IMPLEMENTACIÓN &amp; MANUALES TÉCNICOS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Sistema de inventario para taller de motos","headline":"📦 PAQUETE DE IMPLEMENTACIÓN &amp; MANUALES TÉCNICOS","url":"https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/manual_de_instalacion_arquitectura_y_funcionalidad_motopro_erp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/INVENTARIO_SISTEM/assets/css/style.css?v=d44c795c0b6870c208803ed56770a4c592338f40">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/INVENTARIO_SISTEM/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://carlosmazo1037-beep.github.io/INVENTARIO_SISTEM/">INVENTARIO_SISTEM</a></h1>
+      
+
+      <h1 id="-paquete-de-implementación--manuales-técnicos">📦 PAQUETE DE IMPLEMENTACIÓN &amp; MANUALES TÉCNICOS</h1>
+<h2 id="motopro-workshop-erp--pos-system-v24-producción--sandbox">MotoPro Workshop ERP &amp; POS System v2.4 (Producción &amp; Sandbox)</h2>
+
+<hr />
+
+<h3 id="-índice-general-de-la-entrega">📋 ÍNDICE GENERAL DE LA ENTREGA</h3>
+<ol>
+  <li><strong>Alcance Global del Proyecto y Módulos Desarrollados</strong></li>
+  <li><strong>Estructura del Repositorio de Archivos (Frontend, Base de Datos, Docs)</strong></li>
+  <li><strong>Manual de Instalación y Despliegue Paso a Paso</strong>
+    <ul>
+      <li>3.1. Prueba Local Inmediata (Zero-Config / Sin Servidor)</li>
+      <li>3.2. Despliegue en Servidor Web (Nginx / Apache / GitHub Pages / Vercel)</li>
+      <li>3.3. Despliegue y Migración de Base de Datos PostgreSQL 14+ (<code class="language-plaintext highlighter-rouge">schema.sql</code> y <code class="language-plaintext highlighter-rouge">seed.sql</code>)</li>
+    </ul>
+  </li>
+  <li><strong>Manual de Integración Backend &amp; API REST (<code class="language-plaintext highlighter-rouge">window.MOTOPRO_CONFIG</code> y OpenAPI 3.0.3)</strong></li>
+  <li><strong>Manual de Hardware de Taller y Punto de Venta (POS)</strong>
+    <ul>
+      <li>5.1. Impresoras Térmicas 80mm ESC/POS (Epson / Star / Bixolon)</li>
+      <li>5.2. Gaveta de Dinero Monedero (Pulso Eléctrico RJ11)</li>
+      <li>5.3. Datáfonos SmartPOS (Redeban / Credibanco) y QRs</li>
+      <li>5.4. Escáner Óptico de Código de Barras / QR USB &amp; Bluetooth</li>
+    </ul>
+  </li>
+  <li><strong>Manual Funcional por Roles y Flujos Guiados (End-to-End)</strong>
+    <ul>
+      <li>6.1. Asesor de Servicio: Recepción 360° ➔ Cotización Baremo ➔ Aprobación Digital WhatsApp</li>
+      <li>6.2. Mecánico de Bahía: PWA Táctil ➔ Cronómetro ➔ Evidencias Foto/Voz ➔ Despacho Kardex</li>
+      <li>6.3. Cajero POS: Liquidación Split Payment ➔ Tirilla ➔ Factura DIAN ➔ Arqueo Ciego Reporte Z</li>
+      <li>6.4. Almacenista: Kardex, Galería OEM con Zoom y Command Palette (<code class="language-plaintext highlighter-rouge">Ctrl + K</code>)</li>
+      <li>6.5. Jefe de Taller &amp; Admin: Garantías Fábrica, Tarifas de Sedes y Bahías</li>
+    </ul>
+  </li>
+  <li><strong>Credenciales de Acceso Demo &amp; Entorno de Pruebas</strong></li>
+</ol>
+
+<hr />
+
+<h2 id="1--alcance-global-del-proyecto-hasta-el-momento">1. 🎯 ALCANCE GLOBAL DEL PROYECTO HASTA EL MOMENTO</h2>
+
+<p>El proyecto <strong>MotoPro Workshop ERP</strong> comprende un ecosistema integral y modular con <strong>24 interfaces visuales interconectadas</strong>, persistencia relacional SQL, especificación formal OpenAPI y directivas de hardware:</p>
+
+<h3 id="módulos-implementados-en-frontend--lógica">Módulos Implementados en Frontend &amp; Lógica:</h3>
+<ol>
+  <li><strong>Acceso &amp; Seguridad Multiusuario (<code class="language-plaintext highlighter-rouge">login-multiusuario.html</code>):</strong> Autenticación basada en roles (RBAC), selector dinámico de sedes y PIN supervisor para autorizaciones críticas.</li>
+  <li><strong>Terminal de Caja POS &amp; Dashboard (<code class="language-plaintext highlighter-rouge">dashboard-pos.html</code>):</strong> Resumen de facturación del día, órdenes listas para retiro, monitoreo de periféricos de hardware en tiempo real.</li>
+  <li><strong>Tablero Kanban de Taller (<code class="language-plaintext highlighter-rouge">ordenes-taller.html</code>):</strong> Supervisión en vivo de bahías (<code class="language-plaintext highlighter-rouge">B-01</code> a <code class="language-plaintext highlighter-rouge">B-08</code>), estados de trabajo, mecánicos asignados y alertas de tiempo.</li>
+  <li><strong>Recepción con Peritaje Visual 360° (<code class="language-plaintext highlighter-rouge">recepcion-inspeccion.html</code>):</strong> Checklist de inventario (combustible, accesorios, odómetro), marcado pericial sobre silueta técnica con coordenadas interactivas y firma digital de custodia.</li>
+  <li><strong>Diagnóstico Técnico y Baremo (<code class="language-plaintext highlighter-rouge">diagnostico-cotizacion.html</code>):</strong> Liquidación con baremo de tiempos estándar (<em>Flat Rate</em> por cilindraje), repuestos OEM con margen de ganancia y generación de token seguro para WhatsApp.</li>
+  <li><strong>Portal Cliente en WhatsApp (<code class="language-plaintext highlighter-rouge">portal-cliente-whatsapp.html</code>):</strong> Interfaz ligera móvil sin instalación previa para visualización de evidencias multimedia (fotos de desgaste y audio del mecánico) con aprobación ítem por ítem.</li>
+  <li><strong>Confirmación Exitosa &amp; Firma Criptográfica (<code class="language-plaintext highlighter-rouge">confirmacion-firma-digital.html</code>):</strong> Captura de firma manuscrita digitalizada, generación de hash de seguridad SHA-256 y emisión de acta de aprobación.</li>
+  <li><strong>Bahía Táctil de Mecánico (<code class="language-plaintext highlighter-rouge">bahia-mecanico-tactil.html</code>):</strong> Modo de alto contraste para tablets/smartphones en elevadores: cronómetro en vivo de labor (<em>Clock-in / Clock-out</em>), checklist táctil (≥48px) y solicitud a bodega.</li>
+  <li><strong>Captura de Evidencias de Bahía (<code class="language-plaintext highlighter-rouge">captura-evidencias-voz.html</code>):</strong> Disparador de cámara para registrar piezas averiadas y grabador de notas de voz técnicas de hasta 60s.</li>
+  <li><strong>Kardex &amp; Inventario con Galería Técnica OEM (<code class="language-plaintext highlighter-rouge">inventario-movimientos.html</code>):</strong> Catálogo multisede, trazabilidad de remisiones físicas, visor modal con zoom dinámico de 2.5x para detalles de molde e inspección de autenticidad.</li>
+  <li><strong>Búsqueda Rápida Universal (<code class="language-plaintext highlighter-rouge">Ctrl + K</code> Command Palette):</strong> Atajo predictivo multicriterio por placa, cliente, SKU o repuesto compatible, con sincronización de lector de código de barras.</li>
+  <li><strong>Entrada de Compras a Proveedores (<code class="language-plaintext highlighter-rouge">entrada-compra.html</code>):</strong> Ingreso con lote, orden de compra, ubicación en estante y costeo promedio ponderado.</li>
+  <li><strong>Salida / Despacho a Bahía (<code class="language-plaintext highlighter-rouge">salida-despacho.html</code>):</strong> Descarga blindada contra OT activa con firma de recepción del operario.</li>
+  <li><strong>Liquidación Final de Caja (<code class="language-plaintext highlighter-rouge">factura-liquidacion.html</code>):</strong> Pago mixto (<em>Split Payment</em>) combinando efectivo bimoneda (USD / COP con TRM), datáfonos Redeban/Credibanco y código QR de <strong>Pase de Salida / Portería</strong>.</li>
+  <li><strong>Tirilla Térmica de Caja POS 80mm (<code class="language-plaintext highlighter-rouge">tirilla-pos-80mm.html</code>):</strong> Formato ESC/POS para impresoras térmicas con QR fiscal, CUFE y talón desprendible.</li>
+  <li><strong>Factura Electrónica Fiscal DIAN PDF A4 (<code class="language-plaintext highlighter-rouge">factura-dian-pdf-a4.html</code>):</strong> Cumplimiento formal fiscal estándar UBL 2.1 con firma digital XML, QR de validación y retenciones de ley.</li>
+  <li><strong>Arqueo Ciego &amp; Cierre Fiscal - Reporte Z (<code class="language-plaintext highlighter-rouge">arqueo-cierre-reporte-z.html</code>):</strong> Conteo tangible por denominación de billetes y monedas sin ver saldo del sistema, conciliación de vouchers y bloqueo de terminal.</li>
+  <li><strong>Egresos y Vales de Caja Menor (<code class="language-plaintext highlighter-rouge">egresos-caja-menor.html</code> / <code class="language-plaintext highlighter-rouge">Ctrl + M</code>):</strong> Salida express de caja para insumos urgentes autorizada con PIN de supervisor.</li>
+  <li><strong>Gestión de Formas de Pago (<code class="language-plaintext highlighter-rouge">formas-de-pago.html</code>):</strong> Parametrización de pasarelas, comisiones bancarias y latencia de periféricos.</li>
+  <li><strong>Garantías y Reclamos a Ensambladora (<code class="language-plaintext highlighter-rouge">garantias-reclamos.html</code>):</strong> Módulo de seguimiento de piezas con falla de fábrica, notas de crédito y cuarentena.</li>
+  <li><strong>Modal Radicar Garantía (<code class="language-plaintext highlighter-rouge">modal-radicar-garantia.html</code>):</strong> Expediente técnico con volcado de diagnóstico OBD2 Texa IDC5 Bike y fotos periciales.</li>
+  <li><strong>Configuración de Sedes, Tarifas &amp; Usuarios (<code class="language-plaintext highlighter-rouge">configuracion-sedes.html</code>):</strong> Gestión de sedes, tarifas horarias por segmento de cilindraje y permisos.</li>
+  <li><strong>Modal de Bahías y Elevadores (<code class="language-plaintext highlighter-rouge">modal-bahias-elevadores.html</code>):</strong> Configuración de equipamiento técnico por elevador (capacidad en kg y tipo).</li>
+  <li><strong>Portal Principal y Directorio Interactivo (<code class="language-plaintext highlighter-rouge">index.html</code>):</strong> Directorio interactivo con explorador de vistas, consola de OpenAPI/Swagger UI interactiva y guías de despliegue.</li>
+</ol>
+
+<hr />
+
+<h2 id="2-️-estructura-del-repositorio-de-archivos">2. 🗂️ ESTRUCTURA DEL REPOSITORIO DE ARCHIVOS</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>motopro-workshop-erp/
+│
+├── index.html                           # Portal interactivo, consola Swagger UI y showcase
+├── README.md                            # Documentación integral del repositorio en GitHub
+│
+├── desktop/                             # Vistas de Escritorio (ERP, Taller &amp; POS)
+│   ├── login-multiusuario.html          # Login multi-sede y selector de rol
+│   ├── dashboard-pos.html               # Terminal POS, órdenes listas y balance diario
+│   ├── ordenes-taller.html              # Tablero Kanban de taller y bahías
+│   ├── recepcion-inspeccion.html        # Recepción 360°, checklist visual e inventario
+│   ├── diagnostico-cotizacion.html      # Baremo técnico, repuestos y margen
+│   ├── inventario-movimientos.html      # Kardex, galería multi-foto OEM con zoom
+│   ├── entrada-compra.html              # Ingreso de mercancía por compra a proveedores
+│   ├── salida-despacho.html             # Registro de salida/despacho de piezas a OT
+│   ├── facturacion-contabilidad.html    # Facturación, cartera y clientes
+│   ├── factura-liquidacion.html         # Liquidación de caja POS y emisión de pase salida
+│   ├── factura-dian-pdf-a4.html         # Factura electrónica oficial DIAN en A4
+│   ├── tirilla-pos-80mm.html            # Tirilla térmica de 80mm para Epson ESC/POS
+│   ├── arqueo-cierre-reporte-z.html     # Arqueo físico ciego y Cierre Fiscal Reporte Z
+│   ├── egresos-caja-menor.html          # Vales rápidos de salida de efectivo (Ctrl+M)
+│   ├── formas-de-pago.html              # Parametrización de pasarelas y Split Payment
+│   ├── garantias-reclamos.html          # Seguimiento de garantías a ensambladora
+│   ├── modal-radicar-garantia.html      # Modal de expediente técnico y escáner Texa
+│   ├── configuracion-sedes.html         # Sedes, tarifas de mano de obra y accesos
+│   └── modal-bahias-elevadores.html     # Modal de equipamiento de bahías
+│
+├── mobile/                              # Vistas Optimizadas para Móvil y PWA
+│   ├── bahia-mecanico-tactil.html       # Terminal táctil del mecánico en elevador con cronómetro
+│   ├── captura-evidencias-voz.html      # Cámara pericial de bahía y notas de voz
+│   ├── portal-cliente-whatsapp.html     # Visor web ligero para clientes vía WhatsApp
+│   └── confirmacion-firma-digital.html  # Comprobante de aprobación con firma criptográfica
+│
+├── database/                            # Scripts de Base de Datos Relacional PostgreSQL 14+
+│   ├── schema.sql                       # DDL: Tipos ENUM, 14 tablas, índices y triggers
+│   └── seed.sql                         # DML: Datos demo KTM 1290, Laura Gómez, Carlos M.
+│
+├── api/                                 # Especificación de Arquitectura de Servicios REST
+│   └── openapi-motopro-erp-v2.4.yaml   # Especificación OpenAPI 3.0.3 / Swagger
+│
+└── assets/                              # Recursos gráficos institucionales
+    ├── logo-motopro.png                 # Logotipo vectorial naranja #f97316 y grafito
+    └── avatar-carlos-supervisor.png     # Avatar de usuario del jefe de taller
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="3--manual-de-instalación-y-despliegue">3. 🚀 MANUAL DE INSTALACIÓN Y DESPLIEGUE</h2>
+
+<h3 id="31-prueba-local-inmediata-zero-config">3.1. Prueba Local Inmediata (Zero-Config)</h3>
+<p>No requiere Node.js, compiladores ni Docker para la previsualización:</p>
+<ol>
+  <li>Clonar o descomprimir la carpeta del proyecto.</li>
+  <li>Hacer doble clic en <code class="language-plaintext highlighter-rouge">index.html</code> o abrirlo en cualquier navegador (Chrome, Edge, Safari, Firefox).</li>
+  <li>Toda la suite de pantallas, formularios, Command Palette (<code class="language-plaintext highlighter-rouge">Ctrl+K</code>), atajos (<code class="language-plaintext highlighter-rouge">Ctrl+M</code>) y modales funcionarán de forma autónoma.</li>
+</ol>
+
+<h3 id="32-despliegue-en-servidores-web-y-nube">3.2. Despliegue en Servidores Web y Nube</h3>
+<ul>
+  <li><strong>GitHub Pages:</strong>
+    <ol>
+      <li>Crear repositorio en GitHub y subir los archivos (<code class="language-plaintext highlighter-rouge">git push origin main</code>).</li>
+      <li>En GitHub: <strong>Settings &gt; Pages &gt; Source: Deploy from a branch (<code class="language-plaintext highlighter-rouge">main</code> / <code class="language-plaintext highlighter-rouge">/ root</code>)</strong>.</li>
+      <li>En 2 minutos estará activo en: <code class="language-plaintext highlighter-rouge">https://&lt;tu-usuario&gt;.github.io/&lt;tu-repo&gt;/</code>.</li>
+    </ol>
+  </li>
+  <li><strong>Servidor Nginx (Producción On-Premise en Taller):</strong>
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">taller.motopro.local</span><span class="p">;</span>
+    <span class="kn">root</span> <span class="n">/var/www/motopro-erp</span><span class="p">;</span>
+    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri</span><span class="n">/</span> <span class="n">/index.html</span><span class="p">;</span>
+    <span class="p">}</span>
+      
+    <span class="c1"># Redirección de llamadas API hacia el backend</span>
+    <span class="kn">location</span> <span class="n">/api/v1/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://localhost:8000/v1/</span><span class="p">;</span>
+        <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+        <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="33-despliegue-de-base-de-datos-postgresql-14">3.3. Despliegue de Base de Datos PostgreSQL 14+</h3>
+<p>El sistema incluye los scripts SQL listos para ejecución en PostgreSQL (con extensiones <code class="language-plaintext highlighter-rouge">uuid-ossp</code> y <code class="language-plaintext highlighter-rouge">pgcrypto</code>):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Crear base de datos en PostgreSQL</span>
+createdb <span class="nt">-U</span> postgres motopro_db
+
+<span class="c"># 2. Ejecutar esquema relacional (Tablas, ENUMs, Triggers y Vistas)</span>
+psql <span class="nt">-U</span> postgres <span class="nt">-d</span> motopro_db <span class="nt">-f</span> database/schema.sql
+
+<span class="c"># 3. Cargar datos demo completos (Sedes, Usuarios, KTM 1290, Kardex y Caja)</span>
+psql <span class="nt">-U</span> postgres <span class="nt">-d</span> motopro_db <span class="nt">-f</span> database/seed.sql
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="4--manual-de-integración-backend--api-rest">4. 🔌 MANUAL DE INTEGRACIÓN BACKEND &amp; API REST</h2>
+
+<p>La suite frontend está desacoplada y se conecta al backend mediante el objeto global <code class="language-plaintext highlighter-rouge">window.MOTOPRO_CONFIG</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">MOTOPRO_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">API_BASE_URL</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://api.tu-taller.com/v1</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// O http://localhost:8000/v1</span>
+  <span class="na">SEDE_ID</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SEDE-CENTRAL-01</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">TERMINAL_POS_ID</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POS-01-MOSTRADOR</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">EPSON_PRINTER_IP</span><span class="p">:</span> <span class="dl">"</span><span class="s2">192.168.1.150</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">EPSON_PRINTER_PORT</span><span class="p">:</span> <span class="mi">9100</span><span class="p">,</span>
+  <span class="na">REDEBAN_POS_IP</span><span class="p">:</span> <span class="dl">"</span><span class="s2">192.168.1.180:8088</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">TRM_DEFAULT_COP_USD</span><span class="p">:</span> <span class="mf">4001.20</span><span class="p">,</span>
+  <span class="na">ENABLE_AUTO_DRAWER_PULSE</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>La especificación <strong>OpenAPI 3.0.3</strong> contenida en <code class="language-plaintext highlighter-rouge">api/openapi-motopro-erp-v2.4.yaml</code> documenta los endpoints para:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/auth/login</code>: Autenticación con JWT y sede.</li>
+  <li><code class="language-plaintext highlighter-rouge">/ordenes</code>: Consulta y seguimiento Kanban.</li>
+  <li><code class="language-plaintext highlighter-rouge">/ordenes/{otId}/labor</code>: Sincronización del cronómetro de operarios.</li>
+  <li><code class="language-plaintext highlighter-rouge">/inventario/despacho</code>: Salidas automáticas de Kardex con descuento de stock.</li>
+  <li><code class="language-plaintext highlighter-rouge">/caja/liquidaciones</code>: Split Payment multimoneda y emisión de código QR de portería.</li>
+  <li><code class="language-plaintext highlighter-rouge">/caja/cierres/reporte-z</code>: Cierre fiscal con arqueo ciego.</li>
+  <li><code class="language-plaintext highlighter-rouge">/fiscal/dian/facturas</code>: Validación y timbrado UBL 2.1 con generación de CUFE.</li>
+</ul>
+
+<hr />
+
+<h2 id="5-️-manual-de-hardware-de-taller--pos">5. 🖨️ MANUAL DE HARDWARE DE TALLER &amp; POS</h2>
+
+<h3 id="51-impresoras-térmicas-80mm-escpos">5.1. Impresoras Térmicas 80mm ESC/POS</h3>
+<ul>
+  <li><strong>Modelos Homologados:</strong> Epson TM-T20III, Star TSP143, Bixolon SRP-330II.</li>
+  <li><strong>Protocolo de Impresión:</strong> Raw TCP/IP Socket en puerto <code class="language-plaintext highlighter-rouge">9100</code> o Spooler nativo del sistema operativo.</li>
+  <li><strong>Comando de Corte Automático:</strong> <code class="language-plaintext highlighter-rouge">GS V 66 0</code> (Corte total de guillotina tras imprimir el talón de portería).</li>
+</ul>
+
+<h3 id="52-gaveta-de-dinero-monedero-rj11">5.2. Gaveta de Dinero Monedero (RJ11)</h3>
+<ul>
+  <li>Conectada directamente a la toma RJ11 de la impresora térmica.</li>
+  <li>Se abre automáticamente tras confirmar la liquidación enviando el pulso hexadecimal: <code class="language-plaintext highlighter-rouge">\x1B\x70\x00\x19\xFA</code> (24V, 50ms).</li>
+  <li>Atajo de emergencia manual en mostrador: Tecla <code class="language-plaintext highlighter-rouge">&lt;kbd&gt;F9&lt;/kbd&gt;</code>.</li>
+</ul>
+
+<h3 id="53-datáfonos-smartpos-redeban--credibanco">5.3. Datáfonos SmartPOS (Redeban / Credibanco)</h3>
+<ul>
+  <li>Comunicación por red LAN/Ethernet en el puerto local <code class="language-plaintext highlighter-rouge">8088</code>.</li>
+  <li>El sistema envía el monto (<code class="language-plaintext highlighter-rouge">USD</code> o <code class="language-plaintext highlighter-rouge">COP</code>), espera la autorización del cliente y captura el número de voucher (<code class="language-plaintext highlighter-rouge">AUTH-892182</code>) para vincularlo a la liquidación.</li>
+</ul>
+
+<h3 id="54-escáner-óptico-de-código-de-barras--qr">5.4. Escáner Óptico de Código de Barras / QR</h3>
+<ul>
+  <li>Conexión USB o Bluetooth bajo emulación HID (Keyboard Wedge).</li>
+  <li>Permite la lectura instantánea en la barra global (<code class="language-plaintext highlighter-rouge">Ctrl + K</code>), en el módulo de entrada de compras y en la terminal de bahía para registrar los SKU de los repuestos consumidos.</li>
+</ul>
+
+<hr />
+
+<h2 id="6--manual-funcional-por-roles">6. 📖 MANUAL FUNCIONAL POR ROLES</h2>
+
+<h3 id="61-rol-asesor-de-servicio">6.1. Rol: Asesor de Servicio</h3>
+<ol>
+  <li><strong>Ingreso:</strong> Acceder con usuario (<code class="language-plaintext highlighter-rouge">felipe.sarmiento</code>) a <code class="language-plaintext highlighter-rouge">recepcion-inspeccion.html</code>.</li>
+  <li><strong>Inspección 360°:</strong> Registrar kilometraje, nivel de combustible y tocar en la silueta de la moto para colocar marcadores de daños (rayones, golpes) y adjuntar fotos iniciales.</li>
+  <li><strong>Firma:</strong> Solicitar firma de custodia al cliente en pantalla táctil y generar orden preliminar.</li>
+  <li><strong>Cotización:</strong> Ingresar a <code class="language-plaintext highlighter-rouge">diagnostico-cotizacion.html</code>, seleccionar tareas baremadas y piezas sugeridas. Presionar <strong>«Enviar Enlace WhatsApp»</strong>.</li>
+  <li><strong>Aprobación:</strong> El cliente recibe la cotización en <code class="language-plaintext highlighter-rouge">portal-cliente-whatsapp.html</code>, escucha la nota de voz del mecánico, aprueba los ítems y firma digitalmente (<code class="language-plaintext highlighter-rouge">confirmacion-firma-digital.html</code>).</li>
+</ol>
+
+<h3 id="62-rol-mecánico-en-bahía-pwa-táctil">6.2. Rol: Mecánico en Bahía (PWA Táctil)</h3>
+<ol>
+  <li><strong>Inicio de Labor:</strong> En la tablet del elevador (<code class="language-plaintext highlighter-rouge">bahia-mecanico-tactil.html</code>), el mecánico Andrés López visualiza la moto asignada (<code class="language-plaintext highlighter-rouge">KTM 1290</code>).</li>
+  <li><strong>Cronómetro:</strong> Presiona <strong>«Iniciar Labor»</strong> al comenzar los trabajos. El cronómetro registra horas reales para contrastar contra el baremo oficial.</li>
+  <li><strong>Evidencias:</strong> Si halla desgaste crítico (ej. pastillas de freno en 1.2mm), presiona <strong>«Capturar Evidencia»</strong> (<code class="language-plaintext highlighter-rouge">captura-evidencias-voz.html</code>), toma la foto pericial y graba una nota de voz explicativa de 30 segundos.</li>
+  <li><strong>Repuestos:</strong> Solicita las piezas a almacén con un tap en la lista de repuestos.</li>
+</ol>
+
+<h3 id="63-rol-almacenista-kardex--repuestos">6.3. Rol: Almacenista (Kardex &amp; Repuestos)</h3>
+<ol>
+  <li><strong>Búsqueda Rápida:</strong> Presionar <code class="language-plaintext highlighter-rouge">&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;K&lt;/kbd&gt;</code> en cualquier pantalla para consultar existencias, ubicación en estantería (<code class="language-plaintext highlighter-rouge">Pasillo C-04-12</code>) y stock crítico.</li>
+  <li><strong>Inspección Visual OEM:</strong> En <code class="language-plaintext highlighter-rouge">inventario-movimientos.html</code>, abrir el modal de inspección técnica con zoom <code class="language-plaintext highlighter-rouge">2.5x</code> para verificar hologramas, sellos de empaque y código troquelado en la pieza.</li>
+  <li><strong>Despacho:</strong> En <code class="language-plaintext highlighter-rouge">salida-despacho.html</code>, registrar la salida hacia la orden (<code class="language-plaintext highlighter-rouge">OT-1048</code>), firmar con el mecánico y descargar el stock en tiempo real.</li>
+</ol>
+
+<h3 id="64-rol-cajera-pos-mostrador">6.4. Rol: Cajera POS Mostrador</h3>
+<ol>
+  <li><strong>Terminal:</strong> En <code class="language-plaintext highlighter-rouge">dashboard-pos.html</code>, ubicar la orden lista para retiro.</li>
+  <li><strong>Liquidación Mixta:</strong> En <code class="language-plaintext highlighter-rouge">factura-liquidacion.html</code>, registrar los métodos de pago (Split Payment): $100 USD en efectivo + balance en datáfono Redeban.</li>
+  <li><strong>Comprobantes:</strong> Se acciona la gaveta monedero, se imprime la tirilla térmica de 80mm (<code class="language-plaintext highlighter-rouge">tirilla-pos-80mm.html</code>) con el código QR de <strong>Pase de Salida</strong> y se genera la Factura Electrónica DIAN A4 (<code class="language-plaintext highlighter-rouge">factura-dian-pdf-a4.html</code>).</li>
+  <li><strong>Vales de Emergencia:</strong> Con <code class="language-plaintext highlighter-rouge">&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;M&lt;/kbd&gt;</code> (<code class="language-plaintext highlighter-rouge">egresos-caja-menor.html</code>), registrar salidas rápidas de caja menor con PIN del supervisor.</li>
+  <li><strong>Cierre de Turno:</strong> Al culminar el turno, acceder a <code class="language-plaintext highlighter-rouge">arqueo-cierre-reporte-z.html</code>, ingresar el conteo ciego de billetes y vouchers físicos, verificar cuadre exacto ($0.00 de diferencia) y generar el Reporte Z definitivo con bloqueo de terminal.</li>
+</ol>
+
+<hr />
+
+<h2 id="7--credenciales-y-datos-demo-para-auditoría">7. 🔑 CREDENCIALES Y DATOS DEMO PARA AUDITORÍA</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Rol / Perfil</th>
+      <th style="text-align: left">Usuario</th>
+      <th style="text-align: left">Contraseña / PIN</th>
+      <th style="text-align: left">Funcionalidad Clave</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Jefe de Taller / Supervisor</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">carlos.m@motopro.com</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code> • PIN: <code class="language-plaintext highlighter-rouge">8921</code></td>
+      <td style="text-align: left">Gestión total, desbloqueo de arqueo y garantías</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Cajera Principal POS</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">laura.gomez</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code></td>
+      <td style="text-align: left">Cobros mixtos, vales menores y Reporte Z</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Mecánico Bahía B-04</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">andres.lopez</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code></td>
+      <td style="text-align: left">Cronómetro de labor y evidencias periciales</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Asesor de Servicio</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">felipe.sarmiento</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code></td>
+      <td style="text-align: left">Recepción 360°, baremo y enlace WhatsApp</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Almacenista Kardex</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">jorge.bodega</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code></td>
+      <td style="text-align: left">Entradas de compras y galería OEM con zoom</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Guardia de Portería</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">guardia.porteria</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MotoPro2024*</code></td>
+      <td style="text-align: left">Validación de QR y autorización de salida</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Vehículo Demo en Orden:</strong> <code class="language-plaintext highlighter-rouge">KTM 1290 Super Adventure S 2023</code> • Placa <code class="language-plaintext highlighter-rouge">JKL-92D</code> • Orden <code class="language-plaintext highlighter-rouge">OT-1048</code>.</li>
+  <li><strong>Propietario Demo:</strong> Roberto Valencia Ospina (<code class="language-plaintext highlighter-rouge">+57 312 458 9021</code>).</li>
+  <li><strong>Monto de Liquidación:</strong> <code class="language-plaintext highlighter-rouge">$311.15 USD</code> (TRM oficial <code class="language-plaintext highlighter-rouge">$4,001.20 COP</code> = <code class="language-plaintext highlighter-rouge">$1'245,000 COP</code>).</li>
+</ul>
+
+<hr />
+<p><em>Manual generado y certificado para el paquete de entrega e implementación de MotoPro Workshop ERP.</em> 🏍️💨</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

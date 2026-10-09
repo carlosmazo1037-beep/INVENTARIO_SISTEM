@@ -1,0 +1,888 @@
+openapi: 3.0.3
+info:
+  title: MotoPro Workshop ERP & POS System API
+  description: |
+    API REST para la plataforma integral **MotoPro Workshop ERP & POS System**.
+    Permite la sincronización de órdenes de trabajo (OT), recepción 360°, diagnóstico baremo,
+    despacho e inventario Kardex, terminales POS con split payment, facturación electrónica DIAN (UBL 2.1)
+    y sincronización táctil de operarios en bahía.
+  version: 2.4.0
+  contact:
+    name: Soporte Técnico MotoPro
+    email: soporte@motopro.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://api.tu-taller.com/v1
+    description: Servidor de Producción Multi-Sede
+  - url: https://staging-api.tu-taller.com/v1
+    description: Servidor de Pruebas y Sandbox
+  - url: http://localhost:8000/v1
+    description: Servidor Local de Desarrollo
+
+tags:
+  - name: Autenticación & Sedes
+    description: Sesiones multiusuario, RBAC y contexto de sucursales
+  - name: Órdenes de Trabajo & Taller
+    description: Gestión Kanban de elevadores, cronómetro de operarios y estatus
+  - name: Recepción & Peritaje
+    description: Inspección 360°, checklist de daños y firma de custodia
+  - name: Diagnóstico & Baremo
+    description: Tiempos de mano de obra estandarizados y cotizaciones técnicas
+  - name: Inventario & Kardex
+    description: Entradas de compra, lotes y despachos blindados a bahía
+  - name: Caja POS & Pagos
+    description: Liquidación mixta (split payment), vales menores y arqueo Z
+  - name: Facturación DIAN
+    description: Emisión electrónica UBL 2.1, CUFE y generación de PDF/XML
+  - name: Garantías & Reclamos
+    description: Trazabilidad con ensambladoras y diagnósticos de escáner Texa
+
+paths:
+  # ==========================================
+  # AUTENTICACIÓN & SEDES
+  # ==========================================
+  /auth/login:
+    post:
+      tags:
+        - Autenticación & Sedes
+      summary: Autenticar usuario con selección de sede
+      operationId: loginUsuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, password, sedeId]
+              properties:
+                username:
+                  type: string
+                  example: carlos.m@motopro.com
+                password:
+                  type: string
+                  format: password
+                  example: "••••••••"
+                sedeId:
+                  type: string
+                  example: SEDE-CENTRAL-01
+                pinSupervisor:
+                  type: string
+                  description: PIN requerido para perfiles con privilegios de supervisor
+                  example: "8921"
+      responses:
+        '200':
+          description: Autenticación exitosa
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+                  expiresIn:
+                    type: integer
+                    example: 28800
+                  usuario:
+                    $ref: '#/components/schemas/Usuario'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /sedes:
+    get:
+      tags:
+        - Autenticación & Sedes
+      summary: Listar todas las sedes operativas y sus bahías
+      operationId: getSedes
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Lista de sedes configuradas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sede'
+
+  # ==========================================
+  # RECEPCIÓN E INSPECCIÓN 360°
+  # ==========================================
+  /recepciones:
+    post:
+      tags:
+        - Recepción & Peritaje
+      summary: Registrar nueva recepción pericial con silueta de daños
+      operationId: crearRecepcion
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecepcionRequest'
+      responses:
+        '201':
+          description: Recepción creada y OT preliminar generada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecepcionResponse'
+
+  # ==========================================
+  # ÓRDENES DE TRABAJO & TALLER
+  # ==========================================
+  /ordenes:
+    get:
+      tags:
+        - Órdenes de Trabajo & Taller
+      summary: Consultar órdenes de trabajo activas por sede
+      operationId: getOrdenes
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: sede
+          in: query
+          required: true
+          schema:
+            type: string
+            example: SEDE-CENTRAL-01
+        - name: estado
+          in: query
+          schema:
+            type: string
+            enum: [EN_ESPERA, DIAGNOSTICO, ESPERANDO_REPUESTOS, EN_REPARACION, CONTROL_CALIDAD, LISTO_ENTREGA, LIQUIDADO]
+      responses:
+        '200':
+          description: Tablero Kanban de órdenes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OrdenTrabajo'
+
+  /ordenes/{otId}:
+    get:
+      tags:
+        - Órdenes de Trabajo & Taller
+      summary: Obtener detalle completo de una orden de trabajo
+      operationId: getDetalleOT
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: otId
+          in: path
+          required: true
+          schema:
+            type: string
+            example: OT-1048
+      responses:
+        '200':
+          description: Detalle de la OT, historial pericial y balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrdenTrabajoDetalle'
+
+  /ordenes/{otId}/labor:
+    post:
+      tags:
+        - Órdenes de Trabajo & Taller
+      summary: Registrar tiempo de cronómetro (clock-in / clock-out) de operario
+      operationId: registrarLaborOperario
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: otId
+          in: path
+          required: true
+          schema:
+            type: string
+            example: OT-1048
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [operarioId, minutos, tarea, bahia]
+              properties:
+                operarioId:
+                  type: string
+                  example: andres.lopez
+                minutos:
+                  type: integer
+                  example: 45
+                tarea:
+                  type: string
+                  example: Sincronización de cuerpos de aceleración y bujías
+                bahia:
+                  type: string
+                  example: B-04
+      responses:
+        '200':
+          description: Registro de labor añadido exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  idLabor:
+                    type: string
+                    example: LAB-8921
+                  horasAcumuladas:
+                    type: number
+                    format: float
+                    example: 3.75
+                  costoParcialCOP:
+                    type: number
+                    example: 375000.00
+
+  /ordenes/{otId}/evidencias:
+    post:
+      tags:
+        - Órdenes de Trabajo & Taller
+      summary: Subir fotografías o nota de voz pericial desde la bahía
+      operationId: subirEvidenciasOT
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: otId
+          in: path
+          required: true
+          schema:
+            type: string
+            example: OT-1048
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                tipo:
+                  type: string
+                  enum: [FOTO_DESGASTE, AUDIO_VOZ_TECNICA, VIDEO_DIAGNOSTICO]
+                archivo:
+                  type: string
+                  format: binary
+                descripcion:
+                  type: string
+                  example: Desgaste severo en pastillas de freno sinterizadas delanteras
+      responses:
+        '201':
+          description: Evidencia vinculada y enlace temporal WhatsApp generado
+
+  # ==========================================
+  # DIAGNÓSTICO & BAREMO
+  # ==========================================
+  /baremo/servicios:
+    get:
+      tags:
+        - Diagnóstico & Baremo
+      summary: Consultar catálogo de tiempos estandarizados por cilindraje
+      operationId: getBaremoServicios
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: cilindraje
+          in: query
+          schema:
+            type: string
+            enum: [BAJA_HASTA_200CC, MEDIA_250_500CC, ALTA_MAYOR_600CC]
+      responses:
+        '200':
+          description: Catálogo baremo con tiempos flat rate recomendados
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BaremoItem'
+
+  # ==========================================
+  # INVENTARIO & KARDEX
+  # ==========================================
+  /inventario/items/{sku}:
+    get:
+      tags:
+        - Inventario & Kardex
+      summary: Consultar existencias, costo promedio y ubicación de un repuesto
+      operationId: getStockItem
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: sku
+          in: path
+          required: true
+          schema:
+            type: string
+            example: KTM-6030-8015
+        - name: sede
+          in: query
+          required: true
+          schema:
+            type: string
+            example: SEDE-CENTRAL-01
+      responses:
+        '200':
+          description: Información del stock multisede
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StockItem'
+
+  /inventario/despacho:
+    post:
+      tags:
+        - Inventario & Kardex
+      summary: Despachar repuestos del almacén hacia una Orden de Trabajo
+      operationId: despacharRepuestos
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [otId, sedeId, items, mecanicoId]
+              properties:
+                otId:
+                  type: string
+                  example: OT-1048
+                sedeId:
+                  type: string
+                  example: SEDE-CENTRAL-01
+                mecanicoId:
+                  type: string
+                  example: andres.lopez
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required: [sku, cantidad]
+                    properties:
+                      sku:
+                        type: string
+                        example: MOTUL-7100-10W50
+                      cantidad:
+                        type: number
+                        example: 3.5
+      responses:
+        '200':
+          description: Despacho completado y descargado del Kardex en tiempo real
+
+  # ==========================================
+  # CAJA POS & PAGOS
+  # ==========================================
+  /caja/liquidaciones:
+    post:
+      tags:
+        - Caja POS & Pagos
+      summary: Liquidar Orden de Trabajo con Pago Mixto (Split Payment)
+      operationId: liquidarPagoSplit
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LiquidacionRequest'
+      responses:
+        '200':
+          description: Liquidación exitosa, emisión de recibo y pase de salida portería
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiquidacionResponse'
+
+  /caja/egresos-menores:
+    post:
+      tags:
+        - Caja POS & Pagos
+      summary: Registrar vale rápido de salida de caja menor (Ctrl+M)
+      operationId: registrarEgresoMenor
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [monto, concepto, beneficiario, autorizaSupervisorPin]
+              properties:
+                monto:
+                  type: number
+                  example: 40.00
+                moneda:
+                  type: string
+                  enum: [USD, COP]
+                  default: USD
+                concepto:
+                  type: string
+                  example: Compra de aerosol limpiador de frenos urgente Wurth
+                beneficiario:
+                  type: string
+                  example: Repuestos & Químicos El Motorista
+                autorizaSupervisorPin:
+                  type: string
+                  example: "8921"
+      responses:
+        '201':
+          description: Vale de caja registrado e impactado en el arqueo del turno
+
+  /caja/cierres/reporte-z:
+    post:
+      tags:
+        - Caja POS & Pagos
+      summary: Procesar arqueo ciego y generar Cierre Fiscal Reporte Z
+      operationId: cerrarTurnoReporteZ
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReporteZRequest'
+      responses:
+        '200':
+          description: Cierre fiscal consolidado y terminal bloqueada exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReporteZResponse'
+
+  # ==========================================
+  # FACTURACIÓN DIAN
+  # ==========================================
+  /fiscal/dian/facturas:
+    post:
+      tags:
+        - Facturación DIAN
+      summary: Emitir factura electrónica ante la DIAN (XML UBL 2.1 + CUFE)
+      operationId: emitirFacturaDIAN
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [otId, env]
+              properties:
+                otId:
+                  type: string
+                  example: OT-1048
+                env:
+                  type: string
+                  enum: [HABILITACION, PRODUCCION]
+                  example: PRODUCCION
+                retenciones:
+                  type: object
+                  properties:
+                    reteFuente:
+                      type: number
+                      example: 2.5
+                    reteICA:
+                      type: number
+                      example: 0.966
+      responses:
+        '200':
+          description: Factura autorizada por la DIAN con CUFE y QR emitido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FacturaDIANResponse'
+
+# ==========================================
+# COMPONENTES & ESQUEMAS
+# ==========================================
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Usuario:
+      type: object
+      properties:
+        id:
+          type: string
+          example: USR-892
+        username:
+          type: string
+          example: laura.gomez
+        nombre:
+          type: string
+          example: Laura Gómez
+        rol:
+          type: string
+          enum: [ADMINISTRADOR, JEFE_TALLER, ASESOR_SERVICIO, MECANICO, CAJERO_POS]
+          example: CAJERO_POS
+        sedeId:
+          type: string
+          example: SEDE-CENTRAL-01
+
+    Sede:
+      type: object
+      properties:
+        id:
+          type: string
+          example: SEDE-CENTRAL-01
+        nombre:
+          type: string
+          example: Sede Central - Taller & POS Norte
+        direccion:
+          type: string
+          example: Calle 127 # 45-19, Bogotá D.C.
+        telefono:
+          type: string
+          example: +57 1 745 9000
+        bahias:
+          type: array
+          items:
+            type: object
+            properties:
+              codigo:
+                type: string
+                example: B-04
+              tipoElevador:
+                type: string
+                example: Hidráulico 2 Postes (Cap. 800 kg)
+              mecanicoAsignado:
+                type: string
+                example: andres.lopez
+              estado:
+                type: string
+                enum: [LIBRE, OCUPADA, MANTENIMIENTO]
+
+    RecepcionRequest:
+      type: object
+      required: [placa, vin, clienteNombre, clienteTelefono, odometroKm, nivelCombustible]
+      properties:
+        placa:
+          type: string
+          example: JKL-92D
+        marcaModelo:
+          type: string
+          example: KTM 1290 Super Adventure S 2023
+        vin:
+          type: string
+          example: VBKVA9400PM128941
+        clienteNombre:
+          type: string
+          example: Roberto Valencia Ospina
+        clienteTelefono:
+          type: string
+          example: "+573124589021"
+        odometroKm:
+          type: integer
+          example: 11452
+        nivelCombustible:
+          type: string
+          enum: [RESERVA, 1_4, 1_2, 3_4, FULL]
+          example: 1_2
+        accesorios:
+          type: array
+          items:
+            type: string
+          example: ["Maletero Top Case Givi", "Defensas Altas Outback", "Exploradoras LED"]
+        danosMarcados:
+          type: array
+          items:
+            type: object
+            properties:
+              punto:
+                type: string
+                example: lateral_izquierdo_carenaje
+              tipoDano:
+                type: string
+                enum: [RAYON, GOLPE, ROTURA, PIEZA_FALTANTE]
+                example: RAYON
+              severidad:
+                type: string
+                enum: [LEVE, MODERADO, SEVERO]
+                example: LEVE
+        firmaClienteConsentimientoBase64:
+          type: string
+          description: Firma digitalizada en pantalla táctil
+
+    RecepcionResponse:
+      type: object
+      properties:
+        recepcionId:
+          type: string
+          example: REC-2023-891
+        otId:
+          type: string
+          example: OT-1048
+        urlComprobanteCustodia:
+          type: string
+          example: https://api.tu-taller.com/docs/rec-1048.pdf
+        hashSHA256:
+          type: string
+          example: 7e9b0e3f81e3a6a9dbfe0f82d2f782c5a2c4e976
+
+    OrdenTrabajo:
+      type: object
+      properties:
+        otId:
+          type: string
+          example: OT-1048
+        placa:
+          type: string
+          example: JKL-92D
+        vehiculo:
+          type: string
+          example: KTM 1290 Super Adventure S 2023
+        cliente:
+          type: string
+          example: Roberto Valencia Ospina
+        estado:
+          type: string
+          example: EN_REPARACION
+        bahia:
+          type: string
+          example: B-04
+        mecanico:
+          type: string
+          example: Andrés López
+        tiempoTranscurridoMinutos:
+          type: integer
+          example: 195
+        totalPresupuestoUSD:
+          type: number
+          example: 311.15
+
+    OrdenTrabajoDetalle:
+      allOf:
+        - $ref: '#/components/schemas/OrdenTrabajo'
+        - type: object
+          properties:
+            itemsRepuestos:
+              type: array
+              items:
+                type: object
+                properties:
+                  sku:
+                    type: string
+                    example: KTM-6030-8015
+                  descripcion:
+                    type: string
+                    example: Kit Filtro de Aceite OEM KTM LC8
+                  cantidad:
+                    type: number
+                    example: 1
+                  precioUnitarioUSD:
+                    type: number
+                    example: 45.00
+            itemsManoObra:
+              type: array
+              items:
+                type: object
+                properties:
+                  codigoBaremo:
+                    type: string
+                    example: MO-MANT-10K
+                  descripcion:
+                    type: string
+                    example: Mantenimiento mayor 10.000 km KTM LC8
+                  horasBaremo:
+                    type: number
+                    example: 3.5
+                  tarifaHoraUSD:
+                    type: number
+                    example: 25.00
+
+    StockItem:
+      type: object
+      properties:
+        sku:
+          type: string
+          example: KTM-6030-8015
+        descripcion:
+          type: string
+          example: Kit Filtro de Aceite OEM KTM LC8
+        stockDisponible:
+          type: integer
+          example: 14
+        stockMinimo:
+          type: integer
+          example: 5
+        ubicacionPasillo:
+          type: string
+          example: Pasillo C - Estante 04 - Gaveta 12
+        costoPromedioCOP:
+          type: number
+          example: 125000.00
+        precioVentaUSD:
+          type: number
+          example: 45.00
+
+    BaremoItem:
+      type: object
+      properties:
+        codigo:
+          type: string
+          example: BAR-FREN-DEL
+        descripcion:
+          type: string
+          example: Cambio de pastillas delanteras + purga hidráulica con DOT 5.1
+        horasEstimadas:
+          type: number
+          example: 0.8
+        dificultad:
+          type: string
+          enum: [BASICO, INTERMEDIO, ESPECIALIZADO]
+
+    LiquidacionRequest:
+      type: object
+      required: [otId, terminal, sedeId, trm, metodosPago]
+      properties:
+        otId:
+          type: string
+          example: OT-1048
+        terminal:
+          type: string
+          example: POS-01-MOSTRADOR
+        sedeId:
+          type: string
+          example: SEDE-CENTRAL-01
+        trm:
+          type: number
+          example: 4001.20
+        metodosPago:
+          type: array
+          description: Desglose de cobro simultáneo (Split Payment)
+          items:
+            type: object
+            required: [metodo, monto, moneda]
+            properties:
+              metodo:
+                type: string
+                enum: [EFECTIVO, DATAFONO_REDEBAN, DATAFONO_CREDIBANCO, QR_BANCOLOMBIA, QR_NEQUI, CREDITO_FLOTA]
+                example: EFECTIVO
+              monto:
+                type: number
+                example: 100.00
+              moneda:
+                type: string
+                enum: [USD, COP]
+                example: USD
+              referenciaVoucher:
+                type: string
+                nullable: true
+                example: "AUTH-892182"
+
+    LiquidacionResponse:
+      type: object
+      properties:
+        numeroRecibo:
+          type: string
+          example: REC-POS-00892
+        totalCobradoUSD:
+          type: number
+          example: 311.15
+        totalCobradoCOP:
+          type: number
+          example: 1245000.00
+        paseSalidaPorteriaQR:
+          type: string
+          description: Token firmado para validación en portería
+          example: "MOTOPRO-PASS-OT1048-VALID-2023"
+        aperturaGavetaEjecutada:
+          type: boolean
+          example: true
+
+    ReporteZRequest:
+      type: object
+      required: [terminal, supervisorPin, arqueoCiegoBilletes]
+      properties:
+        terminal:
+          type: string
+          example: POS-01-MOSTRADOR
+        supervisorPin:
+          type: string
+          example: "8921"
+        arqueoCiegoBilletes:
+          type: object
+          properties:
+            denominacion_100_usd:
+              type: integer
+              example: 4
+            denominacion_50_usd:
+              type: integer
+              example: 2
+            denominacion_100k_cop:
+              type: integer
+              example: 12
+            totalVouchersDatafonoUSD:
+              type: number
+              example: 422.30
+
+    ReporteZResponse:
+      type: object
+      properties:
+        consecutivoZ:
+          type: string
+          example: Z-2023-10-18-001
+        diferenciaCuadreUSD:
+          type: number
+          description: Descuadre entre sistema y arqueo ciego físico
+          example: 0.00
+        ventasBrutasTotalesUSD:
+          type: number
+          example: 1845.50
+        valesMenoresDeducidosUSD:
+          type: number
+          example: 65.00
+        estadoTerminal:
+          type: string
+          example: BLOQUEADA_HASTA_SIGUIENTE_TURNO
+
+    FacturaDIANResponse:
+      type: object
+      properties:
+        numeroFactura:
+          type: string
+          example: SETT-99000148
+        cufe:
+          type: string
+          example: 8c92f1b4a83e0c4b6f1295b9c025da1e71239845ab3d19827401dce9048a12bc8f42194619
+        qrCodeURL:
+          type: string
+          example: https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=8c92f1b4...
+        estadoDIAN:
+          type: string
+          example: ACEPTADA_CON_NOTIFICACION
+        urlPdfA4:
+          type: string
+          example: https://api.tu-taller.com/fiscal/factura-sett-99000148.pdf
+
+  responses:
+    UnauthorizedError:
+      description: Token de autenticación ausente, inválido o expirado
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                example: 401
+              error:
+                type: string
+                example: Token no válido o expirado
